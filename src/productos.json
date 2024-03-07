@@ -1,0 +1,125 @@
+{
+  "productos": {
+    "pesca": [
+      {
+        "tipo": "Caña",
+        "nombre": "Caña Azul Marino de Mar",
+        "descripcion": "Una caña de pescar muy linda para disfrutar de la pesca en el mar.",
+        "stock": true,
+        "codigo": "PESCA0001",
+        "imagenes": [
+          "url_imagen1_pesca.jpg",
+          "url_imagen2_pesca.jpg",
+          "url_imagen3_pesca.jpg"
+        ],
+        "precio": 149.99
+      },
+      {
+        "tipo": "reel",
+        "nombre": "reel huevito",
+        "descripcion": "Conjunto de señuelos variados para atraer diferentes especies de peces.",
+        "stock": false,
+        "codigo": "PESCA0003",
+        "imagenes": [
+          "url_imagen1_senuelos.jpg",
+          "url_imagen2_senuelos.jpg",
+          "url_imagen3_senuelos.jpg"
+        ],
+        "precio": 49.99
+      },
+      {
+        "tipo": "Señuelos",
+        "nombre": "Señuelos ranita de pesca",
+        "descripcion": "Conjunto de señuelos variados para atraer diferentes especies de peces.",
+        "stock": false,
+        "codigo": "PESCA0003",
+        "imagenes": [
+          "url_imagen1_senuelos.jpg",
+          "url_imagen2_senuelos.jpg",
+          "url_imagen3_senuelos.jpg"
+        ],
+        "precio": 49.99
+      },
+      {
+        "tipo": "anzuelos",
+        "nombre": "Kit de anzuelos",
+        "descripcion": "Conjunto de señuelos variados para atraer diferentes especies de peces.",
+        "stock": false,
+        "codigo": "PESCA0003",
+        "imagenes": [
+          "url_imagen1_senuelos.jpg",
+          "url_imagen2_senuelos.jpg",
+          "url_imagen3_senuelos.jpg"
+        ],
+        "precio": 49.99
+      },
+      {
+        "tipo": "plomada",
+        "nombre": "20 plomadas x bolsa",
+        "descripcion": "Conjunto de señuelos variados para atraer diferentes especies de peces.",
+        "stock": false,
+        "codigo": "PESCA0003",
+        "imagenes": [
+          "url_imagen1_senuelos.jpg",
+          "url_imagen2_senuelos.jpg",
+          "url_imagen3_senuelos.jpg"
+        ],
+        "precio": 49.99
+      },
+      {
+        "tipo": "plomada",
+        "nombre": "20 plomadas x bolsa",
+        "descripcion": "Conjunto de señuelos variados para atraer diferentes especies de peces.",
+        "stock": false,
+        "codigo": "PESCA0003",
+        "imagenes": [
+          "url_imagen1_senuelos.jpg",
+          "url_imagen2_senuelos.jpg",
+          "url_imagen3_senuelos.jpg"
+        ],
+        "precio": 49.99
+      },
+      {
+        "tipo": "plomada",
+        "nombre": "20 plomadas x bolsa",
+        "descripcion": "Conjunto de señuelos variados para atraer diferentes especies de peces.",
+        "stock": false,
+        "codigo": "PESCA0003",
+        "imagenes": [
+          "url_imagen1_senuelos.jpg",
+          "url_imagen2_senuelos.jpg",
+          "url_imagen3_senuelos.jpg"
+        ],
+        "precio": 49.99
+      }
+    ],
+    "electronica": [
+      {
+        "tipo": "Teléfono",
+        "nombre": "Smartphone Avanzado",
+        "descripcion": "Un potente smartphone con todas las características modernas.",
+        "precio": 399.99,
+        "stock": true,
+        "codigo": "ELEC0001",
+        "imagenes": [
+          "url_imagen1_smartphone.jpg",
+          "url_imagen2_smartphone.jpg",
+          "url_imagen3_smartphone.jpg"
+        ]
+      },
+      {
+        "tipo": "Auriculares",
+        "nombre": "Auriculares Inalámbricos con Cancelación de Ruido",
+        "descripcion": "Auriculares inalámbricos con cancelación de ruido para una experiencia auditiva inigualable.",
+        "precio": 79.99,
+        "stock": true,
+        "codigo": "ELEC0002",
+        "imagenes": [
+          "url_imagen1_auriculares.jpg",
+          "url_imagen2_auriculares.jpg",
+          "url_imagen3_auriculares.jpg"
+        ]
+      }
+    ]
+  }
+}

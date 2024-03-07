@@ -1,17 +1,10 @@
-import { Box, Button, Divider, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 import Dialog from "@mui/material/Dialog";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import VisibilityIcon from "@mui/icons-material/Visibility";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import reel from "../images/reel.jpeg";
 import { useState } from "react";
-const CardProductos = ({
-  url = reel,
-  price = 30,
-  stock = "Disponible",
-  name = "Reel Huevito Beast",
-}) => {
+const CardProductos = ({ url, price, stock, name, codigo }) => {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -39,13 +32,12 @@ const CardProductos = ({
           >
             Cerrar X{" "}
           </Button>
-          <Divider sx={{ color: "3px solid gray" }}></Divider>
           <Typography variant="p" fontSize={"1.2rem"} mt={"1rem"}>
             {name}
           </Typography>
           <img
-            src={reel}
-            alt="reel huevito"
+            src={url}
+            alt={name}
             style={{ width: "100%", marginTop: ".5rem", aspectRatio: "4/3" }}
           />
           <Typography variant="p" fontSize={"1.2rem"} mt={".5rem"}>
@@ -60,7 +52,7 @@ const CardProductos = ({
               mt: "1rem",
               fontSize: "1rem",
               p: ".3rem .5rem .3rem .5rem",
-              fontFamily: "Zen Dots",
+              fontFamily: "Roboto",
             }}
           >
             Ver Detalles{" "}
@@ -71,11 +63,12 @@ const CardProductos = ({
       <Box
         sx={{
           display: "flex",
+          position: "relative",
           flexDirection: "column",
           alignItems: "center",
           width: "11.5rem",
           height: "auto",
-          pb: "1rem",
+          pb: "1.5rem",
           bgcolor: "white",
           borderRadius: ".5rem",
           boxShadow: `
@@ -87,20 +80,34 @@ const CardProductos = ({
         <Typography
           variant="p"
           fontSize={".6rem"}
-          sx={{ margin: "1rem 0 0 -3.4rem", display: "block" }}
+          sx={{
+            margin: "1rem 0 0 -3.4rem",
+            display: "block",
+            fontSize: ".7rem",
+          }}
         >
-          Stock: <span style={{ color: "#00B51D" }}>{stock}</span>
+          Stock:{" "}
+          <span style={{ color: stock ? "#00B51D" : "#888888" }}>
+            {stock ? "Disponible" : "Sin stock"}
+          </span>
         </Typography>
-        <Typography variant="p" fontSize={".8rem"} mt={".5rem"}>
+        <Typography
+          variant="p"
+          fontSize={".9rem"}
+          mt={".5rem"}
+          textAlign={"center"}
+          fontWeight={"bold"}
+          sx={{ height: "3rem" }}
+        >
           {name}
         </Typography>
         <img
-          src={reel}
-          alt="reel huevito"
+          src={url}
+          alt={name}
           style={{ width: "100%", marginTop: ".5rem", aspectRatio: "4/3" }}
           onClick={() => setOpen(true)}
         />
-        <Typography variant="p" fontSize={".8rem"} mt={".5rem"}>
+        <Typography variant="p" fontSize={"1.2rem"} mt={".5rem"}>
           ${price}
         </Typography>
         <Button
@@ -111,8 +118,8 @@ const CardProductos = ({
             outline: "1px solid black",
             mt: ".5rem",
             p: ".3rem .5rem .3rem .5rem",
-            fontFamily: "Zen Dots",
-            fontSize: ".6rem",
+            fontFamily: "Roboto",
+            fontSize: ".8rem",
             "&:hover": {
               backgroundColor: "black",
               color: "white",
@@ -124,18 +131,19 @@ const CardProductos = ({
         </Button>
         <Button
           variant="contained"
+          disabled={!stock} // Deshabilita el botón cuando stock es false
           sx={{
-            bgcolor: "#00B51D",
+            bgcolor: stock ? "#00B51D" : "#888888", // Cambia el color según stock
             color: "white",
             outline: "1px solid black",
             mt: ".5rem",
             p: ".3rem .5rem .3rem .5rem",
-            fontFamily: "Zen Dots",
-            fontSize: ".7rem",
+            fontFamily: "Roboto",
+            fontSize: ".9rem",
             "&:hover": {
               backgroundColor: "white",
-              color: "#00B51D",
-              outline: "1px solid #00B51D",
+              color: stock ? "#00B51D" : "#888888", // Cambia el color al hacer hover según stock
+              outline: `1px solid ${stock ? "#00B51D" : "#888888"}`, // Cambia el color del contorno al hacer hover según stock
             },
           }}
         >
@@ -146,6 +154,18 @@ const CardProductos = ({
             }}
           />
         </Button>
+        <Typography
+          variant="p"
+          sx={{
+            position: "absolute",
+            bottom: "0rem",
+            left: ".6rem",
+            fontSize: ".6rem",
+            color: "gray",
+          }}
+        >
+          Cod:{codigo}
+        </Typography>
       </Box>
     </>
   );

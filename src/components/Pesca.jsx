@@ -65,7 +65,7 @@ const navigate = useNavigate();
 
       <Container sx={{ mt: "3rem" }}>
         <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          {productosFiltrados.map((producto, index) => (
+          {productosFiltrados.map((product, index) => (
             <Grid
               item
               xs={6}
@@ -77,12 +77,9 @@ const navigate = useNavigate();
               }}
               key={index}
             >
+          
               <CardProductos
-                url={producto.imagen}
-                price={producto.precio}
-                stock={producto.stock}
-                name={producto.nombre}
-                codigo={producto.codigo}
+                product={product}
               />
             </Grid>
           ))}

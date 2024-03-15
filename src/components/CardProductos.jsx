@@ -4,8 +4,17 @@ import Dialog from "@mui/material/Dialog";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useState } from "react";
-const CardProductos = ({ url, price, stock, name, codigo }) => {
+import { useNavigate } from "react-router-dom";
+const CardProductos = ({ product}) => {
+  const { nombre = "", precio = 0, stock = false, codigo = "", descripcion = "", imagenes = [] } = product || {};
+
   const [open, setOpen] = useState(false);
+  const navigate=useNavigate();
+
+  const handleVerDetallesClick = () => {
+    // Navegar al detalle del producto al hacer clic en "Ver Detalles"
+    navigate(`/detalle/${codigo}`);
+  };
   return (
     <>
       <Dialog open={open} onClose={() => setOpen(false)}>
@@ -33,15 +42,15 @@ const CardProductos = ({ url, price, stock, name, codigo }) => {
             Cerrar X{" "}
           </Button>
           <Typography variant="p" fontSize={"1.2rem"} mt={"1rem"}>
-            {name}
+            {nombre}
           </Typography>
           <img
-            src={url}
-            alt={name}
+            src={imagenes[0]}
+            alt={nombre}
             style={{ width: "100%", marginTop: ".5rem", aspectRatio: "4/3" }}
           />
           <Typography variant="p" fontSize={"1.2rem"} mt={".5rem"}>
-            ${price}
+            ${precio}
           </Typography>
           <Button
             variant="contained"
@@ -94,41 +103,23 @@ const CardProductos = ({ url, price, stock, name, codigo }) => {
         <Typography
           variant="p"
           fontSize={".9rem"}
-          mt={".5rem"}
+          m={"1rem"}
           textAlign={"center"}
           fontWeight={"bold"}
-          sx={{ height: "3rem" }}
+          sx={{ height: "3rem"}}
         >
-          {name}
+          {nombre}
         </Typography>
         <img
-          src={url}
-          alt={name}
+          src={imagenes[0]}
+          alt={nombre}
           style={{ width: "100%", marginTop: ".5rem", aspectRatio: "4/3" }}
           onClick={() => setOpen(true)}
         />
         <Typography variant="p" fontSize={"1.2rem"} mt={".5rem"}>
-          ${price}
+          ${precio}
         </Typography>
-        <Button
-          variant="contained"
-          sx={{
-            bgcolor: "white",
-            color: "black",
-            outline: "1px solid black",
-            mt: ".5rem",
-            p: ".3rem .5rem .3rem .5rem",
-            fontFamily: "Roboto",
-            fontSize: ".8rem",
-            "&:hover": {
-              backgroundColor: "black",
-              color: "white",
-            },
-          }}
-        >
-          Ver Detalles{" "}
-          <ArrowForwardIcon sx={{ ml: ".3rem", fontSize: "1.3rem" }} />
-        </Button>
+     
         <Button
           variant="contained"
           disabled={!stock} // Deshabilita el botón cuando stock es false
@@ -154,6 +145,26 @@ const CardProductos = ({ url, price, stock, name, codigo }) => {
             }}
           />
         </Button>
+        <Button
+        variant="contained"
+        sx={{
+          bgcolor: "white",
+          color: "black",
+          outline: "1px solid black",
+          mt: ".5rem",
+          p: ".3rem .5rem .3rem .5rem",
+          fontFamily: "Roboto",
+          fontSize: ".8rem",
+          "&:hover": {
+            backgroundColor: "black",
+            color: "white",
+          },
+        }}
+        onClick={handleVerDetallesClick}
+      >
+        Ver Detalles{" "}
+        <ArrowForwardIcon sx={{ ml: ".3rem", fontSize: "1.3rem" }} />
+      </Button>
         <Typography
           variant="p"
           sx={{

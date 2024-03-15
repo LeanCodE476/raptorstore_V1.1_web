@@ -2,7 +2,8 @@ import { Box, Button, Container, Grid } from "@mui/material";
 import CardProductos from "./CardProductos";
 import productos from "../productos.json";
 import { useNavigate } from "react-router-dom";
-import Envio from "../components/Envio";
+import Footer from "./Footer";
+
 
 const Home = () => {
   // Obtén un array de productos combinando todas las categorías
@@ -11,12 +12,11 @@ const Home = () => {
 
   return (
     <>
-      <Envio />
       <Box
         sx={{
           display: "flex",
           justifyContent: "space-around",
-          margin: "2rem auto",
+          margin: "6rem auto",
           minWidth: "23rem",
           maxWidth: "30rem",
         }}
@@ -34,7 +34,7 @@ const Home = () => {
           Electronica
         </Button>
       </Box>
-      <Container sx={{ mt: "3rem" }}>
+      <Container sx={{ mt: "-2rem", pb: "2rem" }}>
         <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           {allProducts.map((product, index) => (
             <Grid
@@ -45,20 +45,19 @@ const Home = () => {
               sx={{
                 display: "flex",
                 justifyContent: "center",
+                outline:'1px solid red'
               }}
               key={index}
             >
               <CardProductos
-                url={product.imagenes[0]}
-                price={product.precio}
-                stock={product.stock}
-                name={product.nombre}
-                codigo={product.codigo}
+               
+                product={product}
               />
             </Grid>
           ))}
         </Grid>
       </Container>
+      <Footer/>
     </>
   );
 };

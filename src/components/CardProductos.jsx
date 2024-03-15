@@ -1,15 +1,19 @@
 import { Box, Button, Typography } from "@mui/material";
 
-import Dialog from "@mui/material/Dialog";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { useState } from "react";
+import reel from "../images/reel.jpeg";
 import { useNavigate } from "react-router-dom";
-const CardProductos = ({ product}) => {
-  const { nombre = "", precio = 0, stock = false, codigo = "", descripcion = "", imagenes = [] } = product || {};
+const CardProductos = ({ product }) => {
+  const {
+    nombre = "",
+    precio = 0,
+    codigo = "",
+    descripcion = "",
+    imagenes = [],
+  } = product || {};
 
-  const [open, setOpen] = useState(false);
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
   const handleVerDetallesClick = () => {
     // Navegar al detalle del producto al hacer clic en "Ver Detalles"
@@ -17,68 +21,16 @@ const CardProductos = ({ product}) => {
   };
   return (
     <>
-      <Dialog open={open} onClose={() => setOpen(false)}>
-        <Box
-          sx={{
-            width: "20rem",
-            height: "auto",
-            pb: "1rem",
-            bgcolor: "white",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <Button
-            sx={{
-              bgcolor: "#C71F1F",
-              color: "white",
-              m: "1rem 0 0 -14rem",
-              fontSize: ".7rem",
-              fontWeight: "600",
-            }}
-            onClick={() => setOpen(false)}
-          >
-            Cerrar X{" "}
-          </Button>
-          <Typography variant="p" fontSize={"1.2rem"} mt={"1rem"}>
-            {nombre}
-          </Typography>
-          <img
-            src={imagenes[0]}
-            alt={nombre}
-            style={{ width: "100%", marginTop: ".5rem", aspectRatio: "4/3" }}
-          />
-          <Typography variant="p" fontSize={"1.2rem"} mt={".5rem"}>
-            ${precio}
-          </Typography>
-          <Button
-            variant="contained"
-            sx={{
-              bgcolor: "white",
-              color: "black",
-              outline: "1px solid black",
-              mt: "1rem",
-              fontSize: "1rem",
-              p: ".3rem .5rem .3rem .5rem",
-              fontFamily: "Roboto",
-            }}
-          >
-            Ver Detalles{" "}
-            <ArrowForwardIcon sx={{ ml: ".3rem", fontSize: "1.3rem" }} />
-          </Button>
-        </Box>
-      </Dialog>
       <Box
         sx={{
           display: "flex",
           position: "relative",
           flexDirection: "column",
           alignItems: "center",
-          width: "11.5rem",
+          width: "11.5",
           height: "auto",
-          pb: "1.5rem",
           bgcolor: "white",
+          pb: ".7rem",
           borderRadius: ".5rem",
           boxShadow: `
       0px 4px 8px rgba(0, 0, 0, 0.25),
@@ -86,97 +38,81 @@ const CardProductos = ({ product}) => {
     `,
         }}
       >
-        <Typography
-          variant="p"
-          fontSize={".6rem"}
-          sx={{
-            margin: "1rem 0 0 -3.4rem",
-            display: "block",
-            fontSize: ".7rem",
-          }}
-        >
-          Stock:{" "}
-          <span style={{ color: stock ? "#00B51D" : "#888888" }}>
-            {stock ? "Disponible" : "Sin stock"}
-          </span>
-        </Typography>
-        <Typography
-          variant="p"
-          fontSize={".9rem"}
-          m={"1rem"}
-          textAlign={"center"}
-          fontWeight={"bold"}
-          sx={{ height: "3rem"}}
-        >
-          {nombre}
-        </Typography>
-        <img
-          src={imagenes[0]}
-          alt={nombre}
-          style={{ width: "100%", marginTop: ".5rem", aspectRatio: "4/3" }}
-          onClick={() => setOpen(true)}
-        />
-        <Typography variant="p" fontSize={"1.2rem"} mt={".5rem"}>
-          ${precio}
-        </Typography>
-     
-        <Button
-          variant="contained"
-          disabled={!stock} // Deshabilita el botón cuando stock es false
-          sx={{
-            bgcolor: stock ? "#00B51D" : "#888888", // Cambia el color según stock
-            color: "white",
-            outline: "1px solid black",
-            mt: ".5rem",
-            p: ".3rem .5rem .3rem .5rem",
-            fontFamily: "Roboto",
-            fontSize: ".9rem",
-            "&:hover": {
-              backgroundColor: "white",
-              color: stock ? "#00B51D" : "#888888", // Cambia el color al hacer hover según stock
-              outline: `1px solid ${stock ? "#00B51D" : "#888888"}`, // Cambia el color del contorno al hacer hover según stock
-            },
-          }}
-        >
-          Comprar{" "}
-          <WhatsAppIcon
-            sx={{
-              ml: ".3rem",
-            }}
-          />
-        </Button>
-        <Button
-        variant="contained"
-        sx={{
-          bgcolor: "white",
-          color: "black",
-          outline: "1px solid black",
-          mt: ".5rem",
-          p: ".3rem .5rem .3rem .5rem",
-          fontFamily: "Roboto",
-          fontSize: ".8rem",
-          "&:hover": {
-            backgroundColor: "black",
-            color: "white",
-          },
-        }}
-        onClick={handleVerDetallesClick}
-      >
-        Ver Detalles{" "}
-        <ArrowForwardIcon sx={{ ml: ".3rem", fontSize: "1.3rem" }} />
-      </Button>
-        <Typography
-          variant="p"
-          sx={{
-            position: "absolute",
-            bottom: "0rem",
-            left: ".6rem",
-            fontSize: ".6rem",
-            color: "gray",
-          }}
-        >
+        <Typography variant="p" mt={".4rem"} ml={"-3rem"} color={"#CACFD2"}>
           Cod:{codigo}
         </Typography>
+        <img
+          src={reel || imagenes[0]}
+          alt={nombre}
+          style={{
+            width: "90%",
+            marginTop: ".5rem",
+            aspectRatio: "4/3",
+            boxShadow: "0px 4px 7px 0px rgba(0,0,0,0.5)",
+            borderRadius: ".5rem",
+          }}
+          onClick={handleVerDetallesClick}
+        />
+        <Box
+          sx={{
+            width: "90%",
+            height: "5rem",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          {" "}
+          <Typography
+            variant="p"
+            sx={{
+              mt: "1rem",
+              fontSize: ".9rem",
+            }}
+          >
+            {nombre}
+          </Typography>
+          <Typography
+            variant="p"
+            fontSize={"1.2rem"}
+            mt={".5rem"}
+            fontWeight={"bold"}
+            color={"#F49131"}
+          >
+            $70.000
+          </Typography>
+        </Box>
+
+        <Button
+          variant="contained"
+          sx={{
+            bgcolor: "#E5E7E9",
+            color: "black",
+            outline: "1px solid black",
+
+            fontFamily: "Roboto",
+            fontSize: ".8rem",
+            "&:hover": {
+              backgroundColor: "black",
+              color: "white",
+            },
+          }}
+          onClick={handleVerDetallesClick}
+        >
+          Ver Detalles <ArrowForwardIcon />
+        </Button>
+        <Button
+          variant="contained"
+          sx={{
+            bgcolor: "#F49131",
+            color: "black",
+            outline: "1px solid black",
+            mt: "1rem",
+            fontFamily: "Roboto",
+            fontSize: ".8rem",
+          }}
+        >
+          Comprar <WhatsAppIcon sx={{ ml: "1rem" }} />
+        </Button>
       </Box>
     </>
   );

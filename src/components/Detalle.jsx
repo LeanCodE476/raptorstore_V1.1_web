@@ -1,10 +1,10 @@
 import { Box, Button, Container, Typography } from "@mui/material";
-import React from "react";
+
 import { useParams, useNavigate } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-
 import reel from "../images/reel.jpeg";
+
 const Detalle = ({ products }) => {
   const { codigo } = useParams();
   const navigate = useNavigate();
@@ -31,69 +31,37 @@ const Detalle = ({ products }) => {
   }
 
   // Renderizar el componente con los detalles del producto
+
   return (
-    <Container sx={{ bgcolor: "white" }}>
+    <Container sx={{ mt: "2rem" }}>
       <Button
-        sx={{ m: " 5rem 0 0 1rem", bgcolor: "black", color: "white" }}
+        sx={{ m: " 1rem 0 0 1rem", color: "white" }}
         onClick={() => navigate("/")}
       >
         <ArrowBackIcon />
         Volver{" "}
       </Button>
+
       <Box
         sx={{
-          mt: "3rem",
+          m: "3rem auto",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          pb:'3rem'
+          p: "1rem",
+          marginBottom: "1rem",
+          width: "95%",
+          maxWidth: "40rem",
+          bgcolor: "white",
+          borderRadius: ".5rem",
         }}
       >
-        <Typography>Cod:{product.codigo}</Typography>
-        <Typography variant="h5" >{product.nombre}</Typography>
-        <img
-          src={reel || product.imagenes[0]}
-          alt={product.nombre}
-          style={{ width: "100%", marginTop: ".5rem", aspectRatio: "4/3" }}
-        />
-        <Typography variant="h5" fontWeight={700}>${product.precio}</Typography>
 
-        <Typography variant="h5" fontWeight={500} mt={'5rem'} >Descripcion:</Typography>
+      
 
 
-        <ul style={{ listStyle: "none" }}>
-          {product.descripcion.map((descripcion, i) => (
-            <li key={i} style={{ marginTop: "1rem", fontWeight: "600" }}>
-              -{descripcion}
-            </li>
-          ))}
-        </ul>
-        <Button
-        variant="contained"
-        disabled={!product.stock} // Deshabilita el botón cuando stock es false
-        sx={{
-          width:'15rem',
-          bgcolor: product.stock ? "#00B51D" : "#888888", // Cambia el color según stock
-          color: "white",
-          outline: "1px solid black",
-          mt: "2rem",
-          p: ".3rem .5rem .3rem .5rem",
-          fontFamily: "Roboto",
-          fontSize: ".9rem",
-          "&:hover": {
-            backgroundColor: "white",
-            color: product.stock ? "#00B51D" : "#888888", // Cambia el color al hacer hover según stock
-            outline: `1px solid ${product.stock ? "#00B51D" : "#888888"}`, // Cambia el color del contorno al hacer hover según stock
-          },
-        }}
-      >
-        Comprar{" "}
-        <WhatsAppIcon
-          sx={{
-            ml: ".3rem",
-          }}
-        />
-      </Button>
+
+
       </Box>
     </Container>
   );

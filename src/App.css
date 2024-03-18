@@ -7,7 +7,7 @@
 }
 html{
   font-family: "Roboto", sans-serif;
-  background: #EAECEE;
+  background: #283747  ;
 }
 header{
   height: 4rem;
@@ -17,4 +17,23 @@ header{
   line-height: 4rem;
   font-size: .8rem;
   letter-spacing: .3rem;
+}
+
+.flex_row{
+  justify-content: center;
+  display: flex;
+  padding-top: 20px;
+}
+
+.thumbnail{
+padding-left: 20px;
+}
+.clicked{
+border: 5px solid black;
+}
+.btns{
+height: 40px;
+width: 40px;
+border-radius: 5px;
+background: grey;
 }

@@ -3,11 +3,79 @@
     "pesca": [
       {
         "tipo": "Caña",
-        "nombre": "Caña Azul Marino de Mar",
+        "nombre": "Caña de Pescar de Fibra de Carbono",
         "descripcion": [
-          "Una caña de pescar muy linda para disfrutar de la pesca en el mar.",
-          "Ideal para pescadores aficionados y profesionales.",
-          "Material resistente para garantizar durabilidad y rendimiento."
+          "Caña de pescar de alta calidad hecha de fibra de carbono.",
+          "Diseñada para proporcionar un rendimiento excepcional en la pesca deportiva.",
+          "Ligera y resistente para una experiencia de pesca cómoda y duradera."
+        ],
+        "stock": true,
+        "codigo": "PESCA0001",
+        "imagenes": [
+          "reel.jpeg",
+          "reel2.jpeg",
+          "reel3.jpeg"
+        ],
+        "precio": 149.99
+      },
+      {
+        "tipo": "Señuelos",
+        "nombre": "Conjunto de Señuelos Realistas",
+        "descripcion": [
+          "Kit de señuelos realistas diseñados para atraer a diferentes especies de peces.",
+          "Incluye una variedad de señuelos de colores y tamaños para adaptarse a diferentes condiciones.",
+          "Ideal para pescadores de todos los niveles de experiencia."
+        ],
+        "stock": true,
+        "codigo": "PESCA0007",
+        "imagenes": [
+          "url_imagen1_pesca.jpg",
+          "url_imagen2_pesca.jpg",
+          "url_imagen3_pesca.jpg"
+        ],
+        "precio": 149.99
+      },
+      {
+        "tipo": "Gorras",
+        "nombre": "Gorra de Pesca Impermeable",
+        "descripcion": [
+          "Gorra diseñada específicamente para pescadores con protección UV y resistente al agua.",
+          "Ofrece comodidad y protección durante largas horas en el agua.",
+          "Con diseño ajustable para adaptarse a diferentes tamaños de cabeza."
+        ],
+        "stock": true,
+        "codigo": "PESCA0008",
+        "imagenes": [
+          "url_imagen1_pesca.jpg",
+          "url_imagen2_pesca.jpg",
+          "url_imagen3_pesca.jpg"
+        ],
+        "precio": 149.99
+      },
+      {
+        "tipo": "Lentes",
+        "nombre": "Gafas de Sol Polarizadas para Pesca",
+        "descripcion": [
+          "Gafas de sol polarizadas diseñadas específicamente para la pesca.",
+          "Proporciona una visión clara y reduce el deslumbramiento del agua.",
+          "Construidas con materiales duraderos y cómodos para uso prolongado."
+        ],
+        "stock": false,
+        "codigo": "PESCA0002",
+        "imagenes": [
+          "url_imagen1_reel.jpg",
+          "url_imagen2_reel.jpg",
+          "url_imagen3_reel.jpg"
+        ],
+        "precio": 79.99
+      },
+      {
+        "tipo": "Bogagrip",
+        "nombre": "Bogagrip de Pesca Resistente",
+        "descripcion": [
+          "Bogagrip diseñado para manejar peces de gran tamaño con facilidad y seguridad.",
+          "Construido con materiales resistentes y duraderos para un rendimiento confiable.",
+          "Ideal para pescadores que buscan una herramienta de sujeción robusta."
         ],
         "stock": true,
         "codigo": "PESCA0001",
@@ -19,21 +87,38 @@
         "precio": 149.99
       },
       {
-        "tipo": "Reel",
-        "nombre": "Reel Huevito",
+        "tipo": "Anzuelos",
+        "nombre": "Anzuelos de Pesca de Acero Inoxidable",
         "descripcion": [
-          "Conjunto de señuelos variados para atraer diferentes especies de peces.",
-          "Diseño compacto y liviano, ideal para pescadores en movimiento.",
-          "Fácil de usar y mantener, perfecto para principiantes."
+          "Anzuelos de alta calidad hechos de acero inoxidable resistente a la corrosión.",
+          "Diseñados para proporcionar una sujeción segura y confiable de los peces.",
+          "Disponibles en diferentes tamaños para adaptarse a diversas técnicas de pesca."
         ],
-        "stock": false,
-        "codigo": "PESCA0002",
+        "stock": true,
+        "codigo": "PESCA0001",
         "imagenes": [
-          "url_imagen1_reel.jpg",
-          "url_imagen2_reel.jpg",
-          "url_imagen3_reel.jpg"
+          "url_imagen1_pesca.jpg",
+          "url_imagen2_pesca.jpg",
+          "url_imagen3_pesca.jpg"
         ],
-        "precio": 79.99
+        "precio": 149.99
+      },
+      {
+        "tipo": "Boyas",
+        "nombre": "Boyas Flotantes de Pesca",
+        "descripcion": [
+          "Boyas flotantes diseñadas para señalar la posición del anzuelo y la carnada.",
+          "Fabricadas con materiales duraderos y visibles para facilitar la detección.",
+          "Ideales para pescadores que buscan mejorar su técnica de pesca con flotadores precisos."
+        ],
+        "stock": true,
+        "codigo": "PESCA0001",
+        "imagenes": [
+          "url_imagen1_pesca.jpg",
+          "url_imagen2_pesca.jpg",
+          "url_imagen3_pesca.jpg"
+        ],
+        "precio": 149.99
       }
 
     ],
@@ -42,9 +127,9 @@
         "tipo": "Teléfono",
         "nombre": "Smartphone Avanzado",
         "descripcion": [
-          "Un potente smartphone con todas las características modernas.",
-          "Pantalla HD de 6 pulgadas, cámara de alta resolución y rendimiento rápido.",
-          "Sistema operativo actualizable y amplio almacenamiento interno."
+          "Smartphone de última generación con tecnología innovadora y rendimiento excepcional.",
+          "Pantalla de alta resolución, cámara de calidad profesional y capacidad de almacenamiento ampliable.",
+          "Diseñado para satisfacer las necesidades de usuarios exigentes en términos de funcionalidad y estilo."
         ],
         "precio": 399.99,
         "stock": true,
@@ -57,11 +142,11 @@
       },
       {
         "tipo": "Auriculares",
-        "nombre": "Auriculares Inalámbricos",
+        "nombre": "Auriculares Inalámbricos de Alta Fidelidad",
         "descripcion": [
-          "Auriculares inalámbricos con cancelación de ruido para una experiencia auditiva inigualable.",
-          "Batería de larga duración y diseño ergonómico para mayor comodidad.",
-          "Conexión Bluetooth estable y controles táctiles para facilitar su uso."
+          "Auriculares inalámbricos de alta fidelidad con cancelación de ruido activa para una experiencia auditiva inmersiva.",
+          "Batería de larga duración y diseño ergonómico para un uso cómodo durante todo el día.",
+          "Conectividad Bluetooth estable y controles intuitivos para una experiencia de usuario sin complicaciones."
         ],
         "precio": 79.99,
         "stock": true,

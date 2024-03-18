@@ -1,15 +1,12 @@
 import { Box, Button, Typography } from "@mui/material";
-
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import reel from "../images/reel.jpeg";
 import { useNavigate } from "react-router-dom";
+import VisibilityIcon from '@mui/icons-material/Visibility';
 const CardProductos = ({ product }) => {
   const {
     nombre = "",
     precio = 0,
     codigo = "",
-    descripcion = "",
     imagenes = [],
   } = product || {};
 
@@ -27,15 +24,19 @@ const CardProductos = ({ product }) => {
           position: "relative",
           flexDirection: "column",
           alignItems: "center",
-          width: "11.5",
+          maxWidth: "11.5rem",
           height: "auto",
           bgcolor: "white",
           pb: ".7rem",
-          borderRadius: ".5rem",
+          borderRadius: ".5rem .5rem 0rem 0rem",
           boxShadow: `
       0px 4px 8px rgba(0, 0, 0, 0.25),
       0px 0px 2px rgba(0, 0, 0, 0.12)
     `,
+    borderBottom:'2px solid #FF0000',
+    borderTop:'2px solid #FF0000'
+
+    
         }}
       >
         <Typography variant="p" mt={".4rem"} ml={"-3rem"} color={"#CACFD2"}>
@@ -48,8 +49,8 @@ const CardProductos = ({ product }) => {
             width: "90%",
             marginTop: ".5rem",
             aspectRatio: "4/3",
-            boxShadow: "0px 4px 7px 0px rgba(0,0,0,0.5)",
-            borderRadius: ".5rem",
+            boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
+            borderRadius: ".5rem ",
           }}
           onClick={handleVerDetallesClick}
         />
@@ -67,6 +68,11 @@ const CardProductos = ({ product }) => {
             sx={{
               mt: "1rem",
               fontSize: ".9rem",
+              maxWidth: "11.5rem",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+              fontWeight:'BOLD'
             }}
           >
             {nombre}
@@ -76,9 +82,9 @@ const CardProductos = ({ product }) => {
             fontSize={"1.2rem"}
             mt={".5rem"}
             fontWeight={"bold"}
-            color={"#F49131"}
+            color={"#FF0000"}
           >
-            $70.000
+            ${precio}
           </Typography>
         </Box>
 
@@ -91,6 +97,7 @@ const CardProductos = ({ product }) => {
 
             fontFamily: "Roboto",
             fontSize: ".8rem",
+            textTransform: "capitalize",
             "&:hover": {
               backgroundColor: "black",
               color: "white",
@@ -98,20 +105,7 @@ const CardProductos = ({ product }) => {
           }}
           onClick={handleVerDetallesClick}
         >
-          Ver Detalles <ArrowForwardIcon />
-        </Button>
-        <Button
-          variant="contained"
-          sx={{
-            bgcolor: "#F49131",
-            color: "black",
-            outline: "1px solid black",
-            mt: "1rem",
-            fontFamily: "Roboto",
-            fontSize: ".8rem",
-          }}
-        >
-          Comprar <WhatsAppIcon sx={{ ml: "1rem" }} />
+          Ver Detalles <VisibilityIcon sx={{ fontSize: "1.2rem",ml:'.5rem' }} />
         </Button>
       </Box>
     </>

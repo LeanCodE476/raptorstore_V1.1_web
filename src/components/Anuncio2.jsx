@@ -5,13 +5,15 @@ import ship from "../images/logo-shipping.png";
 const Anuncio2 = () => {
   return (
     <Box
-      m={"-4rem auto"}
+      m={"1.5rem auto"}
       height={"6rem"}
       width={"93%"}
       borderRadius={".8rem"}
       boxShadow={"0px 4px 5px 0px rgba(0,0,0,0.5)"}
       maxWidth={"40rem"}
       overflow={"hidden"}
+      bgcolor={'white'}
+   
     >
       <Typography
         variant="h5"

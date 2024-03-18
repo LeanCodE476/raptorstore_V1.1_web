@@ -1,44 +1,53 @@
-import { Box, Button, Container, Grid } from "@mui/material";
+import React, { useState } from "react";
+import { Box, Container, Grid } from "@mui/material";
 import CardProductos from "./CardProductos";
 import productos from "../productos.json";
 import Header from "./Header";
 import Anuncio1 from "./Anuncio1";
 import Anuncio2 from "./Anuncio2";
+import Navbar from "./navbar/Navbar";
+import NavDesktop from "./NavDesktop";
+import Footer from "./Footer";
+
+const Home = ({selectedType}) => {
 
 
-
-const Home = () => {
-  // Obtén un array de productos combinando todas las categorías
   const allProducts = Object.values(productos.productos).flat();
-
+  const filteredProducts = selectedType
+    ? allProducts.filter((product) => product.tipo === selectedType)
+    : allProducts;
 
   return (
     <>
-      <Header />
-      <Anuncio1 />
-      <Anuncio2 />
+      <div style={{ minHeight: "100vh" }}>
+       
 
-      <Container sx={{ mt: "9rem", pb: "2rem" }}>
-        {" "}
-        {/* CONTAINER DEL GRID PROD */}
-        <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          {allProducts.map((product, index) => (
-            <Grid
-              item
-              xs={6}
-              sm={4}
-              lg={2}
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-              }}
-              key={index}
-            >
-              <CardProductos product={product} />
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
+        <Anuncio1 />
+        <Anuncio2 />
+        <Container sx={{ m: "1.5rem auto", pb: "2rem", maxWidth: "80rem" }}>
+          <Grid
+            container
+            rowSpacing={3}
+            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+          >
+            {filteredProducts.map((product, index) => (
+              <Grid
+                item
+                xs={6}
+                sm={4}
+                lg={2}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+                key={index}
+              >
+                <CardProductos product={product} />
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </div>
     </>
   );
 };

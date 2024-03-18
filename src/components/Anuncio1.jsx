@@ -5,7 +5,7 @@ const Anuncio1 = () => {
   return (
     <Box
       bgcolor={"black"}
-      m={"5rem auto"}
+      m={"1.5rem auto"}
       height={"6rem"}
       width={"93%"}
       borderRadius={".8rem"}

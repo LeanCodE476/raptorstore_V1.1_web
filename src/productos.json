@@ -1,162 +1,53 @@
 {
   "productos": {
     "pesca": [
-      {
-        "tipo": "Caña",
-        "nombre": "Caña de Pescar de Fibra de Carbono",
-        "descripcion": [
-          "Caña de pescar de alta calidad hecha de fibra de carbono.",
-          "Diseñada para proporcionar un rendimiento excepcional en la pesca deportiva.",
-          "Ligera y resistente para una experiencia de pesca cómoda y duradera."
-        ],
-        "stock": true,
-        "codigo": "PESCA0001",
-        "imagenes": [
-          "reel.jpeg",
-          "reel2.jpeg",
-          "reel3.jpeg"
-        ],
-        "precio": 149.99
-      },
-      {
-        "tipo": "Señuelos",
-        "nombre": "Conjunto de Señuelos Realistas",
-        "descripcion": [
-          "Kit de señuelos realistas diseñados para atraer a diferentes especies de peces.",
-          "Incluye una variedad de señuelos de colores y tamaños para adaptarse a diferentes condiciones.",
-          "Ideal para pescadores de todos los niveles de experiencia."
-        ],
-        "stock": true,
-        "codigo": "PESCA0007",
-        "imagenes": [
-          "url_imagen1_pesca.jpg",
-          "url_imagen2_pesca.jpg",
-          "url_imagen3_pesca.jpg"
-        ],
-        "precio": 149.99
-      },
-      {
-        "tipo": "Gorras",
-        "nombre": "Gorra de Pesca Impermeable",
-        "descripcion": [
-          "Gorra diseñada específicamente para pescadores con protección UV y resistente al agua.",
-          "Ofrece comodidad y protección durante largas horas en el agua.",
-          "Con diseño ajustable para adaptarse a diferentes tamaños de cabeza."
-        ],
-        "stock": true,
-        "codigo": "PESCA0008",
-        "imagenes": [
-          "url_imagen1_pesca.jpg",
-          "url_imagen2_pesca.jpg",
-          "url_imagen3_pesca.jpg"
-        ],
-        "precio": 149.99
-      },
-      {
-        "tipo": "Lentes",
-        "nombre": "Gafas de Sol Polarizadas para Pesca",
-        "descripcion": [
-          "Gafas de sol polarizadas diseñadas específicamente para la pesca.",
-          "Proporciona una visión clara y reduce el deslumbramiento del agua.",
-          "Construidas con materiales duraderos y cómodos para uso prolongado."
-        ],
-        "stock": false,
-        "codigo": "PESCA0002",
-        "imagenes": [
-          "url_imagen1_reel.jpg",
-          "url_imagen2_reel.jpg",
-          "url_imagen3_reel.jpg"
-        ],
-        "precio": 79.99
-      },
-      {
-        "tipo": "Bogagrip",
-        "nombre": "Bogagrip de Pesca Resistente",
-        "descripcion": [
-          "Bogagrip diseñado para manejar peces de gran tamaño con facilidad y seguridad.",
-          "Construido con materiales resistentes y duraderos para un rendimiento confiable.",
-          "Ideal para pescadores que buscan una herramienta de sujeción robusta."
-        ],
-        "stock": true,
-        "codigo": "PESCA0001",
-        "imagenes": [
-          "url_imagen1_pesca.jpg",
-          "url_imagen2_pesca.jpg",
-          "url_imagen3_pesca.jpg"
-        ],
-        "precio": 149.99
-      },
-      {
-        "tipo": "Anzuelos",
-        "nombre": "Anzuelos de Pesca de Acero Inoxidable",
-        "descripcion": [
-          "Anzuelos de alta calidad hechos de acero inoxidable resistente a la corrosión.",
-          "Diseñados para proporcionar una sujeción segura y confiable de los peces.",
-          "Disponibles en diferentes tamaños para adaptarse a diversas técnicas de pesca."
-        ],
-        "stock": true,
-        "codigo": "PESCA0001",
-        "imagenes": [
-          "url_imagen1_pesca.jpg",
-          "url_imagen2_pesca.jpg",
-          "url_imagen3_pesca.jpg"
-        ],
-        "precio": 149.99
-      },
-      {
-        "tipo": "Boyas",
-        "nombre": "Boyas Flotantes de Pesca",
-        "descripcion": [
-          "Boyas flotantes diseñadas para señalar la posición del anzuelo y la carnada.",
-          "Fabricadas con materiales duraderos y visibles para facilitar la detección.",
-          "Ideales para pescadores que buscan mejorar su técnica de pesca con flotadores precisos."
-        ],
-        "stock": true,
-        "codigo": "PESCA0001",
-        "imagenes": [
-          "url_imagen1_pesca.jpg",
-          "url_imagen2_pesca.jpg",
-          "url_imagen3_pesca.jpg"
-        ],
-        "precio": 149.99
-      }
-
+        {
+          "tipo": "Señuelos",
+          "nombre": "Señuelo Ranita Antienganche 4g",
+          "descripcion": [
+            "Especial para tarariras",
+            "Peso: 5 gramos",
+            "Material: Pvc"
+          ],
+          "stock": true,
+          "codigo": "PESCA0001",
+          "imagenes": [
+            "froganti1.jpeg",
+            "froganti2.jpeg",
+            "froganti3.jpeg"
+          ],
+          "precio": 3.2000
+        },
+        {
+          "tipo": "reel",
+          "nombre": "Reel Huevito Monster Beast",
+          "descripcion": [
+            "3 +1 rulemanes de acero inoxidable ",
+            "Radio de giro de alta velocidad 7:2:1",
+           "Capacidad de multifilamento MM/M: 0.23/180 -0.30/110",
+           "Capacidad de multifilamento MM/M: 0.12/150-0.16/120-1.20/100",
+           "Peso:215 gramos",
+           "Max drag : 7kg",
+           "Freno magnético regulable externamente",
+           "Sistema de desarme rápido de tapa lateral",
+          "Cuerpo de bajo perfil construido en grafito",
+          "  Carretel de grafito",
+          "  Manija doble de aluminio cnc reforzada y alivianada",
+           " Devanador automatico sincronizado"
+          ],
+          "stock": true,
+          "codigo": "PESCA0002",
+          "imagenes": [
+            "reelhuevomonster1.jpeg",
+            "reelhuevomonster2.jpeg",
+            "reelhuevomonster3.jpeg"
+          ],
+          "precio": 22.000
+        }
+ 
     ],
     "electronica": [
-      {
-        "tipo": "Teléfono",
-        "nombre": "Smartphone Avanzado",
-        "descripcion": [
-          "Smartphone de última generación con tecnología innovadora y rendimiento excepcional.",
-          "Pantalla de alta resolución, cámara de calidad profesional y capacidad de almacenamiento ampliable.",
-          "Diseñado para satisfacer las necesidades de usuarios exigentes en términos de funcionalidad y estilo."
-        ],
-        "precio": 399.99,
-        "stock": true,
-        "codigo": "ELEC0001",
-        "imagenes": [
-          "url_imagen1_smartphone.jpg",
-          "url_imagen2_smartphone.jpg",
-          "url_imagen3_smartphone.jpg"
-        ]
-      },
-      {
-        "tipo": "Auriculares",
-        "nombre": "Auriculares Inalámbricos de Alta Fidelidad",
-        "descripcion": [
-          "Auriculares inalámbricos de alta fidelidad con cancelación de ruido activa para una experiencia auditiva inmersiva.",
-          "Batería de larga duración y diseño ergonómico para un uso cómodo durante todo el día.",
-          "Conectividad Bluetooth estable y controles intuitivos para una experiencia de usuario sin complicaciones."
-        ],
-        "precio": 79.99,
-        "stock": true,
-        "codigo": "ELEC0002",
-        "imagenes": [
-          "url_imagen1_auriculares.jpg",
-          "url_imagen2_auriculares.jpg",
-          "url_imagen3_auriculares.jpg"
-        ]
-      }
+
       
     ]
   }

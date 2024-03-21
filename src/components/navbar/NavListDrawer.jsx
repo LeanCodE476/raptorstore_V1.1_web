@@ -9,21 +9,7 @@ const NavListDrawer = ({ setOpen,handleTypeSelection }) => {
   return (
     <>
       <Box sx={{borderBottom:'2px solid #FF0000'}}>
-        <Button
-          sx={{
-            width: "100%",
-            textTransform: "capitalize",
-            bgcolor: "black",
-            color: "#ff0000",
-            borderBottom: "1px solid #D7DBDD",
-            fontSize: "1rem",
-            borderRadius:'0px'
-          }}
-          onClick={()=>{setOpen(false),handleTypeSelection(null)}}
-        >
-          <ArrowBackIcon/>
-          Volver al Inicio
-        </Button>
+       
         {tiposUnicos.map((tipo, index) => (
           <React.Fragment key={index}>
             <Typography
@@ -46,7 +32,7 @@ const NavListDrawer = ({ setOpen,handleTypeSelection }) => {
                   borderBottom: "1px solid #D7DBDD",
                   fontSize: "1rem",
                 }}
-                onClick={() =>{ setOpen(false),console.log(producto.tipo,"soy el tipo de navdrwa"),handleTypeSelection(producto.tipo)}}
+                onClick={() =>{ setOpen(false),handleTypeSelection(producto.tipo)}}
                 
               >
                 {producto.tipo}
@@ -54,6 +40,21 @@ const NavListDrawer = ({ setOpen,handleTypeSelection }) => {
             ))}
           </React.Fragment>
         ))}
+        <Button
+        sx={{
+          width: "100%",
+          textTransform: "capitalize",
+          bgcolor: "black",
+          color: "#ff0000",
+          borderBottom: "1px solid #D7DBDD",
+          fontSize: "1rem",
+          borderRadius:'0px'
+        }}
+        onClick={()=>{setOpen(false),handleTypeSelection(null)}}
+      >
+        <ArrowBackIcon/>
+        Volver al Inicio
+      </Button>
       </Box>
     </>
   );

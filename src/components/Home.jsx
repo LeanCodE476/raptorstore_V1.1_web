@@ -9,18 +9,25 @@ import Navbar from "./navbar/Navbar";
 import NavDesktop from "./NavDesktop";
 import Footer from "./Footer";
 
-const Home = ({selectedType}) => {
+const Home = () => {
 
+  const [selectedType, setSelectedType] = useState(null);
 
   const allProducts = Object.values(productos.productos).flat();
   const filteredProducts = selectedType
     ? allProducts.filter((product) => product.tipo === selectedType)
     : allProducts;
 
+
+  const handleTypeSelection = (type) => {
+    setSelectedType(type === selectedType ? null : type);
+  };
+
   return (
     <>
-      <div style={{ minHeight: "100vh" }}>
-       
+      <div style={{ minHeight: "100vh"}}>
+        <NavDesktop handleTypeSelection={handleTypeSelection} />
+        <Navbar handleTypeSelection={handleTypeSelection} />
 
         <Anuncio1 />
         <Anuncio2 />

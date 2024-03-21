@@ -49,12 +49,24 @@ const Footer = () => {
             +54 3755 503038
           </Button>
 
-          <Button sx={{ color: "#ff0000", fontSize: ".7rem" }}>
+          <Button
+            sx={{
+              color: "#ff0000",
+              fontSize: ".7rem",
+              textTransform: "lowercase",
+            }}
+          >
             <EmailIcon sx={{ paddingRight: "1rem", fontSize: "2.5rem" }} />
             raptorstoreventas@gmail.com
           </Button>
 
-          <Button sx={{ color: "#ff0000", fontSize: ".7rem" }}>
+          <Button
+            sx={{
+              color: "#ff0000",
+              fontSize: ".7rem",
+              textTransform: "capitalize",
+            }}
+          >
             <LocationOnIcon sx={{ paddingRight: "1rem", fontSize: "2.5rem" }} />
             Obera, Misiones,Argentina
           </Button>
@@ -69,11 +81,23 @@ const Footer = () => {
             height: "10rem",
           }}
         >
-          <Button sx={{ color: "#ff0000", fontSize: ".7rem" }}>
+          <Button
+            sx={{
+              color: "#ff0000",
+              fontSize: ".7rem",
+              textTransform: "lowercase",
+            }}
+          >
             <InstagramIcon sx={{ paddingRight: "1rem", fontSize: "2.5rem" }} />
             RaptorStore
           </Button>
-          <Button sx={{ color: "#ff0000", fontSize: ".7rem" }}>
+          <Button
+            sx={{
+              color: "#ff0000",
+              fontSize: ".7rem",
+              textTransform: "lowercase",
+            }}
+          >
             <FacebookIcon sx={{ paddingRight: "1rem", fontSize: "2.5rem" }} />{" "}
             RaptorStore
           </Button>
@@ -85,6 +109,8 @@ const Footer = () => {
           textTransform: "capitalize",
           fontSize: ".8rem",
         }}
+        href="https://github.com/LeanCodE476"
+        target="blank"
       >
         <GitHubIcon sx={{ paddingRight: "1rem", fontSize: "2.4rem" }} />
         developed and designed by leandro balmaceda

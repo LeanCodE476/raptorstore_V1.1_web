@@ -14,19 +14,14 @@ import Header from "./components/Header";
 import { useState } from "react";
 
 function App() {
-  const [selectedType, setSelectedType] = useState(null);
 
-  const handleTypeSelection = (type) => {
-    setSelectedType(type === selectedType ? null : type);
-  };
   return (
-    <>
+    <div style={{background: "linear-gradient(90deg, #4b6cb7 0%, #182848 100%)"}}>
       <BrowserRouter>
       <Header />
-      <NavDesktop handleTypeSelection={handleTypeSelection} />
-      <Navbar handleTypeSelection={handleTypeSelection} />
+
         <Routes>
-          <Route path="/" element={<Home selectedType={selectedType}/>} />
+          <Route path="/" element={<Home />} />
           <Route path="/pesca" element={<Pesca />} />
           <Route path="/electronica" element={<Electronica />} />
           <Route
@@ -36,7 +31,7 @@ function App() {
         </Routes>
         <Footer></Footer>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 export default App;

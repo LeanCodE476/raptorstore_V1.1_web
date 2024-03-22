@@ -129,7 +129,7 @@ const Detalle = ({ products }) => {
                   width: '5rem',
                   cursor: 'pointer',
                   borderRadius: '.5rem',
-                  outline: i === markedIndex ? '3px solid #ff0000' : '2px solid gray',
+                  outline: i === markedIndex ? '4px solid gray' : '2px solid gray',
                 }}
                 onClick={() => {
                   changeIndex(i);

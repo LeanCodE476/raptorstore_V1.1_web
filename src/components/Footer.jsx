@@ -29,7 +29,8 @@ const Footer = () => {
           m: "1rem auto",
           display: "flex",
           justifyContent: "space-around",
-          maxWidth: "50rem",
+          width:'90%',
+          maxWidth:'50rem'
         }}
       >
         {" "}
@@ -44,7 +45,7 @@ const Footer = () => {
             width: "16rem",
           }}
         >
-          <Button sx={{ color: "#ff0000", fontSize: ".7rem" }}>
+          <Button sx={{ color: "#ff0000", fontSize: ".9rem" }}>
             <WhatsAppIcon sx={{ paddingRight: "1rem", fontSize: "2.5rem" }} />
             +54 3755 503038
           </Button>
@@ -52,7 +53,7 @@ const Footer = () => {
           <Button
             sx={{
               color: "#ff0000",
-              fontSize: ".7rem",
+              fontSize: ".9rem",
               textTransform: "lowercase",
             }}
           >
@@ -63,7 +64,7 @@ const Footer = () => {
           <Button
             sx={{
               color: "#ff0000",
-              fontSize: ".7rem",
+              fontSize: ".9rem",
               textTransform: "capitalize",
             }}
           >
@@ -79,12 +80,13 @@ const Footer = () => {
             justifyContent: "space-around",
             alignItems: "flex-start",
             height: "10rem",
+
           }}
         >
           <Button
             sx={{
               color: "#ff0000",
-              fontSize: ".7rem",
+              fontSize: ".9rem",
               textTransform: "lowercase",
             }}
           >
@@ -94,7 +96,7 @@ const Footer = () => {
           <Button
             sx={{
               color: "#ff0000",
-              fontSize: ".7rem",
+              fontSize: ".9rem",
               textTransform: "lowercase",
             }}
           >

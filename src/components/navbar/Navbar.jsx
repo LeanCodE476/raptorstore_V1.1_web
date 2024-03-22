@@ -21,7 +21,7 @@ const Navbar = ({handleTypeSelection}) => {
           }}
           onClick={() => setOpen(true)}
         >
-          Menu <MenuIcon  />
+          FILTRAR <MenuIcon  />
         </Button>
       </Hidden>
 

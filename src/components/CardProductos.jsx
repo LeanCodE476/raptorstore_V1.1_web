@@ -39,7 +39,7 @@ const CardProductos = ({ product }) => {
         </Typography>
 
         <img
-          src={`../src/images/${imagenes[0]}`}
+          src={imagenes[0]}
           alt={nombre}
           style={{
             width: "90%",

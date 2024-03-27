@@ -1,4 +1,4 @@
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+
 import {
   Box,
   Button,
@@ -6,17 +6,17 @@ import {
   Drawer,
   List,
   Typography,
-  Badge,
 } from "@mui/material";
 import { useContext, useState } from "react";
 import reel from "../images/reelhuevomonster1.jpeg";
 import CloseIcon from "@mui/icons-material/Close";
-import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import { CartContext } from "../Contexts/CartContext";
 const Header = () => {
-  const { cart } = useContext(CartContext);
+  const { cart,total,setTotal,contador,cleanCart,onDeleteProduct } = useContext(CartContext);
   const [open, setOpen] = useState(false);
-  const [cartCount, setCartCount] = useState(1);
+
 
   const formattedPrice = (precio) => {
     return precio.toFixed(3);
@@ -44,7 +44,7 @@ const Header = () => {
         onClick={() => setOpen(true)}
         className="icon-cart"
       />
-      {cartCount > 0 && (
+    
         <span
           className="cart-count"
           style={{
@@ -56,9 +56,9 @@ const Header = () => {
             display: "inline-block",
           }}
         >
-          {cartCount}
+          {contador}
         </span>
-      )}
+  
       <Drawer open={open} anchor="right" onClose={() => setOpen(false)}>
         <Box
           sx={{
@@ -75,7 +75,7 @@ const Header = () => {
             mt={"1rem"}
             pb={".5rem"}
           >
-            Tu Carrito
+            Tu Carrito 
           </Typography>
           <CloseIcon
             sx={{
@@ -113,6 +113,7 @@ const Header = () => {
                       alt="prueba"
                       style={{
                         width: "3rem",
+                        height: "2.5rem",
                         cursor: "pointer",
                         outline: "1px solid gray",
                         borderRadius: ".2rem",
@@ -138,7 +139,7 @@ const Header = () => {
                     >
                      $ {formattedPrice(productos.precio)}
                     </Typography>
-                    <CloseIcon className="icon-delete-cart-item" />
+                    <CloseIcon className="icon-delete-cart-item" onClick={()=>onDeleteProduct(productos)} />
                   </List>
                   <Divider />
                 </>
@@ -150,7 +151,7 @@ const Header = () => {
                 fontWeight={"bold"}
                 mt={"2rem"}
               >
-                Tu carrito esta vacio :c
+                Tu carrito esta vacio :(
               </Typography>
             )}
           </Box>
@@ -167,7 +168,7 @@ const Header = () => {
             right: "0rem",
           }}
         >
-          Total:$29.432
+          Total:${total.toFixed(3)}
         </Typography>
         <Button
           sx={{
@@ -178,6 +179,7 @@ const Header = () => {
             bottom: "0rem",
             width: "100%",
           }}
+          onClick={()=>cleanCart()}
         >
           Vaciar Carrito <RemoveShoppingCartIcon />
         </Button>

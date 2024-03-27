@@ -16,7 +16,8 @@
             "../src/images/froganti2.jpeg",
             "../src/images/froganti3.jpeg"
           ],
-          "precio": 3.2000
+          "precio": 3.200,
+          "cantidad":1
         },
         {
           "tipo": "reel",
@@ -42,7 +43,9 @@
             "../src/images/reelhuevomonster2.jpeg",
             "../src/images/reelhuevomonster3.jpeg"
           ],
-          "precio": 22.000
+          "precio": 22.000,
+          "cantidad":1
+
         }
  
     ],

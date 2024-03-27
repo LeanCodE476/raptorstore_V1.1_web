@@ -7,7 +7,8 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import { CartContext } from "../Contexts/CartContext";
 import { useContext } from "react";
 const CardProductos = ({ product }) => {
-  const { cart, setCart } = useContext(CartContext);
+  const { cart, setCart, contador, setContador, total, setTotal } =
+    useContext(CartContext);
   const { nombre = "", precio = 0, codigo = "", imagenes = [] } = product || {};
   const navigate = useNavigate();
 
@@ -17,33 +18,33 @@ const CardProductos = ({ product }) => {
   };
   const formattedPrice = precio.toFixed(3);
 
-  const addOnProduct = (items) => {
-
+  const onAddProduct = (items) => {
     const { codigo, nombre, precio, imagenes } = items;
-   
-    if(cart.find(item=>item.codigo === codigo)){
 
-      const products=cart.map(item=>item.codigo === codigo ? {...item,cantidad:item.cantidad + 1} : item)
-      return setCart([...products])
+    if (cart.find((item) => item.codigo === codigo)) {
+      const products = cart.map((item) =>
+        item.codigo === codigo ? { ...item, cantidad: item.cantidad + 1 } : item
+      );
+      setTotal(total + items.precio * items.cantidad)
+      setContador(contador + items.cantidad);
+      return setCart([...products]);
     }
-
-    setCart(prevCart => [
+    setTotal(total + items.precio * items.cantidad)
+    setContador(contador + items.cantidad);
+    setCart((prevCart) => [
       ...prevCart,
       {
         codigo,
-        cantidad:1,
+        cantidad: 1,
         nombre,
         precio,
-        imagen: imagenes[0] 
-      }
+        imagen: imagenes[0],
+      },
     ]);
-
   };
 
-  
   return (
     <>
- 
       <Box
         sx={{
           display: "flex",
@@ -151,7 +152,7 @@ const CardProductos = ({ product }) => {
               color: "white",
             },
           }}
-          onClick={() => addOnProduct(product)}
+          onClick={() => onAddProduct(product)}
         >
           Agregar Al Carrito
           <AddShoppingCartIcon sx={{ fontSize: "1.2rem", ml: ".5rem" }} />

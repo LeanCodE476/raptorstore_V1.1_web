@@ -8,7 +8,6 @@ import {
   Typography,
 } from "@mui/material";
 import { useContext, useState } from "react";
-import reel from "../images/reelhuevomonster1.jpeg";
 import CloseIcon from "@mui/icons-material/Close";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';

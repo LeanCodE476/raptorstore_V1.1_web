@@ -6,12 +6,10 @@ import Detalle from "./components/Detalle";
 import products from "./productos.json";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import React, { useState } from "react";
+import CartProvider from "./Contexts/CartContext";
+
 
 function App() {
-  const CartContext = React.createContext();
-  const [cart, setCart] = useState();
-
   return (
     <div
       style={{
@@ -20,18 +18,17 @@ function App() {
       }}
     >
       <BrowserRouter>
-        <CartContext.Provider value={{ cart, setCart }}>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route
-              path="/detalle/:codigo"
-              element={<Detalle products={products} />}
-            />
-          </Routes>
-            <Footer />
-       
-        </CartContext.Provider>
+      <CartProvider>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/detalle/:codigo"
+            element={<Detalle products={products} />}
+          />
+        </Routes>
+        <Footer />
+        </CartProvider>
       </BrowserRouter>
     </div>
   );

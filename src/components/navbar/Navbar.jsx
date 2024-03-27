@@ -16,7 +16,7 @@ const Navbar = ({handleTypeSelection}) => {
             boxShadow: "0px 4px 7px 0px rgba(0,0,0,0.5)",
             position: "sticky",
             top:'0rem',
-            zIndex:'9',
+            zIndex:'1',
             color: "gray" 
           }}
           onClick={() => setOpen(true)}

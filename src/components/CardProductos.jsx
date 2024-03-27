@@ -1,9 +1,13 @@
 import { Box, Button, Typography } from "@mui/material";
 
 import { useNavigate } from "react-router-dom";
-import VisibilityIcon from "@mui/icons-material/Visibility";
-import frog from "../images/froganti1.jpeg";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
+
+import { CartContext } from "../Contexts/CartContext";
+import { useContext } from "react";
 const CardProductos = ({ product }) => {
+  const { cart, setCart } = useContext(CartContext);
   const { nombre = "", precio = 0, codigo = "", imagenes = [] } = product || {};
   const navigate = useNavigate();
 
@@ -13,8 +17,33 @@ const CardProductos = ({ product }) => {
   };
   const formattedPrice = precio.toFixed(3);
 
+  const addOnProduct = (items) => {
+
+    const { codigo, nombre, precio, imagenes } = items;
+   
+    if(cart.find(item=>item.codigo === codigo)){
+
+      const products=cart.map(item=>item.codigo === codigo ? {...item,cantidad:item.cantidad + 1} : item)
+      return setCart([...products])
+    }
+
+    setCart(prevCart => [
+      ...prevCart,
+      {
+        codigo,
+        cantidad:1,
+        nombre,
+        precio,
+        imagen: imagenes[0] 
+      }
+    ]);
+
+  };
+
+  
   return (
     <>
+ 
       <Box
         sx={{
           display: "flex",
@@ -49,7 +78,6 @@ const CardProductos = ({ product }) => {
             boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
             borderRadius: ".5rem ",
             cursor: "pointer",
-          
           }}
           className="card-product-img"
           onClick={handleVerDetallesClick}
@@ -106,7 +134,27 @@ const CardProductos = ({ product }) => {
           onClick={handleVerDetallesClick}
         >
           Ver Detalles{" "}
-          <VisibilityIcon sx={{ fontSize: "1.2rem", ml: ".5rem" }} />
+          <ArrowOutwardIcon sx={{ fontSize: "1.2rem", ml: ".5rem" }} />
+        </Button>
+        <Button
+          variant="contained"
+          sx={{
+            bgcolor: "#1F1F1F",
+            color: "white",
+            outline: "1px solid black",
+            marginTop: "1rem",
+            fontFamily: "Roboto",
+            fontSize: ".8rem",
+            textTransform: "capitalize",
+            "&:hover": {
+              backgroundColor: "black",
+              color: "white",
+            },
+          }}
+          onClick={() => addOnProduct(product)}
+        >
+          Agregar Al Carrito
+          <AddShoppingCartIcon sx={{ fontSize: "1.2rem", ml: ".5rem" }} />
         </Button>
       </Box>
     </>

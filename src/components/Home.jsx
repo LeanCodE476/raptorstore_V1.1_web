@@ -32,7 +32,7 @@ const Home = () => {
         <Anuncio1 />
         <Anuncio2 />
         <Container sx={{ m: "1.5rem auto", pb: "2rem", maxWidth: "80rem" }}>
-        <Typography color={'white'} variant="h5" pb={'1rem'} textAlign={'center'}  > Seccion <span style={{textTransform:'capitalize'}}>{selectedType ? selectedType : "Principal"}</span>  </Typography>
+        <Typography color={'white'} variant="h5" pb={'1rem'} textAlign={'center'}  > Sección <span style={{textTransform:'capitalize'}}>{selectedType ? selectedType : "Principal"}</span>  </Typography>
           <Grid
             container
             rowSpacing={3}

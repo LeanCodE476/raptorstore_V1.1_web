@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Button, Typography } from "@mui/material";
 import productos from '../../productos.json'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import CloseIcon from '@mui/icons-material/Close';
 
 const NavListDrawer = ({ setOpen,handleTypeSelection }) => {
   const tiposUnicos = Array.from(new Set(Object.keys(productos.productos)));
@@ -9,7 +10,8 @@ const NavListDrawer = ({ setOpen,handleTypeSelection }) => {
   return (
     <>
       <Box sx={{borderBottom:'2px solid #FF0000'}}>
-       
+       <Typography variant='h5' textAlign={'center'} color={'#ff0000'} bgcolor={'black'} height={'3rem'} lineHeight={'3rem'} onClick={()=>setOpen(false)}>Cerrar </Typography>
+       <hr />
         {tiposUnicos.map((tipo, index) => (
           <React.Fragment key={index}>
             <Typography

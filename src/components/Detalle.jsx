@@ -103,7 +103,7 @@ const Detalle = ({ products }) => {
           }}
         >
           <img
-            src={`../src/images/${product.imagenes[index]}`}
+            src={product.imagenes[index]}
             style={{
               minWidth: '22rem',
               maxWidth: '90%',
@@ -123,7 +123,7 @@ const Detalle = ({ products }) => {
             {product.imagenes.map((img, i) => (
               <img
                 className="imagen-miniatura"
-                src={`../src/images/${img}`}
+                src={img}
                 key={i}
                 style={{
                   width: '5rem',

@@ -24,7 +24,7 @@ const NavDesktop = ({ handleTypeSelection }) => {
             alignItems: "center",
             position: "sticky",
             top:'0rem',
-            zIndex:'9',
+            zIndex:'1',
           }}
         >
           <Button

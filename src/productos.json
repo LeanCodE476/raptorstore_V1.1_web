@@ -12,9 +12,9 @@
           "stock": true,
           "codigo": "PESCA0001",
           "imagenes": [
-            "../../public/images/froganti1.jpeg",
-            "../../public/images/froganti2.jpeg",
-            "../../public/images/froganti3.jpeg"
+            "../public/images/froganti1.jpeg",
+            "../public//images/froganti2.jpeg",
+            "../public/images/froganti3.jpeg"
           ],
           "precio": 3.200,
           "cantidad":1
@@ -39,9 +39,9 @@
           "stock": true,
           "codigo": "PESCA0002",
           "imagenes": [
-            "../../public/images/reelhuevomonster1.jpeg",
-            "../../public/images/reelhuevomonster2.jpeg",
-            "../../public/images/reelhuevomonster3.jpeg"
+            "../public/images/reelhuevomonster1.jpeg",
+            "../public/images/reelhuevomonster2.jpeg",
+            "../public/images/reelhuevomonster3.jpeg"
           ],
           "precio": 22.000,
           "cantidad":1

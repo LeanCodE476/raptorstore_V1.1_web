@@ -167,26 +167,7 @@ const Detalle = ({ products }) => {
             ))}
           </ul>
         </Box>
-        <Button
-          sx={{
-            bgcolor: '#F1C40F',
-            color: 'black',
-            width: '15rem',
-            outline: '2px solid black',
-            mt: '3rem',
-            borderRadius: '1rem',
-            textTransform: 'capitalize',
-            fontSize: '1rem',
-            '&:hover': {
-              transition: '0s all',
-              backgroundColor: 'green',
-              color: 'white',
-            },
-          }}
-          onClick={sendMessage}
-        >
-          Comprar Ahora <WhatsAppIcon sx={{ marginLeft: '1rem' }} />
-        </Button>
+  
       </Box>
     </Container>
   );

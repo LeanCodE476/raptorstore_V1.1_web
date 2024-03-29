@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import caster from '../assets/images/logo-caster.png'
-import beast from '../assets/images/logo-beast.png'
+import caster from '/assets/logo-caster.png'
+import beast from '/assets/logo-beast.png'
 const Anuncio1 = () => {
   return (
     <Box

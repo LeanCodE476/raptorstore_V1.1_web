@@ -7,7 +7,6 @@
 }
 html{
   font-family: "Roboto", sans-serif;
-  background: #283747  ;
 }
 header{
   height: 4rem;
@@ -53,13 +52,15 @@ border-bottom: 1px solid white;
 transition: all .3s ease;
 
 }
+.icon-delete-cart-item{
+
+  border-radius: 50%;
+}
 .icon-delete-cart-item:hover{
-  color: red;
   cursor: pointer;
   transform: scale(1.03);
-  outline: 1px solid black;
-  border-radius: 50%;
-transition: all .3s ease;
+transition: all .2s ease;
+background: rgba(128, 128, 128, 0.503);
 
 }
 

@@ -1,25 +1,43 @@
-
-import {
-  Box,
-  Button,
-  Divider,
-  Drawer,
-  List,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Divider, Drawer, List, Typography } from "@mui/material";
 import { useContext, useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { CartContext } from "../Contexts/CartContext";
-const Header = () => {
-  const { cart,total,setTotal,contador,cleanCart,onDeleteProduct } = useContext(CartContext);
-  const [open, setOpen] = useState(false);
 
+const Header = () => {
+  const { cart, total, contador, cleanCart, onDeleteProduct } =
+    useContext(CartContext);
+  const [open, setOpen] = useState(false);
 
   const formattedPrice = (precio) => {
     return precio.toFixed(3);
   };
+  function enviarMensajeWhatsapp() {
+    const numeroTelefono = "3755 503038";
+
+    let mensaje = `Hola, me gustaría comprar los siguientes productos:\n \n`;
+
+    cart.forEach((producto, index) => {
+      mensaje += `${index + 1}. Código: *${producto.codigo}* \n- ${
+        producto.nombre
+      } \n- Cantidad: ${
+        producto.cantidad
+      } \n- PrecioUnitario: $${formattedPrice(producto.precio)}\n`;
+    });
+
+    // Agregar el total al mensaje con un salto de línea
+    mensaje += `\n*Total: $${formattedPrice(total)}*`;
+
+    // Generar el enlace de WhatsApp con el número de teléfono y el mensaje
+    const enlaceWhatsapp = `https://api.whatsapp.com/send?phone=${numeroTelefono}&text=${encodeURIComponent(
+      mensaje
+    )}`;
+
+    // Abrir el enlace en una nueva pestaña
+    window.open(enlaceWhatsapp);
+  }
 
   return (
     <header
@@ -43,21 +61,22 @@ const Header = () => {
         onClick={() => setOpen(true)}
         className="icon-cart"
       />
-    
-        <span
-          className="cart-count"
-          style={{
-            position: "absolute",
-            top: ".2rem",
-            right: "4rem",
-            color: "white",
-            padding: "0rem",
-            display: "inline-block",
-          }}
-        >
-          {contador}
-        </span>
-  
+
+      <span
+        className="cart-count"
+        style={{
+          position: "absolute",
+          top: ".2rem",
+          right: "4rem",
+          color: "white",
+          padding: "0rem",
+          display: "inline-block",
+          fontWeight: "bold",
+        }}
+      >
+        {contador}
+      </span>
+
       <Drawer open={open} anchor="right" onClose={() => setOpen(false)}>
         <Box
           sx={{
@@ -74,7 +93,7 @@ const Header = () => {
             mt={"1rem"}
             pb={".5rem"}
           >
-            Tu Carrito 
+            Tu Carrito
           </Typography>
           <CloseIcon
             sx={{
@@ -98,9 +117,10 @@ const Header = () => {
           >
             {" "}
             {cart.length > 0 ? (
-              cart.map((productos) => (
+              cart.map((productos,i) => (
                 <>
                   <List
+                  key={i}
                     sx={{
                       display: "flex",
                       justifyContent: "space-around",
@@ -108,8 +128,8 @@ const Header = () => {
                     }}
                   >
                     <img
-                      src={productos.imagen}
-                      alt="prueba"
+                      src={`/images/${productos.imagen}`}
+                      alt={productos.nombre}
                       style={{
                         width: "3rem",
                         height: "2.5rem",
@@ -132,13 +152,13 @@ const Header = () => {
                     >
                       {productos.nombre}
                     </Typography>
-                    <Typography
-                      fontWeight={"bold"}
-                      fontSize={".8rem"}
-                    >
-                     $ {formattedPrice(productos.precio)}
+                    <Typography fontWeight={"bold"} fontSize={".8rem"}>
+                      $ {formattedPrice(productos.precio)}
                     </Typography>
-                    <CloseIcon className="icon-delete-cart-item" onClick={()=>onDeleteProduct(productos)} />
+                    <CloseIcon
+                      className="icon-delete-cart-item"
+                      onClick={() => onDeleteProduct(productos)}
+                    />
                   </List>
                   <Divider />
                 </>
@@ -150,7 +170,7 @@ const Header = () => {
                 fontWeight={"bold"}
                 mt={"2rem"}
               >
-                Tu carrito esta vacio :(
+                Tu carrito se encuentra vacio
               </Typography>
             )}
           </Box>
@@ -159,7 +179,7 @@ const Header = () => {
           variant="h6"
           sx={{
             position: "absolute",
-            bottom: "3.5rem",
+            bottom: "7rem",
             fontWeight: "bold",
             fontSize: "1.5rem",
             textAlign: "center",
@@ -169,19 +189,54 @@ const Header = () => {
         >
           Total:${total.toFixed(3)}
         </Typography>
-        <Button
-          sx={{
-            bgcolor: "black",
-            color: "white",
-            borderRadius: "0rem",
-            position: "absolute",
-            bottom: "0rem",
-            width: "100%",
-          }}
-          onClick={()=>cleanCart()}
-        >
-          Vaciar Carrito <RemoveShoppingCartIcon />
-        </Button>
+
+        {cart.length > 0 ? (
+          <>
+            <Button
+              sx={{
+                borderTop: "2px solid #ff0000",
+                bgcolor: "black",
+                color: "white",
+                borderRadius: "0rem",
+                position: "absolute",
+                bottom: "0rem",
+                width: "100%",
+                height: "2.4rem",
+                "&:hover": {
+                  backgroundColor: "red",
+                  color: "white",
+                },
+              }}
+              onClick={() => cleanCart()}
+            >
+              Vaciar Carrito <RemoveShoppingCartIcon />
+            </Button>
+            <Button
+              sx={{
+                bgcolor: "#00A617",
+                color: "white",
+                width: "10rem",
+                position: "absolute",
+                bottom: "3.5rem",
+                fontWeight: "bold",
+                fontSize: "1rem",
+                textTransform:'capitalize',
+                left: "28%",
+                right: "28%",
+                "&:hover": {
+                  backgroundColor: "black",
+                  color: "white",
+                },
+              }}
+              onClick={enviarMensajeWhatsapp}
+            >
+              Comprar{" "}
+              <WhatsAppIcon
+                sx={{ marginLeft: "1rem", fontSize: "2rem", color: "white" }}
+              />
+            </Button>
+          </>
+        ) : null}
       </Drawer>
     </header>
   );

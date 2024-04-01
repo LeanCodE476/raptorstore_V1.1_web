@@ -1,57 +1,421 @@
 {
   "productos": {
     "pesca": [
-        {
-          "tipo": "Señuelos",
-          "nombre": "Señuelo Ranita Antienganche 4g",
-          "descripcion": [
-            "Especial para tarariras",
-            "Peso: 5 gramos",
-            "Material: Pvc"
-          ],
-          "stock": true,
-          "codigo": "PESCA0001",
-          "imagenes": [
-            "../public/images/froganti1.jpeg",
-            "../public//images/froganti2.jpeg",
-            "../public/images/froganti3.jpeg"
-          ],
-          "precio": 3.200,
-          "cantidad":1
-        },
-        {
-          "tipo": "reel",
-          "nombre": "Reel Huevito Monster Beast",
-          "descripcion": [
-            "3 +1 rulemanes de acero inoxidable ",
-            "Radio de giro de alta velocidad 7:2:1",
-           "Capacidad de multifilamento MM/M: 0.23/180 -0.30/110",
-           "Capacidad de multifilamento MM/M: 0.12/150-0.16/120-1.20/100",
-           "Peso:215 gramos",
-           "Max drag : 7kg",
-           "Freno magnético regulable externamente",
-           "Sistema de desarme rápido de tapa lateral",
+      {
+        "tipo": "señuelos",
+        "nombre": "Señuelo Ranita Antienganche 4g",
+        "descripcion": [
+          "Especial para tarariras",
+          "Peso: 5 gramos",
+          "Material: Pvc"
+        ],
+        "stock": true,
+        "codigo": "PESCA0012",
+        "imagenes": [
+          "froganti1.jpeg",
+          "froganti2.jpeg",
+          "froganti3.jpeg"
+        ],
+        "precio": 3.200,
+        "cantidad": 1
+      },
+      {
+        "tipo": "reel",
+        "nombre": "Reel Huevito Monster Beast",
+        "descripcion": [
+          "3 +1 rulemanes de acero inoxidable ",
+          "Radio de giro de alta velocidad 7:2:1",
+          "Capacidad de multifilamento MM/M: 0.23/180 -0.30/110",
+          "Capacidad de multifilamento MM/M: 0.12/150-0.16/120-1.20/100",
+          "Peso:215 gramos",
+          "Max drag : 7kg",
+          "Freno magnético regulable externamente",
+          "Sistema de desarme rápido de tapa lateral",
           "Cuerpo de bajo perfil construido en grafito",
           "  Carretel de grafito",
           "  Manija doble de aluminio cnc reforzada y alivianada",
-           " Devanador automatico sincronizado"
-          ],
-          "stock": true,
-          "codigo": "PESCA0002",
-          "imagenes": [
-            "../public/images/reelhuevomonster1.jpeg",
-            "../public/images/reelhuevomonster2.jpeg",
-            "../public/images/reelhuevomonster3.jpeg"
-          ],
-          "precio": 22.000,
-          "cantidad":1
-
-        }
- 
+          " Devanador automatico sincronizado"
+        ],
+        "stock": true,
+        "codigo": "PESCA0002",
+        "imagenes": [
+          "reelhuevomonster1.jpeg",
+          "reelhuevomonster2.jpeg",
+          "reelhuevomonster3.jpeg"
+        ],
+        "precio": 25.000,
+        "cantidad": 1
+      },
+      {
+        "tipo": "anzuelos",
+        "nombre": "Anzuelos Offset CASTER Cabeza Plomada 3.5g Para Señuelos De Goma 3 Unidades",
+        "descripcion": [
+          "Anzuelos offset lastrados con cabeza plomada ideal para armado de gomas",
+          "Material: Acero inoxidable de alto carbono",
+          "Número: 1/0",
+          "Peso: 3.5 gramos",
+          "Medidas: 4,1 x 1,4 cm",
+          "Presentación: sobre de 3 unidades"
+        ],
+        "stock": true,
+        "codigo": "PESCA0001",
+        "imagenes": ["reelhuevomonster1.jpeg"],
+        "precio": 2.600,
+        "cantidad": 1
+      },
+      {
+        "tipo": "grips",
+        "nombre": "Boga Grip Pinza Acero Inoxidable 15 Kg 17,5cm",
+        "descripcion": [
+          "Medida: 17,5 cm",
+          "Peso: 120 gramos",
+          "Soporte máximo: 15 kg",
+          "Material: Acero inoxidable 304",
+          "Empuñadura de goma eva",
+          "Cordón con ajuste para colgar",
+          "Herramienta de alta calidad para sacar, manipular a los peces en forma rápida y sencilla",
+          "Presiona en la parte baja de la quijada en la mayoría de los peces de río y laguna, incluyendo el dorado y la tararira",
+          "No daña a los peces",
+          "Compacto para pescadores de vadeo o de superficie",
+          "Resistente a la corrosión",
+          "Facilita la exhibición de las piezas para fotografiarlas"
+        ],
+        "stock": true,
+        "codigo": "PESCA0002",
+        "imagenes": ["reelhuevomonster1.jpeg"],
+        "precio": 9.200,
+        "cantidad": 1
+      },
+      {
+        "tipo": "cañas",
+        "nombre": "caña SPEEDFORCE-GSP1802M",
+        "descripcion": [
+          "Medida: 1.80m en 2 tramos",
+          "Tipo de reel utilizable: frontal",
+          "Composición: fibra de vidrio",
+          "5 pasahilos SiC de titanio de 3 patas, aptos para multifilamento",
+          "Acción: Rápida",
+          "Power: Medium",
+          "Capacidad de lanzamiento máximo: 30 a 60 gramos",
+          "Peso: 165 gramos",
+          "Medida cerrada: 95.5 cm",
+          "Diámetro (mm):",
+          "Portareel de grafito con capuchones de acero inoxidable",
+          "Empuñadura de goma eva ergonómica",
+          "Incluye funda de tela estampada con divisiones"
+        ],
+        "stock": true,
+        "codigo": "PESCA0003",
+        "imagenes": ["reelhuevomonster1.jpeg"],
+        "precio": 21.300,
+        "cantidad": 1
+      },
+      {
+        "tipo": "cañas",
+        "nombre": "Caña CASTER Black Fighter 1.80m Bait Casting 6-12 Lb 8-25g",
+        "descripcion": [
+          "Medida: 1.80m en 2 tramos",
+          "Tipo de reel utilizable: huevito",
+          "Composición: fibra de vidrio",
+          "5 pasahilos de cerámica de 2 y 6 patas",
+          "Acción: Moderate Fast",
+          "Power: Medium",
+          "Libraje: 6 a 12",
+          "Capacidad de lanzamiento máximo: 8 a 25 gramos",
+          "Peso: 110 gramos",
+          "Medida cerrada: 94.5 cm",
+          "Diámetro (mm):",
+          "Gancho porta anzuelo 'hook keeper'",
+          "Portareel de grafito con capuchón de acero inoxidable",
+          "Empuñadura recortada de goma eva ergonómica con diseño camuflado",
+          "Incluye funda de tela estampada con divisiones"
+        ],
+        "stock": true,
+        "codigo": "PESCA0004",
+        "imagenes": ["reelhuevomonster1.jpeg"],
+        "precio": 21.500,
+        "cantidad": 1
+      },
+      {
+        "tipo": "leaders",
+        "nombre": "Cable De Acero Leaders Armados CASTER 15cm 20 Lb 10 Unidades",
+        "descripcion": [
+          "Cable de acero armado con esmerillón y mosquetón de acero inoxidable",
+          "Ideal para pesca de peces depredadores con carnada",
+          "Resistencia: 20 libras",
+          "Medida: 15cm",
+          "Color: plata",
+          "Presentación: bolsita de 10 unidades"
+        ],
+        "stock": true,
+        "codigo": "PESCA0005",
+        "imagenes": ["reelhuevomonster1.jpeg"],
+        "precio": 3.600,
+        "cantidad": 1
+      },
+      {
+        "tipo": "mosquetones",
+        "nombre": "Mosquetones CASTER #1 Acero Inoxidable Negros 13kg 100 Unidades",
+        "descripcion": [
+          "Mosquetones de acero inoxidable negros",
+          "Número: 1",
+          "Resistencia: 13 kg",
+          "Medida: 2,1 cm de largo",
+          "Presentación: bolsita de 100 unidades"
+        ],
+        "stock": true,
+        "codigo": "PESCA0006",
+        "imagenes": ["reelhuevomonster1.jpeg"],
+        "precio": 6.500,
+        "cantidad": 1
+      },
+      {
+        "tipo": "multifilamento",
+        "nombre": "Multifilamento Castforce 4x 0.18mm 12,3kg 27lb 100m Verde",
+        "descripcion": [
+          "Diámetro: 0.18 mm",
+          "Resistencia: 12,3 kg | 27 lbs",
+          "Cantidad: 600 metros en 6 carreteles de 100 metros cada uno",
+          "Alta resistencia a la abrasión de agua dulce y salada",
+          "Trenzado de 4 fibras sin memoria",
+          "Máxima flotabilidad y sensibilidad"
+        ],
+        "stock": true,
+        "codigo": "PESCA0007",
+        "imagenes": ["reelhuevomonster1.jpeg"],
+        "precio": 3.500,
+        "cantidad": 1
+      },
+      {
+        "tipo": "multifilamento",
+        "nombre": "Multifilamento Castforce 4x 0.18mm 12,3kg 27lb 100m Amarillo",
+        "descripcion": [
+          "Diámetro: 0.18 mm",
+          "Resistencia: 12,3 kg | 27 lbs",
+          "Cantidad: 600 metros en 6 carreteles de 100 metros cada uno",
+          "Alta resistencia a la abrasión de agua dulce y salada",
+          "Trenzado de 4 fibras sin memoria",
+          "Máxima flotabilidad y sensibilidad"
+        ],
+        "stock": true,
+        "codigo": "PESCA0008",
+        "imagenes": ["reelhuevomonster1.jpeg"],
+        "precio": 3.500,
+        "cantidad": 1
+      },
+      {
+        "tipo": "reel",
+        "nombre": "Reel Frontal Black Widow 4006 Variada Río",
+        "descripcion": [
+          "5 + 1 RULEMANES blindados de acero inoxidable MaxiDur™",
+          "Relación de giro: 5.2:1",
+          "Capacidad mm/M: 0.30/200 - 0.35/160 - 0.40/100",
+          "Peso: 345 gramos",
+          "Max drag: 20 libras",
+          "Freno multidisco con alto poder de arrastre",
+          "Alarma de salida de línea",
+          "Cuerpo construido en grafito de alta resistencia GraphMax™",
+          "Rotor hueco alivianado AirRotor™",
+          "Anti-reverse infinito instantáneo",
+          "Carretel de aluminio CNC forjado y alivianado",
+          "Carretel de grafito adicional",
+          "Manija en aluminio CNC reforzada con empuñadura de fuerza en aluminio, intercambiable izquierda/derecha",
+          "Pick up de aluminio grueso PowerBail™",
+          "Diseño ultra liviano y compacto"
+        ],
+        "stock": true,
+        "codigo": "PESCA0009",
+        "imagenes": ["reelhuevomonster1.jpeg"],
+        "precio": 38.500,
+        "cantidad": 1
+      },
+      {
+        "tipo": "reel",
+        "nombre": "Reel Frontal CASTER Flex 4002 Variada Río 2 Rulemanes",
+        "descripcion": [
+          "2 RULEMANES de acero MaxiDur™",
+          "Radio de giro: 5.5:1",
+          "Capacidad mm/m: 0.30/240 - 0.35/165 - 0.40/140",
+          "Peso: 300 gramos",
+          "Freno multidisco con alto poder de arrastre",
+          "Max drag: 12 libras",
+          "Cuerpo construido en grafito de alta resistencia GraphMax™",
+          "Rotor micro-balanceado por computadora",
+          "Anti-reverse infinito",
+          "Carretel de grafito alivianado",
+          "Manija de grafito intercambiable izquierda/derecha",
+          "Pick up de aluminio grueso PowerBail™"
+        ],
+        "stock": true,
+        "codigo": "PESCA0010",
+        "imagenes": ["reelhuevomonster1.jpeg"],
+        "precio": 22.800,
+        "cantidad": 1
+      },
+      {
+        "tipo": "reel",
+        "nombre": "Reel Huevito CASTER Unlimited Pro 110 Bait Casting 10 Rulemanes 7.2:1",
+        "descripcion": [
+          "9 + 1 RULEMANES blindados de acero inoxidable MaxiDur™",
+          "Relación de giro de alta velocidad: 7.2:1",
+          "Capacidad mm/m: multifilamento 0.18/100 - monofilamento 0.30/120",
+          "Peso: 205 gramos",
+          "Max Drag: 18 libras",
+          "Engranaje y piñon de bronce",
+          "Freno magnético de 10 imanes con regulación externa",
+          "Alarma automática de salida de línea (chicharra)",
+          "Sistema de desarme rápido de tapa lateral",
+          "Cuerpo de bajo perfil construido en grafito de alta resistencia GraphMax™",
+          "Carretel de aluminio CNC forjado y alivianado",
+          "Manija doble de aluminio CNC reforzada y alivianada con empuñaduras de goma eva",
+          "Devanador automático sincronizado en forma ovalada para evitar la fricción en el lanzamiento"
+        ],
+        "stock": true,
+        "codigo": "PESCA0011",
+        "imagenes": ["reelhuevomonster1.jpeg"],
+        "precio": 59.800,
+        "cantidad": 1
+      },
+      {
+        "tipo": "señuelos",
+        "nombre": "Señuelo Combat Frog 5.5cm 14g Rana Goma Antienganche",
+        "descripcion": [
+          "Rana de goma Combat Frog",
+          "Largo: 5.5 cm (total con cuchara: 8 cm)",
+          "Peso: 14 gramos",
+          "Anzuelo simple antienganche",
+          "Con cuchara giratoria",
+          "Ideal para pesca de tarariras"
+        ],
+        "stock": true,
+        "codigo": "PESCA0013",
+        "imagenes": ["reelhuevomonster1.jpeg"],
+        "precio": 2.900,
+        "cantidad": 1
+      },
+      {
+        "tipo": "señuelos",
+        "nombre": "Señuelo Lunker Frog 6cm 16g Rana Goma Antienganche",
+        "descripcion": [
+          "Rana de goma Lunker Frog",
+          "Largo: 6 cm (total con patas extendidas: 12 cm)",
+          "Peso: 16 gramos",
+          "Anzuelo doble antienganche",
+          "Patas de goma con movimiento",
+          "Ideal para pesca de tarariras"
+        ],
+        "stock": true,
+        "codigo": "PESCA0014",
+        "imagenes": ["reelhuevomonster1.jpeg"],
+        "precio": 3.400,
+        "cantidad": 1
+      },
+      {
+        "tipo": "señuelos",
+        "nombre": "Señuelo River Shad 12cm 24.9g Articulado Hundimiento",
+        "descripcion": [
+          "Señuelo River Shad",
+          "Largo: 12 cm",
+          "Peso: 24,9 gramos",
+          "Articulaciones: 6",
+          "Acción: hundimiento (profundidad máxima 3 m)",
+          "Con rattling (sonajero)",
+          "Anzuelos: 2 triples",
+          "Los señuelos CASTER PRO EDITION han sido desarrollados con los mejores materiales para replicar el movimiento y la apariencia de un pez real, logrando así un diseño sumamente realista.",
+          "Las principales características de nuestros señuelos son: cuerpo sellado por ultrasonido y testeado en tanques de alta presión, anzuelos extremadamente filosos y resistentes, anillas forjadas, ojos holográficos en 3D, pintura e impresiones realistas de alto nivel.",
+          "Cada señuelo ha sido testeado individualmente para ofrecer la mejor experiencia y efectividad."
+        ],
+        "stock": true,
+        "codigo": "PESCA0015",
+        "imagenes": ["reelhuevomonster1.jpeg"],
+        "precio": 6.600,
+        "cantidad": 1
+      },
+      {
+        "tipo": "señuelos",
+        "nombre": "Señuelo Froggy 6.5cm 9g Rana Superficie",
+        "descripcion": [
+          "Señuelo Froggy",
+          "Largo: 6.5 cm",
+          "Peso: 9 gramos",
+          "Acción: superficie",
+          "Con rattling (sonajero)",
+          "Anzuelos: 2 triples rojos"
+        ],
+        "stock": true,
+        "codigo": "PESCA0016",
+        "imagenes": ["reelhuevomonster1.jpeg"],
+        "precio": 2.400,
+        "cantidad": 1
+      },
+      {
+        "tipo": "señuelos",
+        "nombre": "Señuelo Goma Big Frog 90mm 15.5g Pack 2 Unidades",
+        "descripcion": [
+          "Ranitas de goma Big Frog",
+          "Largo: 9 cm",
+          "Peso: 15.5 gramos",
+          "Antienganche",
+          "Para armar con anzuelo offset",
+          "Ideal para pesca de tarariras",
+          "Presentación: sobre de 2 unidades"
+        ],
+        "stock": true,
+        "codigo": "PESCA0017",
+        "imagenes": ["reelhuevomonster1.jpeg"],
+        "precio": 2.600,
+        "cantidad": 1
+      },
+      {
+        "tipo": "señuelos",
+        "nombre": "Cuchara Giratoria 03#2 5cm 8g Anzuelo Offset #3/0",
+        "descripcion": [
+          "Cuchara giratoria #2 (2,8 cm)",
+          "Largo: 5 cm (total incluyendo anzuelo: 9.8 cm)",
+          "Peso: 8 gramos",
+          "Anzuelo offset #3/0"
+        ],
+        "stock": true,
+        "codigo": "PESCA0018",
+        "imagenes": ["reelhuevomonster1.jpeg"],
+        "precio": 3.100,
+        "cantidad": 1
+      },
+      {
+        "tipo": "reel",
+        "nombre": "Reel Abu Garcia Black Max 3 BaitCasting Drag 8kg",
+        "descripcion": [
+          "Reel Black Max 3 Abu Garcia",
+          "Tipo: Low profile",
+          "Marca: Abu García",
+          "Mano: Zurdo o derecho",
+          "Cuerpo: Grafito",
+          "Rulemanes: 4+1 de acero inoxidable",
+          "Velocidad: 6.4:1",
+          "Sistema de frenado: Power DisK™ de Abu",
+          "Sistema Mag Trax™: 10 posiciones de frenado magnético regulable",
+          "Capacidad de línea: 145 metros de 0.30 mm"
+        ],
+        "stock": true,
+        "codigo": "PESCA0020",
+        "imagenes": ["reelhuevomonster1.jpeg"],
+        "precio": 72.000,
+        "cantidad": 1
+      },
+      {
+        "tipo": "señuelos",
+        "nombre": "Señuelo Cuchara Giratoria ZWICKE",
+        "descripcions": [
+          "Alta calidad",
+          "Acabado holográfico altamente reflectante"
+        ],
+        "stock": true,
+        "codigo": "PESCA0020",
+        "imagenes": ["reelhuevomonster1.jpeg"],
+        "precio": 2.800,
+        "cantidad": 1
+      }
     ],
-    "electronica": [
-
-      
-    ]
+    "electronica": []
   }
 }

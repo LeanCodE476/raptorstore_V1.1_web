@@ -7,8 +7,7 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import { CartContext } from "../Contexts/CartContext";
 import { useContext } from "react";
 const CardProductos = ({ product }) => {
-  const { cart, setCart, contador, setContador, total, setTotal } =
-    useContext(CartContext);
+  const { onAddProduct } = useContext(CartContext);
   const { nombre = "", precio = 0, codigo = "", imagenes = [] } = product || {};
   const navigate = useNavigate();
 
@@ -18,30 +17,6 @@ const CardProductos = ({ product }) => {
   };
   const formattedPrice = precio.toFixed(3);
 
-  const onAddProduct = (items) => {
-    const { codigo, nombre, precio, imagenes } = items;
-
-    if (cart.find((item) => item.codigo === codigo)) {
-      const products = cart.map((item) =>
-        item.codigo === codigo ? { ...item, cantidad: item.cantidad + 1 } : item
-      );
-      setTotal(total + items.precio * items.cantidad)
-      setContador(contador + items.cantidad);
-      return setCart([...products]);
-    }
-    setTotal(total + items.precio * items.cantidad)
-    setContador(contador + items.cantidad);
-    setCart((prevCart) => [
-      ...prevCart,
-      {
-        codigo,
-        cantidad: 1,
-        nombre,
-        precio,
-        imagen: imagenes[0],
-      },
-    ]);
-  };
 
   return (
     <>
@@ -52,7 +27,7 @@ const CardProductos = ({ product }) => {
           flexDirection: "column",
           alignItems: "center",
           maxWidth: "11.5rem",
-          height: "auto",
+          height: "22rem",
           bgcolor: "white",
           pb: ".7rem",
           borderRadius: ".5rem .5rem 0rem 0rem",
@@ -69,7 +44,7 @@ const CardProductos = ({ product }) => {
         </Typography>
 
         <img
-          src={imagenes[0]}
+          src={`/images/${imagenes[0]}`}
           alt={nombre}
           style={{
             width: "90%",

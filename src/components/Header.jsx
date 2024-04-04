@@ -1,13 +1,27 @@
-import { Box, Button, Divider, Drawer, List, Typography } from "@mui/material";
-import { useContext, useState } from "react";
-import CloseIcon from "@mui/icons-material/Close";
+import { useContext, useState,useRef } from "react";
+import {
+  Box,
+  Button,
+  Drawer,
+  IconButton,
+  List,
+  Typography,
+} from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { CartContext } from "../Contexts/CartContext";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
+import logoRaptor from "../../public/images/logoRaptor.png";
+import carritoVacio from "../../public/images/carritoVacio.png";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { useNavigate } from "react-router-dom";
+import { useAutoAnimate } from '@formkit/auto-animate/react'
+import '../App.css'
 
 const Header = () => {
-  const { cart, total, contador, cleanCart, onDeleteProduct } =
+  const navigate = useNavigate();
+  const { cart, total, contador, increaseItems, decreaseItems } =
     useContext(CartContext);
   const [open, setOpen] = useState(false);
 
@@ -39,51 +53,58 @@ const Header = () => {
     window.open(enlaceWhatsapp);
   }
 
+
+  const [animationParent] = useAutoAnimate()
   return (
     <header
       style={{
         display: "flex",
         justifyContent: "space-between",
+        alignItems: "center",
         top: "0",
         width: "100%",
-        height: "4rem",
+        height: "5rem",
         lineHeight: "4rem",
         fontSize: "1rem",
         zIndex: "9",
         color: "#FF0000",
-        borderBottom: "1px solid #FF0000",
+        borderBottom: "2px solid #FF0000",
         position: "relative",
+        backgroundColor: "black",
       }}
     >
-      <h1 style={{ marginLeft: "1rem" }}>Raptor Store</h1>
+      <img
+        src={logoRaptor}
+        alt="logo raptor store"
+        style={{ height: "4rem", marginLeft: "2rem", cursor: "pointer" }}
+        onClick={() => navigate("/")}
+      />
       <ShoppingCartIcon
-        sx={{ fontSize: "2rem", mr: "2rem", mt: "1rem", cursor: "pointer" }}
+        sx={{ fontSize: "2rem", mr: "2rem", mt: ".3rem", cursor: "pointer" }}
         onClick={() => setOpen(true)}
         className="icon-cart"
       />
 
-      <span
+      <Typography
         className="cart-count"
         style={{
           position: "absolute",
-          top: ".2rem",
-          right: "4rem",
-          color: "white",
+          top: "2rem",
+          right: "4.3rem",
+          color: "#ff0000",
           padding: "0rem",
           display: "inline-block",
           fontWeight: "bold",
         }}
       >
-        {contador}
-      </span>
-
+        {0 || contador}
+      </Typography>
       <Drawer open={open} anchor="right" onClose={() => setOpen(false)}>
         <Box
           sx={{
-            width: "23rem",
+            width: "25rem",
             borderRadius: ".5rem",
-            minHeight: "5rem",
-            bgcolor: "white",
+            minHeight: "90vh",
             position: "relative",
           }}
         >
@@ -92,14 +113,15 @@ const Header = () => {
             textAlign={"center"}
             mt={"1rem"}
             pb={".5rem"}
+            fontWeight={"bold"}
           >
-            Tu Carrito
+            Mi Carrito
           </Typography>
-          <CloseIcon
+          <ArrowBackIosIcon
             sx={{
               position: "absolute",
               top: ".7rem",
-              left: ".5rem",
+              left: "1.6rem",
               fontSize: "2rem",
               color: "red",
               cursor: "pointer",
@@ -107,135 +129,177 @@ const Header = () => {
             className="close-icon"
             onClick={() => setOpen(false)}
           />
-          <hr />
+          <Typography sx={{position:'absolute',top:'2rem',right:'1rem',fontWeight:'bold',color:'#25d366'}}>{0 || contador} Productos</Typography>
           <Box
             sx={{
-              overflowX: "auto",
-              maxHeight: "30rem",
-              paddingBottom: "1rem",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              overflowY: "scroll",
+              Height: "60vh",
+              paddingBottom: "2rem",
+              maskImage: "linear-gradient(white 93%,transparent)",
+            
             }}
+            ref={animationParent}
+
           >
             {" "}
             {cart.length > 0 ? (
-              cart.map((productos,i) => (
+              cart.map((productos, i) => (
                 <>
                   <List
-                  key={i}
+                    key={i}
                     sx={{
                       display: "flex",
                       justifyContent: "space-around",
                       alignItems: "center",
+                      borderRadius: ".5rem",
+                      width: "90%",
+                      height: "6rem",
+                      mt: ".7rem",
+                      bgcolor: "white",
+                      boxShadow: `0 1px 2px rgba(0, 0, 0, 0.2)`,
                     }}
                   >
                     <img
                       src={`/images/${productos.imagen}`}
                       alt={productos.nombre}
                       style={{
-                        width: "3rem",
-                        height: "2.5rem",
+                        width: "5rem",
+                        height: "5rem",
                         cursor: "pointer",
-                        outline: "1px solid gray",
+                        outline: "1px solid #D7DBDD ",
                         borderRadius: ".2rem",
                       }}
                     />
-                    <Typography fontWeight={"bold"} fontSize={".8rem"}>
-                      {productos.cantidad}
-                    </Typography>
-                    <Typography
+                    <Box
                       sx={{
-                        maxWidth: "8rem",
-                        whiteSpace: "nowrap",
-                        overflow: "hidden",
-                        textOverflow: "ellipsis",
-                        fontSize: ".9rem",
+                        height: "4.5rem",
+                        width: "12rem",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-between",
                       }}
                     >
-                      {productos.nombre}
-                    </Typography>
-                    <Typography fontWeight={"bold"} fontSize={".8rem"}>
-                      $ {formattedPrice(productos.precio)}
-                    </Typography>
-                    <CloseIcon
-                      className="icon-delete-cart-item"
-                      onClick={() => onDeleteProduct(productos)}
-                    />
+                      <Typography
+                        sx={{
+                          maxWidth: "12rem",
+                          whiteSpace: "nowrap",
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
+                          fontSize: ".9rem",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        {productos.nombre}
+                      </Typography>{" "}
+                      <Typography fontWeight={"bold"} fontSize={"1.2rem"}>
+                        $ {formattedPrice(productos.precio)}
+                      </Typography>
+                    </Box>
+
+                    <Box
+                      sx={{
+                        height: "5rem",
+                        width: "1.5rem",
+                        borderRadius: "1rem",
+                        bgcolor: "#E5E7E9 ",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        boxShadow: `0 1px 2px rgba(0, 0, 0, .6)`,
+                      }}
+                    >
+                      <IconButton
+                        sx={{ width: "1.3rem", height: "1.3rem" }}
+                        onClick={() => increaseItems(productos)}
+                      >
+                        <AddIcon
+                          sx={{ color: "#ff0000", fontSize: "1.3rem" }}
+                        />
+                      </IconButton>
+
+                      <Typography sx={{ fontWeight: "bold" }}>
+                        {productos.cantidad}
+                      </Typography>
+                      <IconButton
+                        sx={{ width: "1.3rem", height: "1.3rem" }}
+                        onClick={() => decreaseItems(productos)}
+                      >
+                        <RemoveIcon
+                          sx={{ color: "#ff0000", fontSize: "1.3rem" }}
+                        />
+                      </IconButton>
+                    </Box>
                   </List>
-                  <Divider />
                 </>
               ))
             ) : (
-              <Typography
-                variant="h6"
-                textAlign={"center"}
-                fontWeight={"bold"}
-                mt={"2rem"}
-              >
-                Tu carrito se encuentra vacio
-              </Typography>
+              <>
+                <img
+                  src={carritoVacio}
+                  alt="carrito-vacio"
+                  style={{ width: "10rem", marginTop: "14rem" }}
+                />
+                <Typography
+                  variant="h6"
+                  textAlign={"center"}
+                  mt={"2rem"}
+                  color={"gray"}
+                >
+                  Carrito Vacío
+                </Typography>
+              </>
             )}
           </Box>
         </Box>
-        <Typography
-          variant="h6"
-          sx={{
-            position: "absolute",
-            bottom: "7rem",
-            fontWeight: "bold",
-            fontSize: "1.5rem",
-            textAlign: "center",
-            left: "0rem",
-            right: "0rem",
-          }}
-        >
-          Total:${total.toFixed(3)}
-        </Typography>
-
         {cart.length > 0 ? (
-          <>
-            <Button
+          <Box
+            sx={{
+              width: "23rem",
+              borderTop: "1px solid #CACFD2  ",
+              height: "10rem",
+              position: "absolute",
+              bottom: "0rem",
+              left: "1rem",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-around",
+            }}
+          >
+            <Box
               sx={{
-                borderTop: "2px solid #ff0000",
-                bgcolor: "black",
-                color: "white",
-                borderRadius: "0rem",
-                position: "absolute",
-                bottom: "0rem",
                 width: "100%",
-                height: "2.4rem",
-                "&:hover": {
-                  backgroundColor: "red",
-                  color: "white",
-                },
+                display: "flex",
+                justifyContent: "space-between",
+                mt: "-1rem",
               }}
-              onClick={() => cleanCart()}
             >
-              Vaciar Carrito <RemoveShoppingCartIcon />
-            </Button>
+              <Typography
+                fontWeight={"bold"}
+                fontSize={"1.2rem"}
+                color={"gray "}
+              >
+                Total
+              </Typography>
+              <Typography fontWeight={"bold"} fontSize={"1.2rem"} color={'#25d366'}>
+                ${total.toFixed(3)}
+              </Typography>
+            </Box>
             <Button
               sx={{
-                bgcolor: "#00A617",
+                bgcolor: "#25d366",
                 color: "white",
-                width: "10rem",
-                position: "absolute",
-                bottom: "3.5rem",
-                fontWeight: "bold",
-                fontSize: "1rem",
-                textTransform:'capitalize',
-                left: "28%",
-                right: "28%",
-                "&:hover": {
-                  backgroundColor: "black",
-                  color: "white",
-                },
+                borderRadius: ".5rem",
+                textTransform: "capitalize",
               }}
-              onClick={enviarMensajeWhatsapp}
+              onClick={() => enviarMensajeWhatsapp()}
             >
-              Comprar{" "}
-              <WhatsAppIcon
-                sx={{ marginLeft: "1rem", fontSize: "2rem", color: "white" }}
-              />
+             Comprar Carrito <WhatsAppIcon sx={{ marginLeft: "1rem" }} />
             </Button>
-          </>
+          </Box>
         ) : null}
       </Drawer>
     </header>

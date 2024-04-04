@@ -23,7 +23,11 @@ const Footer = () => {
       sx={{ width: "100%", backgroundColor: "black", pb: "1rem" }}
       textAlign={"center"}
       borderTop={"2px solid #FF0000"}
+      position={'relative'}
     >
+    <Typography color={"#FF0000"} fontSize={"1rem"} position={'absolute'} fontWeight={'bold'} left={'1rem'} top={'.8rem'}>
+    V 1.0
+  </Typography>
       <Typography color={"#FF0000"} pt={"1rem"} fontSize={".8rem"}>
         Todos los derechos reservados ©raptorstore
       </Typography>

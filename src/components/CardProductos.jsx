@@ -1,11 +1,14 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, IconButton, Typography } from "@mui/material";
 
 import { useNavigate } from "react-router-dom";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
-
+import logoCaster from "../../public/images/logo-caster.png";
+import logoAbuGarcia from "../../public/images/logoAbuGarcia.jpg";
+import logoBeast from "../../public/images/logo-beast.png";
 import { CartContext } from "../Contexts/CartContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 const CardProductos = ({ product }) => {
   const { onAddProduct } = useContext(CartContext);
   const { nombre = "", precio = 0, codigo = "", imagenes = [] } = product || {};
@@ -17,6 +20,28 @@ const CardProductos = ({ product }) => {
   };
   const formattedPrice = precio.toFixed(3);
 
+  const logos = {
+    caster: logoCaster,
+    abugarcia: logoAbuGarcia,
+    beast: logoBeast,
+  };
+  const [cantidad, setCantidad] = useState(product.cantidad || 0);
+
+  const handleIncrease = () => {
+    setCantidad(cantidad + 1);
+  };
+
+  const handleDecrease = () => {
+    if (cantidad > 1) {
+      setCantidad(cantidad - 1);
+    }
+  };
+
+  const handleAddToCart = () => {
+    const productToAdd = { ...product, cantidad: cantidad };
+    onAddProduct(productToAdd);
+    setCantidad(1);
+  };
 
   return (
     <>
@@ -27,29 +52,50 @@ const CardProductos = ({ product }) => {
           flexDirection: "column",
           alignItems: "center",
           maxWidth: "11.5rem",
-          height: "22rem",
+          height: "auto",
+          pb: "1.5rem",
           bgcolor: "white",
-          pb: ".7rem",
           borderRadius: ".5rem .5rem 0rem 0rem",
           boxShadow: `
-      0px 4px 8px rgba(0, 0, 0, 0.25),
-      0px 0px 2px rgba(0, 0, 0, 0.12)
-    `,
+          0px 4px 8px rgba(0, 0, 0, 0.25),
+          0px 0px 2px rgba(0, 0, 0, 0.12)
+           `,
           borderBottom: "2px solid #FF0000",
           borderTop: "2px solid #FF0000",
         }}
       >
-        <Typography mt={".4rem"} ml={"-3rem"} color={"#CACFD2"}>
-          Cod:{codigo}
-        </Typography>
+        <Box
+          sx={{
+            width: "90%",
+            height: "2rem",
+            display: "flex",
+            marginTop: ".5rem",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          {" "}
+          <Typography color={"#CACFD2"} fontSize={".8rem"}>
+            {codigo}
+          </Typography>
+          {product.marca && logos[product.marca] && (
+            <img
+              src={logos[product.marca]}
+              alt={`logo-${product.marca}`}
+              style={{
+                width: "5.5rem",
+              }}
+            />
+          )}
+        </Box>
 
         <img
           src={`/images/${imagenes[0]}`}
           alt={nombre}
           style={{
             width: "90%",
-            height: "auto",
-            marginTop: ".5rem",
+            height: "10rem",
+            marginTop: "1rem",
             aspectRatio: "4/3",
             boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
             borderRadius: ".5rem ",
@@ -91,47 +137,67 @@ const CardProductos = ({ product }) => {
             ${formattedPrice}
           </Typography>
         </Box>
-
-        <Button
-          variant="contained"
+        <Box
           sx={{
-            bgcolor: "#E5E7E9",
-            color: "black",
-            outline: "1px solid black",
+            width: "90%",
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+          }}
+        >
+          <Box
+            sx={{
+              height: "2rem",
+              width: "5rem",
+              borderRadius: ".3rem",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <IconButton
+              sx={{
+                bgcolor: "#E5E7E9",
+                padding: ".2rem",
+                opacity: cantidad === 1 ? 0 : 1,
+              }}
+              disabled={cantidad === 1}
+              onClick={handleDecrease}
+            >
+              <RemoveIcon sx={{ color: "#424949 ", fontSize: "1.6rem" }} />
+            </IconButton>
 
-            fontFamily: "Roboto",
-            fontSize: ".8rem",
-            textTransform: "capitalize",
-            "&:hover": {
-              backgroundColor: "black",
+            <Typography sx={{ fontWeight: "bold", margin: ".5rem" }}>
+              {cantidad}
+            </Typography>
+
+            <IconButton
+              sx={{
+                bgcolor: "#E5E7E9",
+                padding: ".2rem",
+              }}
+              onClick={handleIncrease}
+            >
+              <AddIcon sx={{ color: "#424949  ", fontSize: "1.6rem" }} />
+            </IconButton>
+          </Box>
+          <IconButton
+            sx={{
+              bgcolor: "#1F1F1F",
               color: "white",
-            },
-          }}
-          onClick={handleVerDetallesClick}
-        >
-          Ver Detalles{" "}
-          <ArrowOutwardIcon sx={{ fontSize: "1.2rem", ml: ".5rem" }} />
-        </Button>
-        <Button
-          variant="contained"
-          sx={{
-            bgcolor: "#1F1F1F",
-            color: "white",
-            outline: "1px solid black",
-            marginTop: "1rem",
-            fontFamily: "Roboto",
-            fontSize: ".8rem",
-            textTransform: "capitalize",
-            "&:hover": {
-              backgroundColor: "black",
-              color: "white",
-            },
-          }}
-          onClick={() => onAddProduct(product)}
-        >
-          Agregar Al Carrito
-          <AddShoppingCartIcon sx={{ fontSize: "1.2rem", ml: ".5rem" }} />
-        </Button>
+              width: "3rem",
+              height: "2rem",
+              borderRadius: ".3rem",
+              "&:hover": {
+                backgroundColor: "black",
+                color: "white",
+              },
+            }}
+            onClick={handleAddToCart}
+          >
+            <AddShoppingCartIcon sx={{ fontSize: "1.2rem" }} />
+          </IconButton>
+        </Box>
       </Box>
     </>
   );

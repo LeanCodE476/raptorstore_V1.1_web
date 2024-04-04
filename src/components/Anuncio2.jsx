@@ -12,22 +12,29 @@ const Anuncio2 = () => {
       boxShadow={"0px 4px 5px 0px rgba(0,0,0,0.5)"}
       maxWidth={"40rem"}
       overflow={"hidden"}
-      bgcolor={'white'}
-   
+      bgcolor={"black"}
+      color={"#ff0000"}
+      outline={"1px solid #FF0000"}
     >
       <Typography
         variant="h5"
         textAlign={"center"}
         pt={"1rem"}
-        pb={".3rem"}
+        pb={".5rem"}
         fontWeight={"bold"}
         borderBottom={"1px solid gray"}
+        color={"#ff0000"}
+        textTransform={"uppercase"}
       >
-        <img src={ship} style={{ width: "2rem" }} alt="logo-ship" /> Envios a
-        todo el Pais{" "}
+        <img
+          src={ship}
+          style={{ width: "3rem", filter: "invert(1)", paddingRight: ".5rem" }}
+          alt="logo-ship"
+        />{" "}
+        Envios a todo el Pais{" "}
         <img
           src={argentina}
-          style={{ width: "3rem", marginBottom: "-.8rem" }}
+          style={{ width: "3rem", marginBottom: "-.8rem", filter: "invert(1)" }}
           alt="logo-argentina"
         />
       </Typography>
@@ -38,15 +45,9 @@ const Anuncio2 = () => {
         alignItems={"center"}
       >
         <Typography fontWeight={"bold"}>Transferencias</Typography>
-        <Typography fontWeight={"bold"} color={"#52BE80 "}>
-          Efectivo
-        </Typography>
-        <Typography fontWeight={"bold"} color={"#D4AC0D  "}>
-          Bitcoin
-        </Typography>
-        <Typography fontWeight={"bold"} color={"green"}>
-          Usdt
-        </Typography>
+        <Typography fontWeight={"bold"}>Efectivo</Typography>
+        <Typography fontWeight={"bold"}>Bitcoin</Typography>
+        <Typography fontWeight={"bold"}>Usdt</Typography>
       </Box>
     </Box>
   );

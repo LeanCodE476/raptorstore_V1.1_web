@@ -1,16 +1,25 @@
-import React, { useContext } from "react";
-import { Button, Container, Typography, Box } from "@mui/material";
+import React, { useContext, useState } from "react";
+import { Button, Container, Typography, Box, IconButton, Divider } from "@mui/material";
 import { useParams, useNavigate } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { CartContext } from "../Contexts/CartContext";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
+import { useEffect } from "react";
+import { animateScroll as scroll } from "react-scroll";
 
 const Detalle = ({ products }) => {
+
+
+  useEffect(() => {
+    scroll.scrollToTop();
+  }, []);
   const { codigo } = useParams();
   const navigate = useNavigate();
   const [index, setIndex] = React.useState(0);
   const [markedIndex, setMarkedIndex] = React.useState(0);
-  const { onAddProduct } = useContext(CartContext);
+  const { onAddProduct,cart, total, contador, increaseItems, decreaseItems } = useContext(CartContext);
   let product = null;
 
   for (const categoryKey in products.productos) {
@@ -34,6 +43,24 @@ const Detalle = ({ products }) => {
   };
 
   const formattedPrice = product ? product.precio.toFixed(3) : "";
+
+  const [cantidad, setCantidad] = useState(product.cantidad || 0);
+
+  const handleIncrease = () => {
+    setCantidad(cantidad + 1);
+  };
+
+  const handleDecrease = () => {
+    if (cantidad > 1) {
+      setCantidad(cantidad - 1);
+    }
+  };
+
+  const handleAddToCart = () => {
+    const productToAdd = { ...product, cantidad: cantidad };
+    onAddProduct(productToAdd);
+    setCantidad(1);
+  };
 
   if (!product) {
     return <p>Producto no encontrado</p>;
@@ -62,7 +89,8 @@ const Detalle = ({ products }) => {
           flexDirection: "column",
           alignItems: "center",
           p: "1rem",
-          marginBottom: "1rem",
+          paddingBottom:'2rem',
+          marginBottom: "2rem",
           width: "100%",
           maxWidth: "40rem",
           bgcolor: "white",
@@ -71,7 +99,7 @@ const Detalle = ({ products }) => {
           borderBottom: "2px solid #ff0000",
         }}
       >
-        <Typography variant="h6">{product.nombre}</Typography>
+        <Typography variant="h6" textAlign={'center'} width={'90%'}>{product.nombre}</Typography>
         <Box sx={{ display: "flex", width: "90%", alignItems: "center" }}>
           <Typography
             variant="h5"
@@ -142,7 +170,7 @@ const Detalle = ({ products }) => {
         <Typography
           variant="h5"
           width={"90%"}
-          mt={"1rem"}
+          mt={"2rem"}
           textAlign={"center"}
           fontWeight={"bold"}
         >
@@ -158,34 +186,80 @@ const Detalle = ({ products }) => {
             }}
           >
             {product.descripcion.map((desc, i) => (
-              <li key={i} style={{ marginTop: ".5rem" }}>
+              <li key={i} style={{ marginTop: ".5rem",color:'gray' }}>
                 -{desc}
               </li>
             ))}
           </ul>
         </Box>
-
-        <Button
-          variant="contained"
+        <Box
+        sx={{
+          width: "90%",
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+          marginTop:'2rem',
+          maxWidth:'20rem'
+        }}
+      >
+        <Box
           sx={{
-            // width:'20rem',
-            padding: ".5rem 1rem .5rem 1rem",
-            bgcolor: "#34495E",
+            height: "2rem",
+            width: "5rem",
+            borderRadius: ".3rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <IconButton
+            sx={{
+              bgcolor: "#E5E7E9",
+              padding: ".2rem",
+              opacity: cantidad === 1 ? 0 : 1,
+            }}
+            disabled={cantidad === 1}
+            onClick={handleDecrease}
+          >
+            <RemoveIcon sx={{ color: "#424949 ", fontSize: "1.6rem" }} />
+          </IconButton>
+
+          <Typography sx={{ fontWeight: "bold", margin: ".5rem" }}>
+            {cantidad}
+          </Typography>
+
+          <IconButton
+            sx={{
+              bgcolor: "#E5E7E9",
+              padding: ".2rem",
+            }}
+            onClick={handleIncrease}
+          >
+            <AddIcon sx={{ color: "#424949  ", fontSize: "1.6rem" }} />
+          </IconButton>
+        </Box>
+        <IconButton
+          sx={{
+            bgcolor: "#1F1F1F",
             color: "white",
-            marginTop: "2rem",
-            fontFamily: "Roboto",
-            fontSize: ".8rem",
-            textTransform: "capitalize",
+            width: "7rem",
+            height: "2rem",
+            borderRadius: ".3rem",
+            fontSize:'1rem',
+            fontWeight:'bold',
             "&:hover": {
               backgroundColor: "black",
               color: "white",
             },
           }}
-          onClick={() => onAddProduct(product)}
+          onClick={handleAddToCart}
         >
-          Agregar Al Carrito
-          <AddShoppingCartIcon sx={{ fontSize: "1.2rem", ml: ".5rem" }} />
-        </Button>
+        Agregar
+
+          <AddShoppingCartIcon sx={{ fontSize: "1.2rem",marginLeft:'.5rem'}} />
+        </IconButton>
+      </Box>
+   
       </Box>
     </Container>
   );

@@ -15,6 +15,7 @@ const CartProvider = ({ children }) => {
     setTotal(0);
     setContador(0);
   };
+
   const onDeleteProduct = product => {
 		const results = cart.filter(
 			item => item.codigo !== product.codigo
@@ -23,7 +24,7 @@ const CartProvider = ({ children }) => {
 		setTotal(total - product.precio * product.cantidad);
 		setContador(contador - product.cantidad);
 		setCart(results);
-    enqueueSnackbar("Se elimino un producto del carrito", {
+    enqueueSnackbar("Se eliminó un producto del carrito", {
       variant: "error",
       anchorOrigin: {
         vertical: "bottom",
@@ -34,10 +35,10 @@ const CartProvider = ({ children }) => {
 
   const onAddProduct = (items) => {
     const { codigo, nombre, precio, imagenes } = items;
-
+  
     if (cart.find((item) => item.codigo === codigo)) {
       const products = cart.map((item) =>
-        item.codigo === codigo ? { ...item, cantidad: item.cantidad + 1 } : item
+        item.codigo === codigo ? { ...item, cantidad: item.cantidad + items.cantidad } : item
       );
       setTotal(total + items.precio * items.cantidad);
       setContador(contador + items.cantidad);
@@ -49,19 +50,46 @@ const CartProvider = ({ children }) => {
       ...prevCart,
       {
         codigo,
-        cantidad: 1,
+        cantidad: items.cantidad,
         nombre,
         precio,
         imagen: imagenes[0],
       },
     ]);
-    enqueueSnackbar("Se agrego un producto al carrito :D", {
+    enqueueSnackbar("Se agregó un producto al carrito :D", {
       variant: "success",
       anchorOrigin: {
         vertical: "bottom",
         horizontal: "right",
       },
     });
+  };
+  
+
+  const decreaseItems = (product) => {
+    if (product.cantidad === 1) {
+      onDeleteProduct(product);
+    } else {
+      const updatedCart = cart.map((item) =>
+        item.codigo === product.codigo
+          ? { ...item, cantidad: item.cantidad - 1 }
+          : item
+      );
+      setCart(updatedCart);
+      setTotal(total - product.precio);
+      setContador(contador - 1);
+    }
+  };
+
+  const increaseItems = (product) => {
+    const updatedCart = cart.map((item) =>
+      item.codigo === product.codigo
+        ? { ...item, cantidad: item.cantidad + 1 }
+        : item
+    );
+    setCart(updatedCart);
+    setTotal(total + product.precio);
+    setContador(contador + 1);
   };
 
   return (
@@ -75,7 +103,9 @@ const CartProvider = ({ children }) => {
         setContador,
         cleanCart,
         onDeleteProduct,
-        onAddProduct
+        onAddProduct,
+        decreaseItems,
+        increaseItems
       }}
     >
       {children}

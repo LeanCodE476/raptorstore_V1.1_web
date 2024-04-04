@@ -10,6 +10,7 @@
           "Material: Pvc"
         ],
         "stock": true,
+        "marca":"caster",
         "codigo": "PESCA0012",
         "imagenes": [
           "froganti1.jpeg",
@@ -32,16 +33,17 @@
           "Freno magnético regulable externamente",
           "Sistema de desarme rápido de tapa lateral",
           "Cuerpo de bajo perfil construido en grafito",
-          "  Carretel de grafito",
-          "  Manija doble de aluminio cnc reforzada y alivianada",
-          " Devanador automatico sincronizado"
+          "Carretel de grafito",
+          "Manija doble de aluminio cnc reforzada y alivianada",
+          "Devanador automatico sincronizado"
         ],
         "stock": true,
-        "codigo": "PESCA0002",
+        "marca":"beast",
+        "codigo": "PESCA0028",
         "imagenes": [
-          "reelhuevomonster1.jpeg",
-          "reelhuevomonster2.jpeg",
-          "reelhuevomonster3.jpeg"
+          "reelHuevoMonster-1.webp",
+          "reelHuevoMonster-2.webp",
+          "reelHuevoMonster-3.webp"
         ],
         "precio": 25.000,
         "cantidad": 1
@@ -58,8 +60,13 @@
           "Presentación: sobre de 3 unidades"
         ],
         "stock": true,
+        "marca":"caster",
+
         "codigo": "PESCA0001",
-        "imagenes": ["reelhuevomonster1.jpeg"],
+        "imagenes": [
+          "anzueloOffsetPlomada-1.jpg",
+          "anzueloOffsetPlomada-2.jpg"
+        ],
         "precio": 2.600,
         "cantidad": 1
       },
@@ -81,8 +88,10 @@
           "Facilita la exhibición de las piezas para fotografiarlas"
         ],
         "stock": true,
+        "marca":"caster",
+
         "codigo": "PESCA0002",
-        "imagenes": ["reelhuevomonster1.jpeg"],
+        "imagenes": ["bogaGrip-1.jpg","bogaGrip-2.jpg"],
         "precio": 9.200,
         "cantidad": 1
       },
@@ -105,8 +114,10 @@
           "Incluye funda de tela estampada con divisiones"
         ],
         "stock": true,
+        "marca":"caster",
+
         "codigo": "PESCA0003",
-        "imagenes": ["reelhuevomonster1.jpeg"],
+        "imagenes": ["caniaSpeedForcegsp1902m-1.jpg"],
         "precio": 21.300,
         "cantidad": 1
       },
@@ -131,14 +142,16 @@
           "Incluye funda de tela estampada con divisiones"
         ],
         "stock": true,
+        "marca":"caster",
+
         "codigo": "PESCA0004",
-        "imagenes": ["reelhuevomonster1.jpeg"],
+        "imagenes": ["caniaBackFighter-BC1802M-1.jpg"],
         "precio": 21.500,
         "cantidad": 1
       },
       {
         "tipo": "leaders",
-        "nombre": "Cable De Acero Leaders Armados CASTER 15cm 20 Lb 10 Unidades",
+        "nombre": "Cable De Acero Leaders Armados CASTER 15cm 20 Lb x 10 Unidades",
         "descripcion": [
           "Cable de acero armado con esmerillón y mosquetón de acero inoxidable",
           "Ideal para pesca de peces depredadores con carnada",
@@ -148,8 +161,10 @@
           "Presentación: bolsita de 10 unidades"
         ],
         "stock": true,
+        "marca":"caster",
+
         "codigo": "PESCA0005",
-        "imagenes": ["reelhuevomonster1.jpeg"],
+        "imagenes": ["leader15CM-1.jpg"],
         "precio": 3.600,
         "cantidad": 1
       },
@@ -164,8 +179,10 @@
           "Presentación: bolsita de 100 unidades"
         ],
         "stock": true,
+        "marca":"caster",
+
         "codigo": "PESCA0006",
-        "imagenes": ["reelhuevomonster1.jpeg"],
+        "imagenes": ["mosquetones13kg-1.jpg"],
         "precio": 6.500,
         "cantidad": 1
       },
@@ -181,8 +198,10 @@
           "Máxima flotabilidad y sensibilidad"
         ],
         "stock": true,
+        "marca":"caster",
+
         "codigo": "PESCA0007",
-        "imagenes": ["reelhuevomonster1.jpeg"],
+        "imagenes": ["multifilamentoVerde-1"],
         "precio": 3.500,
         "cantidad": 1
       },
@@ -198,8 +217,10 @@
           "Máxima flotabilidad y sensibilidad"
         ],
         "stock": true,
+        "marca":"caster",
+
         "codigo": "PESCA0008",
-        "imagenes": ["reelhuevomonster1.jpeg"],
+        "imagenes": ["multifilmanetoAmarillo-1.jpg"],
         "precio": 3.500,
         "cantidad": 1
       },
@@ -224,8 +245,10 @@
           "Diseño ultra liviano y compacto"
         ],
         "stock": true,
+        "marca":"caster",
+
         "codigo": "PESCA0009",
-        "imagenes": ["reelhuevomonster1.jpeg"],
+        "imagenes": ["reelFrontalBlackWidow4006-1.jpg","reelFrontalBlackWidow4006-2.jpg"],
         "precio": 38.500,
         "cantidad": 1
       },
@@ -247,8 +270,10 @@
           "Pick up de aluminio grueso PowerBail™"
         ],
         "stock": true,
+        "marca":"caster",
+
         "codigo": "PESCA0010",
-        "imagenes": ["reelhuevomonster1.jpeg"],
+        "imagenes": ["reelFrontalFlex4002-1.jpg"],
         "precio": 22.800,
         "cantidad": 1
       },
@@ -271,8 +296,10 @@
           "Devanador automático sincronizado en forma ovalada para evitar la fricción en el lanzamiento"
         ],
         "stock": true,
+        "marca":"caster",
+
         "codigo": "PESCA0011",
-        "imagenes": ["reelhuevomonster1.jpeg"],
+        "imagenes": ["reelHuevitoUnlimited-1.jpg","reelHuevitoUnlimited-2.jpg"],
         "precio": 59.800,
         "cantidad": 1
       },
@@ -288,8 +315,10 @@
           "Ideal para pesca de tarariras"
         ],
         "stock": true,
+        "marca":"caster",
+
         "codigo": "PESCA0013",
-        "imagenes": ["reelhuevomonster1.jpeg"],
+        "imagenes": ["senueloCombatFrog-1.jpg"],
         "precio": 2.900,
         "cantidad": 1
       },
@@ -305,8 +334,10 @@
           "Ideal para pesca de tarariras"
         ],
         "stock": true,
+        "marca":"caster",
+
         "codigo": "PESCA0014",
-        "imagenes": ["reelhuevomonster1.jpeg"],
+        "imagenes": ["senueloLunkerFrog-1.jpg"],
         "precio": 3.400,
         "cantidad": 1
       },
@@ -326,8 +357,10 @@
           "Cada señuelo ha sido testeado individualmente para ofrecer la mejor experiencia y efectividad."
         ],
         "stock": true,
+        "marca":"caster",
+
         "codigo": "PESCA0015",
-        "imagenes": ["reelhuevomonster1.jpeg"],
+        "imagenes": ["senueloRiverShad-1.jpg"],
         "precio": 6.600,
         "cantidad": 1
       },
@@ -343,8 +376,10 @@
           "Anzuelos: 2 triples rojos"
         ],
         "stock": true,
+        "marca":"caster",
+
         "codigo": "PESCA0016",
-        "imagenes": ["reelhuevomonster1.jpeg"],
+        "imagenes": ["senueloFroggy-1.jpg"],
         "precio": 2.400,
         "cantidad": 1
       },
@@ -361,8 +396,10 @@
           "Presentación: sobre de 2 unidades"
         ],
         "stock": true,
+        "marca":"caster",
+
         "codigo": "PESCA0017",
-        "imagenes": ["reelhuevomonster1.jpeg"],
+        "imagenes": ["senueloBigFrog-1.jpg","senueloBigFrog-2.jpg"],
         "precio": 2.600,
         "cantidad": 1
       },
@@ -376,8 +413,10 @@
           "Anzuelo offset #3/0"
         ],
         "stock": true,
+        "marca":"caster",
+
         "codigo": "PESCA0018",
-        "imagenes": ["reelhuevomonster1.jpeg"],
+        "imagenes": ["cucharaGiratoria03-1.jpg"],
         "precio": 3.100,
         "cantidad": 1
       },
@@ -397,21 +436,22 @@
           "Capacidad de línea: 145 metros de 0.30 mm"
         ],
         "stock": true,
-        "codigo": "PESCA0020",
-        "imagenes": ["reelhuevomonster1.jpeg"],
+        "marca":"abugarcia",
+        "codigo": "PESCA0019",
+        "imagenes": ["reelHuevitoAbuGarciaBM3-1.jpeg","reelHuevitoAbuGarciaBM3-2.jpeg","reelHuevitoAbuGarciaBM3-3.jpeg"],
         "precio": 72.000,
         "cantidad": 1
       },
       {
         "tipo": "señuelos",
         "nombre": "Señuelo Cuchara Giratoria ZWICKE",
-        "descripcions": [
+        "descripcion": [
           "Alta calidad",
           "Acabado holográfico altamente reflectante"
         ],
         "stock": true,
         "codigo": "PESCA0020",
-        "imagenes": ["reelhuevomonster1.jpeg"],
+        "imagenes": ["cucharaGiratoriaZwicke-1.jpeg"],
         "precio": 2.800,
         "cantidad": 1
       }

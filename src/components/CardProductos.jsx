@@ -9,6 +9,7 @@ import { CartContext } from "../Contexts/CartContext";
 import { useContext, useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import "../App.css";
 const CardProductos = ({ product }) => {
   const { onAddProduct } = useContext(CartContext);
   const { nombre = "", precio = 0, codigo = "", imagenes = [] } = product || {};
@@ -62,6 +63,10 @@ const CardProductos = ({ product }) => {
            `,
           borderBottom: "2px solid #FF0000",
           borderTop: "2px solid #FF0000",
+
+          "@media (max-width: 375px)": {
+            maxWidth: "10rem",
+          },
         }}
       >
         <Box
@@ -80,13 +85,13 @@ const CardProductos = ({ product }) => {
           </Typography>
           {product.marca && logos[product.marca] && (
             <img
+              className="img-marca"
               src={logos[product.marca]}
               alt={`logo-${product.marca}`}
               style={{
                 width: "5.5rem",
               }}
-              loading='lazy'
-
+              loading="lazy"
             />
           )}
         </Box>
@@ -94,8 +99,7 @@ const CardProductos = ({ product }) => {
         <img
           src={`/images/${imagenes[0]}`}
           alt={nombre}
-          loading='lazy'
-
+          loading="lazy"
           style={{
             width: "90%",
             height: "10rem",
@@ -168,7 +172,13 @@ const CardProductos = ({ product }) => {
               disabled={cantidad === 1}
               onClick={handleDecrease}
             >
-              <RemoveIcon sx={{ color: "#424949 ", fontSize: "1.6rem" }} />
+              <RemoveIcon
+                sx={{
+                  color: "#424949 ",
+                  fontSize: "1.6rem",
+                  "@media (max-width: 375px)": {fontSize: "1.3rem",}
+                }}
+              />
             </IconButton>
 
             <Typography sx={{ fontWeight: "bold", margin: ".5rem" }}>
@@ -182,7 +192,13 @@ const CardProductos = ({ product }) => {
               }}
               onClick={handleIncrease}
             >
-              <AddIcon sx={{ color: "#424949  ", fontSize: "1.6rem" }} />
+              <AddIcon
+                sx={{
+                  color: "#424949  ",
+                  fontSize: "1.6rem",
+                  "@media (max-width: 375px)": {fontSize: "1.3rem",}
+                }}
+              />
             </IconButton>
           </Box>
           <IconButton

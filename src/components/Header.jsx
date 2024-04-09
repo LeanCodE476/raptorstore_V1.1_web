@@ -59,7 +59,25 @@ const Header = () => {
           padding: "1.9rem",
           borderRadius: "10rem",
           outline: "1px solid white",
+          "@media (max-width: 375px)": {
+            position: cartPosition,
+            top: cartPosition === "absolute" ? "0.5rem" : "5rem",
+            right: "3rem",
+            zIndex: "2",
+            width: "3rem",
+            height: "3rem",
+            bgcolor: "black",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "1.9rem",
+            borderRadius: "10rem",
+            outline: "1px solid white",
+          }
+          
         }}
+
+     
         ref={animationParent}
 
       >
@@ -85,6 +103,12 @@ const Header = () => {
             borderRadius: ".5rem",
             minHeight: "90vh",
             position: "relative",
+            "@media (max-width: 375px)": {
+              width: "22rem",
+              borderRadius: ".5rem",
+              minHeight: "90vh",
+              position: "relative",
+            }
           }}
         >
           <Typography

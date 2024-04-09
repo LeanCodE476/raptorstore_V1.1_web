@@ -8,9 +8,6 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Footer = () => {
-  
-  
-
   const openWhatsApp = () => {
     const telefono = "3755503038";
     const mensaje = "Hola, quiero consultar acerca de...";
@@ -31,6 +28,7 @@ const Footer = () => {
       textAlign={"center"}
       borderTop={"2px solid #FF0000"}
       position={"relative"}
+      overflow={"hidden"}
     >
       <Typography
         color={"#FF0000"}
@@ -39,6 +37,7 @@ const Footer = () => {
         fontWeight={"bold"}
         left={"1rem"}
         top={".8rem"}
+        sx={{ "@media (max-width: 375px)": { fontSize: ".8rem" } }}
       >
         V 1.0
       </Typography>
@@ -50,6 +49,7 @@ const Footer = () => {
         textAlign={"center"}
         color={"#FF0000"}
         mt={"2rem"}
+        sx={{ "@media (max-width: 375px)": { fontSize: "1rem" } }}
       >
         Contactanos
       </Typography>
@@ -74,10 +74,23 @@ const Footer = () => {
           }}
         >
           <Button
-            sx={{ color: "#ff0000", fontSize: ".9rem" }}
+            sx={{
+              color: "#ff0000",
+              fontSize: ".9rem",
+              "@media (max-width: 375px)": { fontSize: ".5rem" },
+            }}
             onClick={openWhatsApp}
           >
-            <WhatsAppIcon sx={{ paddingRight: "1rem", fontSize: "2.5rem" }} />
+            <WhatsAppIcon
+              sx={{
+                paddingRight: "1rem",
+                fontSize: "2.5rem",
+                "@media (max-width: 375px)": {
+                  fontSize: "1rem",
+                  paddingRight: "0rem",
+                },
+              }}
+            />
             +54 3755 503038
           </Button>
 
@@ -86,9 +99,19 @@ const Footer = () => {
               color: "#ff0000",
               fontSize: ".9rem",
               textTransform: "lowercase",
+              "@media (max-width: 375px)": { fontSize: ".5rem" },
             }}
           >
-            <EmailIcon sx={{ paddingRight: "1rem", fontSize: "2.5rem" }} />
+            <EmailIcon
+              sx={{
+                paddingRight: "1rem",
+                fontSize: "2.5rem",
+                "@media (max-width: 375px)": {
+                  fontSize: "1rem",
+                  paddingRight: "0rem",
+                },
+              }}
+            />
             raptorstoreventas@gmail.com
           </Button>
 
@@ -97,9 +120,19 @@ const Footer = () => {
               color: "#ff0000",
               fontSize: ".9rem",
               textTransform: "capitalize",
+              "@media (max-width: 375px)": { fontSize: ".5rem" },
             }}
           >
-            <LocationOnIcon sx={{ paddingRight: "1rem", fontSize: "2.5rem" }} />
+            <LocationOnIcon
+              sx={{
+                paddingRight: "1rem",
+                fontSize: "2.5rem",
+                "@media (max-width: 375px)": {
+                  fontSize: "1rem",
+                  paddingRight: "0rem",
+                },
+              }}
+            />
             Obera, Misiones,Argentina
           </Button>
         </Box>
@@ -122,9 +155,19 @@ const Footer = () => {
             href="https://www.instagram.com/raptor_store_ventas/?hl=es"
             target="blank"
           >
-            <InstagramIcon sx={{ paddingRight: "1rem", fontSize: "2.5rem" }} />
+            <InstagramIcon
+              sx={{
+                paddingRight: "1rem",
+                fontSize: "2.5rem",
+                "@media (max-width: 375px)": {
+                  fontSize: "1rem",
+                  paddingRight: "0rem",
+                },
+              }}
+            />
             raptorstore
           </Button>
+
           <Button
             sx={{
               color: "#ff0000",
@@ -134,7 +177,16 @@ const Footer = () => {
             href="https://www.facebook.com/profile.php?id=61557818861437"
             target="blank"
           >
-            <FacebookIcon sx={{ paddingRight: "1rem", fontSize: "2.5rem" }} />{" "}
+            <FacebookIcon
+              sx={{
+                paddingRight: "1rem",
+                fontSize: "2.5rem",
+                "@media (max-width: 375px)": {
+                  fontSize: "1rem",
+                  paddingRight: "0rem",
+                },
+              }}
+            />{" "}
             raptorstore
           </Button>
         </Box>
@@ -148,11 +200,19 @@ const Footer = () => {
         href="https://github.com/LeanCodE476"
         target="blank"
       >
-        <GitHubIcon sx={{ paddingRight: "1rem", fontSize: "2.4rem" }} />
+        <GitHubIcon
+          sx={{
+            paddingRight: "1rem",
+            fontSize: "2.4rem",
+            "@media (max-width: 375px)": {
+              fontSize: "2rem",
+              paddingRight: "1rem",
+            },
+          }}
+        />
         developed and designed by leandro balmaceda
       </Button>
       {/* Botón para copiar el correo */}
-  
     </Box>
   );
 };

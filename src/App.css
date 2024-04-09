@@ -73,3 +73,9 @@ background: rgba(128, 128, 128, 0.503);
   animation: slideOut 0.5s forwards;
 }
 
+@media (max-width: 375px) {
+  .img-marca {
+    width: 4rem !important; /* Ancho para pantallas más pequeñas que 375px */
+  }
+ 
+}

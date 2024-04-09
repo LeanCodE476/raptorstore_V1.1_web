@@ -47,6 +47,17 @@ const BuyCart = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-around",
+        "@media (max-width: 375px)": {
+          width: "90%",
+          borderTop: "1px solid #CACFD2  ",
+          height: "10rem",
+          position: "absolute",
+          bottom: "0rem",
+          left: "1rem",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-around",
+        }
       }}
     >
       <Box

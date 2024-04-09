@@ -129,16 +129,18 @@ const Detalle = ({ products }) => {
             loading='lazy'
 
             style={{
-              minWidth: "22rem",
               maxWidth: "90%",
               boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
               borderRadius: ".5rem ",
             }}
             alt={product.nombre}
+
+          className="imagen-detalle"
           />
           <Box
             sx={{
-              width: "18rem",
+              width:'90%',
+              maxWidth:'20rem',
               display: "flex",
               justifyContent: "space-between",
               marginTop: "2rem",

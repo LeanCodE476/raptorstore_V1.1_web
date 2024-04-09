@@ -2,6 +2,57 @@
   "productos": {
     "pesca": [
       {
+        "tipo": "reel",
+        "nombre": "Reel Huevito CASTER Unlimited Pro 110 Bait Casting 10 Rulemanes 7.2:1",
+        "descripcion": [
+          "9 + 1 RULEMANES blindados de acero inoxidable MaxiDur™",
+          "Relación de giro de alta velocidad: 7.2:1",
+          "Capacidad mm/m: multifilamento 0.18/100 - monofilamento 0.30/120",
+          "Peso: 205 gramos",
+          "Max Drag: 18 libras",
+          "Engranaje y piñon de bronce",
+          "Freno magnético de 10 imanes con regulación externa",
+          "Alarma automática de salida de línea (chicharra)",
+          "Sistema de desarme rápido de tapa lateral",
+          "Cuerpo de bajo perfil construido en grafito de alta resistencia GraphMax™",
+          "Carretel de aluminio CNC forjado y alivianado",
+          "Manija doble de aluminio CNC reforzada y alivianada con empuñaduras de goma eva",
+          "Devanador automático sincronizado en forma ovalada para evitar la fricción en el lanzamiento"
+        ],
+        "stock": true,
+        "marca":"caster",
+
+        "codigo": "PESCA0011",
+        "imagenes": ["reelHuevitoUnlimited-1.webp","reelHuevitoUnlimited-2.webp"],
+        "precio": 59.800,
+        "cantidad": 1
+      },
+      {
+        "tipo": "reel",
+        "nombre": "Reel Frontal CASTER Flex 4002 Variada Río 2 Rulemanes",
+        "descripcion": [
+          "2 RULEMANES de acero MaxiDur™",
+          "Radio de giro: 5.5:1",
+          "Capacidad mm/m: 0.30/240 - 0.35/165 - 0.40/140",
+          "Peso: 300 gramos",
+          "Freno multidisco con alto poder de arrastre",
+          "Max drag: 12 libras",
+          "Cuerpo construido en grafito de alta resistencia GraphMax™",
+          "Rotor micro-balanceado por computadora",
+          "Anti-reverse infinito",
+          "Carretel de grafito alivianado",
+          "Manija de grafito intercambiable izquierda/derecha",
+          "Pick up de aluminio grueso PowerBail™"
+        ],
+        "stock": true,
+        "marca":"caster",
+
+        "codigo": "PESCA0010",
+        "imagenes": ["reelFrontalFlex4002-1.webp"],
+        "precio": 22.800,
+        "cantidad": 1
+      },
+      {
         "tipo": "señuelos",
         "nombre": "Señuelo Ranita Antienganche 4g",
         "descripcion": [
@@ -46,6 +97,26 @@
           "reelHuevoMonster-3.webp"
         ],
         "precio": 25.000,
+        "cantidad": 1
+      },
+      {
+        "tipo": "señuelos",
+        "nombre": "Señuelo Goma Big Frog 90mm 15.5g Pack 2 Unidades",
+        "descripcion": [
+          "Ranitas de goma Big Frog",
+          "Largo: 9 cm",
+          "Peso: 15.5 gramos",
+          "Antienganche",
+          "Para armar con anzuelo offset",
+          "Ideal para pesca de tarariras",
+          "Presentación: sobre de 2 unidades"
+        ],
+        "stock": true,
+        "marca":"caster",
+
+        "codigo": "PESCA0017",
+        "imagenes": ["senueloBigFrog-1.webp","senueloBigFrog-2.webp"],
+        "precio": 2.600,
         "cantidad": 1
       },
       {
@@ -252,57 +323,8 @@
         "precio": 38.500,
         "cantidad": 1
       },
-      {
-        "tipo": "reel",
-        "nombre": "Reel Frontal CASTER Flex 4002 Variada Río 2 Rulemanes",
-        "descripcion": [
-          "2 RULEMANES de acero MaxiDur™",
-          "Radio de giro: 5.5:1",
-          "Capacidad mm/m: 0.30/240 - 0.35/165 - 0.40/140",
-          "Peso: 300 gramos",
-          "Freno multidisco con alto poder de arrastre",
-          "Max drag: 12 libras",
-          "Cuerpo construido en grafito de alta resistencia GraphMax™",
-          "Rotor micro-balanceado por computadora",
-          "Anti-reverse infinito",
-          "Carretel de grafito alivianado",
-          "Manija de grafito intercambiable izquierda/derecha",
-          "Pick up de aluminio grueso PowerBail™"
-        ],
-        "stock": true,
-        "marca":"caster",
-
-        "codigo": "PESCA0010",
-        "imagenes": ["reelFrontalFlex4002-1.webp"],
-        "precio": 22.800,
-        "cantidad": 1
-      },
-      {
-        "tipo": "reel",
-        "nombre": "Reel Huevito CASTER Unlimited Pro 110 Bait Casting 10 Rulemanes 7.2:1",
-        "descripcion": [
-          "9 + 1 RULEMANES blindados de acero inoxidable MaxiDur™",
-          "Relación de giro de alta velocidad: 7.2:1",
-          "Capacidad mm/m: multifilamento 0.18/100 - monofilamento 0.30/120",
-          "Peso: 205 gramos",
-          "Max Drag: 18 libras",
-          "Engranaje y piñon de bronce",
-          "Freno magnético de 10 imanes con regulación externa",
-          "Alarma automática de salida de línea (chicharra)",
-          "Sistema de desarme rápido de tapa lateral",
-          "Cuerpo de bajo perfil construido en grafito de alta resistencia GraphMax™",
-          "Carretel de aluminio CNC forjado y alivianado",
-          "Manija doble de aluminio CNC reforzada y alivianada con empuñaduras de goma eva",
-          "Devanador automático sincronizado en forma ovalada para evitar la fricción en el lanzamiento"
-        ],
-        "stock": true,
-        "marca":"caster",
-
-        "codigo": "PESCA0011",
-        "imagenes": ["reelHuevitoUnlimited-1.webp","reelHuevitoUnlimited-2.webp"],
-        "precio": 59.800,
-        "cantidad": 1
-      },
+  
+      
       {
         "tipo": "señuelos",
         "nombre": "Señuelo Combat Frog 5.5cm 14g Rana Goma Antienganche",
@@ -383,26 +405,7 @@
         "precio": 2.400,
         "cantidad": 1
       },
-      {
-        "tipo": "señuelos",
-        "nombre": "Señuelo Goma Big Frog 90mm 15.5g Pack 2 Unidades",
-        "descripcion": [
-          "Ranitas de goma Big Frog",
-          "Largo: 9 cm",
-          "Peso: 15.5 gramos",
-          "Antienganche",
-          "Para armar con anzuelo offset",
-          "Ideal para pesca de tarariras",
-          "Presentación: sobre de 2 unidades"
-        ],
-        "stock": true,
-        "marca":"caster",
-
-        "codigo": "PESCA0017",
-        "imagenes": ["senueloBigFrog-1.webp","senueloBigFrog-2.webp"],
-        "precio": 2.600,
-        "cantidad": 1
-      },
+    
       {
         "tipo": "señuelos",
         "nombre": "Cuchara Giratoria 03#2 5cm 8g Anzuelo Offset #3/0",

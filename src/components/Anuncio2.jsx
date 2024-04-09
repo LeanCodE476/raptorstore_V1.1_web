@@ -25,6 +25,11 @@ const Anuncio2 = () => {
         borderBottom={"1px solid gray"}
         color={"#ff0000"}
         textTransform={"uppercase"}
+        sx={{
+          "@media (max-width: 375px)": {
+            fontSize: "1.2rem",
+          },
+        }}
       >
         <img
           src={ship}

@@ -13,9 +13,9 @@
         "marca":"caster",
         "codigo": "PESCA0012",
         "imagenes": [
-          "froganti1.jpeg",
-          "froganti2.jpeg",
-          "froganti3.jpeg"
+          "froganti1.webp",
+          "froganti2.webp",
+          "froganti3.webp"
         ],
         "precio": 3.200,
         "cantidad": 1
@@ -64,8 +64,8 @@
 
         "codigo": "PESCA0001",
         "imagenes": [
-          "anzueloOffsetPlomada-1.jpg",
-          "anzueloOffsetPlomada-2.jpg"
+          "anzueloOffsetPlomada-1.webp",
+          "anzueloOffsetPlomada-2.webp"
         ],
         "precio": 2.600,
         "cantidad": 1
@@ -91,7 +91,7 @@
         "marca":"caster",
 
         "codigo": "PESCA0002",
-        "imagenes": ["bogaGrip-1.jpg","bogaGrip-2.jpg"],
+        "imagenes": ["bogaGrip-1.webp","bogaGrip-2.webp"],
         "precio": 9.200,
         "cantidad": 1
       },
@@ -117,7 +117,7 @@
         "marca":"caster",
 
         "codigo": "PESCA0003",
-        "imagenes": ["caniaSpeedForcegsp1902m-1.jpg"],
+        "imagenes": ["caniaSpeedForcegsp1902m-1.webp"],
         "precio": 21.300,
         "cantidad": 1
       },
@@ -145,7 +145,7 @@
         "marca":"caster",
 
         "codigo": "PESCA0004",
-        "imagenes": ["caniaBackFighter-BC1802M-1.jpg"],
+        "imagenes": ["caniaBackFighter-BC1802M-1.webp"],
         "precio": 21.500,
         "cantidad": 1
       },
@@ -164,7 +164,7 @@
         "marca":"caster",
 
         "codigo": "PESCA0005",
-        "imagenes": ["leader15CM-1.jpg"],
+        "imagenes": ["leader15CM-1.webp"],
         "precio": 3.600,
         "cantidad": 1
       },
@@ -182,7 +182,7 @@
         "marca":"caster",
 
         "codigo": "PESCA0006",
-        "imagenes": ["mosquetones13kg-1.jpg"],
+        "imagenes": ["mosquetones13kg-1.webp"],
         "precio": 6.500,
         "cantidad": 1
       },
@@ -201,7 +201,7 @@
         "marca":"caster",
 
         "codigo": "PESCA0007",
-        "imagenes": ["multifilamentoVerde-1"],
+        "imagenes": ["multifilamentoVerde-1.webp"],
         "precio": 3.500,
         "cantidad": 1
       },
@@ -220,7 +220,7 @@
         "marca":"caster",
 
         "codigo": "PESCA0008",
-        "imagenes": ["multifilmanetoAmarillo-1.jpg"],
+        "imagenes": ["multifilmanetoAmarillo-1.webp"],
         "precio": 3.500,
         "cantidad": 1
       },
@@ -248,7 +248,7 @@
         "marca":"caster",
 
         "codigo": "PESCA0009",
-        "imagenes": ["reelFrontalBlackWidow4006-1.jpg","reelFrontalBlackWidow4006-2.jpg"],
+        "imagenes": ["reelFrontalBlackWidow4006-1.webp","reelFrontalBlackWidow4006-2.webp"],
         "precio": 38.500,
         "cantidad": 1
       },
@@ -273,7 +273,7 @@
         "marca":"caster",
 
         "codigo": "PESCA0010",
-        "imagenes": ["reelFrontalFlex4002-1.jpg"],
+        "imagenes": ["reelFrontalFlex4002-1.webp"],
         "precio": 22.800,
         "cantidad": 1
       },
@@ -299,7 +299,7 @@
         "marca":"caster",
 
         "codigo": "PESCA0011",
-        "imagenes": ["reelHuevitoUnlimited-1.jpg","reelHuevitoUnlimited-2.jpg"],
+        "imagenes": ["reelHuevitoUnlimited-1.webp","reelHuevitoUnlimited-2.webp"],
         "precio": 59.800,
         "cantidad": 1
       },
@@ -318,7 +318,7 @@
         "marca":"caster",
 
         "codigo": "PESCA0013",
-        "imagenes": ["senueloCombatFrog-1.jpg"],
+        "imagenes": ["senueloCombatFrog-1.webp"],
         "precio": 2.900,
         "cantidad": 1
       },
@@ -337,7 +337,7 @@
         "marca":"caster",
 
         "codigo": "PESCA0014",
-        "imagenes": ["senueloLunkerFrog-1.jpg"],
+        "imagenes": ["senueloLunkerFrog-1.webp"],
         "precio": 3.400,
         "cantidad": 1
       },
@@ -360,7 +360,7 @@
         "marca":"caster",
 
         "codigo": "PESCA0015",
-        "imagenes": ["senueloRiverShad-1.jpg"],
+        "imagenes": ["senueloRiverShad-1.webp"],
         "precio": 6.600,
         "cantidad": 1
       },
@@ -379,7 +379,7 @@
         "marca":"caster",
 
         "codigo": "PESCA0016",
-        "imagenes": ["senueloFroggy-1.jpg"],
+        "imagenes": ["senueloFroggy-1.webp"],
         "precio": 2.400,
         "cantidad": 1
       },
@@ -399,7 +399,7 @@
         "marca":"caster",
 
         "codigo": "PESCA0017",
-        "imagenes": ["senueloBigFrog-1.jpg","senueloBigFrog-2.jpg"],
+        "imagenes": ["senueloBigFrog-1.webp","senueloBigFrog-2.webp"],
         "precio": 2.600,
         "cantidad": 1
       },
@@ -416,7 +416,7 @@
         "marca":"caster",
 
         "codigo": "PESCA0018",
-        "imagenes": ["cucharaGiratoria03-1.jpg"],
+        "imagenes": ["cucharaGiratoria03-1.webp"],
         "precio": 3.100,
         "cantidad": 1
       },
@@ -438,7 +438,7 @@
         "stock": true,
         "marca":"abugarcia",
         "codigo": "PESCA0019",
-        "imagenes": ["reelHuevitoAbuGarciaBM3-1.jpeg","reelHuevitoAbuGarciaBM3-2.jpeg","reelHuevitoAbuGarciaBM3-3.jpeg"],
+        "imagenes": ["reelHuevitoAbuGarciaBM3-1.webp","reelHuevitoAbuGarciaBM3-2.webp","reelHuevitoAbuGarciaBM3-3.webp"],
         "precio": 72.000,
         "cantidad": 1
       },
@@ -451,7 +451,7 @@
         ],
         "stock": true,
         "codigo": "PESCA0020",
-        "imagenes": ["cucharaGiratoriaZwicke-1.jpeg"],
+        "imagenes": ["cucharaGiratoriaZwicke-1.webp"],
         "precio": 2.800,
         "cantidad": 1
       }

@@ -8,8 +8,20 @@
 html{
   font-family: "Roboto", sans-serif;
 }
-header{
-  height: 4rem;
+header {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  line-height: 4rem;
+  font-size: 1rem;
+  z-index: 9;
+  color: #ff0000;
+  border-bottom: 2px solid #ff0000;
+  position: relative;
+  background-color: black;
 }
 
 .flex_row{
@@ -57,8 +69,6 @@ transition: all .2s ease;
 background: rgba(128, 128, 128, 0.503);
 
 }
-
-
 .slide-out {
   animation: slideOut 0.5s forwards;
 }

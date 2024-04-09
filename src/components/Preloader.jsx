@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 
-import { RingLoader } from "react-spinners";
-import logoRaptor from '../../public/images/logoRaptor.png'
+import { SyncLoader  } from "react-spinners";
+import logoRaptor from '../../public/images/logoRaptor.webp'
 import '../App.css'
 const Preloader = ({loading}) => {
   return (
@@ -10,8 +10,8 @@ const Preloader = ({loading}) => {
         position: "fixed",
         width: "100%",
         height: "100vh",
-        bgcolor: "black",
         zIndex: "55",
+        bgcolor:'black',
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -22,9 +22,9 @@ const Preloader = ({loading}) => {
     <Typography variant="h4" color={'white'} fontWeight={'bold'} fontSize={'3.5rem'}>Bienvenido</Typography>
     <Typography variant="h4" color={'white'} fontWeight={'bold'} fontSize={'3.5rem'} paddingBottom={'10rem'}>a</Typography>
 
-       {<img src={logoRaptor} alt="logo-raptor"style={{width:'17rem',marginTop:'-6rem',position:'absolute'}} />}
+       {<img src={logoRaptor} alt="logo-raptor"style={{width:'17rem',marginTop:'5.5rem',position:'absolute'}} />}
 
-      <RingLoader  color="red" size={150}  />
+      <SyncLoader color="red" size={30}  />
     </Box>
   );
 };

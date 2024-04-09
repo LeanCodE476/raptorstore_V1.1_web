@@ -2,9 +2,9 @@ import { Box, Button, IconButton, Typography } from "@mui/material";
 
 import { useNavigate } from "react-router-dom";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import logoCaster from "../../public/images/logo-caster.png";
-import logoAbuGarcia from "../../public/images/logoAbuGarcia.jpg";
-import logoBeast from "../../public/images/logo-beast.png";
+import logoCaster from "../../public/images/logo-caster.webp";
+import logoAbuGarcia from "../../public/images/logoAbuGarcia.webp";
+import logoBeast from "../../public/images/logo-beast.webp";
 import { CartContext } from "../Contexts/CartContext";
 import { useContext, useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
@@ -85,6 +85,8 @@ const CardProductos = ({ product }) => {
               style={{
                 width: "5.5rem",
               }}
+              loading='lazy'
+
             />
           )}
         </Box>
@@ -92,6 +94,8 @@ const CardProductos = ({ product }) => {
         <img
           src={`/images/${imagenes[0]}`}
           alt={nombre}
+          loading='lazy'
+
           style={{
             width: "90%",
             height: "10rem",

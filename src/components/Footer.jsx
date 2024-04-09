@@ -1,3 +1,4 @@
+import React from "react";
 import { Box, Button, Typography } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import EmailIcon from "@mui/icons-material/Email";
@@ -7,27 +8,40 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Footer = () => {
-  // Función para abrir WhatsApp con el número de teléfono y un mensaje predefinido
+  
+  
+
   const openWhatsApp = () => {
     const telefono = "3755503038";
     const mensaje = "Hola, quiero consultar acerca de...";
-    window.open(`https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`, "_blank");
+    window.open(
+      `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`,
+      "_blank"
+    );
   };
-
-  // Función para copiar la dirección de correo electrónico al portapapeles
-
 
   return (
     <Box
       component="footer"
-      sx={{ width: "100%", backgroundColor: "black", pb: "1rem" }}
+      sx={{
+        width: "100%",
+        backgroundColor: "black",
+        pb: "1rem",
+      }}
       textAlign={"center"}
       borderTop={"2px solid #FF0000"}
-      position={'relative'}
+      position={"relative"}
     >
-    <Typography color={"#FF0000"} fontSize={"1rem"} position={'absolute'} fontWeight={'bold'} left={'1rem'} top={'.8rem'}>
-    V 1.0
-  </Typography>
+      <Typography
+        color={"#FF0000"}
+        fontSize={"1rem"}
+        position={"absolute"}
+        fontWeight={"bold"}
+        left={"1rem"}
+        top={".8rem"}
+      >
+        V 1.0
+      </Typography>
       <Typography color={"#FF0000"} pt={"1rem"} fontSize={".8rem"}>
         Todos los derechos reservados ©raptorstore
       </Typography>
@@ -44,11 +58,10 @@ const Footer = () => {
           m: "1rem auto",
           display: "flex",
           justifyContent: "space-around",
-          width:'90%',
-          maxWidth:'50rem'
+          width: "90%",
+          maxWidth: "50rem",
         }}
       >
-        {" "}
         <Box
           color={"#FF0000"}
           sx={{
@@ -60,7 +73,10 @@ const Footer = () => {
             width: "16rem",
           }}
         >
-          <Button sx={{ color: "#ff0000", fontSize: ".9rem" }} onClick={openWhatsApp}>
+          <Button
+            sx={{ color: "#ff0000", fontSize: ".9rem" }}
+            onClick={openWhatsApp}
+          >
             <WhatsAppIcon sx={{ paddingRight: "1rem", fontSize: "2.5rem" }} />
             +54 3755 503038
           </Button>
@@ -95,7 +111,6 @@ const Footer = () => {
             justifyContent: "space-around",
             alignItems: "flex-start",
             height: "10rem",
-
           }}
         >
           <Button
@@ -104,9 +119,11 @@ const Footer = () => {
               fontSize: ".9rem",
               textTransform: "lowercase",
             }}
+            href="https://www.instagram.com/raptor_store_ventas/?hl=es"
+            target="blank"
           >
             <InstagramIcon sx={{ paddingRight: "1rem", fontSize: "2.5rem" }} />
-            RaptorStore
+            raptorstore
           </Button>
           <Button
             sx={{
@@ -114,9 +131,11 @@ const Footer = () => {
               fontSize: ".9rem",
               textTransform: "lowercase",
             }}
+            href="https://www.facebook.com/profile.php?id=61557818861437"
+            target="blank"
           >
             <FacebookIcon sx={{ paddingRight: "1rem", fontSize: "2.5rem" }} />{" "}
-            RaptorStore
+            raptorstore
           </Button>
         </Box>
       </Box>
@@ -132,6 +151,8 @@ const Footer = () => {
         <GitHubIcon sx={{ paddingRight: "1rem", fontSize: "2.4rem" }} />
         developed and designed by leandro balmaceda
       </Button>
+      {/* Botón para copiar el correo */}
+  
     </Box>
   );
 };

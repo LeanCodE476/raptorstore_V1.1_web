@@ -1,104 +1,83 @@
-import { useContext, useState,useRef } from "react";
-import {
-  Box,
-  Button,
-  Drawer,
-  IconButton,
-  List,
-  Typography,
-} from "@mui/material";
+import { useContext, useEffect, useState } from "react";
+import { Box, Drawer, Typography } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { CartContext } from "../Contexts/CartContext";
-import AddIcon from "@mui/icons-material/Add";
-import RemoveIcon from "@mui/icons-material/Remove";
-import logoRaptor from "../../public/images/logoRaptor.png";
-import carritoVacio from "../../public/images/carritoVacio.png";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { v4 as uuidv4 } from "uuid";
+
+import logoRaptor from "../../public/images/logoRaptor.webp";
+import carritoVacio from "../../public/images/carritoVacio.webp";
 import { useNavigate } from "react-router-dom";
-import { useAutoAnimate } from '@formkit/auto-animate/react'
-import '../App.css'
+import { useAutoAnimate } from "@formkit/auto-animate/react";
+import "../App.css";
+import ListItem from "./cartComponentes/ListItem";
+import BuyCart from "./cartComponentes/BuyCart";
 
 const Header = () => {
+  const [cartPosition, setCartPosition] = useState("absolute");
   const navigate = useNavigate();
-  const { cart, total, contador, increaseItems, decreaseItems } =
-    useContext(CartContext);
+  const { cart, contador } = useContext(CartContext);
   const [open, setOpen] = useState(false);
 
-  const formattedPrice = (precio) => {
-    return precio.toFixed(3);
-  };
-  function enviarMensajeWhatsapp() {
-    const numeroTelefono = "3755 503038";
+  const [animationParent] = useAutoAnimate();
 
-    let mensaje = `Hola, me gustaría comprar los siguientes productos:\n \n`;
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setCartPosition("fixed");
+      } else {
+        setCartPosition("absolute");
+      }
+    };
 
-    cart.forEach((producto, index) => {
-      mensaje += `${index + 1}. Código: *${producto.codigo}* \n- ${
-        producto.nombre
-      } \n- Cantidad: ${
-        producto.cantidad
-      } \n- PrecioUnitario: $${formattedPrice(producto.precio)}\n`;
-    });
+    window.addEventListener("scroll", handleScroll);
 
-    // Agregar el total al mensaje con un salto de línea
-    mensaje += `\n*Total: $${formattedPrice(total)}*`;
-
-    // Generar el enlace de WhatsApp con el número de teléfono y el mensaje
-    const enlaceWhatsapp = `https://api.whatsapp.com/send?phone=${numeroTelefono}&text=${encodeURIComponent(
-      mensaje
-    )}`;
-
-    // Abrir el enlace en una nueva pestaña
-    window.open(enlaceWhatsapp);
-  }
-
-
-  const [animationParent] = useAutoAnimate()
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <header
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        top: "0",
-        width: "100%",
-        height: "5rem",
-        lineHeight: "4rem",
-        fontSize: "1rem",
-        zIndex: "9",
-        color: "#FF0000",
-        borderBottom: "2px solid #FF0000",
-        position: "relative",
-        backgroundColor: "black",
-      }}
-    >
+    <header>
       <img
         src={logoRaptor}
         alt="logo raptor store"
         style={{ height: "4rem", marginLeft: "2rem", cursor: "pointer" }}
         onClick={() => navigate("/")}
       />
-      <ShoppingCartIcon
-        sx={{ fontSize: "2rem", mr: "2rem", mt: ".3rem", cursor: "pointer" }}
-        onClick={() => setOpen(true)}
-        className="icon-cart"
-      />
-
-      <Typography
-        className="cart-count"
-        style={{
-          position: "absolute",
-          top: "2rem",
-          right: "4.3rem",
-          color: "#ff0000",
-          padding: "0rem",
-          display: "inline-block",
-          fontWeight: "bold",
+      <Box
+        sx={{
+          position: cartPosition,
+          top: cartPosition === "absolute" ? "0.5rem" : "3.5rem",
+          right: "1rem",
+          zIndex: "2",
+          width: "3rem",
+          height: "3rem",
+          bgcolor: "black",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "1.9rem",
+          borderRadius: "10rem",
+          outline: "1px solid white",
         }}
+        ref={animationParent}
+
       >
-        {0 || contador}
-      </Typography>
+        <Typography
+          style={{
+            color: "#ff0000",
+            fontWeight: "bold",
+          }}
+        >
+          {0 || contador}
+        </Typography>
+        <ShoppingCartIcon
+          sx={{ fontSize: "2rem", cursor: "pointer" }}
+          onClick={() => setOpen(true)}
+          className="icon-cart"
+        />
+      </Box>
+
       <Drawer open={open} anchor="right" onClose={() => setOpen(false)}>
         <Box
           sx={{
@@ -129,111 +108,34 @@ const Header = () => {
             className="close-icon"
             onClick={() => setOpen(false)}
           />
-          <Typography sx={{position:'absolute',top:'2rem',right:'1rem',fontWeight:'bold',color:'#25d366'}}>{0 || contador} Productos</Typography>
+          <Typography
+            sx={{
+              position: "absolute",
+              top: "2rem",
+              right: "1rem",
+              fontWeight: "bold",
+              color: "#25d366",
+            }}
+          >
+            {0 || contador} Productos
+          </Typography>
           <Box
             sx={{
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               overflowY: "scroll",
-              Height: "60vh",
+              height: "60vh",
               paddingBottom: "2rem",
               maskImage: "linear-gradient(white 93%,transparent)",
-            
             }}
             ref={animationParent}
-
           >
             {" "}
             {cart.length > 0 ? (
-              cart.map((productos, i) => (
+              cart.map((productos) => (
                 <>
-                  <List
-                    key={i}
-                    sx={{
-                      display: "flex",
-                      justifyContent: "space-around",
-                      alignItems: "center",
-                      borderRadius: ".5rem",
-                      width: "90%",
-                      height: "6rem",
-                      mt: ".7rem",
-                      bgcolor: "white",
-                      boxShadow: `0 1px 2px rgba(0, 0, 0, 0.2)`,
-                    }}
-                  >
-                    <img
-                      src={`/images/${productos.imagen}`}
-                      alt={productos.nombre}
-                      style={{
-                        width: "5rem",
-                        height: "5rem",
-                        cursor: "pointer",
-                        outline: "1px solid #D7DBDD ",
-                        borderRadius: ".2rem",
-                      }}
-                    />
-                    <Box
-                      sx={{
-                        height: "4.5rem",
-                        width: "12rem",
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "space-between",
-                      }}
-                    >
-                      <Typography
-                        sx={{
-                          maxWidth: "12rem",
-                          whiteSpace: "nowrap",
-                          overflow: "hidden",
-                          textOverflow: "ellipsis",
-                          fontSize: ".9rem",
-                          fontWeight: "bold",
-                        }}
-                      >
-                        {productos.nombre}
-                      </Typography>{" "}
-                      <Typography fontWeight={"bold"} fontSize={"1.2rem"}>
-                        $ {formattedPrice(productos.precio)}
-                      </Typography>
-                    </Box>
-
-                    <Box
-                      sx={{
-                        height: "5rem",
-                        width: "1.5rem",
-                        borderRadius: "1rem",
-                        bgcolor: "#E5E7E9 ",
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        boxShadow: `0 1px 2px rgba(0, 0, 0, .6)`,
-                      }}
-                    >
-                      <IconButton
-                        sx={{ width: "1.3rem", height: "1.3rem" }}
-                        onClick={() => increaseItems(productos)}
-                      >
-                        <AddIcon
-                          sx={{ color: "#ff0000", fontSize: "1.3rem" }}
-                        />
-                      </IconButton>
-
-                      <Typography sx={{ fontWeight: "bold" }}>
-                        {productos.cantidad}
-                      </Typography>
-                      <IconButton
-                        sx={{ width: "1.3rem", height: "1.3rem" }}
-                        onClick={() => decreaseItems(productos)}
-                      >
-                        <RemoveIcon
-                          sx={{ color: "#ff0000", fontSize: "1.3rem" }}
-                        />
-                      </IconButton>
-                    </Box>
-                  </List>
+                  <ListItem key={uuidv4()} productos={productos} />
                 </>
               ))
             ) : (
@@ -242,6 +144,7 @@ const Header = () => {
                   src={carritoVacio}
                   alt="carrito-vacio"
                   style={{ width: "10rem", marginTop: "14rem" }}
+                  loading='lazy'
                 />
                 <Typography
                   variant="h6"
@@ -255,52 +158,7 @@ const Header = () => {
             )}
           </Box>
         </Box>
-        {cart.length > 0 ? (
-          <Box
-            sx={{
-              width: "23rem",
-              borderTop: "1px solid #CACFD2  ",
-              height: "10rem",
-              position: "absolute",
-              bottom: "0rem",
-              left: "1rem",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-around",
-            }}
-          >
-            <Box
-              sx={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "space-between",
-                mt: "-1rem",
-              }}
-            >
-              <Typography
-                fontWeight={"bold"}
-                fontSize={"1.2rem"}
-                color={"gray "}
-              >
-                Total
-              </Typography>
-              <Typography fontWeight={"bold"} fontSize={"1.2rem"} color={'#25d366'}>
-                ${total.toFixed(3)}
-              </Typography>
-            </Box>
-            <Button
-              sx={{
-                bgcolor: "#25d366",
-                color: "white",
-                borderRadius: ".5rem",
-                textTransform: "capitalize",
-              }}
-              onClick={() => enviarMensajeWhatsapp()}
-            >
-             Comprar Carrito <WhatsAppIcon sx={{ marginLeft: "1rem" }} />
-            </Button>
-          </Box>
-        ) : null}
+        {cart.length > 0 ? <BuyCart /> : null}
       </Drawer>
     </header>
   );

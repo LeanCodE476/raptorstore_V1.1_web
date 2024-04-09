@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import argentina from "../../public/images/logo-argentina.png";
-import ship from "../../public/images/logo-shipping.png";
+import argentina from "../../public/images/logo-argentina.webp";
+import ship from "../../public/images/logo-shipping.webp";
 
 const Anuncio2 = () => {
   return (

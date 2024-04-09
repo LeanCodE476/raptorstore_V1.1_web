@@ -126,6 +126,8 @@ const Detalle = ({ products }) => {
         >
           <img
             src={`/images/${product.imagenes[index]}`}
+            loading='lazy'
+
             style={{
               minWidth: "22rem",
               maxWidth: "90%",
@@ -145,6 +147,8 @@ const Detalle = ({ products }) => {
             {product.imagenes.map((img, i) => (
               <img
                 className="imagen-miniatura"
+                loading='lazy'
+
                 src={`/images/${img}`}
                 key={i}
                 style={{
@@ -199,9 +203,13 @@ const Detalle = ({ products }) => {
           justifyContent: "space-around",
           alignItems: "center",
           marginTop:'2rem',
-          maxWidth:'20rem'
+          maxWidth:'20rem',
+          bgcolor:'#D0D3D4 ',
+          padding:'.5rem',
+          borderRadius:'.5rem'
         }}
       >
+     
         <Box
           sx={{
             height: "2rem",

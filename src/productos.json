@@ -49,7 +49,7 @@
 
         "codigo": "PESCA0010",
         "imagenes": ["reelFrontalFlex4002-1.webp"],
-        "precio": 22.800,
+        "precio": 21.700,
         "cantidad": 1
       },
       {
@@ -68,7 +68,7 @@
           "froganti2.webp",
           "froganti3.webp"
         ],
-        "precio": 3.200,
+        "precio": 2.800,
         "cantidad": 1
       },
       {
@@ -116,7 +116,7 @@
 
         "codigo": "PESCA0017",
         "imagenes": ["senueloBigFrog-1.webp","senueloBigFrog-2.webp"],
-        "precio": 2.600,
+        "precio": 2.300,
         "cantidad": 1
       },
       {
@@ -138,7 +138,7 @@
           "anzueloOffsetPlomada-1.webp",
           "anzueloOffsetPlomada-2.webp"
         ],
-        "precio": 2.600,
+        "precio": 2.300,
         "cantidad": 1
       },
       {
@@ -163,7 +163,7 @@
 
         "codigo": "PESCA0002",
         "imagenes": ["bogaGrip-1.webp","bogaGrip-2.webp"],
-        "precio": 9.200,
+        "precio": 8.300,
         "cantidad": 1
       },
       {
@@ -189,7 +189,7 @@
 
         "codigo": "PESCA0003",
         "imagenes": ["caniaSpeedForcegsp1902m-1.webp"],
-        "precio": 21.300,
+        "precio": 20.100,
         "cantidad": 1
       },
       {
@@ -217,7 +217,7 @@
 
         "codigo": "PESCA0004",
         "imagenes": ["caniaBackFighter-BC1802M-1.webp"],
-        "precio": 21.500,
+        "precio": 19.900,
         "cantidad": 1
       },
       {
@@ -236,7 +236,7 @@
 
         "codigo": "PESCA0005",
         "imagenes": ["leader15CM-1.webp"],
-        "precio": 3.600,
+        "precio": 2.900,
         "cantidad": 1
       },
       {
@@ -254,7 +254,7 @@
 
         "codigo": "PESCA0006",
         "imagenes": ["mosquetones13kg-1.webp"],
-        "precio": 6.500,
+        "precio": 5.300,
         "cantidad": 1
       },
       {
@@ -273,7 +273,7 @@
 
         "codigo": "PESCA0007",
         "imagenes": ["multifilamentoVerde-1.webp"],
-        "precio": 3.500,
+        "precio": 3.900,
         "cantidad": 1
       },
       {
@@ -292,7 +292,7 @@
 
         "codigo": "PESCA0008",
         "imagenes": ["multifilmanetoAmarillo-1.webp"],
-        "precio": 3.500,
+        "precio": 3.900,
         "cantidad": 1
       },
       {
@@ -320,7 +320,7 @@
 
         "codigo": "PESCA0009",
         "imagenes": ["reelFrontalBlackWidow4006-1.webp","reelFrontalBlackWidow4006-2.webp"],
-        "precio": 38.500,
+        "precio": 35.900,
         "cantidad": 1
       },
   
@@ -341,7 +341,7 @@
 
         "codigo": "PESCA0013",
         "imagenes": ["senueloCombatFrog-1.webp"],
-        "precio": 2.900,
+        "precio": 2.100,
         "cantidad": 1
       },
       {
@@ -360,7 +360,7 @@
 
         "codigo": "PESCA0014",
         "imagenes": ["senueloLunkerFrog-1.webp"],
-        "precio": 3.400,
+        "precio": 2.900,
         "cantidad": 1
       },
       {
@@ -383,7 +383,7 @@
 
         "codigo": "PESCA0015",
         "imagenes": ["senueloRiverShad-1.webp"],
-        "precio": 6.600,
+        "precio": 5.900,
         "cantidad": 1
       },
       {
@@ -402,7 +402,7 @@
 
         "codigo": "PESCA0016",
         "imagenes": ["senueloFroggy-1.webp"],
-        "precio": 2.400,
+        "precio": 2.200,
         "cantidad": 1
       },
     
@@ -420,7 +420,7 @@
 
         "codigo": "PESCA0018",
         "imagenes": ["cucharaGiratoria03-1.webp"],
-        "precio": 3.100,
+        "precio": 2.700,
         "cantidad": 1
       },
       {
@@ -442,7 +442,7 @@
         "marca":"abugarcia",
         "codigo": "PESCA0019",
         "imagenes": ["reelHuevitoAbuGarciaBM3-1.webp","reelHuevitoAbuGarciaBM3-2.webp","reelHuevitoAbuGarciaBM3-3.webp"],
-        "precio": 72.000,
+        "precio": 62.700,
         "cantidad": 1
       },
       {
@@ -455,7 +455,7 @@
         "stock": true,
         "codigo": "PESCA0020",
         "imagenes": ["cucharaGiratoriaZwicke-1.webp"],
-        "precio": 2.800,
+        "precio": 1.900,
         "cantidad": 1
       }
     ],

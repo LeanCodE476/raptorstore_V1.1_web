@@ -152,7 +152,7 @@ const Footer = () => {
               fontSize: ".9rem",
               textTransform: "lowercase",
             }}
-            href="https://www.instagram.com/raptor_store_ventas/?hl=es"
+            href="https://www.instagram.com/raptor_store_argentina/?hl=es"
             target="blank"
           >
             <InstagramIcon

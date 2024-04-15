@@ -26,8 +26,8 @@ const Anuncio2 = () => {
         color={"#ff0000"}
         textTransform={"uppercase"}
         sx={{
-          "@media (max-width: 375px)": {
-            fontSize: "1.2rem",
+          "@media (max-width: 410px)": {
+            fontSize: "1rem",
           },
         }}
       >
@@ -49,10 +49,46 @@ const Anuncio2 = () => {
         justifyContent={"space-around"}
         alignItems={"center"}
       >
-        <Typography fontWeight={"bold"}>Transferencias</Typography>
-        <Typography fontWeight={"bold"}>Efectivo</Typography>
-        <Typography fontWeight={"bold"}>Bitcoin</Typography>
-        <Typography fontWeight={"bold"}>Usdt</Typography>
+        <Typography
+          fontWeight={"bold"}
+          sx={{
+            "@media (max-width: 410px)": {
+              fontSize: ".9rem",
+            },
+          }}
+        >
+          Transferencias
+        </Typography>
+        <Typography
+          fontWeight={"bold"}
+          sx={{
+            "@media (max-width: 410px)": {
+              fontSize: ".9rem",
+            },
+          }}
+        >
+          Efectivo
+        </Typography>
+        <Typography
+          fontWeight={"bold"}
+          sx={{
+            "@media (max-width: 410px)": {
+              fontSize: ".9rem",
+            },
+          }}
+        >
+          Bitcoin
+        </Typography>
+        <Typography
+          fontWeight={"bold"}
+          sx={{
+            "@media (max-width: 410px)": {
+              fontSize: ".9rem",
+            },
+          }}
+        >
+          Usdt
+        </Typography>
       </Box>
     </Box>
   );

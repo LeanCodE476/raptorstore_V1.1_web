@@ -4,9 +4,9 @@ import { Box, Button, Typography } from "@mui/material";
 import { CartContext } from "../../Contexts/CartContext";
 
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-
+import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
 const BuyCart = () => {
-  const { cart, total } = useContext(CartContext);
+  const { cart, total,cleanCart } = useContext(CartContext);
   function enviarMensajeWhatsapp() {
     const numeroTelefono = "3755 503038";
 
@@ -47,7 +47,7 @@ const BuyCart = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-around",
-        "@media (max-width: 375px)": {
+        "@media (max-width: 410px)": {
           width: "90%",
           borderTop: "1px solid #CACFD2  ",
           height: "10rem",
@@ -57,9 +57,23 @@ const BuyCart = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-around",
-        }
+        },
       }}
     >
+      <Button
+        sx={{
+          position: "absolute",
+          bgcolor: "black",
+          color: "white",
+          bottom: "11rem",
+          fontSize:'.7rem'
+        }}
+        onClick={()=>cleanCart()}
+        className="button-clean-cart"
+      >
+        {" "}
+        Vaciar carrito <RemoveShoppingCartIcon />
+      </Button>
       <Box
         sx={{
           width: "100%",

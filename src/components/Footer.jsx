@@ -37,7 +37,9 @@ const Footer = () => {
         fontWeight={"bold"}
         left={"1rem"}
         top={".8rem"}
-        sx={{ "@media (max-width: 375px)": { fontSize: ".8rem" } }}
+        sx={{
+          "@media (max-width: 410px)": { fontSize: ".8rem", marginTop: "2rem" },
+        }}
       >
         V 1.0
       </Typography>
@@ -49,7 +51,7 @@ const Footer = () => {
         textAlign={"center"}
         color={"#FF0000"}
         mt={"2rem"}
-        sx={{ "@media (max-width: 375px)": { fontSize: "1rem" } }}
+        sx={{ "@media (max-width: 410px)": { fontSize: "1rem" } }}
       >
         Contactanos
       </Typography>
@@ -77,7 +79,7 @@ const Footer = () => {
             sx={{
               color: "#ff0000",
               fontSize: ".9rem",
-              "@media (max-width: 375px)": { fontSize: ".5rem" },
+              "@media (max-width:410px)": { fontSize: ".7rem" },
             }}
             onClick={openWhatsApp}
           >
@@ -85,9 +87,9 @@ const Footer = () => {
               sx={{
                 paddingRight: "1rem",
                 fontSize: "2.5rem",
-                "@media (max-width: 375px)": {
-                  fontSize: "1rem",
-                  paddingRight: "0rem",
+                "@media (max-width: 410x)": {
+                  fontSize: ".5rem",
+                  paddingRight: "0rem ",
                 },
               }}
             />
@@ -99,16 +101,16 @@ const Footer = () => {
               color: "#ff0000",
               fontSize: ".9rem",
               textTransform: "lowercase",
-              "@media (max-width: 375px)": { fontSize: ".5rem" },
+              "@media (max-width: 410px)": { fontSize: ".7rem" },
             }}
           >
             <EmailIcon
               sx={{
                 paddingRight: "1rem",
                 fontSize: "2.5rem",
-                "@media (max-width: 375px)": {
-                  fontSize: "1rem",
-                  paddingRight: "0rem",
+                "@media (max-width: 410px)": {
+                  fontSize: "1.5rem",
+                  paddingRight: ".1rem",
                 },
               }}
             />
@@ -120,15 +122,15 @@ const Footer = () => {
               color: "#ff0000",
               fontSize: ".9rem",
               textTransform: "capitalize",
-              "@media (max-width: 375px)": { fontSize: ".5rem" },
+              "@media (max-width: 410px)": { fontSize: ".7rem" },
             }}
           >
             <LocationOnIcon
               sx={{
                 paddingRight: "1rem",
                 fontSize: "2.5rem",
-                "@media (max-width: 375px)": {
-                  fontSize: "1rem",
+                "@media (max-width: 410px)": {
+                  fontSize: "1.8rem",
                   paddingRight: "0rem",
                 },
               }}
@@ -159,7 +161,7 @@ const Footer = () => {
               sx={{
                 paddingRight: "1rem",
                 fontSize: "2.5rem",
-                "@media (max-width: 375px)": {
+                "@media (max-width: 410px)": {
                   fontSize: "1rem",
                   paddingRight: "0rem",
                 },
@@ -181,7 +183,7 @@ const Footer = () => {
               sx={{
                 paddingRight: "1rem",
                 fontSize: "2.5rem",
-                "@media (max-width: 375px)": {
+                "@media (max-width: 410px)": {
                   fontSize: "1rem",
                   paddingRight: "0rem",
                 },
@@ -204,9 +206,9 @@ const Footer = () => {
           sx={{
             paddingRight: "1rem",
             fontSize: "2.4rem",
-            "@media (max-width: 375px)": {
-              fontSize: "2rem",
-              paddingRight: "1rem",
+            "@media (max-width: 410px)": {
+              fontSize: "3rem",
+              paddingRight: ".4rem",
             },
           }}
         />

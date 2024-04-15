@@ -49,6 +49,12 @@ const Home = () => {
               fontSize={"1.2rem"}
               fontWeight={"bold"}
               width={"17rem"}
+              sx={{
+                "@media (max-width: 410px)": {
+                  fontSize: ".8rem",
+                  marginTop:'.5rem'
+                },
+              }}
             >
               {" "}
               Sección{" "}
@@ -80,6 +86,8 @@ const Home = () => {
             container
             rowSpacing={3}
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+        
+
           >
             {filteredProducts.map((product, index) => (
               <Grid

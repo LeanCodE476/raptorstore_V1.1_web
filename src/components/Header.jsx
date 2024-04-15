@@ -43,6 +43,7 @@ const Header = () => {
         alt="logo raptor store"
         style={{ height: "4rem", marginLeft: "2rem", cursor: "pointer" }}
         onClick={() => navigate("/")}
+        className="logo-header"
       />
       <Box
         sx={{
@@ -59,27 +60,9 @@ const Header = () => {
           padding: "1.9rem",
           borderRadius: "10rem",
           outline: "1px solid white",
-          "@media (max-width: 375px)": {
-            position: cartPosition,
-            top: cartPosition === "absolute" ? "0.5rem" : "5rem",
-            right: "3rem",
-            zIndex: "2",
-            width: "3rem",
-            height: "3rem",
-            bgcolor: "black",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            padding: "1.9rem",
-            borderRadius: "10rem",
-            outline: "1px solid white",
-          }
-          
         }}
-
-     
         ref={animationParent}
-
+        className="box-logo-carrito"
       >
         <Typography
           style={{
@@ -103,12 +86,12 @@ const Header = () => {
             borderRadius: ".5rem",
             minHeight: "90vh",
             position: "relative",
-            "@media (max-width: 375px)": {
-              width: "22rem",
+            "@media (max-width: 410px)": {
+              width: "18rem",
               borderRadius: ".5rem",
               minHeight: "90vh",
               position: "relative",
-            }
+            },
           }}
         >
           <Typography
@@ -135,8 +118,8 @@ const Header = () => {
           <Typography
             sx={{
               position: "absolute",
-              top: "2rem",
-              right: "1rem",
+              top: "2.2rem",
+              right: ".5rem",
               fontWeight: "bold",
               color: "#25d366",
             }}
@@ -152,6 +135,7 @@ const Header = () => {
               height: "60vh",
               paddingBottom: "2rem",
               maskImage: "linear-gradient(white 93%,transparent)",
+
             }}
             ref={animationParent}
           >
@@ -168,7 +152,7 @@ const Header = () => {
                   src={carritoVacio}
                   alt="carrito-vacio"
                   style={{ width: "10rem", marginTop: "14rem" }}
-                  loading='lazy'
+                  loading="lazy"
                 />
                 <Typography
                   variant="h6"

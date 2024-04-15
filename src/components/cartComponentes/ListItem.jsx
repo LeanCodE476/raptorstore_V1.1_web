@@ -33,6 +33,7 @@ const ListItem = ({ productos }) => {
           outline: "1px solid #D7DBDD ",
           borderRadius: ".2rem",
         }}
+        className="image-cart"
       />
       <Box
         sx={{
@@ -41,6 +42,9 @@ const ListItem = ({ productos }) => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
+          "@media (max-width: 410px)": {
+            width: "9rem",
+          },
         }}
       >
         <Typography

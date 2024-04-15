@@ -26,8 +26,8 @@ const Anuncio1 = () => {
       </Typography>
       <Box  mt={'1rem'} display={'flex'} justifyContent={'space-around'}>
         {" "}
-        <img src={caster} alt="logo-caster" style={{width:'9rem'}} />
-        <img src={beast} alt="logo-beast" style={{width:'9rem'}} />
+        <img src={caster} alt="logo-caster" style={{width:'9rem'}} className="img-anuncio-1"/>
+        <img src={beast} alt="logo-beast" style={{width:'9rem'}} className="img-anuncio-1"/>
       </Box>
     </Box>
   );

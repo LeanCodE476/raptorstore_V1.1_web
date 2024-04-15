@@ -64,8 +64,8 @@ const CardProductos = ({ product }) => {
           borderBottom: "2px solid #FF0000",
           borderTop: "2px solid #FF0000",
 
-          "@media (max-width: 375px)": {
-            maxWidth: "10rem",
+          "@media (max-width: 410px)": {
+            maxWidth: "9rem",
           },
         }}
       >
@@ -161,6 +161,9 @@ const CardProductos = ({ product }) => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              "@media (max-width: 410px)": {
+                width: "4rem",
+              },
             }}
           >
             <IconButton
@@ -176,7 +179,7 @@ const CardProductos = ({ product }) => {
                 sx={{
                   color: "#424949 ",
                   fontSize: "1.6rem",
-                  "@media (max-width: 375px)": {fontSize: "1.3rem",}
+                  "@media (max-width: 410px)": { fontSize: "1rem" },
                 }}
               />
             </IconButton>
@@ -196,7 +199,7 @@ const CardProductos = ({ product }) => {
                 sx={{
                   color: "#424949  ",
                   fontSize: "1.6rem",
-                  "@media (max-width: 375px)": {fontSize: "1.3rem",}
+                  "@media (max-width: 410px)": { fontSize: "1rem" },
                 }}
               />
             </IconButton>

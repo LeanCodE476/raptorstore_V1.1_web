@@ -72,10 +72,47 @@ background: rgba(128, 128, 128, 0.503);
 .slide-out {
   animation: slideOut 0.5s forwards;
 }
+/* HOVER PAR ABOTON DE BORRAR TOTAL CARRITO */
+.button-clean-cart:hover{
+background-color: gray!important;
+}
+@media only screen and (max-width: 410px) {
 
-@media (max-width: 375px) {
-  .img-marca {
-    width: 4rem !important; /* Ancho para pantallas más pequeñas que 375px */
+  /* ESTILOS HEADER */
+ .img-marca {
+    width: 4rem !important; 
   }
- 
+
+.logo-header{
+  height: 3rem !important;
+}
+.box-logo-carrito{
+  width: 2rem !important;
+  height: 2rem !important;
+  padding: 1.7rem !important;
+  margin-top: .4rem;
+}
+.icon-cart{
+  font-size: 1.5rem !important;
+}
+/* ESTILOS PARA EL CARRITO */
+
+.image-cart{
+  width:4rem !important;
+  height: 4rem !important;
+}
+
+/* ESTILOS PARA EL ANUNCIO 1 */
+.img-anuncio-1{
+
+  width: 7rem !important;
+}
+
+
+
+/* ESTILOS PARA EL CARD PRODUCTO*/
+
+.card-product-img{
+  height: 7rem !important;
+}
 }

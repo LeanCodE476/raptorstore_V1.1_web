@@ -54,7 +54,7 @@ const Footer = () => {
           m: "1rem auto",
           display: "flex",
           justifyContent: "space-around",
-          "@media (max-width:410px)": { flexDirection: "column" },
+          "@media (max-width:500px)": { flexDirection: "column",alignItems:'center'},
           width: "90%",
           maxWidth: "50rem",
         }}

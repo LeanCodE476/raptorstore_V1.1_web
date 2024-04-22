@@ -30,28 +30,22 @@ const Footer = () => {
       position={"relative"}
       overflow={"hidden"}
     >
+      <Typography color={"#FF0000"} pt={"1rem"} fontSize={".8rem"}>
+        Todos los derechos reservados ©raptorstore
+      </Typography>
       <Typography
         color={"#FF0000"}
         fontSize={"1rem"}
-        position={"absolute"}
         fontWeight={"bold"}
-        left={"1rem"}
-        top={".8rem"}
-        sx={{
-          "@media (max-width: 410px)": { fontSize: ".8rem", marginTop: "2rem" },
-        }}
+        mt={"1rem"}
       >
         V 1.0
-      </Typography>
-      <Typography color={"#FF0000"} pt={"1rem"} fontSize={".8rem"}>
-        Todos los derechos reservados ©raptorstore
       </Typography>
       <Typography
         fontWeight={"bold"}
         textAlign={"center"}
         color={"#FF0000"}
-        mt={"2rem"}
-        sx={{ "@media (max-width: 410px)": { fontSize: "1rem" } }}
+        mt={"1rem"}
       >
         Contactanos
       </Typography>
@@ -60,6 +54,7 @@ const Footer = () => {
           m: "1rem auto",
           display: "flex",
           justifyContent: "space-around",
+          "@media (max-width:410px)": { flexDirection: "column" },
           width: "90%",
           maxWidth: "50rem",
         }}
@@ -69,6 +64,7 @@ const Footer = () => {
           sx={{
             display: "flex",
             flexDirection: "column",
+
             justifyContent: "space-between",
             alignItems: "flex-start",
             height: "10rem",
@@ -79,7 +75,6 @@ const Footer = () => {
             sx={{
               color: "#ff0000",
               fontSize: ".9rem",
-              "@media (max-width:410px)": { fontSize: ".7rem" },
             }}
             onClick={openWhatsApp}
           >
@@ -87,10 +82,6 @@ const Footer = () => {
               sx={{
                 paddingRight: "1rem",
                 fontSize: "2.5rem",
-                "@media (max-width: 410x)": {
-                  fontSize: ".5rem",
-                  paddingRight: "0rem ",
-                },
               }}
             />
             +54 3755 503038
@@ -101,17 +92,12 @@ const Footer = () => {
               color: "#ff0000",
               fontSize: ".9rem",
               textTransform: "lowercase",
-              "@media (max-width: 410px)": { fontSize: ".7rem" },
             }}
           >
             <EmailIcon
               sx={{
                 paddingRight: "1rem",
                 fontSize: "2.5rem",
-                "@media (max-width: 410px)": {
-                  fontSize: "1.5rem",
-                  paddingRight: ".1rem",
-                },
               }}
             />
             raptorstoreventas@gmail.com
@@ -122,17 +108,13 @@ const Footer = () => {
               color: "#ff0000",
               fontSize: ".9rem",
               textTransform: "capitalize",
-              "@media (max-width: 410px)": { fontSize: ".7rem" },
             }}
           >
             <LocationOnIcon
               sx={{
                 paddingRight: "1rem",
                 fontSize: "2.5rem",
-                "@media (max-width: 410px)": {
-                  fontSize: "1.8rem",
-                  paddingRight: "0rem",
-                },
+           
               }}
             />
             Obera, Misiones,Argentina
@@ -145,7 +127,7 @@ const Footer = () => {
             flexDirection: "column",
             justifyContent: "space-around",
             alignItems: "flex-start",
-            height: "10rem",
+            height: "6.5rem",
           }}
         >
           <Button
@@ -161,10 +143,7 @@ const Footer = () => {
               sx={{
                 paddingRight: "1rem",
                 fontSize: "2.5rem",
-                "@media (max-width: 410px)": {
-                  fontSize: "1rem",
-                  paddingRight: "0rem",
-                },
+          
               }}
             />
             raptorstore
@@ -183,10 +162,7 @@ const Footer = () => {
               sx={{
                 paddingRight: "1rem",
                 fontSize: "2.5rem",
-                "@media (max-width: 410px)": {
-                  fontSize: "1rem",
-                  paddingRight: "0rem",
-                },
+            
               }}
             />{" "}
             raptorstore
@@ -207,7 +183,7 @@ const Footer = () => {
             paddingRight: "1rem",
             fontSize: "2.4rem",
             "@media (max-width: 410px)": {
-              fontSize: "3rem",
+              fontSize: "2.3rem",
               paddingRight: ".4rem",
             },
           }}

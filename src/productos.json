@@ -3,6 +3,28 @@
     "pesca": [
       {
         "tipo": "reel",
+        "nombre": "Reel Abu Garcia Black Max 3 BaitCasting Drag 8kg",
+        "descripcion": [
+          "Reel Black Max 3 Abu Garcia",
+          "Tipo: Low profile",
+          "Marca: Abu García",
+          "Mano: Zurdo o derecho",
+          "Cuerpo: Grafito",
+          "Rulemanes: 4+1 de acero inoxidable",
+          "Velocidad: 6.4:1",
+          "Sistema de frenado: Power DisK™ de Abu",
+          "Sistema Mag Trax™: 10 posiciones de frenado magnético regulable",
+          "Capacidad de línea: 145 metros de 0.30 mm"
+        ],
+        "stock": true,
+        "marca":"abugarcia",
+        "codigo": "PESCA0019",
+        "imagenes": ["reelHuevitoAbuGarciaBM3-1.webp","reelHuevitoAbuGarciaBM3-2.webp","reelHuevitoAbuGarciaBM3-3.webp"],
+        "precio": 62.700,
+        "cantidad": 1
+      },
+      {
+        "tipo": "reel",
         "nombre": "Reel Huevito CASTER Unlimited Pro 110 Bait Casting 10 Rulemanes 7.2:1",
         "descripcion": [
           "9 + 1 RULEMANES blindados de acero inoxidable MaxiDur™",
@@ -424,38 +446,106 @@
         "cantidad": 1
       },
       {
-        "tipo": "reel",
-        "nombre": "Reel Abu Garcia Black Max 3 BaitCasting Drag 8kg",
-        "descripcion": [
-          "Reel Black Max 3 Abu Garcia",
-          "Tipo: Low profile",
-          "Marca: Abu García",
-          "Mano: Zurdo o derecho",
-          "Cuerpo: Grafito",
-          "Rulemanes: 4+1 de acero inoxidable",
-          "Velocidad: 6.4:1",
-          "Sistema de frenado: Power DisK™ de Abu",
-          "Sistema Mag Trax™: 10 posiciones de frenado magnético regulable",
-          "Capacidad de línea: 145 metros de 0.30 mm"
-        ],
-        "stock": true,
-        "marca":"abugarcia",
-        "codigo": "PESCA0019",
-        "imagenes": ["reelHuevitoAbuGarciaBM3-1.webp","reelHuevitoAbuGarciaBM3-2.webp","reelHuevitoAbuGarciaBM3-3.webp"],
-        "precio": 62.700,
-        "cantidad": 1
-      },
-      {
         "tipo": "señuelos",
         "nombre": "Señuelo Cuchara Giratoria ZWICKE",
         "descripcion": [
-          "Alta calidad",
-          "Acabado holográfico altamente reflectante"
+          "Cucharitas minis"
         ],
         "stock": true,
         "codigo": "PESCA0020",
         "imagenes": ["cucharaGiratoriaZwicke-1.webp"],
-        "precio": 1.900,
+        "precio": 1.600,
+        "cantidad": 1
+      },
+      {
+        "tipo": "señuelos",
+        "nombre": "Señuelo 7.9cm",
+        "descripcion": [
+          "medidas: 7.9cm",
+          "peso: 5g"
+        ],
+        "stock": true,
+        "codigo": "PESCALR001",
+        "imagenes": ["senuelo_LR001.webp"],
+        "precio": 1.600,
+        "cantidad": 1
+      },
+      {
+        "tipo": "señuelos",
+        "nombre": "Señuelo 7cm",
+        "descripcion": [
+          "medidas: 7cm",
+          "peso: 3.8g"
+        ],
+        "stock": true,
+        "codigo": "PESCALR002",
+        "imagenes": ["senuelo_LR002.webp"],
+        "precio": 1.600,
+        "cantidad": 1
+      },
+      {
+        "tipo": "señuelos",
+        "nombre": "Señuelo 6.8cm",
+        "descripcion": [
+          "medidas: 6.8cm",
+          "peso: 4.1g"
+        ],
+        "stock": true,
+        "codigo": "PESCALR003",
+        "imagenes": ["senuelo_LR003.webp"],
+        "precio": 1.800,
+        "cantidad": 1
+      },
+      {
+        "tipo": "señuelos",
+        "nombre": "Señuelo 2.8cm",
+        "descripcion": [
+          "medidas: 2.8cm",
+          "peso: 1.5g"
+        ],
+        "stock": true,
+        "codigo": "PESCALR004",
+        "imagenes": ["senuelo_LR004.webp"],
+        "precio": 1.500,
+        "cantidad": 1
+      },
+      {
+        "tipo": "señuelos",
+        "nombre": "Señuelo 6.5cm",
+        "descripcion": [
+          "medidas: 6.5cm",
+          "peso: 8.3g"
+        ],
+        "stock": true,
+        "codigo": "PESCALR005",
+        "imagenes": ["senuelo_LR005.webp"],
+        "precio": 2.100,
+        "cantidad": 1
+      },
+      {
+        "tipo": "señuelos",
+        "nombre": "Señuelo 5cm",
+        "descripcion": [
+          "medidas: 5cm",
+          "peso: 3.6g"
+        ],
+        "stock": true,
+        "codigo": "PESCALR006",
+        "imagenes": ["senuelo_LR006.webp"],
+        "precio": 1.700,
+        "cantidad": 1
+      },
+      {
+        "tipo": "señuelos",
+        "nombre": "Señuelo 4.5cm",
+        "descripcion": [
+          "medidas: 4.5cm",
+          "peso: 3.5g"
+        ],
+        "stock": true,
+        "codigo": "PESCALR007",
+        "imagenes": ["senuelo_LR007.webp"],
+        "precio": 1.600,
         "cantidad": 1
       }
     ],

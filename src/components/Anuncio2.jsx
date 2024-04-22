@@ -6,18 +6,18 @@ const Anuncio2 = () => {
   return (
     <Box
       m={"1.5rem auto"}
-      height={"6rem"}
+      height={"6rem auto"}
       width={"93%"}
       borderRadius={".8rem"}
       boxShadow={"0px 4px 5px 0px rgba(0,0,0,0.5)"}
-      maxWidth={"40rem"}
+      maxWidth={"30rem"}
       overflow={"hidden"}
       bgcolor={"black"}
       color={"#ff0000"}
       outline={"1px solid #FF0000"}
     >
       <Typography
-        variant="h5"
+        variant="h6"
         textAlign={"center"}
         pt={"1rem"}
         pb={".5rem"}
@@ -25,22 +25,25 @@ const Anuncio2 = () => {
         borderBottom={"1px solid gray"}
         color={"#ff0000"}
         textTransform={"uppercase"}
-        sx={{
-          "@media (max-width: 410px)": {
-            fontSize: "1rem",
-          },
-        }}
       >
         <img
           src={ship}
-          style={{ width: "3rem", filter: "invert(1)", paddingRight: ".5rem" }}
-          alt="logo-ship"
+          style={{
+            width: "2.5rem",
+            filter: "invert(1)",
+            paddingRight: ".5rem",
+          }}
         />{" "}
         Envios a todo el Pais{" "}
         <img
           src={argentina}
-          style={{ width: "3rem", marginBottom: "-.8rem", filter: "invert(1)" }}
-          alt="logo-argentina"
+          style={{
+            width: "2.5rem",
+            marginBottom: "-.8rem",
+            filter: "invert(1)",
+          }}
+
+          className="logo-argentina"
         />
       </Typography>
       <Box
@@ -49,44 +52,16 @@ const Anuncio2 = () => {
         justifyContent={"space-around"}
         alignItems={"center"}
       >
-        <Typography
-          fontWeight={"bold"}
-          sx={{
-            "@media (max-width: 410px)": {
-              fontSize: ".9rem",
-            },
-          }}
-        >
+        <Typography fontWeight={"bold"} fontSize={".9rem"}>
           Transferencias
         </Typography>
-        <Typography
-          fontWeight={"bold"}
-          sx={{
-            "@media (max-width: 410px)": {
-              fontSize: ".9rem",
-            },
-          }}
-        >
+        <Typography fontWeight={"bold"} fontSize={".9rem"}>
           Efectivo
         </Typography>
-        <Typography
-          fontWeight={"bold"}
-          sx={{
-            "@media (max-width: 410px)": {
-              fontSize: ".9rem",
-            },
-          }}
-        >
+        <Typography fontWeight={"bold"} fontSize={".9rem"}>
           Bitcoin
         </Typography>
-        <Typography
-          fontWeight={"bold"}
-          sx={{
-            "@media (max-width: 410px)": {
-              fontSize: ".9rem",
-            },
-          }}
-        >
+        <Typography fontWeight={"bold"} fontSize={".9rem"}>
           Usdt
         </Typography>
       </Box>

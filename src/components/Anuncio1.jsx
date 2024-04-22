@@ -11,7 +11,7 @@ const Anuncio1 = () => {
       borderRadius={".8rem"}
       boxShadow={"0px 4px 5px 0px rgba(0,0,0,0.5)"}
       outline={"1px solid #FF0000"}
-      maxWidth={"40rem"}
+      maxWidth={"30rem"}
     >
       <Typography
         variant="h5"
@@ -22,12 +22,12 @@ const Anuncio1 = () => {
               fontWeight={"bold"}
               fontStyle={'italic'}
       >
-        Vendedor Oficial
+        Marcas Oficiales
       </Typography>
       <Box  mt={'1rem'} display={'flex'} justifyContent={'space-around'}>
         {" "}
-        <img src={caster} alt="logo-caster" style={{width:'9rem'}} className="img-anuncio-1"/>
-        <img src={beast} alt="logo-beast" style={{width:'9rem'}} className="img-anuncio-1"/>
+        <img src={caster} alt="logo-caster" style={{width:'7rem'}} className="img-anuncio-1"/>
+        <img src={beast} alt="logo-beast" style={{width:'7rem'}} className="img-anuncio-1"/>
       </Box>
     </Box>
   );

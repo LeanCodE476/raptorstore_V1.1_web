@@ -53,6 +53,7 @@ const CardProductos = ({ product }) => {
           flexDirection: "column",
           alignItems: "center",
           maxWidth: "11.5rem",
+          width:'100%',
           height: "auto",
           pb: "1.5rem",
           bgcolor: "white",
@@ -64,9 +65,9 @@ const CardProductos = ({ product }) => {
           borderBottom: "2px solid #FF0000",
           borderTop: "2px solid #FF0000",
 
-          "@media (max-width: 410px)": {
-            maxWidth: "9rem",
-          },
+          // "@media (max-width: 410px)": {
+          //   maxWidth: "9rem",
+          // },
         }}
       >
         <Box
@@ -89,7 +90,7 @@ const CardProductos = ({ product }) => {
               src={logos[product.marca]}
               alt={`logo-${product.marca}`}
               style={{
-                width: "5.5rem",
+                width: "4rem",
               }}
               loading="lazy"
             />
@@ -102,9 +103,8 @@ const CardProductos = ({ product }) => {
           loading="lazy"
           style={{
             width: "90%",
-            height: "10rem",
+            height: "auto",
             marginTop: "1rem",
-            aspectRatio: "4/3",
             boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
             borderRadius: ".5rem ",
             cursor: "pointer",

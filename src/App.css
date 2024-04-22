@@ -103,10 +103,6 @@ background-color: gray!important;
 }
 
 /* ESTILOS PARA EL ANUNCIO 1 */
-.img-anuncio-1{
-
-  width: 7rem !important;
-}
 
 
 
@@ -114,5 +110,10 @@ background-color: gray!important;
 
 .card-product-img{
   height: 7rem !important;
+}
+
+.logo-argentina{
+
+  display: none;
 }
 }

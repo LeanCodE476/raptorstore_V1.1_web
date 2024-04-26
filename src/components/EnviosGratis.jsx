@@ -5,7 +5,7 @@ const EnviosGratis = () => {
   return (
     <Box
       sx={{
-        bgcolor: "yellow",
+        bgcolor: "white",
         m: "1rem auto",
         height: "2rem auto",
         width: "93%",

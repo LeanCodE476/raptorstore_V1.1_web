@@ -10,6 +10,8 @@
         ],
         "stock": true,
         "marca":"abugarcia",
+        "envioGratis":"true",
+
         "codigo": "PESCA0032",
         "imagenes": ["combobaitcast-2.webp","reelHuevitoAbuGarciaBM3-1.webp","caniaBackFighter-BC1802M-1.webp"],
         "precio": 79.200,
@@ -610,6 +612,8 @@
         ],
         "stock": true,
         "marca":"caster",
+        "envioGratis":"true",
+
         "codigo": "PESCA0031",
         "imagenes": ["combobaitcast-1.webp","reelHuevitoUnlimited-1.webp","caniaBackFighter-BC1802M-1.webp"],
         "precio": 79.200,

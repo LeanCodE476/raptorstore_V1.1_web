@@ -2,6 +2,20 @@
   "productos": {
     "pesca": [
       {
+        "tipo": "combos",
+        "nombre": "Combo BaitCasting 2",
+        "descripcion": [
+         "Reel Abu Garcia Black Max 3",
+         "Caña Caster BlackFighter 1.80mt"
+        ],
+        "stock": true,
+        "marca":"abugarcia",
+        "codigo": "PESCA0032",
+        "imagenes": ["combobaitcast-2.webp","reelHuevitoAbuGarciaBM3-1.webp","caniaBackFighter-BC1802M-1.webp"],
+        "precio": 79.200,
+        "cantidad": 1
+      },
+      {
         "tipo": "reel",
         "nombre": "Reel Abu Garcia Black Max 3 BaitCasting Drag 8kg",
         "descripcion": [
@@ -18,6 +32,7 @@
         ],
         "stock": true,
         "marca":"abugarcia",
+        "envioGratis":"true",
         "codigo": "PESCA0019",
         "imagenes": ["reelHuevitoAbuGarciaBM3-1.webp","reelHuevitoAbuGarciaBM3-2.webp","reelHuevitoAbuGarciaBM3-3.webp"],
         "precio": 62.700,
@@ -43,10 +58,24 @@
         ],
         "stock": true,
         "marca":"caster",
-
+        "envioGratis":"true",
         "codigo": "PESCA0011",
         "imagenes": ["reelHuevitoUnlimited-1.webp","reelHuevitoUnlimited-2.webp"],
         "precio": 59.800,
+        "cantidad": 1
+      },
+      {
+        "tipo": "combos",
+        "nombre": "Combo Variada Rio 1",
+        "descripcion": [
+         "Reel Frontal Caster Flex",
+         "Caña SpeedForce 1.80mt"
+        ],
+        "stock": true,
+        "marca":"caster",
+        "codigo": "PESCA0034",
+        "imagenes": ["combovariada-1.webp","caniaSpeedForcegsp1902m-1.webp","reelFrontalFlex4002-1.webp"],
+        "precio": 41.500,
         "cantidad": 1
       },
       {
@@ -94,31 +123,15 @@
         "cantidad": 1
       },
       {
-        "tipo": "reel",
-        "nombre": "Reel Huevito Monster Beast",
+        "tipo": "sombreros",
+        "nombre": "Sombrero Negro con Cubre Cuello",
         "descripcion": [
-          "3 +1 rulemanes de acero inoxidable ",
-          "Radio de giro de alta velocidad 7:2:1",
-          "Capacidad de multifilamento MM/M: 0.23/180 -0.30/110",
-          "Capacidad de multifilamento MM/M: 0.12/150-0.16/120-1.20/100",
-          "Peso:215 gramos",
-          "Max drag : 7kg",
-          "Freno magnético regulable externamente",
-          "Sistema de desarme rápido de tapa lateral",
-          "Cuerpo de bajo perfil construido en grafito",
-          "Carretel de grafito",
-          "Manija doble de aluminio cnc reforzada y alivianada",
-          "Devanador automatico sincronizado"
+         
         ],
         "stock": true,
-        "marca":"beast",
-        "codigo": "PESCA0028",
-        "imagenes": [
-          "reelHuevoMonster-1.webp",
-          "reelHuevoMonster-2.webp",
-          "reelHuevoMonster-3.webp"
-        ],
-        "precio": 25.000,
+        "codigo": "PESCA0030",
+        "imagenes": ["sombreronegro-1.webp","sombreronegro-2.webp"],
+        "precio": 5.300,
         "cantidad": 1
       },
       {
@@ -154,7 +167,7 @@
         ],
         "stock": true,
         "marca":"caster",
-
+        
         "codigo": "PESCA0001",
         "imagenes": [
           "anzueloOffsetPlomada-1.webp",
@@ -182,7 +195,7 @@
         ],
         "stock": true,
         "marca":"caster",
-
+        
         "codigo": "PESCA0002",
         "imagenes": ["bogaGrip-1.webp","bogaGrip-2.webp"],
         "precio": 8.300,
@@ -208,7 +221,7 @@
         ],
         "stock": true,
         "marca":"caster",
-
+        
         "codigo": "PESCA0003",
         "imagenes": ["caniaSpeedForcegsp1902m-1.webp"],
         "precio": 20.100,
@@ -236,7 +249,7 @@
         ],
         "stock": true,
         "marca":"caster",
-
+        
         "codigo": "PESCA0004",
         "imagenes": ["caniaBackFighter-BC1802M-1.webp"],
         "precio": 19.900,
@@ -255,10 +268,38 @@
         ],
         "stock": true,
         "marca":"caster",
-
+        
         "codigo": "PESCA0005",
         "imagenes": ["leader15CM-1.webp"],
         "precio": 2.900,
+        "cantidad": 1
+      },
+      {
+        "tipo": "reel",
+        "nombre": "Reel Huevito Monster Beast",
+        "descripcion": [
+          "3 +1 rulemanes de acero inoxidable ",
+          "Radio de giro de alta velocidad 7:2:1",
+          "Capacidad de multifilamento MM/M: 0.23/180 -0.30/110",
+          "Capacidad de multifilamento MM/M: 0.12/150-0.16/120-1.20/100",
+          "Peso:215 gramos",
+          "Max drag : 7kg",
+          "Freno magnético regulable externamente",
+          "Sistema de desarme rápido de tapa lateral",
+          "Cuerpo de bajo perfil construido en grafito",
+          "Carretel de grafito",
+          "Manija doble de aluminio cnc reforzada y alivianada",
+          "Devanador automatico sincronizado"
+        ],
+        "stock": true,
+        "marca":"beast",
+        "codigo": "PESCA0028",
+        "imagenes": [
+          "reelHuevoMonster-1.webp",
+          "reelHuevoMonster-2.webp",
+          "reelHuevoMonster-3.webp"
+        ],
+        "precio": 25.000,
         "cantidad": 1
       },
       {
@@ -547,7 +588,64 @@
         "imagenes": ["senuelo_LR007.webp"],
         "precio": 1.600,
         "cantidad": 1
+      },
+      {
+        "tipo": "sombreros",
+        "nombre": "Sombrero Gris con Cubre Cuello",
+        "descripcion": [
+         
+        ],
+        "stock": true,
+        "codigo": "PESCA0029",
+        "imagenes": ["sombrerogris-1.webp","sombrerogris-2.webp"],
+        "precio": 5.300,
+        "cantidad": 1
+      },
+      {
+        "tipo": "combos",
+        "nombre": "Combo BaitCasting 1",
+        "descripcion": [
+         "Reel huevito Caster Pro 110 Unlimited",
+         "Caña Caster BlackFighter 1.80mt"
+        ],
+        "stock": true,
+        "marca":"caster",
+        "codigo": "PESCA0031",
+        "imagenes": ["combobaitcast-1.webp","reelHuevitoUnlimited-1.webp","caniaBackFighter-BC1802M-1.webp"],
+        "precio": 79.200,
+        "cantidad": 1
+      },
+   {
+        "tipo": "combos",
+        "nombre": "Combo BaitCasting 3",
+        "descripcion": [
+         "Reel Huevito Beast",
+         "Caña Caster BlackFighter 1.80mt"
+        ],
+        "stock": true,
+        "marca":"caster",
+        "codigo": "PESCA0033",
+        "imagenes": ["combobaitcast-3.webp","reelHuevoMonster-1.webp","caniaBackFighter-BC1802M-1.webp"],
+        "precio": 44.300,
+        "cantidad": 1
+      },
+  
+      {
+        "tipo": "combos",
+        "nombre": "Combo Variada Rio 2",
+        "descripcion": [
+         "Reel Frontal Caster BlackWidow",
+         "Caña SpeedForce 1.80mt"
+        ],
+        "stock": true,
+        "marca":"caster",
+        "codigo": "PESCA0035",
+        "imagenes": ["combovariada-2.webp","caniaSpeedForcegsp1902m-1.webp","reelFrontalBlackWidow4006-1.webp"],
+        "precio": 55.400,
+        "cantidad": 1
       }
+
+  
     ],
     "electronica": []
   }

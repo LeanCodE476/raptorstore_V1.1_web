@@ -9,6 +9,7 @@ import { CartContext } from "../Contexts/CartContext";
 import { useContext, useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import SearchIcon from "@mui/icons-material/Search";
 import "../App.css";
 const CardProductos = ({ product }) => {
   const { onAddProduct } = useContext(CartContext);
@@ -53,9 +54,9 @@ const CardProductos = ({ product }) => {
           flexDirection: "column",
           alignItems: "center",
           maxWidth: "11.5rem",
-          width:'100%',
+          width: "100%",
           height: "auto",
-          pb: "1.5rem",
+          pb: "1rem",
           bgcolor: "white",
           borderRadius: ".5rem .5rem 0rem 0rem",
           boxShadow: `
@@ -64,18 +65,18 @@ const CardProductos = ({ product }) => {
            `,
           borderBottom: "2px solid #FF0000",
           borderTop: "2px solid #FF0000",
-
-          // "@media (max-width: 410px)": {
-          //   maxWidth: "9rem",
-          // },
         }}
       >
+      <Box sx={{height:'2rem',width:'90%',mt:'.5rem',display:'flex', justifyContent:'space-between',alignItems:'center'}}>
+      <Typography sx={{fontSize:'.8rem',fontWeight:'bold'}}>En Stock</Typography>
+      <Typography sx={{fontSize:'.8rem',fontWeight:'bold',color:'#109010',opacity:product.envioGratis ? 1: 0}}>Envio Gratis</Typography>
+
+      </Box>
         <Box
           sx={{
             width: "90%",
             height: "2rem",
             display: "flex",
-            marginTop: ".5rem",
             justifyContent: "space-between",
             alignItems: "center",
           }}
@@ -221,6 +222,22 @@ const CardProductos = ({ product }) => {
             <AddShoppingCartIcon sx={{ fontSize: "1.2rem" }} />
           </IconButton>
         </Box>
+        <Button
+          sx={{
+            color: "black",
+            width: "90%",
+            mt: "1rem",
+            outline: "1px solid black",
+            "&:hover": {
+              backgroundColor: "black",
+              color: "white",
+            },
+          }}
+          onClick={handleVerDetallesClick}
+        >
+          Ver Producto <SearchIcon sx={{ transform: "rotate(70deg)" }} />
+        </Button>
+
       </Box>
     </>
   );

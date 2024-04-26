@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import argentina from "../../public/images/logo-argentina.webp";
 import ship from "../../public/images/logo-shipping.webp";
-
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 const Anuncio2 = () => {
   return (
     <Box
@@ -24,27 +24,14 @@ const Anuncio2 = () => {
         fontWeight={"bold"}
         borderBottom={"1px solid gray"}
         color={"#ff0000"}
-        textTransform={"uppercase"}
+        textTransform={"capitalize"}
+        position={'relative'}
+      
       >
-        <img
-          src={ship}
-          style={{
-            width: "2.5rem",
-            filter: "invert(1)",
-            paddingRight: ".5rem",
-          }}
-        />{" "}
-        Envios a todo el Pais{" "}
-        <img
-          src={argentina}
-          style={{
-            width: "2.5rem",
-            marginBottom: "-.8rem",
-            filter: "invert(1)",
-          }}
+      <ArrowDownwardIcon sx={{ fontSize:'2rem',position:'absolute',left:'2rem'}}/>
+        Formas de pago
+      <ArrowDownwardIcon sx={{ fontSize:'2rem',position:'absolute',right:'2rem'}}/>
 
-          className="logo-argentina"
-        />
       </Typography>
       <Box
         height={"2rem"}

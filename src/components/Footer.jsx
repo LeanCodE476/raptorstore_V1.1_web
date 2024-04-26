@@ -42,6 +42,7 @@ const Footer = () => {
         V 1.0
       </Typography>
       <Typography
+        fontSize={"1.5rem"}
         fontWeight={"bold"}
         textAlign={"center"}
         color={"#FF0000"}
@@ -54,7 +55,10 @@ const Footer = () => {
           m: "1rem auto",
           display: "flex",
           justifyContent: "space-around",
-          "@media (max-width:500px)": { flexDirection: "column",alignItems:'center'},
+          "@media (max-width:500px)": {
+            flexDirection: "column",
+            alignItems: "center",
+          },
           width: "90%",
           maxWidth: "50rem",
         }}
@@ -114,7 +118,6 @@ const Footer = () => {
               sx={{
                 paddingRight: "1rem",
                 fontSize: "2.5rem",
-           
               }}
             />
             Obera, Misiones,Argentina
@@ -143,7 +146,6 @@ const Footer = () => {
               sx={{
                 paddingRight: "1rem",
                 fontSize: "2.5rem",
-          
               }}
             />
             raptorstore
@@ -162,7 +164,6 @@ const Footer = () => {
               sx={{
                 paddingRight: "1rem",
                 fontSize: "2.5rem",
-            
               }}
             />{" "}
             raptorstore

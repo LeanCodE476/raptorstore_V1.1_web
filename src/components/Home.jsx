@@ -8,6 +8,7 @@ import Navbar from "./navbar/Navbar";
 import NavDesktop from "./navbar/NavDesktop";
 
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
+import EnviosGratis from "./EnviosGratis";
 const Home = () => {
   const [selectedType, setSelectedType] = useState(null);
 
@@ -28,8 +29,7 @@ const Home = () => {
       <div style={{ minHeight: "100vh" }}>
         <NavDesktop handleTypeSelection={handleTypeSelection} />
         <Navbar handleTypeSelection={handleTypeSelection} />
-
-        <Anuncio1 />
+        <EnviosGratis />
         <Anuncio2 />
         <Container sx={{ m: "1.5rem auto", pb: "2rem", maxWidth: "80rem" }}>
           <Box
@@ -52,7 +52,7 @@ const Home = () => {
               sx={{
                 "@media (max-width: 410px)": {
                   fontSize: ".8rem",
-                  marginTop:'.5rem'
+                  marginTop: ".5rem",
                 },
               }}
             >
@@ -86,8 +86,6 @@ const Home = () => {
             container
             rowSpacing={3}
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-        
-
           >
             {filteredProducts.map((product, index) => (
               <Grid

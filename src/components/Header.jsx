@@ -117,8 +117,9 @@ const Header = () => {
           />
           <Typography
             sx={{
+              fontSize:'.8rem',
               position: "absolute",
-              top: "2.2rem",
+              top: "2.3rem",
               right: ".5rem",
               fontWeight: "bold",
               color: "#25d366",

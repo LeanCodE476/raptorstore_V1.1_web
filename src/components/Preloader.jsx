@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 
 import { SyncLoader  } from "react-spinners";
-import logoRaptor from '../../public/images/logoRaptor.webp'
+
 import '../App.css'
 const Preloader = ({loading}) => {
   return (
@@ -19,12 +19,12 @@ const Preloader = ({loading}) => {
       }}
       className={!loading ? 'slide-out' : ''}
     >
-    <Typography variant="h4" color={'white'} fontWeight={'bold'} fontSize={'3.5rem'}>Bienvenido</Typography>
-    <Typography variant="h4" color={'white'} fontWeight={'bold'} fontSize={'3.5rem'} paddingBottom={'10rem'}>a</Typography>
+    <Typography variant="h4" color={'white'} fontWeight={'bold'} fontSize={'3.5rem'} mt={'-5rem' } textAlign={'center'}>Bienvenido <br /> a</Typography>
 
-       {<img src={logoRaptor} alt="logo-raptor"style={{width:'17rem',marginTop:'5.5rem',position:'absolute'}} />}
+      <Typography variant="h2" color={'#ff0000'} textAlign={'center'} fontFamily={"Orbitron"} fontWeight={'800'} sx={{transform:'translate(0)'}}>Raptor Store</Typography>
 
-      <SyncLoader color="red" size={30}  />
+       <Typography variant="h5" textAlign={'center'} color={'yellow'} mt={'1rem'}  fontWeight={'bold'} fontSize={'1.2rem'}>Envios Gratis apartir de $65.000!!</Typography>
+      <SyncLoader color="red" size={20} style={{marginTop:'3rem'}} />
     </Box>
   );
 };

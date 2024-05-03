@@ -22,11 +22,6 @@ const CardProductos = ({ product }) => {
   };
   const formattedPrice = precio.toFixed(3);
 
-  const logos = {
-    caster: logoCaster,
-    abugarcia: logoAbuGarcia,
-    beast: logoBeast,
-  };
   const [cantidad, setCantidad] = useState(product.cantidad || 0);
 
   const handleIncrease = () => {
@@ -53,9 +48,8 @@ const CardProductos = ({ product }) => {
           position: "relative",
           flexDirection: "column",
           alignItems: "center",
-          maxWidth: "11.5rem",
-          width: "100%",
           height: "auto",
+          width: "95%",
           pb: "1rem",
           bgcolor: "white",
           borderRadius: ".5rem .5rem 0rem 0rem",
@@ -67,11 +61,6 @@ const CardProductos = ({ product }) => {
           borderTop: "2px solid #FF0000",
         }}
       >
-      <Box sx={{height:'2rem',width:'90%',mt:'.5rem',display:'flex', justifyContent:'space-between',alignItems:'center'}}>
-      <Typography sx={{fontSize:'.7rem',fontWeight:'bold'}}>{product.stock}</Typography>
-      <Typography sx={{fontSize:'.8rem',fontWeight:'bold',color:'#109010',opacity:product.envioGratis ? 1: 0}}>Envio Gratis</Typography>
-
-      </Box>
         <Box
           sx={{
             width: "90%",
@@ -81,38 +70,39 @@ const CardProductos = ({ product }) => {
             alignItems: "center",
           }}
         >
-          {" "}
           <Typography color={"#CACFD2"} fontSize={".8rem"}>
             {codigo}
           </Typography>
-          {product.marca && logos[product.marca] && (
-            <img
-              className="img-marca"
-              src={logos[product.marca]}
-              alt={`logo-${product.marca}`}
-              style={{
-                width: "4rem",
-              }}
-              loading="lazy"
-            />
-          )}
         </Box>
 
+        <Box
+        sx={{
+          width: "90%",
+          height: "auto",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          cursor: 'pointer',
+          transition: 'transform 0.2s',
+          '&:hover': {
+            transform: 'scale(1.1)',
+          },
+        }}
+        onClick={handleVerDetallesClick}
+      >
         <img
           src={`/images/${imagenes[0]}`}
-          alt={nombre}
           loading="lazy"
           style={{
-            width: "90%",
-            height: "auto",
-            marginTop: "1rem",
+            width: "100%",
             boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
-            borderRadius: ".5rem ",
-            cursor: "pointer",
+            borderRadius: ".5rem",
           }}
-          className="card-product-img"
-          onClick={handleVerDetallesClick}
+          alt={product.nombre}
+          className="imagen-detalle"
         />
+      </Box>
+      
         <Box
           sx={{
             width: "90%",
@@ -127,7 +117,6 @@ const CardProductos = ({ product }) => {
             sx={{
               mt: "1rem",
               fontSize: ".9rem",
-              maxWidth: "11.5rem",
               whiteSpace: "nowrap",
               overflow: "hidden",
               textOverflow: "ellipsis",
@@ -142,102 +131,108 @@ const CardProductos = ({ product }) => {
             mt={".5rem"}
             fontWeight={"bold"}
             color={"#FF0000"}
+            textAlign={"center"}
           >
             ${formattedPrice}
           </Typography>
         </Box>
+        {
+          // <Button
+          //   sx={{
+          //     color: "black",
+          //     width: "7rem",
+          //     fontSize: "70%",
+          //     outline: "1px solid black",
+          //     textTransform: "capitalize",
+          //     "&:hover": {
+          //       backgroundColor: "black",
+          //       color: "white",
+          //     },
+          //   }}
+          //   onClick={handleVerDetallesClick}
+          // >
+          //   Ver Mas
+          //   <SearchIcon sx={{ transform: "rotate(70deg)" }} />
+          // </Button>
+        }
+
         <Box
           sx={{
             width: "90%",
             display: "flex",
             justifyContent: "space-around",
             alignItems: "center",
+            flexWrap: "wrap",
+            gap: ".5rem",
+            mt: "0rem",
           }}
         >
           <Box
             sx={{
               height: "2rem",
-              width: "5rem",
-              borderRadius: ".3rem",
+              maxWidth: "7rem",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              "@media (max-width: 410px)": {
-                width: "4rem",
-              },
+              borderRadius: ".3rem",
+              overflow: "hidden",
+              outline: "1px solid gray",
             }}
           >
             <IconButton
               sx={{
-                bgcolor: "#E5E7E9",
-                padding: ".2rem",
+                borderRadius: "0rem",
+
                 opacity: cantidad === 1 ? 0 : 1,
+                bgcolor: "#F1C40F",
               }}
               disabled={cantidad === 1}
               onClick={handleDecrease}
             >
-              <RemoveIcon
-                sx={{
-                  color: "#424949 ",
-                  fontSize: "1.6rem",
-                  "@media (max-width: 410px)": { fontSize: "1rem" },
-                }}
-              />
+              <RemoveIcon sx={{ color: "#424949 ", fontSize: "1.6rem" }} />
             </IconButton>
 
-            <Typography sx={{ fontWeight: "bold", margin: ".5rem" }}>
+            <Typography
+              sx={{ fontWeight: "bold", margin: "1rem", fontSize: "1rem" }}
+            >
               {cantidad}
             </Typography>
 
             <IconButton
               sx={{
-                bgcolor: "#E5E7E9",
-                padding: ".2rem",
+                borderRadius: "0rem",
+                bgcolor: "#F1C40F",
               }}
               onClick={handleIncrease}
             >
-              <AddIcon
-                sx={{
-                  color: "#424949  ",
-                  fontSize: "1.6rem",
-                  "@media (max-width: 410px)": { fontSize: "1rem" },
-                }}
-              />
+              <AddIcon sx={{ color: "#424949  ", fontSize: "1.6rem" }} />
             </IconButton>
           </Box>
-          <IconButton
+
+          <Button
             sx={{
               bgcolor: "#1F1F1F",
               color: "white",
-              width: "3rem",
               height: "2rem",
+              width: "100%",
               borderRadius: ".3rem",
-              "&:hover": {
+              fontWeight: "bold",
+              fontSize: "70%",
+              textTransform: "capitalize",
+              mt:'.3rem'
+,              "&:hover": {
                 backgroundColor: "black",
                 color: "white",
               },
             }}
             onClick={handleAddToCart}
           >
-            <AddShoppingCartIcon sx={{ fontSize: "1.2rem" }} />
-          </IconButton>
+            Agregar al Carrito
+            <AddShoppingCartIcon
+              sx={{ fontSize: "1.2rem", marginLeft: ".5rem" }}
+            />
+          </Button>
         </Box>
-        <Button
-          sx={{
-            color: "black",
-            width: "90%",
-            mt: "1rem",
-            outline: "1px solid black",
-            "&:hover": {
-              backgroundColor: "black",
-              color: "white",
-            },
-          }}
-          onClick={handleVerDetallesClick}
-        >
-          Ver Producto <SearchIcon sx={{ transform: "rotate(70deg)" }} />
-        </Button>
-
       </Box>
     </>
   );

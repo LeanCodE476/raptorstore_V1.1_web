@@ -27,7 +27,7 @@ const Detalle = ({ products }) => {
   };
 
   useEffect(() => {
-    // scroll.scrollToTop();
+    scroll.scrollToTop();
   }, []);
   const { codigo } = useParams();
   const navigate = useNavigate();
@@ -36,6 +36,17 @@ const Detalle = ({ products }) => {
   const { onAddProduct, cart, total, contador, increaseItems, decreaseItems } =
     useContext(CartContext);
   let product = null;
+
+  const enviarMensajeWhatsApp = (codigo, nombre) => {
+    const telefono = "3755503038"; // Número de teléfono al que se enviará el mensaje
+    const mensaje = `Hola, quiero cotizar el envio de este producto. Código: ${codigo}, Nombre: ${nombre}`;
+
+    const enlaceWhatsApp = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(
+      mensaje
+    )}`;
+
+    window.open(enlaceWhatsApp, "_blank");
+  };
 
   for (const categoryKey in products.productos) {
     if (Object.prototype.hasOwnProperty.call(products.productos, categoryKey)) {
@@ -182,6 +193,7 @@ const Detalle = ({ products }) => {
               style={{
                 width: "100%",
                 boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
+                borderRadius: ".5rem",
               }}
               alt={product.nombre}
               className="imagen-detalle"
@@ -257,15 +269,24 @@ const Detalle = ({ products }) => {
             ))}
           </ul>
         </Box>
-        { 
-        //     <Typography mt={"2rem"} width={"90%"} color={"#00B728"} variant="h6">
-        //   Queres cotizar el envio de este producto?{" "}
-        //   <Button sx={{ fontWeight: "bold", bgcolor: "black", color:'red' }}>
-        //     Presiona aca
-        //   </Button>
-        // </Typography>
-      }
-     
+
+        <Typography mt={"2rem"} width={"90%"} variant="h6" fontSize={"1rem"}>
+          Queres cotizar el envio de este producto?{" "}
+          <Button
+            sx={{
+              color: "red",
+              textTransform: "capitalize",
+              padding: ".2rem",
+              color:'red',
+              fontWeight:'bold'
+            }}
+            onClick={() =>
+              enviarMensajeWhatsApp(product.codigo, product.nombre)
+            }
+          >
+            Presiona aca 
+          </Button>
+        </Typography>
 
         <Box
           sx={{
@@ -286,14 +307,14 @@ const Detalle = ({ products }) => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              borderRadius:'.3rem',
-              overflow:'hidden'
+              borderRadius: ".3rem",
+              overflow: "hidden",
             }}
           >
             <IconButton
               sx={{
                 borderRadius: "0rem",
-                bgcolor: "#E5E7E9",
+
                 opacity: cantidad === 1 ? 0 : 1,
                 bgcolor: "#F1C40F",
               }}
@@ -311,7 +332,6 @@ const Detalle = ({ products }) => {
 
             <IconButton
               sx={{
-                bgcolor: "#E5E7E9",
                 borderRadius: "0rem",
                 bgcolor: "#F1C40F",
               }}
@@ -329,7 +349,7 @@ const Detalle = ({ products }) => {
               height: "2rem",
               borderRadius: ".3rem",
               fontWeight: "bold",
-              fontSize:'.7rem',
+              fontSize: ".7rem",
               "&:hover": {
                 backgroundColor: "black",
                 color: "white",

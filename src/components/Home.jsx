@@ -2,13 +2,10 @@ import { useState } from "react";
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import CardProductos from "./CardProductos";
 import productos from "../productos.json";
-import Anuncio1 from "./Anuncio1";
-import Anuncio2 from "./Anuncio2";
 import Navbar from "./navbar/Navbar";
 import NavDesktop from "./navbar/NavDesktop";
 
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
-import EnviosGratis from "./EnviosGratis";
 const Home = () => {
   const [selectedType, setSelectedType] = useState(null);
 
@@ -26,12 +23,17 @@ const Home = () => {
 
   return (
     <>
-      <div style={{ minHeight: "100vh" }}>
+      <div
+        style={{
+          minHeight: "100vh",
+        
+        }}
+      >
         <NavDesktop handleTypeSelection={handleTypeSelection} />
         <Navbar handleTypeSelection={handleTypeSelection} />
-        <EnviosGratis />
-        <Anuncio2 />
-        <Container sx={{ m: "1.5rem auto", pb: "2rem", maxWidth: "80rem" }}>
+        <Box
+          sx={{ m: "1.5rem auto",  maxWidth: "60rem", width: "95%" }}
+        >
           <Box
             sx={{
               display: "flex",
@@ -45,16 +47,9 @@ const Home = () => {
             <Typography
               color={"white"}
               variant="h6"
-              textAlign={"center"}
               fontSize={"1.2rem"}
+              width={"100%"}
               fontWeight={"bold"}
-              width={"17rem"}
-              sx={{
-                "@media (max-width: 410px)": {
-                  fontSize: ".8rem",
-                  marginTop: ".5rem",
-                },
-              }}
             >
               {" "}
               Sección{" "}
@@ -68,7 +63,8 @@ const Home = () => {
                   m: " 0rem 0 0 1rem",
                   color: "white",
                   outline: "1px solid white",
-                  width: "9rem",
+                  width: "10rem",
+                  fontSize: ".7rem",
                   "&:hover": {
                     transition: "0s all",
                     backgroundColor: "black",
@@ -76,23 +72,20 @@ const Home = () => {
                 }}
                 onClick={() => handleTypeSelection(null)}
               >
-                Volver
+                Ver Todo
                 <FilterAltIcon />
               </Button>
             ) : null}
           </Box>
 
-          <Grid
-            container
-            rowSpacing={3}
-            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-          >
+          <Grid container rowSpacing={3} columnSpacing={0}>
             {filteredProducts.map((product, index) => (
               <Grid
                 item
                 xs={6}
                 sm={4}
-                lg={2}
+                md={3}
+                lg={3}
                 sx={{
                   display: "flex",
                   justifyContent: "center",
@@ -103,7 +96,7 @@ const Home = () => {
               </Grid>
             ))}
           </Grid>
-        </Container>
+        </Box>
       </div>
     </>
   );

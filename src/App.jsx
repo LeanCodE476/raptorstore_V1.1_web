@@ -25,13 +25,7 @@ function App() {
   }, []);
 
   return (
-    <div
-      style={
-        {
-           backgroundColor: "#1B2631"
-        }
-      }
-    >
+    <div style={{backgroundColor:'#313955'}}>
       {loading ? (
         <Preloader loading />
       ) : (
@@ -48,7 +42,6 @@ function App() {
             <Footer />
           </CartProvider>
         </BrowserRouter>
-      
       )}
     </div>
   );

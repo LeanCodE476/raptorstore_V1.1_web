@@ -15,10 +15,19 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
+import logoCaster from "../../public/images/logo-caster.webp";
+import logoAbuGarcia from "../../public/images/logoAbuGarcia.webp";
+import logoBeast from "../../public/images/logo-beast.webp";
 
 const Detalle = ({ products }) => {
+  const logos = {
+    caster: logoCaster,
+    abugarcia: logoAbuGarcia,
+    beast: logoBeast,
+  };
+
   useEffect(() => {
-    scroll.scrollToTop();
+    // scroll.scrollToTop();
   }, []);
   const { codigo } = useParams();
   const navigate = useNavigate();
@@ -72,12 +81,13 @@ const Detalle = ({ products }) => {
     return <p>Producto no encontrado</p>;
   }
   return (
-    <Container sx={{ mt: "2rem" }}>
+    <Box sx={{ bgcolor: "white" }}>
       <Button
         sx={{
-          m: " 0rem 0 0 1rem",
+          m: " 1rem 0 0 1rem",
           color: "white",
           outline: "1px solid white",
+          bgcolor: "black",
           "&:hover": {
             transition: "0s all",
             backgroundColor: "black",
@@ -94,29 +104,52 @@ const Detalle = ({ products }) => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          p: "1rem",
-          paddingBottom: "2rem",
           marginBottom: "2rem",
-          width: "100%",
           maxWidth: "40rem",
           bgcolor: "white",
           borderRadius: ".5rem",
-          borderTop: "2px solid #ff0000",
-          borderBottom: "2px solid #ff0000",
+          pb: "2rem",
         }}
       >
-        <Typography variant="h6" textAlign={"center"} width={"90%"}>
+        <Typography
+          variant="h6"
+          textAlign={"start"}
+          width={"90%"}
+          fontSize={"1.4rem"}
+        >
           {product.nombre}
+        </Typography>
+        <Typography
+          variant="h6"
+          textAlign={"start"}
+          width={"90%"}
+          mt={"1rem"}
+          color={"gray"}
+          fontWeight={"400"}
+        >
+          Producto de :{" "}
+          {product.marca && logos[product.marca] && (
+            <img
+              className="img-marca"
+              src={logos[product.marca]}
+              alt={`logo-${product.marca}`}
+              style={{
+                width: "5rem",
+              }}
+              loading="lazy"
+            />
+          )}
         </Typography>
         <Box sx={{ display: "flex", width: "90%", alignItems: "center" }}>
           <Typography
-            variant="h5"
+            variant="h6"
             fontWeight={"bold"}
-            color={"#ff0000"}
+            color={"#1BCC4D"}
             width={"90%"}
             mt={"1rem"}
+            textTransform={"capitalize"}
           >
-            ${formattedPrice}
+            {product.stock}!
           </Typography>
           <Typography variant="p" color={"gray"} marginTop={" 1rem"}>
             Cod:{product.codigo}
@@ -130,25 +163,36 @@ const Detalle = ({ products }) => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            width: "95%",
           }}
         >
-          <img
-            src={`/images/${product.imagenes[index]}`}
-            loading="lazy"
-            style={{
-              maxWidth: "90%",
-              boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
-              borderRadius: ".5rem ",
+          <Box
+            sx={{
+              width: "100%",
+              height: "auto",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
-            alt={product.nombre}
-            className="imagen-detalle"
-          />
+          >
+            {" "}
+            <img
+              src={`/images/${product.imagenes[index]}`}
+              loading="lazy"
+              style={{
+                width: "100%",
+                boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
+              }}
+              alt={product.nombre}
+              className="imagen-detalle"
+            />
+          </Box>
+
           <Box
             sx={{
               width: "90%",
-              maxWidth: "20rem",
               display: "flex",
-              justifyContent: "space-between",
+              justifyContent: "space-around",
               marginTop: "2rem",
             }}
           >
@@ -179,9 +223,19 @@ const Detalle = ({ products }) => {
         </Box>
 
         <Typography
-          variant="h5"
+          variant="h4"
+          fontWeight={"500"}
           width={"90%"}
           mt={"2rem"}
+          textAlign={"start"}
+          color={"#ff0000"}
+        >
+          ${formattedPrice}
+        </Typography>
+        <Typography
+          variant="h5"
+          width={"90%"}
+          mt={"1rem"}
           textAlign={"center"}
           fontWeight={"bold"}
         >
@@ -203,26 +257,24 @@ const Detalle = ({ products }) => {
             ))}
           </ul>
         </Box>
-{product.envioGratis ?  <Typography
-  variant="p"
-  fontWeight={"bold"}
-  color={"green"}
-  mt={"2rem"}
-  textAlign={"center"}
->
-  Este producto cuenta con ENVIO GRATIS!
-</Typography> : null}
-       
+        { 
+        //     <Typography mt={"2rem"} width={"90%"} color={"#00B728"} variant="h6">
+        //   Queres cotizar el envio de este producto?{" "}
+        //   <Button sx={{ fontWeight: "bold", bgcolor: "black", color:'red' }}>
+        //     Presiona aca
+        //   </Button>
+        // </Typography>
+      }
+     
 
         <Box
           sx={{
-            width: "90%",
+            width: "95%",
             display: "flex",
-            justifyContent: "space-around",
+            justifyContent: "space-between",
             alignItems: "center",
             marginTop: "2rem",
             maxWidth: "20rem",
-            bgcolor: "#D0D3D4 ",
             padding: ".5rem",
             borderRadius: ".5rem",
           }}
@@ -230,18 +282,20 @@ const Detalle = ({ products }) => {
           <Box
             sx={{
               height: "2rem",
-              width: "5rem",
-              borderRadius: ".3rem",
+              width: "8rem",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              borderRadius:'.3rem',
+              overflow:'hidden'
             }}
           >
             <IconButton
               sx={{
+                borderRadius: "0rem",
                 bgcolor: "#E5E7E9",
-                padding: ".2rem",
                 opacity: cantidad === 1 ? 0 : 1,
+                bgcolor: "#F1C40F",
               }}
               disabled={cantidad === 1}
               onClick={handleDecrease}
@@ -249,29 +303,33 @@ const Detalle = ({ products }) => {
               <RemoveIcon sx={{ color: "#424949 ", fontSize: "1.6rem" }} />
             </IconButton>
 
-            <Typography sx={{ fontWeight: "bold", margin: ".5rem" }}>
+            <Typography
+              sx={{ fontWeight: "bold", margin: "1rem", fontSize: "1.6rem" }}
+            >
               {cantidad}
             </Typography>
 
             <IconButton
               sx={{
                 bgcolor: "#E5E7E9",
-                padding: ".2rem",
+                borderRadius: "0rem",
+                bgcolor: "#F1C40F",
               }}
               onClick={handleIncrease}
             >
               <AddIcon sx={{ color: "#424949  ", fontSize: "1.6rem" }} />
             </IconButton>
           </Box>
+
           <IconButton
             sx={{
               bgcolor: "#1F1F1F",
               color: "white",
-              width: "7rem",
+              width: "9rem",
               height: "2rem",
               borderRadius: ".3rem",
-              fontSize: "1rem",
               fontWeight: "bold",
+              fontSize:'.7rem',
               "&:hover": {
                 backgroundColor: "black",
                 color: "white",
@@ -279,14 +337,14 @@ const Detalle = ({ products }) => {
             }}
             onClick={handleAddToCart}
           >
-            Agregar
+            Agregar al Carrito
             <AddShoppingCartIcon
               sx={{ fontSize: "1.2rem", marginLeft: ".5rem" }}
             />
           </IconButton>
         </Box>
       </Box>
-    </Container>
+    </Box>
   );
 };
 

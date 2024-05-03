@@ -68,7 +68,7 @@ const CardProductos = ({ product }) => {
         }}
       >
       <Box sx={{height:'2rem',width:'90%',mt:'.5rem',display:'flex', justifyContent:'space-between',alignItems:'center'}}>
-      <Typography sx={{fontSize:'.8rem',fontWeight:'bold'}}>En Stock</Typography>
+      <Typography sx={{fontSize:'.7rem',fontWeight:'bold'}}>{product.stock}</Typography>
       <Typography sx={{fontSize:'.8rem',fontWeight:'bold',color:'#109010',opacity:product.envioGratis ? 1: 0}}>Envio Gratis</Typography>
 
       </Box>

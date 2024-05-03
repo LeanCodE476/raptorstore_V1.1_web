@@ -8,7 +8,7 @@
          "Reel Abu Garcia Black Max 3",
          "Caña Caster BlackFighter 1.80mt"
         ],
-        "stock": true,
+        "stock": "stock disponible",
         "marca":"abugarcia",
         "envioGratis":"true",
 
@@ -32,7 +32,7 @@
           "Sistema Mag Trax™: 10 posiciones de frenado magnético regulable",
           "Capacidad de línea: 145 metros de 0.30 mm"
         ],
-        "stock": true,
+        "stock": "stock disponible",
         "marca":"abugarcia",
         "envioGratis":"true",
         "codigo": "PESCA0019",
@@ -58,7 +58,8 @@
           "Manija doble de aluminio CNC reforzada y alivianada con empuñaduras de goma eva",
           "Devanador automático sincronizado en forma ovalada para evitar la fricción en el lanzamiento"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
         "envioGratis":"true",
         "codigo": "PESCA0011",
@@ -73,7 +74,8 @@
          "Reel Frontal Caster Flex",
          "Caña SpeedForce 1.80mt"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
         "codigo": "PESCA0034",
         "imagenes": ["combovariada-1.webp","caniaSpeedForcegsp1902m-1.webp","reelFrontalFlex4002-1.webp"],
@@ -97,7 +99,8 @@
           "Manija de grafito intercambiable izquierda/derecha",
           "Pick up de aluminio grueso PowerBail™"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
 
         "codigo": "PESCA0010",
@@ -113,7 +116,8 @@
           "Peso: 5 gramos",
           "Material: Pvc"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
         "codigo": "PESCA0012",
         "imagenes": [
@@ -130,7 +134,8 @@
         "descripcion": [
          
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "codigo": "PESCA0030",
         "imagenes": ["sombreronegro-1.webp","sombreronegro-2.webp"],
         "precio": 5.300,
@@ -148,7 +153,8 @@
           "Ideal para pesca de tarariras",
           "Presentación: sobre de 2 unidades"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
 
         "codigo": "PESCA0017",
@@ -167,7 +173,8 @@
           "Medidas: 4,1 x 1,4 cm",
           "Presentación: sobre de 3 unidades"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
         
         "codigo": "PESCA0001",
@@ -195,7 +202,8 @@
           "Resistente a la corrosión",
           "Facilita la exhibición de las piezas para fotografiarlas"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
         
         "codigo": "PESCA0002",
@@ -221,7 +229,8 @@
           "Empuñadura de goma eva ergonómica",
           "Incluye funda de tela estampada con divisiones"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
         
         "codigo": "PESCA0003",
@@ -249,7 +258,8 @@
           "Empuñadura recortada de goma eva ergonómica con diseño camuflado",
           "Incluye funda de tela estampada con divisiones"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
         
         "codigo": "PESCA0004",
@@ -268,7 +278,8 @@
           "Color: plata",
           "Presentación: bolsita de 10 unidades"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
         
         "codigo": "PESCA0005",
@@ -293,7 +304,8 @@
           "Manija doble de aluminio cnc reforzada y alivianada",
           "Devanador automatico sincronizado"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"beast",
         "codigo": "PESCA0028",
         "imagenes": [
@@ -314,7 +326,8 @@
           "Medida: 2,1 cm de largo",
           "Presentación: bolsita de 100 unidades"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
 
         "codigo": "PESCA0006",
@@ -332,7 +345,8 @@
           "Trenzado de 4 fibras sin memoria",
           "Máxima flotabilidad y sensibilidad"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
 
         "codigo": "PESCA0007",
@@ -350,7 +364,8 @@
           "Trenzado de 4 fibras sin memoria",
           "Máxima flotabilidad y sensibilidad"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
 
         "codigo": "PESCA0008",
@@ -378,7 +393,8 @@
           "Pick up de aluminio grueso PowerBail™",
           "Diseño ultra liviano y compacto"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
 
         "codigo": "PESCA0009",
@@ -399,7 +415,8 @@
           "Con cuchara giratoria",
           "Ideal para pesca de tarariras"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
 
         "codigo": "PESCA0013",
@@ -418,7 +435,8 @@
           "Patas de goma con movimiento",
           "Ideal para pesca de tarariras"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
 
         "codigo": "PESCA0014",
@@ -441,7 +459,8 @@
           "Las principales características de nuestros señuelos son: cuerpo sellado por ultrasonido y testeado en tanques de alta presión, anzuelos extremadamente filosos y resistentes, anillas forjadas, ojos holográficos en 3D, pintura e impresiones realistas de alto nivel.",
           "Cada señuelo ha sido testeado individualmente para ofrecer la mejor experiencia y efectividad."
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
 
         "codigo": "PESCA0015",
@@ -460,7 +479,8 @@
           "Con rattling (sonajero)",
           "Anzuelos: 2 triples rojos"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
 
         "codigo": "PESCA0016",
@@ -478,7 +498,8 @@
           "Peso: 8 gramos",
           "Anzuelo offset #3/0"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
 
         "codigo": "PESCA0018",
@@ -492,7 +513,8 @@
         "descripcion": [
           "Cucharitas minis"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "codigo": "PESCA0020",
         "imagenes": ["cucharaGiratoriaZwicke-1.webp"],
         "precio": 1.600,
@@ -518,7 +540,8 @@
           "medidas: 7cm",
           "peso: 3.8g"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "codigo": "PESCALR002",
         "imagenes": ["senuelo_LR002.webp"],
         "precio": 1.600,
@@ -531,7 +554,8 @@
           "medidas: 6.8cm",
           "peso: 4.1g"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "codigo": "PESCALR003",
         "imagenes": ["senuelo_LR003.webp"],
         "precio": 1.800,
@@ -544,7 +568,8 @@
           "medidas: 2.8cm",
           "peso: 1.5g"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "codigo": "PESCALR004",
         "imagenes": ["senuelo_LR004.webp"],
         "precio": 1.500,
@@ -557,7 +582,8 @@
           "medidas: 6.5cm",
           "peso: 8.3g"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "codigo": "PESCALR005",
         "imagenes": ["senuelo_LR005.webp"],
         "precio": 2.100,
@@ -570,7 +596,8 @@
           "medidas: 5cm",
           "peso: 3.6g"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "codigo": "PESCALR006",
         "imagenes": ["senuelo_LR006.webp"],
         "precio": 1.700,
@@ -583,7 +610,8 @@
           "medidas: 4.5cm",
           "peso: 3.5g"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "codigo": "PESCALR007",
         "imagenes": ["senuelo_LR007.webp"],
         "precio": 1.600,
@@ -595,7 +623,8 @@
         "descripcion": [
          
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "codigo": "PESCA0029",
         "imagenes": ["sombrerogris-1.webp","sombrerogris-2.webp"],
         "precio": 5.300,
@@ -608,7 +637,8 @@
          "Reel huevito Caster Pro 110 Unlimited",
          "Caña Caster BlackFighter 1.80mt"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
         "envioGratis":"true",
 
@@ -624,7 +654,8 @@
          "Reel Huevito Beast",
          "Caña Caster BlackFighter 1.80mt"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
         "codigo": "PESCA0033",
         "imagenes": ["combobaitcast-3.webp","reelHuevoMonster-1.webp","caniaBackFighter-BC1802M-1.webp"],
@@ -639,7 +670,8 @@
          "Reel Frontal Caster BlackWidow",
          "Caña SpeedForce 1.80mt"
         ],
-        "stock": true,
+        "stock": "stock disponible",
+
         "marca":"caster",
         "codigo": "PESCA0035",
         "imagenes": ["combovariada-2.webp","caniaSpeedForcegsp1902m-1.webp","reelFrontalBlackWidow4006-1.webp"],

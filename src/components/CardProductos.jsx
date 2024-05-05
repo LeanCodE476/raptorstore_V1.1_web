@@ -156,7 +156,7 @@ const CardProductos = ({ product }) => {
             variant="p"
             fontSize={"1.2rem"}
             mt={".5rem"}
-           
+           fontWeight={'500'}
             textAlign={"start"}
           >
             ${formattedPrice}

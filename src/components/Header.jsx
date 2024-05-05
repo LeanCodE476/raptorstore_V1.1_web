@@ -59,7 +59,6 @@ const Header = () => {
           alignItems: "center",
           padding: "1.9rem",
           borderRadius: "10rem",
-          outline: "1px solid white",
         }}
         ref={animationParent}
         className="box-logo-carrito"

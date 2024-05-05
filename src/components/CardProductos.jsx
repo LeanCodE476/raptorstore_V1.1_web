@@ -39,7 +39,11 @@ const CardProductos = ({ product }) => {
     onAddProduct(productToAdd);
     setCantidad(1);
   };
-
+  const logos = {
+    caster: logoCaster,
+    abugarcia: logoAbuGarcia,
+    beast: logoBeast,
+  };
   return (
     <>
       <Box
@@ -70,39 +74,62 @@ const CardProductos = ({ product }) => {
             alignItems: "center",
           }}
         >
-          <Typography color={"#CACFD2"} fontSize={".8rem"}>
-            {codigo}
-          </Typography>
+          <Box
+            sx={{
+              width: "100%",
+              height: "1rem",
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <Typography color={"#CACFD2"} fontSize={"80%"}>
+              {codigo}
+            </Typography>
+         
+             
+              {product.marca && logos[product.marca] && (
+                <img
+                  className="img-marca"
+                  src={logos[product.marca]}
+                  alt={`logo-${product.marca}`}
+                  style={{
+                    height:'auto',
+                    maxWidth:'30%',
+                    zIndex:2
+                  }}
+                />
+              )}
+            
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            width: "100%",
+            height: "auto",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            cursor: "pointer",
+            transition: "transform 0.2s",
+            position:'relative',
+            "&:hover": {
+              transform: "scale(1.1)",
+            },
+          }}
+          onClick={handleVerDetallesClick}
+        >
+          <img
+            src={`/images/${imagenes[0]}`}
+            loading="lazy"
+            style={{
+              width: "100%",
+              boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
+            }}
+            alt={product.nombre}
+            className="imagen-detalle"
+          />
         </Box>
 
-        <Box
-        sx={{
-          width: "90%",
-          height: "auto",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          cursor: 'pointer',
-          transition: 'transform 0.2s',
-          '&:hover': {
-            transform: 'scale(1.1)',
-          },
-        }}
-        onClick={handleVerDetallesClick}
-      >
-        <img
-          src={`/images/${imagenes[0]}`}
-          loading="lazy"
-          style={{
-            width: "100%",
-            boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
-            borderRadius: ".5rem",
-          }}
-          alt={product.nombre}
-          className="imagen-detalle"
-        />
-      </Box>
-      
         <Box
           sx={{
             width: "90%",
@@ -129,32 +156,13 @@ const CardProductos = ({ product }) => {
             variant="p"
             fontSize={"1.2rem"}
             mt={".5rem"}
-            fontWeight={"bold"}
-            color={"#FF0000"}
-            textAlign={"center"}
+           
+            textAlign={"start"}
           >
             ${formattedPrice}
           </Typography>
         </Box>
-        {
-          // <Button
-          //   sx={{
-          //     color: "black",
-          //     width: "7rem",
-          //     fontSize: "70%",
-          //     outline: "1px solid black",
-          //     textTransform: "capitalize",
-          //     "&:hover": {
-          //       backgroundColor: "black",
-          //       color: "white",
-          //     },
-          //   }}
-          //   onClick={handleVerDetallesClick}
-          // >
-          //   Ver Mas
-          //   <SearchIcon sx={{ transform: "rotate(70deg)" }} />
-          // </Button>
-        }
+  
 
         <Box
           sx={{
@@ -176,7 +184,7 @@ const CardProductos = ({ product }) => {
               justifyContent: "center",
               borderRadius: ".3rem",
               overflow: "hidden",
-              outline: "1px solid gray",
+              boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
             }}
           >
             <IconButton
@@ -219,8 +227,9 @@ const CardProductos = ({ product }) => {
               fontWeight: "bold",
               fontSize: "70%",
               textTransform: "capitalize",
-              mt:'.3rem'
-,              "&:hover": {
+              boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
+              mt: ".3rem",
+              "&:hover": {
                 backgroundColor: "black",
                 color: "white",
               },

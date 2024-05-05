@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Box, Drawer, Typography } from "@mui/material";
+import { Box, Drawer, Typography, Button } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { CartContext } from "../Contexts/CartContext";
@@ -117,12 +117,11 @@ const Header = () => {
           />
           <Typography
             sx={{
-              fontSize:'.8rem',
+              fontSize: ".8rem",
               position: "absolute",
-              top: "2.3rem",
-              right: ".5rem",
+              top: "3rem",
+              left: "1.2rem",
               fontWeight: "bold",
-              color: "#25d366",
             }}
           >
             {0 || contador} Productos
@@ -136,7 +135,6 @@ const Header = () => {
               height: "60vh",
               paddingBottom: "2rem",
               maskImage: "linear-gradient(white 93%,transparent)",
-
             }}
             ref={animationParent}
           >
@@ -163,6 +161,17 @@ const Header = () => {
                 >
                   Carrito Vacío
                 </Typography>
+                <Button
+                  sx={{
+                    outline: "1px solid #09b90f",
+                    color: "black",
+                    mt: "1rem",
+                    textTransform: "capitalize",
+                  }}
+                  onClick={()=>setOpen(false)}
+                >
+                  Agrega productos! :D
+                </Button>
               </>
             )}
           </Box>

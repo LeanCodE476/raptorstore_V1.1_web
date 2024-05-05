@@ -25,26 +25,30 @@ function App() {
   }, []);
 
   return (
-    <div style={{backgroundColor:'#313955'}}>
-      {loading ? (
-        <Preloader loading />
-      ) : (
-        <BrowserRouter>
-          <CartProvider>
-            <Header />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route
-                path="/detalle/:codigo"
-                element={<Detalle products={products} />}
-              />
-            </Routes>
-            <Footer />
-          </CartProvider>
-        </BrowserRouter>
-      )}
-    </div>
+    <BrowserRouter>
+      <CartProvider>
+        {/* Aplica los estilos de fondo a un elemento separado para mejor aislamiento */}
+        <div className="contenedor-fondo">
+          {loading ? (
+            <Preloader loading />
+          ) : (
+            <>
+              <Header />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route
+                  path="/detalle/:codigo"
+                  element={<Detalle products={products} />}
+                />
+              </Routes>
+              <Footer />
+            </>
+          )}
+        </div>
+      </CartProvider>
+    </BrowserRouter>
   );
 }
 
 export default App;
+

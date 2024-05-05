@@ -14,19 +14,22 @@ const CartProvider = ({ children }) => {
     setCart([]);
     setTotal(0);
     setContador(0);
+    localStorage.removeItem("cart");
+    localStorage.removeItem("total");
+    localStorage.removeItem("contador");
   };
 
   const onDeleteProduct = (product) => {
     const results = cart.filter((item) => item.codigo !== product.codigo);
     const newTotal = total - product.precio * product.cantidad;
     const newContador = contador - product.cantidad;
-  
+
     setTotal(newTotal >= 0 ? newTotal : 0);
     setContador(newContador >= 0 ? newContador : 0);
     setCart(results);
-  
+
     saveToLocalStorage(results, newTotal >= 0 ? newTotal : 0, newContador >= 0 ? newContador : 0);
-  
+
     enqueueSnackbar("Se eliminó un producto del carrito", {
       variant: "error",
       anchorOrigin: {

@@ -26,6 +26,8 @@ const Home = () => {
       <div
         style={{
           minHeight: "100vh",
+          overflow:'auto',
+          borderBottom:'2px solid transparent'
         
         }}
       >
@@ -42,23 +44,23 @@ const Home = () => {
               height: "2rem",
               m: "1rem auto",
             }}
-          >
+            >
             {" "}
             <Typography
-              color={"white"}
-              variant="h6"
-              fontSize={"1.2rem"}
-              width={"100%"}
-              fontWeight={"bold"}
+            color={"white"}
+            variant="h6"
+            fontSize={"1.2rem"}
+            width={"100%"}
+            fontWeight={"bold"}
             >
-              {" "}
-              Sección{" "}
-              <span style={{ textTransform: "capitalize" }}>
-                {selectedType ? selectedType : "Principal"}
+            {" "}
+            Sección{" "}
+            <span style={{ textTransform: "capitalize" }}>
+            {selectedType ? selectedType : "Principal"}
               </span>{" "}
-            </Typography>
-            {selectedType ? (
-              <Button
+              </Typography>
+              {selectedType ? (
+                <Button
                 sx={{
                   m: " 0rem 0 0 1rem",
                   color: "white",
@@ -71,16 +73,17 @@ const Home = () => {
                   },
                 }}
                 onClick={() => handleTypeSelection(null)}
-              >
+                >
                 Ver Todo
                 <FilterAltIcon />
-              </Button>
-            ) : null}
-          </Box>
-
-          <Grid container rowSpacing={3} columnSpacing={0}>
-            {filteredProducts.map((product, index) => (
-              <Grid
+                </Button>
+              ) : null}
+              </Box>
+              
+            
+              <Grid container rowSpacing={3} columnSpacing={0}>
+              {filteredProducts.map((product, index) => (
+                <Grid
                 item
                 xs={6}
                 sm={4}
@@ -91,9 +94,9 @@ const Home = () => {
                   justifyContent: "center",
                 }}
                 key={index}
-              >
+                >
                 <CardProductos product={product} />
-              </Grid>
+                </Grid>
             ))}
           </Grid>
         </Box>

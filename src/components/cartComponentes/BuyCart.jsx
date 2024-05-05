@@ -85,13 +85,13 @@ const BuyCart = () => {
         <Typography fontWeight={"bold"} fontSize={"1.2rem"} color={"gray "}>
           Total
         </Typography>
-        <Typography fontWeight={"bold"} fontSize={"1.2rem"} color={"#25d366"}>
+        <Typography  fontSize={"1.2rem"} fontWeight={'500'} >
           ${total.toFixed(3)}
         </Typography>
       </Box>
       <Button
         sx={{
-          bgcolor: "#25d366",
+          bgcolor: "#09b90f",
           color: "white",
           borderRadius: ".5rem",
           textTransform: "capitalize",

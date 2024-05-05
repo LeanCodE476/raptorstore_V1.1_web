@@ -26,9 +26,9 @@ const Footer = () => {
         pb: "1rem",
       }}
       textAlign={"center"}
-      borderTop={"2px solid #FF0000"}
       position={"relative"}
       overflow={"hidden"}
+      borderTop={'2px solid #ff0000'}
     >
       <Typography color={"#FF0000"} pt={"1rem"} fontSize={".8rem"}>
         Todos los derechos reservados ©raptorstore

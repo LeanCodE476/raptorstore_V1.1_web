@@ -92,7 +92,7 @@ const Detalle = ({ products }) => {
     return <p>Producto no encontrado</p>;
   }
   return (
-    <Box sx={{ bgcolor: "white" }}>
+    <Box sx={{ bgcolor: "white",borderBottom:'1px solid transparent' }}>
       <Button
         sx={{
           m: " 1rem 0 0 1rem",
@@ -116,7 +116,7 @@ const Detalle = ({ products }) => {
           flexDirection: "column",
           alignItems: "center",
           marginBottom: "2rem",
-          maxWidth: "40rem",
+          maxWidth: "35rem",
           bgcolor: "white",
           borderRadius: ".5rem",
           pb: "2rem",
@@ -138,18 +138,22 @@ const Detalle = ({ products }) => {
           color={"gray"}
           fontWeight={"400"}
         >
-          Producto de :{" "}
-          {product.marca && logos[product.marca] && (
-            <img
-              className="img-marca"
-              src={logos[product.marca]}
-              alt={`logo-${product.marca}`}
-              style={{
-                width: "5rem",
-              }}
-              loading="lazy"
-            />
-          )}
+          {product.marca ? (
+            <>
+              Producto de :{" "}
+              {product.marca && logos[product.marca] && (
+                <img
+                  className="img-marca"
+                  src={logos[product.marca]}
+                  alt={`logo-${product.marca}`}
+                  style={{
+                    width: "5rem",
+                  }}
+                  loading="lazy"
+                />
+              )}
+            </>
+          ) : null}
         </Typography>
         <Box sx={{ display: "flex", width: "90%", alignItems: "center" }}>
           <Typography
@@ -236,11 +240,9 @@ const Detalle = ({ products }) => {
 
         <Typography
           variant="h4"
-          fontWeight={"500"}
           width={"90%"}
           mt={"2rem"}
           textAlign={"start"}
-          color={"#ff0000"}
         >
           ${formattedPrice}
         </Typography>
@@ -277,14 +279,17 @@ const Detalle = ({ products }) => {
               color: "red",
               textTransform: "capitalize",
               padding: ".2rem",
-              color:'red',
-              fontWeight:'bold'
+              color: "#F1C40F",
+              fontWeight: "bold",
+            boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
+            bgcolor:'black'
+
             }}
             onClick={() =>
               enviarMensajeWhatsApp(product.codigo, product.nombre)
             }
           >
-            Presiona aca 
+            Presiona aca
           </Button>
         </Typography>
 
@@ -298,6 +303,7 @@ const Detalle = ({ products }) => {
             maxWidth: "20rem",
             padding: ".5rem",
             borderRadius: ".5rem",
+            boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
           }}
         >
           <Box
@@ -309,6 +315,7 @@ const Detalle = ({ products }) => {
               justifyContent: "center",
               borderRadius: ".3rem",
               overflow: "hidden",
+              boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
             }}
           >
             <IconButton

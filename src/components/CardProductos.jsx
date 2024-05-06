@@ -146,6 +146,7 @@ const CardProductos = ({ product }) => {
               p: ".2rem",
               paddingRight: "1rem",
               borderRadius: " .5rem 0 0 0",
+              textTransform:'capitalize'
             }}
           >
           <span> {product.stock}</span>

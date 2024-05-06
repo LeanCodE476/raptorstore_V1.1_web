@@ -93,6 +93,7 @@ const CardProductos = ({ product }) => {
               <Typography
                 className="brand-caster brand-caster-color"
                 fontFamily={"Days One"}
+                fontSize={'.8rem'}
               >
                 CASTER
               </Typography>

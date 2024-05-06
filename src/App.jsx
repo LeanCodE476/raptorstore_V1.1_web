@@ -10,6 +10,7 @@ import Header from "./components/Header";
 import CartProvider from "./Contexts/CartContext";
 import Preloader from "./components/Preloader";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import Envios from "./components/Envios";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -36,10 +37,12 @@ function App() {
               <Header />
               <Routes>
                 <Route path="/" element={<Home />} />
+                
                 <Route
-                  path="/detalle/:codigo"
-                  element={<Detalle products={products} />}
+                path="/detalle/:codigo"
+                element={<Detalle products={products} />}
                 />
+                <Route path="/Envios" element={<Envios />} />
               </Routes>
               <Footer />
             </>

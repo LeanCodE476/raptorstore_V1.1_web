@@ -1,22 +1,7 @@
 {
   "productos": {
     "pesca": [
-      {
-        "tipo": "combos",
-        "nombre": "Combo BaitCasting 2",
-        "descripcion": [
-         "Reel Abu Garcia Black Max 3",
-         "Caña Caster BlackFighter 1.80mt"
-        ],
-        "stock": "stock disponible",
-        "marca":"abugarcia",
-        "envioGratis":"true",
-
-        "codigo": "PESCA0032",
-        "imagenes": ["combobaitcast-2.webp","reelHuevitoAbuGarciaBM3-1.webp","caniaBackFighter-BC1802M-1.webp"],
-        "precio": 82.100,
-        "cantidad": 1
-      },
+     
       {
         "tipo": "reel",
         "nombre": "Reel Abu Garcia Black Max 3 BaitCasting Drag 8kg",
@@ -33,10 +18,24 @@
           "Capacidad de línea: 145 metros de 0.30 mm"
         ],
         "stock": "stock disponible",
-        "marca":"abugarcia",
-        "envioGratis":"true",
+        "marca": "abugarcia",
+        "envioGratis": "true",
         "codigo": "PESCA0019",
-        "imagenes": ["reelHuevitoAbuGarciaBM3-1.webp","reelHuevitoAbuGarciaBM3-2.webp","reelHuevitoAbuGarciaBM3-3.webp"],
+        "imagenes": [
+          "reelHuevitoAbuGarciaBM3-3.webp",
+          "reelHuevitoAbuGarciaBM3-1.webp",
+          "reelHuevitoAbuGarciaBM3-2.webp"
+        ],
+        "imagenesVertical": [
+          "abugarciaV-4.webp",
+          "abugarciaV-1.webp",
+          "abugarciaV-2.webp",
+          "abugarciaV-3.webp",
+          "abugarciaV-5.webp",
+          "abugarciaV-6.webp",
+          "abugarciaV-7.webp",
+          "abugarciaV-8.webp"
+        ],
         "precio": 62.700,
         "cantidad": 1
       },
@@ -60,11 +59,24 @@
           "Devanador automático sincronizado en forma ovalada para evitar la fricción en el lanzamiento"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
-        "envioGratis":"true",
+        "marca": "caster",
+        "envioGratis": "true",
         "codigo": "PESCA0011",
-        "imagenes": ["reelHuevitoUnlimited-1.webp","reelHuevitoUnlimited-2.webp"],
+        "imagenes": [
+          "reelHuevitoUnlimited-1.webp",
+          "reelHuevitoUnlimited-2.webp"
+        ],
+        "imagenesVertical": [
+          "unlimited110V-1.webp",
+          "unlimited110V-2.webp",
+          "unlimited110V-3.webp",
+          "unlimited110V-7.webp",
+          "unlimited110V-4.webp",
+          "unlimited110V-5.webp",
+          "unlimited110V-6.webp",
+          "unlimited110V-8.webp",
+          "unlimited110V-9.webp"
+        ],
         "precio": 59.800,
         "cantidad": 1
       },
@@ -72,14 +84,22 @@
         "tipo": "combos",
         "nombre": "Combo Variada Rio 1",
         "descripcion": [
-         "Reel Frontal Caster Flex",
-         "Caña SpeedForce 1.80mt"
+          "Reel Frontal Caster Flex",
+          "Caña SpeedForce 1.80mt"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
+        "marca": "caster",
         "codigo": "PESCA0034",
-        "imagenes": ["combovariada-1.webp","caniaSpeedForcegsp1902m-1.webp","reelFrontalFlex4002-1.webp"],
+        "imagenes": [
+          "combovariada-1.webp",
+          "caniaSpeedForcegsp1902m-1.webp",
+          "reelFrontalFlex4002-1.webp"
+        ],
+        "imagenesVertical": [
+          "caniaSpeedForcegsp1902m-1.webp",
+          "casterflexV-1.webp",
+          "casterflexV-2.webp"
+        ],
         "precio": 41.500,
         "cantidad": 1
       },
@@ -101,12 +121,47 @@
           "Pick up de aluminio grueso PowerBail™"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
-
+        "marca": "caster",
         "codigo": "PESCA0010",
-        "imagenes": ["reelFrontalFlex4002-1.webp"],
+        "imagenes": [
+          "reelFrontalFlex4002-3.webp",
+          "reelFrontalFlex4002-1.webp",
+          "reelFrontalFlex4002-2.webp"
+        ],
+        "imagenesVertical": [
+          "casterflexV-1.webp",
+          "casterflexV-2.webp",
+          "casterflexV-3.webp",
+          "casterflexV-4.webp",
+          "casterflexV-5.webp",
+          "casterflexV-6.webp",
+          "casterflexV-7.webp",
+          "casterflexV-8.webp"
+        ],
         "precio": 21.700,
+        "cantidad": 1
+      },
+      {
+        "tipo": "combos",
+        "nombre": "Combo BaitCasting 2",
+        "descripcion": [
+          "Reel Abu Garcia Black Max 3",
+          "Caña Caster BlackFighter 1.80mt"
+        ],
+        "stock": "stock disponible",
+        "marca": "abugarcia",
+        "envioGratis": "true",
+        "codigo": "PESCA0032",
+        "imagenes": [
+          "combobaitcast-2.webp",
+          "reelHuevitoAbuGarciaBM3-1.webp",
+          "caniaBackFighter-BC1802M-1.webp"
+        ],
+        "imagenesVertical": [
+          "reelHuevitoAbuGarciaBM3-2.webp",
+          "caniaBackFighter-BC1802M-1.webp"
+        ],
+        "precio": 82.100,
         "cantidad": 1
       },
       {
@@ -118,13 +173,17 @@
           "Material: Pvc"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
         "codigo": "PESCA0012",
         "imagenes": [
           "froganti1.webp",
           "froganti2.webp",
           "froganti3.webp"
+        ],
+        "imagenesVertical": [
+          "frogantiV-1.webp",
+          "frogantiV-2.webp",
+          "frogantiV-3.webp",
+          "frogantiV-4.webp"
         ],
         "precio": 2.800,
         "cantidad": 1
@@ -133,12 +192,17 @@
         "tipo": "sombreros",
         "nombre": "Sombrero Negro con Cubre Cuello",
         "descripcion": [
-         
+          "Sombrero con cubre cuello",
+          "Ultra liviano",
+          "Especial para la pesca"
+
         ],
         "stock": "stock disponible",
-
         "codigo": "PESCA0030",
-        "imagenes": ["sombreronegro-1.webp","sombreronegro-2.webp"],
+        "imagenes": [
+          "sombreronegro-1.webp",
+          "sombreronegro-2.webp"
+        ],
         "precio": 5.300,
         "cantidad": 1
       },
@@ -155,12 +219,40 @@
           "Presentación: sobre de 2 unidades"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
-
+        "marca": "caster",
         "codigo": "PESCA0017",
-        "imagenes": ["senueloBigFrog-1.webp","senueloBigFrog-2.webp"],
+        "imagenes": [
+          "senueloBigFrog-1.webp",
+          "senueloBigFrog-2.webp"
+        ],
+        "imagenesVertical": [
+          "senueloBigFrogV-1.webp",
+          "senueloBigFrogV-2.webp",
+          "senueloBigFrogV-3.webp"
+        ],
         "precio": 2.300,
+        "cantidad": 1
+      },
+      {
+        "tipo": "combos",
+        "nombre": "Combo Variada Rio 2",
+        "descripcion": [
+          "Reel Frontal Caster BlackWidow",
+          "Caña SpeedForce 1.80mt"
+        ],
+        "stock": "stock disponible",
+        "marca": "caster",
+        "codigo": "PESCA0035",
+        "imagenes": [
+          "combovariadario-2.webp",
+          "caniaSpeedForcegsp1902m-1.webp",
+          "reelFrontalBlackWidow4006-1.webp"
+        ],
+        "imagenesVertical":[
+          "reelfrontalcasterblackwidowV-8.webp",
+          "caniaspeedforceV-2.webp"
+        ],
+        "precio": 55.400,
         "cantidad": 1
       },
       {
@@ -175,13 +267,14 @@
           "Presentación: sobre de 3 unidades"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
-        
+        "marca": "caster",
         "codigo": "PESCA0001",
         "imagenes": [
           "anzueloOffsetPlomada-1.webp",
           "anzueloOffsetPlomada-2.webp"
+        ],
+        "imagenesVertical": [
+          "anzueloPlomadoV-1.webp"
         ],
         "precio": 2.300,
         "cantidad": 1
@@ -204,11 +297,17 @@
           "Facilita la exhibición de las piezas para fotografiarlas"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
-        
+        "marca": "caster",
         "codigo": "PESCA0002",
-        "imagenes": ["bogaGrip-1.webp","bogaGrip-2.webp"],
+        "imagenes": [
+          "bogaGrip-1.webp",
+          "bogaGrip-2.webp"
+        ],
+        "imagenesVertical": [
+          "bogagripV-1.webp",
+          "bogagripV-2.webp",
+          "bogagripV-3.webp"
+        ],
         "precio": 8.300,
         "cantidad": 1
       },
@@ -231,11 +330,16 @@
           "Incluye funda de tela estampada con divisiones"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
-        
+        "marca": "caster",
         "codigo": "PESCA0003",
-        "imagenes": ["caniaSpeedForcegsp1902m-1.webp"],
+        "imagenes": [
+          "caniaSpeedForcegsp1902m-1.webp"
+        ],
+        "imagenesVertical": [
+          "caniaspeedforceV-2.webp",
+          "caniaspeedforceV-1.webp",
+          "caniaspeedforceV-3.webp"
+        ],
         "precio": 20.100,
         "cantidad": 1
       },
@@ -260,11 +364,15 @@
           "Incluye funda de tela estampada con divisiones"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
-        
+        "marca": "caster",
         "codigo": "PESCA0004",
-        "imagenes": ["caniaBackFighter-BC1802M-1.webp"],
+        "imagenes": [
+          "caniaBlackFighter-BC1802M-1.webp"
+        ],
+        "imagenesVertical": [
+          "caniablackfighterV-1.webp",
+          "caniablackfighterV-2.webp"
+        ],
         "precio": 19.900,
         "cantidad": 1
       },
@@ -280,11 +388,15 @@
           "Presentación: bolsita de 10 unidades"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
-        
+        "marca": "caster",
         "codigo": "PESCA0005",
-        "imagenes": ["leader15CM-1.webp"],
+        "imagenes": [
+          "leader15CM-1.webp"
+        ],
+        "imagenesVertical": [
+          "leader15cmV-1.webp",
+          "leader15cmV-2.webp"
+        ],
         "precio": 2.900,
         "cantidad": 1
       },
@@ -306,13 +418,21 @@
           "Devanador automatico sincronizado"
         ],
         "stock": "stock disponible",
-
-        "marca":"beast",
+        "marca": "beast",
         "codigo": "PESCA0028",
         "imagenes": [
           "reelHuevoMonster-1.webp",
           "reelHuevoMonster-2.webp",
           "reelHuevoMonster-3.webp"
+        ],
+        "imagenesVertical": [
+          "reelhuevomonsterV-1.webp",
+          "reelhuevomonsterV-2.webp",
+          "reelhuevomonsterV-3.webp",
+          "reelhuevomonsterV-7.webp",
+          "reelhuevomonsterV-6.webp",
+          "reelhuevomonsterV-4.webp",
+          "reelhuevomonsterV-5.webp"
         ],
         "precio": 25.000,
         "cantidad": 1
@@ -328,11 +448,11 @@
           "Presentación: bolsita de 100 unidades"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
-
+        "marca": "caster",
         "codigo": "PESCA0006",
-        "imagenes": ["mosquetones13kg-1.webp"],
+        "imagenes": [
+          "mosquetones13kg-1.webp"
+        ],
         "precio": 5.300,
         "cantidad": 1
       },
@@ -347,11 +467,15 @@
           "Máxima flotabilidad y sensibilidad"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
-
+        "marca": "caster",
         "codigo": "PESCA0007",
-        "imagenes": ["multifilamentoVerde-1.webp"],
+        "imagenes": [
+          "multifilamentoVerde-1.webp"
+        ],
+        "imagenesVertical": [
+          "multifilamentoverde0.18V-2.webp",
+          "multifilamentoverde0.18V-1.webp"
+        ],
         "precio": 3.900,
         "cantidad": 1
       },
@@ -366,11 +490,15 @@
           "Máxima flotabilidad y sensibilidad"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
-
+        "marca": "caster",
         "codigo": "PESCA0008",
-        "imagenes": ["multifilmanetoAmarillo-1.webp"],
+        "imagenes": [
+          "multifilmanetoAmarillo-1.webp"
+        ],
+        "imagenesVertical": [
+          "multifilamentoamarillo0.18V-2.webp",
+          "multifilamentoamarillo0.18V-1.webp"
+        ],
         "precio": 3.900,
         "cantidad": 1
       },
@@ -395,16 +523,26 @@
           "Diseño ultra liviano y compacto"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
-
+        "marca": "caster",
         "codigo": "PESCA0009",
-        "imagenes": ["reelFrontalBlackWidow4006-1.webp","reelFrontalBlackWidow4006-2.webp"],
+        "imagenes": [
+          "reelFrontalBlackWidow4006-1.webp",
+          "reelFrontalBlackWidow4006-2.webp",
+          "reelFrontalBlackWidow4006-3.webp"
+        ],
+        "imagenesVertical": [
+          "reelfrontalcasterblackwidowV-1.webp",
+          "reelfrontalcasterblackwidowV-2.webp",
+          "reelfrontalcasterblackwidowV-3.webp",
+          "reelfrontalcasterblackwidowV-4.webp",
+          "reelfrontalcasterblackwidowV-5.webp",
+          "reelfrontalcasterblackwidowV-6.webp",
+          "reelfrontalcasterblackwidowV-7.webp",
+          "reelfrontalcasterblackwidowV-8.webp"
+        ],
         "precio": 35.900,
         "cantidad": 1
       },
-  
-      
       {
         "tipo": "señuelos",
         "nombre": "Señuelo Combat Frog 5.5cm 14g Rana Goma Antienganche",
@@ -417,11 +555,16 @@
           "Ideal para pesca de tarariras"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
-
+        "marca": "caster",
         "codigo": "PESCA0013",
-        "imagenes": ["senueloCombatFrog-1.webp"],
+        "imagenes": [
+          "senueloCombatFrog-1.webp"
+        ],
+        "imagenesVertical": [
+          "combatfrogV-1.webp",
+          "combatfrogV-2.webp",
+          "combatfrogV-3.webp"
+        ],
         "precio": 2.100,
         "cantidad": 1
       },
@@ -437,11 +580,15 @@
           "Ideal para pesca de tarariras"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
-
+        "marca": "caster",
         "codigo": "PESCA0014",
-        "imagenes": ["senueloLunkerFrog-1.webp"],
+        "imagenes": [
+          "senueloLunkerFrog-1.webp"
+        ],
+        "imagenesVertical": [
+          "lunkerfrogV-1.webp",
+          "lunkerfrogV-2.webp"
+        ],
         "precio": 2.900,
         "cantidad": 1
       },
@@ -461,11 +608,16 @@
           "Cada señuelo ha sido testeado individualmente para ofrecer la mejor experiencia y efectividad."
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
-
+        "marca": "caster",
         "codigo": "PESCA0015",
-        "imagenes": ["senueloRiverShad-1.webp"],
+        "imagenes": [
+          "senueloRiverShad-1.webp"
+        ],
+        "imagenesVertical": [
+          "rivershadV-1.webp",
+          "rivershadV-2.webp",
+          "rivershadV-3.webp"
+        ],
         "precio": 5.900,
         "cantidad": 1
       },
@@ -481,15 +633,18 @@
           "Anzuelos: 2 triples rojos"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
-
+        "marca": "caster",
         "codigo": "PESCA0016",
-        "imagenes": ["senueloFroggy-1.webp"],
+        "imagenes": [
+          "senueloFroggy-1.webp"
+        ],
+        "imagenesVertical": [
+          "froggyV-1.webp",
+          "froggyV-2.webp"
+        ],
         "precio": 2.200,
         "cantidad": 1
       },
-    
       {
         "tipo": "señuelos",
         "nombre": "Cuchara Giratoria 03#2 5cm 8g Anzuelo Offset #3/0",
@@ -500,24 +655,35 @@
           "Anzuelo offset #3/0"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
-
+        "marca": "caster",
         "codigo": "PESCA0018",
-        "imagenes": ["cucharaGiratoria03-1.webp"],
+        "imagenes": [
+          "cucharaGiratoria03-1.webp"
+        ],
+        "imagenesVertical": [
+          "cucharacaster03V-1.webp",
+          "cucharacaster03V-2.webp"
+        ],
         "precio": 2.700,
         "cantidad": 1
       },
       {
         "tipo": "señuelos",
-        "nombre": "Señuelo Cuchara Giratoria ZWICKE",
+        "nombre": "Señuelo Cuchara por Unid. Giratoria ZWICKE",
         "descripcion": [
-          "Cucharitas minis"
+          "Cucharitas minis",
+          "Difentes figuras holograficas",
+          "Largo: 5 Cm aprox"
         ],
         "stock": "stock disponible",
-
         "codigo": "PESCA0020",
-        "imagenes": ["cucharaGiratoriaZwicke-1.webp"],
+        "imagenes": [
+          "cucharaGiratoriaZwicke-1.webp"
+        ],
+        "imagenesVertical": [
+          "cucharazwickeV-1.webp",
+          "cucharazwickeV-2.webp"
+        ],
         "precio": 1.600,
         "cantidad": 1
       },
@@ -526,11 +692,17 @@
         "nombre": "Señuelo 7.9cm",
         "descripcion": [
           "medidas: 7.9cm",
-          "peso: 5g"
+          "peso: 5g",
+          "Consulte por mas colores disponibles!"
         ],
         "stock": true,
         "codigo": "PESCALR001",
-        "imagenes": ["senuelo_LR001.webp"],
+        "imagenes": [
+          "senuelo_LR001.webp"
+        ],
+        "imagenesVertical": [
+          "senuelolr001V-1.webp"
+        ],
         "precio": 1.600,
         "cantidad": 1
       },
@@ -539,12 +711,17 @@
         "nombre": "Señuelo 7cm",
         "descripcion": [
           "medidas: 7cm",
-          "peso: 3.8g"
+          "peso: 3.8g",
+          "Consulte por mas colores disponibles!"
         ],
         "stock": "stock disponible",
-
         "codigo": "PESCALR002",
-        "imagenes": ["senuelo_LR002.webp"],
+        "imagenes": [
+          "senuelo_LR002.webp"
+        ],
+        "imagenesVertical": [
+          "senuelolr0002V-1.webp"
+        ],
         "precio": 1.600,
         "cantidad": 1
       },
@@ -553,12 +730,17 @@
         "nombre": "Señuelo 6.8cm",
         "descripcion": [
           "medidas: 6.8cm",
-          "peso: 4.1g"
+          "peso: 4.1g",
+          "Consulte por mas colores disponibles!"
         ],
         "stock": "stock disponible",
-
         "codigo": "PESCALR003",
-        "imagenes": ["senuelo_LR003.webp"],
+        "imagenes": [
+          "senuelo_LR003.webp"
+        ],
+        "imagenesVertical": [
+          "senuelolr003V-1.webp"
+        ],
         "precio": 1.800,
         "cantidad": 1
       },
@@ -567,12 +749,18 @@
         "nombre": "Señuelo 2.8cm",
         "descripcion": [
           "medidas: 2.8cm",
-          "peso: 1.5g"
+          "peso: 1.5g",
+          "Consulte por mas colores disponibles!"
         ],
         "stock": "stock disponible",
-
         "codigo": "PESCALR004",
-        "imagenes": ["senuelo_LR004.webp"],
+        "imagenes": [
+          "senuelo_LR004.webp"
+        ],
+        "imagenesVertical": [
+          "senuelolr004V-1.webp",
+          "senuelolr004V-2.webp"
+        ],
         "precio": 1.500,
         "cantidad": 1
       },
@@ -581,12 +769,18 @@
         "nombre": "Señuelo 6.5cm",
         "descripcion": [
           "medidas: 6.5cm",
-          "peso: 8.3g"
+          "peso: 8.3g",
+          "Consulte por mas colores disponibles!"
         ],
         "stock": "stock disponible",
-
         "codigo": "PESCALR005",
-        "imagenes": ["senuelo_LR005.webp"],
+        "imagenes": [
+          "senuelo_LR005.webp"
+        ],
+        "imagenesVertical": [
+          "senuelolr005V-2.webp",
+          "senuelolr005V-1.webp"
+        ],
         "precio": 2.100,
         "cantidad": 1
       },
@@ -595,12 +789,18 @@
         "nombre": "Señuelo 5cm",
         "descripcion": [
           "medidas: 5cm",
-          "peso: 3.6g"
+          "peso: 3.6g",
+          "Consulte por mas colores disponibles!"
         ],
         "stock": "stock disponible",
-
         "codigo": "PESCALR006",
-        "imagenes": ["senuelo_LR006.webp"],
+        "imagenes": [
+          "senuelo_LR006.webp"
+        ],
+        "imagenesVertical": [
+          "senuelolr006V-1.webp",
+          "senuelolr006V-2.webp"
+        ],
         "precio": 1.700,
         "cantidad": 1
       },
@@ -609,12 +809,19 @@
         "nombre": "Señuelo 4.5cm",
         "descripcion": [
           "medidas: 4.5cm",
-          "peso: 3.5g"
+          "peso: 3.5g",
+          "Consulte por mas colores disponibles!"
         ],
         "stock": "stock disponible",
-
         "codigo": "PESCALR007",
-        "imagenes": ["senuelo_LR007.webp"],
+        "imagenes": [
+          "senuelo_LR007.webp"
+        ],
+        "imagenesVertical": [
+          "senuelolr007V-1.webp",
+          "senuelolr007V-2.webp",
+          "senuelolr007V-3.webp"
+        ],
         "precio": 1.600,
         "cantidad": 1
       },
@@ -622,12 +829,16 @@
         "tipo": "sombreros",
         "nombre": "Sombrero Gris con Cubre Cuello",
         "descripcion": [
-         
+          "Sombrero con cubre cuello",
+          "Ultra liviano",
+          "Especial para la pesca"
         ],
         "stock": "stock disponible",
-
         "codigo": "PESCA0029",
-        "imagenes": ["sombrerogris-1.webp","sombrerogris-2.webp"],
+        "imagenes": [
+          "sombrerogris-1.webp",
+          "sombrerogris-2.webp"
+        ],
         "precio": 5.300,
         "cantidad": 1
       },
@@ -635,52 +846,51 @@
         "tipo": "combos",
         "nombre": "Combo BaitCasting 1",
         "descripcion": [
-         "Reel huevito Caster Pro 110 Unlimited",
-         "Caña Caster BlackFighter 1.80mt"
+          "Reel huevito Caster Pro 110 Unlimited",
+          "Caña Caster BlackFighter 1.80mt"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
-        "envioGratis":"true",
-
+        "marca": "caster",
+        "envioGratis": "true",
         "codigo": "PESCA0031",
-        "imagenes": ["combobaitcast-1.webp","reelHuevitoUnlimited-1.webp","caniaBackFighter-BC1802M-1.webp"],
+        "imagenes": [
+          "combobaitcast-1.webp",
+          "reelHuevitoUnlimited-1.webp",
+          "caniaBlackFighter-BC1802M-1.webp"
+        ],
+        "imagenesVertical": [
+          "unlimited110V-8.webp",
+          "unlimited110V-5.webp",
+          "unlimited110V-6.webp",
+          "caniablackfighterV-1.webp"
+        ],
         "precio": 79.200,
         "cantidad": 1
       },
-   {
+      {
         "tipo": "combos",
         "nombre": "Combo BaitCasting 3",
         "descripcion": [
-         "Reel Huevito Beast",
-         "Caña Caster BlackFighter 1.80mt"
+          "Reel Huevito Beast",
+          "Caña Caster BlackFighter 1.80mt"
         ],
         "stock": "stock disponible",
-
-        "marca":"caster",
+        "marca": "caster",
         "codigo": "PESCA0033",
-        "imagenes": ["combobaitcast-3.webp","reelHuevoMonster-1.webp","caniaBackFighter-BC1802M-1.webp"],
-        "precio": 44.300,
-        "cantidad": 1
-      },
-  
-      {
-        "tipo": "combos",
-        "nombre": "Combo Variada Rio 2",
-        "descripcion": [
-         "Reel Frontal Caster BlackWidow",
-         "Caña SpeedForce 1.80mt"
+        "imagenes": [
+          "combobaitcast-3.webp",
+          "reelHuevoMonster-1.webp",
+          "caniaBlackFighter-BC1802M-1.webp"
         ],
-        "stock": "stock disponible",
-
-        "marca":"caster",
-        "codigo": "PESCA0035",
-        "imagenes": ["combovariada-2.webp","caniaSpeedForcegsp1902m-1.webp","reelFrontalBlackWidow4006-1.webp"],
-        "precio": 55.400,
+        "imagenesVertical": [
+          "reelhuevomonsterV-6.webp",
+          "caniablackfighterV-1.webp",
+          "reelhuevomonsterV-4.webp"
+        ],
+        "precio": 44.300,
         "cantidad": 1
       }
 
-  
     ],
     "electronica": []
   }

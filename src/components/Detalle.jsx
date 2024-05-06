@@ -18,7 +18,8 @@ import { animateScroll as scroll } from "react-scroll";
 import logoCaster from "../../public/images/logo-caster.webp";
 import logoAbuGarcia from "../../public/images/logoAbuGarcia.webp";
 import logoBeast from "../../public/images/logo-beast.webp";
-
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import '../App.css'
 const Detalle = ({ products }) => {
   const logos = {
     caster: logoCaster,
@@ -36,7 +37,7 @@ const Detalle = ({ products }) => {
   const { onAddProduct, cart, total, contador, increaseItems, decreaseItems } =
     useContext(CartContext);
   let product = null;
-
+  const [showScrollButton, setShowScrollButton] = useState(false);
   const enviarMensajeWhatsApp = (codigo, nombre) => {
     const telefono = "3755503038"; // Número de teléfono al que se enviará el mensaje
     const mensaje = `Hola, quiero cotizar el envio de este producto. Código: ${codigo}, Nombre: ${nombre}`;
@@ -88,11 +89,33 @@ const Detalle = ({ products }) => {
     setCantidad(1);
   };
 
+  const handleScrollToTop = () => {
+    scroll.scrollToTop({
+      smooth: true,
+      duration: 500, // Duración del desplazamiento en milisegundos
+    });
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 1500) {
+        setShowScrollButton(true);
+      } else {
+        setShowScrollButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   if (!product) {
     return <p>Producto no encontrado</p>;
   }
   return (
-    <Box sx={{ bgcolor: "white",borderBottom:'1px solid transparent' }}>
+    <Box sx={{  borderBottom: "1px solid transparent" }}>
       <Button
         sx={{
           m: " 1rem 0 0 1rem",
@@ -109,6 +132,24 @@ const Detalle = ({ products }) => {
         <ArrowBackIcon />
         Volver
       </Button>
+      {showScrollButton && (
+        <IconButton
+          sx={{
+            position: "fixed",
+            bottom: "2rem",
+            right: "2rem",
+            bgcolor: "white",
+            color: "black",
+            zIndex:'9',
+            "&:hover": {
+              bgcolor: "black",
+            },
+          }}
+          onClick={handleScrollToTop}
+        >
+          <ArrowUpwardIcon />
+        </IconButton>
+      )}
       <Box
         sx={{
           m: "1rem auto",
@@ -119,7 +160,7 @@ const Detalle = ({ products }) => {
           maxWidth: "35rem",
           bgcolor: "white",
           borderRadius: ".5rem",
-          pb: "2rem",
+          overflow:'hidden'
         }}
       >
         <Typography
@@ -127,6 +168,7 @@ const Detalle = ({ products }) => {
           textAlign={"start"}
           width={"90%"}
           fontSize={"1.4rem"}
+          mt={'2rem'}
         >
           {product.nombre}
         </Typography>
@@ -178,7 +220,7 @@ const Detalle = ({ products }) => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            width: "95%",
+            width: "100%",
           }}
         >
           <Box
@@ -194,10 +236,10 @@ const Detalle = ({ products }) => {
             <img
               src={`/images/${product.imagenes[index]}`}
               loading="lazy"
+              
               style={{
                 width: "100%",
                 boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
-                borderRadius: ".5rem",
               }}
               alt={product.nombre}
               className="imagen-detalle"
@@ -216,6 +258,7 @@ const Detalle = ({ products }) => {
               <img
                 className="imagen-miniatura"
                 loading="lazy"
+              
                 src={`/images/${img}`}
                 key={i}
                 style={{
@@ -238,61 +281,9 @@ const Detalle = ({ products }) => {
           </Box>
         </Box>
 
-        <Typography
-          variant="h4"
-          width={"90%"}
-          mt={"2rem"}
-          textAlign={"start"}
-        >
+        <Typography variant="h4" width={"90%"} mt={"2rem"} textAlign={"start"}>
           ${formattedPrice}
         </Typography>
-        <Typography
-          variant="h5"
-          width={"90%"}
-          mt={"1rem"}
-          textAlign={"center"}
-          fontWeight={"bold"}
-        >
-          Caracteristicas
-        </Typography>
-        <Box sx={{ width: "90%" }}>
-          <ul
-            style={{
-              listStyle: "none",
-              marginTop: "1rem",
-              fontSize: "1.1rem",
-              fontWeight: "500",
-            }}
-          >
-            {product.descripcion.map((desc, i) => (
-              <li key={i} style={{ marginTop: ".5rem", color: "gray" }}>
-                -{desc}
-              </li>
-            ))}
-          </ul>
-        </Box>
-
-        <Typography mt={"2rem"} width={"90%"} variant="h6" fontSize={"1rem"}>
-          Queres cotizar el envio de este producto?{" "}
-          <Button
-            sx={{
-              color: "red",
-              textTransform: "capitalize",
-              padding: ".2rem",
-              color: "#F1C40F",
-              fontWeight: "bold",
-            boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
-            bgcolor:'black'
-
-            }}
-            onClick={() =>
-              enviarMensajeWhatsApp(product.codigo, product.nombre)
-            }
-          >
-            Presiona aca
-          </Button>
-        </Typography>
-
         <Box
           sx={{
             width: "95%",
@@ -370,6 +361,65 @@ const Detalle = ({ products }) => {
             />
           </IconButton>
         </Box>
+        <Typography
+          variant="h5"
+          width={"90%"}
+          mt={"1.5rem"}
+          textAlign={"center"}
+        >
+          Caracteristicas
+        </Typography>
+        <Box sx={{ width: "90%" }}>
+          <ul
+            style={{
+              listStyle: "none",
+              marginTop: "1rem",
+              fontSize: "1.1rem",
+              fontWeight: "400",
+            }}
+          >
+            {product.descripcion.map((desc, i) => (
+              <li key={i} style={{ marginTop: ".5rem", color: "gray" }}>
+                -{desc}
+              </li>
+            ))}
+          </ul>
+        </Box>
+        <Typography mt={"2rem"} width={"90%"} variant="h6" fontSize={"1rem"}>
+        Queres cotizar el envio de este producto?{" "}
+        <Button
+          sx={{
+            color: "red",
+            textTransform: "capitalize",
+            padding: ".2rem",
+            fontWeight: "bold",
+          }}
+          onClick={() =>
+            enviarMensajeWhatsApp(product.codigo, product.nombre)
+          }
+        >
+          Click Aca
+        </Button>
+      </Typography>
+        <Box
+          sx={{
+            width: "100%",
+            mt: "3rem",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          {product.imagenesVertical?.map((img, i) => (
+            <img
+              src={`/images/${img}`}
+              key={i}
+              alt={product.imagenesVertical[i]}
+              style={{ width: "100%" }}
+              loading="lazy"
+            />
+          ))}
+        </Box>
+     
       </Box>
     </Box>
   );

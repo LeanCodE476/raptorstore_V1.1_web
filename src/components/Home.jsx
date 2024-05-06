@@ -6,7 +6,11 @@ import Navbar from "./navbar/Navbar";
 import NavDesktop from "./navbar/NavDesktop";
 
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
+import FormaPago from "./FormaPago";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  const navigate=useNavigate();
+
   const [selectedType, setSelectedType] = useState(null);
 
   const allProducts = Object.values(productos.productos).flat();
@@ -26,16 +30,31 @@ const Home = () => {
       <div
         style={{
           minHeight: "100vh",
-          overflow:'auto',
-          borderBottom:'2px solid transparent'
-        
+          overflow: "auto",
+          borderBottom: "2px solid transparent",
         }}
       >
         <NavDesktop handleTypeSelection={handleTypeSelection} />
         <Navbar handleTypeSelection={handleTypeSelection} />
-        <Box
-          sx={{ m: "1.5rem auto",  maxWidth: "60rem", width: "95%" }}
+        <FormaPago />
+
+        <Typography
+          sx={{ color: "yellow", textAlign: "center", fontWeight: "bold" }}
         >
+          {" "}
+          Como son los envios?{" "}
+          <Button
+            sx={{
+              textTransform: "capitalize",
+              color: "red",
+              borderBottom: "1px solid yellow",
+            }}
+            onClick={()=>navigate("/Envios")}
+          >
+            Click Aca
+          </Button>
+        </Typography>
+        <Box sx={{ m: "1.5rem auto", maxWidth: "60rem", width: "95%" }}>
           <Box
             sx={{
               display: "flex",
@@ -44,23 +63,23 @@ const Home = () => {
               height: "2rem",
               m: "1rem auto",
             }}
-            >
+          >
             {" "}
             <Typography
-            color={"white"}
-            variant="h6"
-            fontSize={"1.2rem"}
-            width={"100%"}
-            fontWeight={"bold"}
+              color={"white"}
+              variant="h6"
+              fontSize={"1.2rem"}
+              width={"100%"}
+              fontWeight={"bold"}
             >
-            {" "}
-            Sección{" "}
-            <span style={{ textTransform: "capitalize" }}>
-            {selectedType ? selectedType : "Principal"}
+              {" "}
+              Sección{" "}
+              <span style={{ textTransform: "capitalize" }}>
+                {selectedType ? selectedType : "Principal"}
               </span>{" "}
-              </Typography>
-              {selectedType ? (
-                <Button
+            </Typography>
+            {selectedType ? (
+              <Button
                 sx={{
                   m: " 0rem 0 0 1rem",
                   color: "white",
@@ -73,17 +92,16 @@ const Home = () => {
                   },
                 }}
                 onClick={() => handleTypeSelection(null)}
-                >
+              >
                 Ver Todo
                 <FilterAltIcon />
-                </Button>
-              ) : null}
-              </Box>
-              
-            
-              <Grid container rowSpacing={3} columnSpacing={0}>
-              {filteredProducts.map((product, index) => (
-                <Grid
+              </Button>
+            ) : null}
+          </Box>
+
+          <Grid container rowSpacing={3} columnSpacing={0}>
+            {filteredProducts.map((product, index) => (
+              <Grid
                 item
                 xs={6}
                 sm={4}
@@ -94,9 +112,9 @@ const Home = () => {
                   justifyContent: "center",
                 }}
                 key={index}
-                >
+              >
                 <CardProductos product={product} />
-                </Grid>
+              </Grid>
             ))}
           </Grid>
         </Box>

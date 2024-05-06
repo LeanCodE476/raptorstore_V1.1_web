@@ -1,23 +1,20 @@
 import { Box, Button, IconButton, Typography } from "@mui/material";
-
 import { useNavigate } from "react-router-dom";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import logoCaster from "../../public/images/logo-caster.webp";
 import logoAbuGarcia from "../../public/images/logoAbuGarcia.webp";
-import logoBeast from "../../public/images/logo-beast.webp";
 import { CartContext } from "../Contexts/CartContext";
 import { useContext, useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import SearchIcon from "@mui/icons-material/Search";
 import "../App.css";
+
 const CardProductos = ({ product }) => {
   const { onAddProduct } = useContext(CartContext);
-  const { nombre = "", precio = 0, codigo = "", imagenes = [] } = product || {};
+  const { nombre = "", precio = 0, codigo = "", imagenes = [], marca } = product || {};
   const navigate = useNavigate();
 
   const handleVerDetallesClick = () => {
-    // Navegar al detalle del producto al hacer clic en "Ver Detalles"
     navigate(`/detalle/${codigo}`);
   };
   const formattedPrice = precio.toFixed(3);
@@ -40,10 +37,9 @@ const CardProductos = ({ product }) => {
     setCantidad(1);
   };
   const logos = {
-    caster: logoCaster,
     abugarcia: logoAbuGarcia,
-    beast: logoBeast,
   };
+
   return (
     <>
       <Box
@@ -80,44 +76,81 @@ const CardProductos = ({ product }) => {
               height: "1rem",
               display: "flex",
               justifyContent: "space-between",
+              alignItems:'center'
             }}
           >
-            <Typography color={"#CACFD2"} fontSize={"80%"}>
-              {codigo}
-            </Typography>
-         
-             
-              {product.marca && logos[product.marca] && (
+          <Typography color={"#CACFD2"} fontSize={"80%"}>
+            {codigo}
+          </Typography>
+            {marca === "caster" ? (
+              <Typography className="brand-caster brand-caster-color">CASTER</Typography>
+            ) : null}
+            {marca === "beast" ? (
+              <Typography className="brand-beast-color">Beast</Typography>
+            ) : null}
+            {
+              marca && logos[marca] ? (
                 <img
                   className="img-marca"
-                  src={logos[product.marca]}
-                  alt={`logo-${product.marca}`}
+                  src={logos[marca]}
+                  alt={`logo-${marca}`}
                   style={{
-                    height:'auto',
-                    maxWidth:'30%',
-                    zIndex:2
+                    height: "auto",
+                    maxWidth: "2.5rem",
+                    zIndex: 2,
                   }}
                 />
-              )}
+              ) : null}
+            
+        
             
           </Box>
         </Box>
         <Box
           sx={{
             width: "100%",
-            height: "auto",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             cursor: "pointer",
             transition: "transform 0.2s",
-            position:'relative',
+            position: "relative",
             "&:hover": {
               transform: "scale(1.1)",
             },
           }}
           onClick={handleVerDetallesClick}
         >
+          <SearchIcon
+            sx={{
+              position: "absolute",
+              bgcolor: "black",
+              color: "white",
+              p: ".3rem",
+              fontSize: "1.5rem",
+              borderRadius: ".5rem",
+              top: ".5rem",
+              right: ".5rem",
+            }}
+            onClick={handleVerDetallesClick}
+          />
+          <Typography
+            sx={{
+              fontSize: ".7rem",
+              position: "absolute",
+              bottom: "0rem",
+              bgcolor: "white",
+              color: "green",
+              right: "0rem",
+              fontWeight: "500",
+              p: ".2rem",
+              paddingRight: "1rem",
+              borderRadius: " .5rem 0 0 0",
+            }}
+          >
+          <span> {product.stock}</span>
+           
+          </Typography>
           <img
             src={`/images/${imagenes[0]}`}
             loading="lazy"
@@ -156,13 +189,12 @@ const CardProductos = ({ product }) => {
             variant="p"
             fontSize={"1.2rem"}
             mt={".5rem"}
-           fontWeight={'500'}
+            fontWeight={"500"}
             textAlign={"start"}
           >
             ${formattedPrice}
           </Typography>
         </Box>
-  
 
         <Box
           sx={{

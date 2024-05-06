@@ -1,6 +1,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zen+Dots&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zen+Dots&display=swap');
 *{
   padding: 0;
   margin: 0;
@@ -85,7 +86,16 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
 }
-
+.brand-beast-color {
+	color: #ffe140;
+	font-family: "Days One", sans-serif;
+  font-style: italic;
+	text-shadow:
+	-1px -1px 1px #000,
+	1px -1px 1px #000,
+	-1px 1px 1px #000,
+	1px 1px 1px #000;
+}
 @media only screen and (max-width: 410px) {
 
   /* ESTILOS HEADER */
@@ -132,4 +142,14 @@ body {
 .img-marca{
   max-height:.8rem ;
 }
+}
+.brand-caster {
+	font-family: "Days One", sans-serif;
+}
+
+.brand-caster-color {
+	color: #e01823;
+  font-weight: 900 !important;
+  font-style: italic;
+
 }

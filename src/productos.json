@@ -44,29 +44,7 @@
         "precio": 59.800,
         "cantidad": 1
       },
-      {
-        "tipo": "combos",
-        "nombre": "Combo Variada Rio 1",
-        "descripcion": [
-          "Reel Frontal Caster Flex",
-          "Caña SpeedForce 1.80mt"
-        ],
-        "stock": "stock disponible",
-        "marca": "caster",
-        "codigo": "PESCA0034",
-        "imagenes": [
-          "combovariada-1.webp",
-          "caniaSpeedForcegsp1902m-1.webp",
-          "reelFrontalFlex4002-1.webp"
-        ],
-        "imagenesVertical": [
-          "caniaSpeedForcegsp1902m-1.webp",
-          "casterflexV-1.webp",
-          "casterflexV-2.webp"
-        ],
-        "precio": 41.500,
-        "cantidad": 1
-      },
+
       {
         "tipo": "reel",
         "nombre": "Reel Frontal CASTER Flex 4002 Variada Río 2 Rulemanes",
@@ -564,6 +542,29 @@
         "cantidad": 1
       },
       {
+        "tipo": "combos",
+        "nombre": "Combo Variada Rio 1",
+        "descripcion": [
+          "Reel Frontal Caster Flex",
+          "Caña SpeedForce 1.80mt"
+        ],
+        "stock": "stock disponible",
+        "marca": "caster",
+        "codigo": "PESCA0034",
+        "imagenes": [
+          "combovariada-1.webp",
+          "caniaSpeedForcegsp1902m-1.webp",
+          "reelFrontalFlex4002-1.webp"
+        ],
+        "imagenesVertical": [
+          "caniaSpeedForcegsp1902m-1.webp",
+          "casterflexV-1.webp",
+          "casterflexV-2.webp"
+        ],
+        "precio": 41.500,
+        "cantidad": 1
+      },
+      {
         "tipo": "señuelos",
         "nombre": "Señuelo Froggy 6.5cm 9g Rana Superficie",
         "descripcion": [
@@ -883,11 +884,11 @@
         "imagenes": [
           "combobaitcast-2.webp",
           "reelHuevitoAbuGarciaBM3-1.webp",
-          "caniaBackFighter-BC1802M-1.webp"
+          "caniaBlackFighter-BC1802M-1.webp"
         ],
         "imagenesVertical": [
           "reelHuevitoAbuGarciaBM3-2.webp",
-          "caniaBackFighter-BC1802M-1.webp"
+          "caniaBlackFighter-BC1802M-1.webp"
         ],
         "precio": 82.100,
         "cantidad": 1

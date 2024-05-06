@@ -11,7 +11,14 @@ import "../App.css";
 
 const CardProductos = ({ product }) => {
   const { onAddProduct } = useContext(CartContext);
-  const { nombre = "", precio = 0, codigo = "", imagenes = [], marca, stock } = product || {};
+  const {
+    nombre = "",
+    precio = 0,
+    codigo = "",
+    imagenes = [],
+    marca,
+    stock,
+  } = product || {};
   const navigate = useNavigate();
 
   const handleVerDetallesClick = () => {
@@ -39,8 +46,6 @@ const CardProductos = ({ product }) => {
   const logos = {
     abugarcia: logoAbuGarcia,
   };
-
-
 
   return (
     <>
@@ -78,31 +83,35 @@ const CardProductos = ({ product }) => {
               height: "1rem",
               display: "flex",
               justifyContent: "space-between",
-              alignItems:'center'
+              alignItems: "center",
             }}
           >
             <Typography color={"#CACFD2"} fontSize={"80%"}>
               {codigo}
             </Typography>
             {marca === "caster" ? (
-              <Typography className="brand-caster brand-caster-color">CASTER</Typography>
+              <Typography
+                className="brand-caster brand-caster-color"
+                fontFamily={"Days One"}
+              >
+                CASTER
+              </Typography>
             ) : null}
             {marca === "beast" ? (
               <Typography className="brand-beast-color">Beast</Typography>
             ) : null}
-            {
-              marca && logos[marca] ? (
-                <img
-                  className="img-marca"
-                  src={logos[marca]}
-                  alt={`logo-${marca}`}
-                  style={{
-                    height: "auto",
-                    maxWidth: "2.5rem",
-                    zIndex: 2,
-                  }}
-                />
-              ) : null}
+            {marca && logos[marca] ? (
+              <img
+                className="img-marca"
+                src={logos[marca]}
+                alt={`logo-${marca}`}
+                style={{
+                  height: "auto",
+                  maxWidth: "2.5rem",
+                  zIndex: 2,
+                }}
+              />
+            ) : null}
           </Box>
         </Box>
         <Box
@@ -139,19 +148,40 @@ const CardProductos = ({ product }) => {
               position: "absolute",
               bottom: "0rem",
               bgcolor: "white",
-              color: product.stock === "Agotado" ? "red" : product.stock === "stock disponible" ? "green":null,
+              color:
+                product.stock === "Agotado"
+                  ? "red"
+                  : product.stock === "stock disponible"
+                  ? "green"
+                  : null,
               right: "0rem",
               fontWeight: "500",
               p: ".2rem",
               paddingRight: "1rem",
               borderRadius: " .5rem 0 0 0",
-              textTransform:'capitalize'
+              textTransform: "capitalize",
             }}
           >
-
             {product.stock}
           </Typography>
-
+          {product.stock === "Agotado" ? (
+            <Box
+              sx={{
+                width: "100%",
+                height: "3rem",
+                bgcolor: "#00000091",
+                zIndex: "10",
+                position: "absolute",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Typography variant="h6" color={"red"} fontFamily={"Days One"}>
+                AGOTADO
+              </Typography>
+            </Box>
+          ) : null}
           <img
             src={`/images/${imagenes[0]}`}
             loading="lazy"
@@ -250,7 +280,7 @@ const CardProductos = ({ product }) => {
           </Box>
 
           <Button
-          disabled={product.stock === "Agotado"}
+            disabled={product.stock === "Agotado"}
             sx={{
               bgcolor: "#1F1F1F",
               color: "white",

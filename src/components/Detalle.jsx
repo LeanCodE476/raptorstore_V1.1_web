@@ -228,6 +228,7 @@ const Detalle = ({ products }) => {
             flexDirection: "column",
             alignItems: "center",
             width: "100%",
+            position: "relative",
           }}
         >
           <Box
@@ -240,6 +241,24 @@ const Detalle = ({ products }) => {
             }}
           >
             {" "}
+            {product.stock === "Agotado" ? (
+              <Box
+                sx={{
+                  width: "100%",
+                  height: "3rem",
+                  bgcolor: "#00000091",
+                  zIndex: "10",
+                  position: "absolute",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Typography variant="h6" color={"red"} fontFamily={"Days One"}>
+                  AGOTADO
+                </Typography>
+              </Box>
+            ) : null}
             <img
               src={`/images/${product.imagenes[index]}`}
               loading="lazy"
@@ -289,62 +308,62 @@ const Detalle = ({ products }) => {
         <Typography variant="h4" width={"90%"} mt={"2rem"} textAlign={"start"}>
           ${formattedPrice}
         </Typography>
-        <Box
-          sx={{
-            width: "95%",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            marginTop: "2rem",
-            maxWidth: "20rem",
-            padding: ".5rem",
-            borderRadius: ".5rem",
-            boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
-          }}
-        >
+        {product.stock === "stock disponible" ? (
           <Box
             sx={{
-              height: "2rem",
-              width: "8rem",
+              width: "95%",
               display: "flex",
+              justifyContent: "space-between",
               alignItems: "center",
-              justifyContent: "center",
-              borderRadius: ".3rem",
-              overflow: "hidden",
+              marginTop: "2rem",
+              maxWidth: "20rem",
+              padding: ".5rem",
+              borderRadius: ".5rem",
               boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
             }}
           >
-            <IconButton
+            <Box
               sx={{
-                borderRadius: "0rem",
-
-                opacity: cantidad === 1 ? 0 : 1,
-                bgcolor: "#F1C40F",
+                height: "2rem",
+                width: "8rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: ".3rem",
+                overflow: "hidden",
+                boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
               }}
-              disabled={cantidad === 1}
-              onClick={handleDecrease}
             >
-              <RemoveIcon sx={{ color: "#424949 ", fontSize: "1.6rem" }} />
-            </IconButton>
+              <IconButton
+                sx={{
+                  borderRadius: "0rem",
 
-            <Typography
-              sx={{ fontWeight: "bold", margin: "1rem", fontSize: "1.6rem" }}
-            >
-              {cantidad}
-            </Typography>
+                  opacity: cantidad === 1 ? 0 : 1,
+                  bgcolor: "#F1C40F",
+                }}
+                disabled={cantidad === 1}
+                onClick={handleDecrease}
+              >
+                <RemoveIcon sx={{ color: "#424949 ", fontSize: "1.6rem" }} />
+              </IconButton>
 
-            <IconButton
-              sx={{
-                borderRadius: "0rem",
-                bgcolor: "#F1C40F",
-              }}
-              onClick={handleIncrease}
-            >
-              <AddIcon sx={{ color: "#424949  ", fontSize: "1.6rem" }} />
-            </IconButton>
-          </Box>
+              <Typography
+                sx={{ fontWeight: "bold", margin: "1rem", fontSize: "1.6rem" }}
+              >
+                {cantidad}
+              </Typography>
 
-          {product.stock === "Stock Disponible" && (
+              <IconButton
+                sx={{
+                  borderRadius: "0rem",
+                  bgcolor: "#F1C40F",
+                }}
+                onClick={handleIncrease}
+              >
+                <AddIcon sx={{ color: "#424949  ", fontSize: "1.6rem" }} />
+              </IconButton>
+            </Box>
+
             <IconButton
               sx={{
                 bgcolor: "#1F1F1F",
@@ -366,8 +385,9 @@ const Detalle = ({ products }) => {
                 sx={{ fontSize: "1.2rem", marginLeft: ".5rem" }}
               />
             </IconButton>
-          )}
-        </Box>
+          </Box>
+        ) : null}
+
         <Typography
           variant="h5"
           width={"90%"}

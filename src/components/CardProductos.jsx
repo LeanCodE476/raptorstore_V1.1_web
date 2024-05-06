@@ -11,7 +11,7 @@ import "../App.css";
 
 const CardProductos = ({ product }) => {
   const { onAddProduct } = useContext(CartContext);
-  const { nombre = "", precio = 0, codigo = "", imagenes = [], marca } = product || {};
+  const { nombre = "", precio = 0, codigo = "", imagenes = [], marca, stock } = product || {};
   const navigate = useNavigate();
 
   const handleVerDetallesClick = () => {
@@ -39,6 +39,8 @@ const CardProductos = ({ product }) => {
   const logos = {
     abugarcia: logoAbuGarcia,
   };
+
+
 
   return (
     <>
@@ -79,9 +81,9 @@ const CardProductos = ({ product }) => {
               alignItems:'center'
             }}
           >
-          <Typography color={"#CACFD2"} fontSize={"80%"}>
-            {codigo}
-          </Typography>
+            <Typography color={"#CACFD2"} fontSize={"80%"}>
+              {codigo}
+            </Typography>
             {marca === "caster" ? (
               <Typography className="brand-caster brand-caster-color">CASTER</Typography>
             ) : null}
@@ -101,9 +103,6 @@ const CardProductos = ({ product }) => {
                   }}
                 />
               ) : null}
-            
-        
-            
           </Box>
         </Box>
         <Box
@@ -140,7 +139,7 @@ const CardProductos = ({ product }) => {
               position: "absolute",
               bottom: "0rem",
               bgcolor: "white",
-              color: "green",
+              color: product.stock === "Agotado" ? "red" : product.stock === "stock disponible" ? "green":null,
               right: "0rem",
               fontWeight: "500",
               p: ".2rem",
@@ -149,9 +148,10 @@ const CardProductos = ({ product }) => {
               textTransform:'capitalize'
             }}
           >
-          <span> {product.stock}</span>
-           
+
+            {product.stock}
           </Typography>
+
           <img
             src={`/images/${imagenes[0]}`}
             loading="lazy"
@@ -223,7 +223,6 @@ const CardProductos = ({ product }) => {
             <IconButton
               sx={{
                 borderRadius: "0rem",
-
                 opacity: cantidad === 1 ? 0 : 1,
                 bgcolor: "#F1C40F",
               }}
@@ -251,6 +250,7 @@ const CardProductos = ({ product }) => {
           </Box>
 
           <Button
+          disabled={product.stock === "Agotado"}
             sx={{
               bgcolor: "#1F1F1F",
               color: "white",

@@ -18,8 +18,8 @@ import { animateScroll as scroll } from "react-scroll";
 import logoCaster from "../../public/images/logo-caster.webp";
 import logoAbuGarcia from "../../public/images/logoAbuGarcia.webp";
 import logoBeast from "../../public/images/logo-beast.webp";
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import '../App.css'
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import "../App.css";
 const Detalle = ({ products }) => {
   const logos = {
     caster: logoCaster,
@@ -115,7 +115,7 @@ const Detalle = ({ products }) => {
     return <p>Producto no encontrado</p>;
   }
   return (
-    <Box sx={{  borderBottom: "1px solid transparent" }}>
+    <Box sx={{ borderBottom: "1px solid transparent" }}>
       <Button
         sx={{
           m: " 1rem 0 0 1rem",
@@ -140,7 +140,7 @@ const Detalle = ({ products }) => {
             right: "2rem",
             bgcolor: "white",
             color: "black",
-            zIndex:'9',
+            zIndex: "9",
             "&:hover": {
               bgcolor: "black",
             },
@@ -160,7 +160,7 @@ const Detalle = ({ products }) => {
           maxWidth: "35rem",
           bgcolor: "white",
           borderRadius: ".5rem",
-          overflow:'hidden'
+          overflow: "hidden",
         }}
       >
         <Typography
@@ -168,7 +168,7 @@ const Detalle = ({ products }) => {
           textAlign={"start"}
           width={"90%"}
           fontSize={"1.4rem"}
-          mt={'2rem'}
+          mt={"2rem"}
         >
           {product.nombre}
         </Typography>
@@ -201,7 +201,14 @@ const Detalle = ({ products }) => {
           <Typography
             variant="h6"
             fontWeight={"bold"}
-            color={"#1BCC4D"}
+            sx={{
+              color:
+                product.stock === "Agotado"
+                  ? "red"
+                  : product.stock === "stock disponible"
+                  ? "green"
+                  : null,
+            }}
             width={"90%"}
             mt={"1rem"}
             textTransform={"capitalize"}
@@ -236,7 +243,6 @@ const Detalle = ({ products }) => {
             <img
               src={`/images/${product.imagenes[index]}`}
               loading="lazy"
-              
               style={{
                 width: "100%",
                 boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
@@ -258,7 +264,6 @@ const Detalle = ({ products }) => {
               <img
                 className="imagen-miniatura"
                 loading="lazy"
-              
                 src={`/images/${img}`}
                 key={i}
                 style={{
@@ -339,27 +344,29 @@ const Detalle = ({ products }) => {
             </IconButton>
           </Box>
 
-          <IconButton
-            sx={{
-              bgcolor: "#1F1F1F",
-              color: "white",
-              width: "9rem",
-              height: "2rem",
-              borderRadius: ".3rem",
-              fontWeight: "bold",
-              fontSize: ".7rem",
-              "&:hover": {
-                backgroundColor: "black",
+          {product.stock === "Stock Disponible" && (
+            <IconButton
+              sx={{
+                bgcolor: "#1F1F1F",
                 color: "white",
-              },
-            }}
-            onClick={handleAddToCart}
-          >
-            Agregar al Carrito
-            <AddShoppingCartIcon
-              sx={{ fontSize: "1.2rem", marginLeft: ".5rem" }}
-            />
-          </IconButton>
+                width: "9rem",
+                height: "2rem",
+                borderRadius: ".3rem",
+                fontWeight: "bold",
+                fontSize: ".7rem",
+                "&:hover": {
+                  backgroundColor: "black",
+                  color: "white",
+                },
+              }}
+              onClick={handleAddToCart}
+            >
+              Agregar al Carrito
+              <AddShoppingCartIcon
+                sx={{ fontSize: "1.2rem", marginLeft: ".5rem" }}
+              />
+            </IconButton>
+          )}
         </Box>
         <Typography
           variant="h5"
@@ -386,21 +393,21 @@ const Detalle = ({ products }) => {
           </ul>
         </Box>
         <Typography mt={"2rem"} width={"90%"} variant="h6" fontSize={"1rem"}>
-        Queres cotizar el envio de este producto?{" "}
-        <Button
-          sx={{
-            color: "red",
-            textTransform: "capitalize",
-            padding: ".2rem",
-            fontWeight: "bold",
-          }}
-          onClick={() =>
-            enviarMensajeWhatsApp(product.codigo, product.nombre)
-          }
-        >
-          Click Aca
-        </Button>
-      </Typography>
+          Queres cotizar el envio de este producto?{" "}
+          <Button
+            sx={{
+              color: "red",
+              textTransform: "capitalize",
+              padding: ".2rem",
+              fontWeight: "bold",
+            }}
+            onClick={() =>
+              enviarMensajeWhatsApp(product.codigo, product.nombre)
+            }
+          >
+            Click Aca
+          </Button>
+        </Typography>
         <Box
           sx={{
             width: "100%",
@@ -419,7 +426,6 @@ const Detalle = ({ products }) => {
             />
           ))}
         </Box>
-     
       </Box>
     </Box>
   );

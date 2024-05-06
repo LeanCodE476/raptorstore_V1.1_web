@@ -2,43 +2,7 @@
   "productos": {
     "pesca": [
      
-      {
-        "tipo": "reel",
-        "nombre": "Reel Abu Garcia Black Max 3 BaitCasting Drag 8kg",
-        "descripcion": [
-          "Mano: Derecha",
-          "Reel Black Max 3 Abu Garcia",
-          "Tipo: Low profile",
-          "Marca: Abu García",
-          "Cuerpo: Grafito",
-          "Rulemanes: 4+1 de acero inoxidable",
-          "Velocidad: 6.4:1",
-          "Sistema de frenado: Power DisK™ de Abu",
-          "Sistema Mag Trax™: 10 posiciones de frenado magnético regulable",
-          "Capacidad de línea: 145 metros de 0.30 mm"
-        ],
-        "stock": "stock disponible",
-        "marca": "abugarcia",
-        "envioGratis": "true",
-        "codigo": "PESCA0019",
-        "imagenes": [
-          "reelHuevitoAbuGarciaBM3-3.webp",
-          "reelHuevitoAbuGarciaBM3-1.webp",
-          "reelHuevitoAbuGarciaBM3-2.webp"
-        ],
-        "imagenesVertical": [
-          "abugarciaV-4.webp",
-          "abugarciaV-1.webp",
-          "abugarciaV-2.webp",
-          "abugarciaV-3.webp",
-          "abugarciaV-5.webp",
-          "abugarciaV-6.webp",
-          "abugarciaV-7.webp",
-          "abugarciaV-8.webp"
-        ],
-        "precio": 62.700,
-        "cantidad": 1
-      },
+ 
       {
         "tipo": "reel",
         "nombre": "Reel Huevito CASTER Unlimited Pro 110 Bait Casting 10 Rulemanes 7.2:1",
@@ -141,29 +105,7 @@
         "precio": 21.700,
         "cantidad": 1
       },
-      {
-        "tipo": "combos",
-        "nombre": "Combo BaitCasting 2",
-        "descripcion": [
-          "Reel Abu Garcia Black Max 3",
-          "Caña Caster BlackFighter 1.80mt"
-        ],
-        "stock": "stock disponible",
-        "marca": "abugarcia",
-        "envioGratis": "true",
-        "codigo": "PESCA0032",
-        "imagenes": [
-          "combobaitcast-2.webp",
-          "reelHuevitoAbuGarciaBM3-1.webp",
-          "caniaBackFighter-BC1802M-1.webp"
-        ],
-        "imagenesVertical": [
-          "reelHuevitoAbuGarciaBM3-2.webp",
-          "caniaBackFighter-BC1802M-1.webp"
-        ],
-        "precio": 82.100,
-        "cantidad": 1
-      },
+     
       {
         "tipo": "señuelos",
         "nombre": "Señuelo Ranita Antienganche 5g",
@@ -888,6 +830,66 @@
           "reelhuevomonsterV-4.webp"
         ],
         "precio": 44.300,
+        "cantidad": 1
+      },
+      {
+        "tipo": "reel",
+        "nombre": "Reel Abu Garcia Black Max 3 BaitCasting Drag 8kg",
+        "descripcion": [
+          "Mano: Derecha",
+          "Reel Black Max 3 Abu Garcia",
+          "Tipo: Low profile",
+          "Marca: Abu García",
+          "Cuerpo: Grafito",
+          "Rulemanes: 4+1 de acero inoxidable",
+          "Velocidad: 6.4:1",
+          "Sistema de frenado: Power DisK™ de Abu",
+          "Sistema Mag Trax™: 10 posiciones de frenado magnético regulable",
+          "Capacidad de línea: 145 metros de 0.30 mm"
+        ],
+        "stock": "Agotado",
+        "marca": "abugarcia",
+        "envioGratis": "true",
+        "codigo": "PESCA0019",
+        "imagenes": [
+          "reelHuevitoAbuGarciaBM3-3.webp",
+          "reelHuevitoAbuGarciaBM3-1.webp",
+          "reelHuevitoAbuGarciaBM3-2.webp"
+        ],
+        "imagenesVertical": [
+          "abugarciaV-4.webp",
+          "abugarciaV-1.webp",
+          "abugarciaV-2.webp",
+          "abugarciaV-3.webp",
+          "abugarciaV-5.webp",
+          "abugarciaV-6.webp",
+          "abugarciaV-7.webp",
+          "abugarciaV-8.webp"
+        ],
+        "precio": 62.700,
+        "cantidad": 1
+      },
+      {
+        "tipo": "combos",
+        "nombre": "Combo BaitCasting 2",
+        "descripcion": [
+          "Reel Abu Garcia Black Max 3",
+          "Caña Caster BlackFighter 1.80mt"
+        ],
+        "stock": "Agotado",
+        "marca": "abugarcia",
+        "envioGratis": "true",
+        "codigo": "PESCA0032",
+        "imagenes": [
+          "combobaitcast-2.webp",
+          "reelHuevitoAbuGarciaBM3-1.webp",
+          "caniaBackFighter-BC1802M-1.webp"
+        ],
+        "imagenesVertical": [
+          "reelHuevitoAbuGarciaBM3-2.webp",
+          "caniaBackFighter-BC1802M-1.webp"
+        ],
+        "precio": 82.100,
         "cantidad": 1
       }
 

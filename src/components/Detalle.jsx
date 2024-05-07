@@ -21,11 +21,11 @@ import logoBeast from "../../public/images/logo-beast.webp";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import "../App.css";
 const Detalle = ({ products }) => {
-  const logos = {
-    caster: logoCaster,
-    abugarcia: logoAbuGarcia,
-    beast: logoBeast,
-  };
+  // const logos = {
+  //   caster: logoCaster,
+  //   abugarcia: logoAbuGarcia,
+  //   beast: logoBeast,
+  // };
 
   useEffect(() => {
     scroll.scrollToTop();
@@ -172,31 +172,44 @@ const Detalle = ({ products }) => {
         >
           {product.nombre}
         </Typography>
-        <Typography
-          variant="h6"
-          textAlign={"start"}
-          width={"90%"}
-          mt={"1rem"}
-          color={"gray"}
-          fontWeight={"400"}
-        >
-          {product.marca ? (
-            <>
-              Producto de :{" "}
-              {product.marca && logos[product.marca] && (
-                <img
-                  className="img-marca"
-                  src={logos[product.marca]}
-                  alt={`logo-${product.marca}`}
-                  style={{
-                    width: "5rem",
-                  }}
-                  loading="lazy"
-                />
-              )}
-            </>
-          ) : null}
-        </Typography>
+
+        {product.marca ? (
+          <Typography
+            variant="h6"
+            textAlign={"start"}
+            width={"90%"}
+            mt={"1rem"}
+            color={"gray"}
+            fontWeight={"400"}
+          >
+            Producto de :
+            {product && product.marca === "caster" ? (
+              <Typography
+                className="brand-caster brand-caster-color"
+                fontFamily={"Days One"}
+                fontSize={".8rem"}
+              >
+                CASTER
+              </Typography>
+            ) : null}
+            {product && product.marca === "beast" ? (
+              <Typography className="brand-beast-color">Beast</Typography>
+            ) : null}
+            {product && product.marca === "abugarcia" ? (
+              <img
+                className="img-marca"
+                src={logoAbuGarcia}
+                alt={`logo-abugarcia`}
+                style={{
+                  height: "auto",
+                  maxWidth: "2.5rem",
+                  zIndex: 2,
+                }}
+              />
+            ) : null}
+          </Typography>
+        ) : null}
+
         <Box sx={{ display: "flex", width: "90%", alignItems: "center" }}>
           <Typography
             variant="h6"
@@ -207,6 +220,8 @@ const Detalle = ({ products }) => {
                   ? "red"
                   : product.stock === "stock disponible"
                   ? "green"
+                  : product.stock === "proximamente"
+                  ? "blue"
                   : null,
             }}
             width={"90%"}

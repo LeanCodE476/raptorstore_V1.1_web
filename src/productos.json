@@ -795,7 +795,7 @@
         "stock": "stock disponible",
         "marca": "caster",
         "envioGratis": "true",
-        "codigo": "PESCA0031",
+        "codigo": "PESCA0050",
         "imagenes": [
           "combobaitcast-1.webp",
           "reelHuevitoUnlimited-1.webp",
@@ -833,6 +833,259 @@
         "precio": 44.300,
         "cantidad": 1
       },
+      
+      {
+        "codigo": "PESCA0031",
+        "tipo": "cañas",
+        "nombre": "Caña BEAST Blue Max 1.80m Bait Casting 2 Tramos 6-12 Lb 8-25g",
+        "descripcion": [],
+        "stock": "proximamente",
+        "marca": "beast",
+        "imagenes": ["BLUEMAX-BC1802M-400_11zon.webp"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0032",
+        "tipo": "cañas",
+        "nombre": "Caña BEAST Cobra 1.80m Bait Casting 2 Tramos 6-12 Lb 8-25g",
+        "descripcion": [],
+        "stock": "proximamente",
+        "marca": "beast",
+        "imagenes": ["COBRA-BC1802M-400_11zon.webp"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0078",
+        "tipo": "cañas",
+        "nombre": "Caña BEAST Solid SE 2.10m Maciza 2 Tramos 15-25 Lb 50-100g",
+        "descripcion": [],
+        "stock": "proximamente",
+        "marca": "beast",
+        "imagenes": ["SOLID-SE2102S-400_11zon.webp"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0120",
+        "tipo": "cañas",
+        "nombre": "Caña CASTER Valiant 2.10m Variada Pesada 100-200g",
+        "descripcion": [],
+        "stock": "proximamente",
+        "marca": "caster",
+        "imagenes": ["VALIANTGSP.jpg"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0070",
+        "tipo": "cañas",
+        "nombre": "Caña CASTER Xtreme Chaos 2.10m Variada Rio 15-30 Lb 80-180g",
+        "descripcion": [],
+        "stock": "proximamente",
+        "marca": "caster",
+        "imagenes": ["XTREMECHAOS-GSP2102MH.jpg"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0036",
+        "tipo": "reel",
+        "nombre": "Reel Huevito BEAST Red Max 104 Bait Casting 4 Rulemanes 7.2:1",
+        "descripcion": [],
+        "stock": "proximamente",
+        "marca": "beast",
+        "imagenes": ["REDMAX104L.jpg"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0037",
+        "tipo": "reel",
+        "nombre": "Reel Frontal BEAST SE200 Pejerrey Spinning Variada Rio 3 Rulemanes",
+        "descripcion": [],
+        "stock": "proximamente",
+        "marca": "beast",
+        "imagenes": ["SE200-YELLOW_11zon.webp"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0038",
+        "tipo": "reel",
+        "nombre": "Reel Huevito CASTER Black Widow 108 Bait Casting 8 Rulemanes 7.2:1",
+        "descripcion": [],
+        "stock": "proximamente",
+        "marca": "caster",
+        "imagenes": ["BLACKWIDOW108L_11zon.webp"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0039",
+        "marca": "caster",
+        "tipo": "reel",
+        "nombre": "Reel Frontal CASTER Cayman 4001 Variada Rio 1 Ruleman",
+        "descripcion": [],
+        "stock": "proximamente",
+        "imagenes": ["CAYMAN4001_11zon.webp"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0040",
+        "marca": "caster",
+        "tipo": "señuelos",
+        "nombre": "Señuelo CASTER Prop Rat 9cm 12g Rata Goma AntiengancheSeñuelo CASTER Prop Rat 9cm 12g Rata Goma Antienganche",
+        "descripcion": [],
+        "stock": "proximamente",
+        "imagenes": ["LF-PROPRAT-C4_11zon.webp"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0041",
+        "marca": "caster",
+        "tipo": "señuelos",
+        "nombre": "Señuelo CASTER Deep Madness 13.5cm 34g Paleta Profundidad",
+        "descripcion": [],
+        "stock": "proximamente",
+        "imagenes": ["LHPRO-DMADNESS-C2034_11zon.webp"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0042",
+        "marca": "caster",
+        "tipo": "señuelos",
+        "nombre": "Señuelo CASTER Giant Toad 11cm 33.4g Rana Paleta Profundidad",
+        "descripcion": [],
+        "stock": "proximamente",
+        "imagenes": ["LHPRO-GTOAD-C15_11zon.webp"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0043",
+        "marca": "caster",
+        "tipo": "organizadores",
+        "nombre": "Caja CASTER Para Señuelos Doble Faz 12 Divisiones 20,5x17x5cm",
+        "descripcion": [],
+        "stock": "proximamente",
+        "imagenes": ["TBOX-001_11zon.webp"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0044",
+        "marca": "caster",
+        "tipo": "organizadores",
+        "nombre": "Caja CASTER Para Señuelos Doble Faz 16 Divisiones 27,5x18,5x5cm",
+        "descripcion": [],
+        "stock": "proximamente",
+        "imagenes": ["TBOX-002_11zon.webp"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0045",
+        "marca": "caster",
+        "tipo": "multifilamento",
+        "nombre": "Multifilamento CASTER Castforce 4x 0.20mm 13,2kg 29lb 100m - Amarillo",
+        "descripcion": [],
+        "stock": "proximamente",
+        "imagenes": ["multifilamentoamarillo_11zon.webp"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0093",
+        "marca": "caster",
+        "tipo": "multifilamento",
+        "nombre": "Multifilamento CASTER Castforce 4x 0.30mm 18,2kg 40lb 100m - Gris",
+        "descripcion": [],
+        "stock": "proximamente",
+        "imagenes": ["multifilamentogris_11zon.webp"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0092",
+        "marca": "caster",
+        "tipo": "multifilamento",
+        "nombre": "Multifilamento CASTER Castforce 4x 0.30mm 18,2kg 40lb 100m - Verde",
+        "descripcion": [],
+        "stock": "proximamente",
+        "imagenes": ["multifilamentoverde_11zon.webp"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0091",
+        "marca": "caster",
+        "tipo": "multifilamento",
+        "nombre": "Multifilamento CASTER Castforce 4x 0.30mm 18,2kg 40lb 100m - Amarillo",
+        "descripcion": [],
+        "stock": "proximamente",
+        "imagenes": ["multifilamentoamarillo_11zon.webp"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0090",
+        "marca": "caster",
+        "tipo": "multifilamento",
+        "nombre": "Multifilamento CASTER Castforce 4x 0.40mm 25kg 55lb 100m - Naranja",
+        "descripcion": [],
+        "stock": "proximamente",
+        "imagenes": ["multifilamentonaranja_11zon.webp"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0089",
+        "marca": "caster",
+        "tipo": "multifilamento",
+        "nombre": "Multifilamento CASTER Castforce 4x 0.40mm 25kg 55lb 100m - Amarillo",
+        "descripcion": [],
+        "stock": "proximamente",
+        "imagenes": ["multifilamentoamarillo_11zon.webp"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA0051",
+        "marca": "caster",
+        "tipo": "anzuelos",
+        "nombre": "Anzuelos Offset CASTER 2/0 Para Señuelos De Goma 10 Unidades",
+        "descripcion": [],
+        "stock": "proximamente",
+        "imagenes": ["HOOKS-W10-20.jpg"],
+        "imagenesVertical": [],
+        "precio": 0.000,
+        "cantidad": 1
+      },
       {
         "tipo": "reel",
         "nombre": "Reel Abu Garcia Black Max 3 BaitCasting Drag 8kg",
@@ -867,7 +1120,7 @@
           "abugarciaV-7.webp",
           "abugarciaV-8.webp"
         ],
-        "precio": 62.700,
+        "precio":0.0,
         "cantidad": 1
       },
       {
@@ -890,7 +1143,7 @@
           "reelHuevitoAbuGarciaBM3-2.webp",
           "caniaBlackFighter-BC1802M-1.webp"
         ],
-        "precio": 82.100,
+        "precio": 0.0,
         "cantidad": 1
       }
 

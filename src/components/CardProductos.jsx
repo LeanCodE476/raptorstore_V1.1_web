@@ -153,7 +153,7 @@ const CardProductos = ({ product }) => {
                 product.stock === "Agotado"
                   ? "red"
                   : product.stock === "stock disponible"
-                  ? "green"
+                  ? "green" : product.stock === "proximamente" ? "blue"
                   : null,
               right: "0rem",
               fontWeight: "500",
@@ -281,7 +281,7 @@ const CardProductos = ({ product }) => {
           </Box>
 
           <Button
-            disabled={product.stock === "Agotado"}
+            disabled={product.stock === "Agotado" || product.stock === "proximamente"}
             sx={{
               bgcolor: "#1F1F1F",
               color: "white",

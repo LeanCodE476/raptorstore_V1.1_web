@@ -281,7 +281,7 @@ const CardProductos = ({ product }) => {
           </Box>
 
           <Button
-            disabled={product.stock === "Agotado" || product.stock === "proximamente"}
+            disabled={product.stock === "Agotado" || product.stock === "proximamente33"}
             sx={{
               bgcolor: "#1F1F1F",
               color: "white",

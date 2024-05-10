@@ -181,6 +181,7 @@ const Detalle = ({ products }) => {
             mt={"1rem"}
             color={"gray"}
             fontWeight={"400"}
+            sx={{ display: "flex", alignItems: "center" }}
           >
             Producto de :
             {product && product.marca === "caster" ? (
@@ -188,12 +189,18 @@ const Detalle = ({ products }) => {
                 className="brand-caster brand-caster-color"
                 fontFamily={"Days One"}
                 fontSize={".8rem"}
+                sx={{ marginLeft: "1rem" }}
               >
                 CASTER
               </Typography>
             ) : null}
             {product && product.marca === "beast" ? (
-              <Typography className="brand-beast-color">Beast</Typography>
+              <Typography
+                className="brand-beast-color"
+                sx={{ marginLeft: "1rem" }}
+              >
+                Beast
+              </Typography>
             ) : null}
             {product && product.marca === "abugarcia" ? (
               <img
@@ -201,6 +208,7 @@ const Detalle = ({ products }) => {
                 src={logoAbuGarcia}
                 alt={`logo-abugarcia`}
                 style={{
+                  marginLeft: "1rem",
                   height: "auto",
                   maxWidth: "2.5rem",
                   zIndex: 2,

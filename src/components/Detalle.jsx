@@ -226,7 +226,7 @@ const Detalle = ({ products }) => {
               color:
                 product.stock === "Agotado"
                   ? "red"
-                  : product.stock === "stock disponible"
+                  : product.stock === "stock disponible" || product.stock === "nuevo ingreso"
                   ? "green"
                   : product.stock === "proximamente"
                   ? "blue"
@@ -331,7 +331,7 @@ const Detalle = ({ products }) => {
         <Typography variant="h4" width={"90%"} mt={"2rem"} textAlign={"start"}>
           ${formattedPrice}
         </Typography>
-        {product.stock === "stock disponible" ? (
+        {product.stock === "stock disponible" || product.stock === "nuevo ingreso" ? (
           <Box
             sx={{
               width: "95%",

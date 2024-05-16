@@ -93,7 +93,7 @@ const CardProductos = ({ product }) => {
               <Typography
                 className="brand-caster brand-caster-color"
                 fontFamily={"Days One"}
-                fontSize={'.8rem'}
+                fontSize={".8rem"}
               >
                 CASTER
               </Typography>
@@ -152,8 +152,10 @@ const CardProductos = ({ product }) => {
               color:
                 product.stock === "Agotado"
                   ? "red"
-                  : product.stock === "stock disponible"
-                  ? "green" : product.stock === "proximamente" ? "blue"
+                  : product.stock === "stock disponible" || "nuevo ingreso"
+                  ? "green"
+                  : product.stock === "proximamente"
+                  ? "blue"
                   : null,
               right: "0rem",
               fontWeight: "500",
@@ -161,6 +163,7 @@ const CardProductos = ({ product }) => {
               paddingRight: "1rem",
               borderRadius: " .5rem 0 0 0",
               textTransform: "capitalize",
+              borderTop:'1px solid green'
             }}
           >
             {product.stock}
@@ -281,7 +284,9 @@ const CardProductos = ({ product }) => {
           </Box>
 
           <Button
-            disabled={product.stock === "Agotado" || product.stock === "proximamente33"}
+            disabled={
+              product.stock === "Agotado" || product.stock === "proximamente" 
+            }
             sx={{
               bgcolor: "#1F1F1F",
               color: "white",

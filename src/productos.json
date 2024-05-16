@@ -67,7 +67,7 @@
           "Modalidades de pesca: señuelo o variada mediana para aquellos pescadores principiantes",
           "Ejemplos de especies: carpa, sábalo, boga, tararira, pejerrey, bagre, chafalote, trucha, patí"
         ],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "marca": "beast",
         "imagenes": [
           "BLUEMAX-BC1802M-400_11zon.webp"
@@ -101,7 +101,7 @@
           "Modalidades de pesca: variada para aquellos pescadores principiantes",
           "Ejemplos de especies: carpa, sábalo, boga, tararira, pejerrey, bagre, chafalote, trucha, patí"
         ],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "marca": "beast",
         "imagenes": [
           "COBRA-BC1802M-400_11zon.webp"
@@ -132,7 +132,7 @@
           "Modalidades de pesca: variada en río y laguna",
           "Ejemplos de especies: carpa, sábalo, boga, tararira, pejerrey, bagre, chafalote, trucha, patí, dorado, surubí"
         ],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "marca": "beast",
         "imagenes": [
           "SOLID-SE2102S-400_11zon.webp"
@@ -162,7 +162,7 @@
           "Empuñadura recortada de goma eva ergonómica",
           "Incluye funda de tela estampada con divisiones"
         ],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "marca": "caster",
         "imagenes": [
           "VALIANTGSP.jpg"
@@ -194,7 +194,7 @@
           "Mango forrado con termocontraible antideslizante",
           "Incluye funda de tela estampada con divisiones"
         ],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "marca": "caster",
         "imagenes": [
           "XTREMECHAOS-GSP2102MH.jpg"
@@ -223,7 +223,7 @@
           "Tipo de caña utilizable: Baitcasting (combo ideal con la caña Beast Red Max 2.10m)",
           "Modalidades de pesca: Señuelo o variada mediana"
         ],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "marca": "beast",
         "imagenes": [
           "REDMAX104L.jpg"
@@ -236,13 +236,7 @@
         "codigo": "PESCA0037",
         "tipo": "reel",
         "nombre": "Reel Frontal BEAST SE200 Pejerrey Spinning Variada Rio 3 Rulemanes",
-        "descripcion": [],
-        "stock": "stock disponible",
-        "marca": "beast",
-        "imagenes": [
-          "SE200-YELLOW_11zon.webp"
-        ],
-        "imagenesVertical": [
+        "descripcion": [
           "3 RULEMANES",
           "Radio de giro: 5.2:1",
           "Capacidad de monofilamento mm/m: 0.18/245 - 0.20/200 - 0.25/125",
@@ -255,6 +249,12 @@
           "Tipo de caña utilizable: Spinning",
           "Modalidades de pesca: Variada liviana en río y laguna"
         ],
+        "stock": "nuevo ingreso",
+        "marca": "beast",
+        "imagenes": [
+          "SE200-YELLOW_11zon.webp"
+        ],
+        "imagenesVertical": [],
         "precio": 8.700,
         "cantidad": 1
       },
@@ -279,7 +279,7 @@
           "Tipo de caña utilizable: Baitcasting (combo ideal con la caña Caster Black Widow 2.10m)",
           "Modalidades de pesca: Variada con señuelos en río o laguna"
         ],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "marca": "caster",
         "imagenes": [
           "BLACKWIDOW108L_11zon.webp"
@@ -310,7 +310,7 @@
           "Tipo de caña utilizable: Spinning",
           "Modalidades de pesca: Variada mediana de río y laguna"
         ],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "imagenes": [
           "CAYMAN4001_11zon.webp"
         ],
@@ -331,7 +331,7 @@
           "Patas giratorias tipo propelas",
           "Ideal para pesca de tarariras"
         ],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "imagenes": [
           "LF-PROPRAT-C4_11zon.webp"
         ],
@@ -354,7 +354,7 @@
           "Ideal para: pesca de dorados",
           "Los señuelos CASTER PRO EDITION han sido desarrollados con los mejores materiales para replicar el movimiento y la apariencia de un pez real, logrando así un diseño sumamente realista. Las principales características de nuestros señuelos son: cuerpo sellado por ultrasonido y testeado en tanques de alta presión, anzuelos extremadamente filosos y resistentes, anillas forjadas, ojos holográficos en 3D, pintura e impresiones realistas de alto nivel. Cada señuelo ha sido testeado individualmente para ofrecer la mejor experiencia y efectividad."
         ],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "imagenes": [
           "LHPRO-DMADNESS-C2034_11zon.webp"
         ],
@@ -377,7 +377,7 @@
           "Ideal para pesca de dorados y tarariras",
           "Señuelos CASTER PRO EDITION: Los señuelos han sido desarrollados con los mejores materiales para replicar el movimiento y la apariencia de un pez real, logrando así un diseño sumamente realista. Las principales características de nuestros señuelos son: cuerpo sellado por ultrasonido y testeado en tanques de alta presión, anzuelos extremadamente filosos y resistentes, anillas forjadas, ojos holográficos en 3D, pintura e impresiones realistas de alto nivel. Cada señuelo ha sido testeado individualmente para ofrecer la mejor experiencia y efectividad."
         ],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "imagenes": [
           "LHPRO-GTOAD-C15_11zon.webp"
         ],
@@ -399,7 +399,7 @@
           "Manija para transportar",
           "Ideal para señuelos"
         ],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "imagenes": [
           "TBOX-001_11zon.webp"
         ],
@@ -421,7 +421,7 @@
           "Manija para transportar",
           "Ideal para señuelos"
         ],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "imagenes": [
           "TBOX-002_11zon.webp"
         ],
@@ -435,7 +435,7 @@
         "tipo": "multifilamento",
         "nombre": "Multifilamento CASTER Castforce 4x 0.20mm 13,2kg 29lb 100m - Amarillo",
         "descripcion": [],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "imagenes": [
           "multifilamentoamarillo_11zon.webp"
         ],
@@ -449,7 +449,7 @@
         "tipo": "multifilamento",
         "nombre": "Multifilamento CASTER Castforce 4x 0.30mm 18,2kg 40lb 100m - Gris",
         "descripcion": [],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "imagenes": [
           "multifilamentogris_11zon.webp"
         ],
@@ -463,7 +463,7 @@
         "tipo": "multifilamento",
         "nombre": "Multifilamento CASTER Castforce 4x 0.30mm 18,2kg 40lb 100m - Verde",
         "descripcion": [],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "imagenes": [
           "multifilamentoverde_11zon.webp"
         ],
@@ -477,7 +477,7 @@
         "tipo": "multifilamento",
         "nombre": "Multifilamento CASTER Castforce 4x 0.30mm 18,2kg 40lb 100m - Amarillo",
         "descripcion": [],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "imagenes": [
           "multifilamentoamarillo_11zon.webp"
         ],
@@ -491,7 +491,7 @@
         "tipo": "multifilamento",
         "nombre": "Multifilamento CASTER Castforce 4x 0.40mm 25kg 55lb 100m - Naranja",
         "descripcion": [],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "imagenes": [
           "multifilamentonaranja_11zon.webp"
         ],
@@ -505,7 +505,7 @@
         "tipo": "multifilamento",
         "nombre": "Multifilamento CASTER Castforce 4x 0.40mm 25kg 55lb 100m - Amarillo",
         "descripcion": [],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "imagenes": [
           "multifilamentoamarillo_11zon.webp"
         ],
@@ -525,7 +525,7 @@
           "Medidas: 5 x 1,9 cm",
           "Presentación: sobre de 10 unidades"
         ],
-        "stock": "stock disponible",
+        "stock": "nuevo ingreso",
         "imagenes": [
           "HOOKS-W10-20.jpg"
         ],
@@ -1319,7 +1319,6 @@
         "precio": 44.300,
         "cantidad": 1
       },
-   
       {
         "tipo": "reel",
         "nombre": "Reel Abu Garcia Black Max 3 BaitCasting Drag 8kg",

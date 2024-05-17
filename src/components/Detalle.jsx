@@ -71,7 +71,7 @@ const Detalle = ({ products }) => {
     setIndex(newIndex);
   };
 
-  const formattedPrice = product ? product.precio.toFixed(3) : "";
+  const formattedPrice = new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' }).format(product.precio);
 
   const [cantidad, setCantidad] = useState(product.cantidad || 0);
 
@@ -345,7 +345,7 @@ const Detalle = ({ products }) => {
         </Box>
 
         <Typography variant="h4" width={"90%"} mt={"2rem"} textAlign={"start"}>
-          ${formattedPrice}
+          {formattedPrice}
         </Typography>
         {product.stock === "stock disponible" || product.stock === "nuevo ingreso" ? (
           <Box

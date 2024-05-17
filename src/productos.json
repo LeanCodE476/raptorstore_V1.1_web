@@ -39,7 +39,7 @@
           "unlimited110V-8.webp",
           "unlimited110V-9.webp"
         ],
-        "precio": 59.800,
+        "precio": 59800,
         "cantidad": 1
       },
       {
@@ -47,8 +47,6 @@
         "tipo": "cañas",
         "nombre": "Caña BEAST Blue Max 1.80m Bait Casting 2 Tramos 6-12 Lb 8-25g",
         "descripcion": [
-          "Reel huevito Caster Pro 110 Unlimited",
-          "Caña Caster BlackFighter 1.80mt",
           "Medida: 1.80m en 2 tramos",
           "Composición: fibra de vidrio",
           "5 pasahilos de cerámica de 2 y 6 patas",
@@ -73,7 +71,7 @@
           "BLUEMAX-BC1802M-400_11zon.webp"
         ],
         "imagenesVertical": [],
-        "precio": 19.900,
+        "precio": 19900,
         "cantidad": 1
       },
       {
@@ -81,8 +79,6 @@
         "tipo": "cañas",
         "nombre": "Caña BEAST Cobra 1.80m Bait Casting 2 Tramos 6-12 Lb 8-25g",
         "descripcion": [
-          "Reel huevito Caster Pro 110 Unlimited",
-          "Caña Caster BlackFighter 1.80mt",
           "Medida: 1.80m en 2 tramos",
           "Composición: fibra de vidrio",
           "5 pasahilos de cerámica de 2 y 6 patas",
@@ -107,7 +103,7 @@
           "COBRA-BC1802M-400_11zon.webp"
         ],
         "imagenesVertical": [],
-        "precio": 19.900,
+        "precio": 19900,
         "cantidad": 1
       },
       {
@@ -138,7 +134,7 @@
           "SOLID-SE2102S-400_11zon.webp"
         ],
         "imagenesVertical": [],
-        "precio": 14.500,
+        "precio": 14500,
         "cantidad": 1
       },
       {
@@ -168,7 +164,7 @@
           "VALIANTGSP.jpg"
         ],
         "imagenesVertical": [],
-        "precio": 32.500,
+        "precio": 32500,
         "cantidad": 1
       },
       {
@@ -200,7 +196,7 @@
           "XTREMECHAOS-GSP2102MH.jpg"
         ],
         "imagenesVertical": [],
-        "precio": 31.500,
+        "precio": 31500,
         "cantidad": 1
       },
       {
@@ -229,7 +225,7 @@
           "REDMAX104L.jpg"
         ],
         "imagenesVertical": [],
-        "precio": 31.900,
+        "precio": 31900,
         "cantidad": 1
       },
       {
@@ -255,7 +251,7 @@
           "SE200-YELLOW_11zon.webp"
         ],
         "imagenesVertical": [],
-        "precio": 8.700,
+        "precio": 8700,
         "cantidad": 1
       },
       {
@@ -285,7 +281,7 @@
           "BLACKWIDOW108L_11zon.webp"
         ],
         "imagenesVertical": [],
-        "precio": 56.700,
+        "precio": 56700,
         "cantidad": 1
       },
       {
@@ -315,7 +311,7 @@
           "CAYMAN4001_11zon.webp"
         ],
         "imagenesVertical": [],
-        "precio": 20.200,
+        "precio": 20200,
         "cantidad": 1
       },
       {
@@ -336,7 +332,7 @@
           "LF-PROPRAT-C4_11zon.webp"
         ],
         "imagenesVertical": [],
-        "precio": 5.300,
+        "precio": 5300,
         "cantidad": 1
       },
       {
@@ -359,7 +355,7 @@
           "LHPRO-DMADNESS-C2034_11zon.webp"
         ],
         "imagenesVertical": [],
-        "precio": 5.700,
+        "precio": 5700,
         "cantidad": 1
       },
       {
@@ -382,7 +378,7 @@
           "LHPRO-GTOAD-C15_11zon.webp"
         ],
         "imagenesVertical": [],
-        "precio": 5.300,
+        "precio": 5300,
         "cantidad": 1
       },
       {
@@ -404,7 +400,7 @@
           "TBOX-001_11zon.webp"
         ],
         "imagenesVertical": [],
-        "precio": 8.100,
+        "precio": 8100,
         "cantidad": 1
       },
       {
@@ -426,7 +422,7 @@
           "TBOX-002_11zon.webp"
         ],
         "imagenesVertical": [],
-        "precio": 9.500,
+        "precio": 9500,
         "cantidad": 1
       },
       {
@@ -440,7 +436,7 @@
           "multifilamentoamarillo_11zon.webp"
         ],
         "imagenesVertical": [],
-        "precio": 3.900,
+        "precio": 3900,
         "cantidad": 1
       },
       {
@@ -454,7 +450,7 @@
           "multifilamentogris_11zon.webp"
         ],
         "imagenesVertical": [],
-        "precio": 3.900,
+        "precio": 3900,
         "cantidad": 1
       },
       {
@@ -468,7 +464,7 @@
           "multifilamentoverde_11zon.webp"
         ],
         "imagenesVertical": [],
-        "precio": 3.900,
+        "precio": 3900,
         "cantidad": 1
       },
       {
@@ -482,7 +478,7 @@
           "multifilamentoamarillo_11zon.webp"
         ],
         "imagenesVertical": [],
-        "precio": 3.900,
+        "precio": 3900,
         "cantidad": 1
       },
       {
@@ -496,7 +492,7 @@
           "multifilamentonaranja_11zon.webp"
         ],
         "imagenesVertical": [],
-        "precio": 3.900,
+        "precio": 3900,
         "cantidad": 1
       },
       {
@@ -510,7 +506,7 @@
           "multifilamentoamarillo_11zon.webp"
         ],
         "imagenesVertical": [],
-        "precio": 3.900,
+        "precio": 3900,
         "cantidad": 1
       },
       {
@@ -530,7 +526,249 @@
           "HOOKS-W10-20.jpg"
         ],
         "imagenesVertical": [],
-        "precio": 1.600,
+        "precio": 1600,
+        "cantidad": 1
+      },
+      
+      {
+        "codigo": "H0605",
+        "tipo": "organizadores",
+        "nombre": " Caja Organizadora chica (10 x 7)",
+        "descripcion": [],
+        "stock": "nuevo ingreso",
+        "marca": "redfish",
+        "envioGratis": "",
+        "imagenes": ["caja_chica_H0605.jpg"],
+        "imagenesVertical": [],
+        "precio": 1900,
+        "cantidad": 1
+      },
+      {
+        "codigo": "H434",
+        "tipo": "organizadores",
+        "nombre": " Caja Organizadora chica (10 x 7)",
+        "descripcion": [],
+        "stock": "nuevo ingreso",
+        "marca": "redfish",
+        "imagenes": ["caja_chica_H434.jpg"],
+        "imagenesVertical": [],
+        "precio": 2500,
+        "cantidad": 1
+      },
+      {
+        "codigo": "H0510A",
+        "tipo": "organizadores",
+        "nombre": " Caja Organizadora chica (12 x 9)",
+        "descripcion": [],
+        "stock": "nuevo ingreso",
+        "marca": "redfish",
+        "imagenes": ["caja_chica_H0510A.jpg"],
+        "imagenesVertical": [],
+        "precio": 2900,
+        "cantidad": 1
+      },
+      {
+        "codigo": "H0310C",
+        "tipo": "organizadores",
+        "nombre": "Caja Organizadora Chica",
+        "descripcion": [],
+        "stock": "nuevo ingreso",
+        "marca": "redfish",
+        "imagenes": ["caja_chica_ H0310C.jpg"],
+        "imagenesVertical": [],
+        "precio": 3400,
+        "cantidad": 1
+      },
+      {
+        "codigo": "RBC001",
+        "tipo": "fundas",
+        "nombre": " Funda reel Neoprene huevito",
+        "descripcion": [],
+        "stock": "nuevo ingreso",
+        "marca": "redfish",
+        "imagenes": ["funda_reel_RBC001.jpg"],
+        "imagenesVertical": [],
+        "precio": 5500,
+        "cantidad": 1
+      },
+      {
+        "codigo": "9752",
+        "tipo": "cuchillos",
+        "nombre": " Navaja engomada Curva",
+        "descripcion": [],
+        "stock": "nuevo ingreso",
+        "marca": "redfish",
+        "imagenes": ["navaja_engomada_9752.jpg"],
+        "imagenesVertical": [],
+        "precio": 9300,
+        "cantidad": 1
+      },
+      {
+        "codigo": "8529-50",
+        "tipo": "nylon",
+        "nombre": "  Nylon 0,50mm x unidad x 100m",
+        "descripcion": [],
+        "stock": "nuevo ingreso",
+        "marca": "redfish",
+        "imagenes": ["nylon_redfish.jpg"],
+        "imagenesVertical": [],
+        "precio": 1900,
+        "cantidad": 1
+      },
+      {
+        "codigo": "8529-40",
+        "tipo": "nylon",
+        "nombre": "Nylon 0,40mm x unidad x 100m",
+        "descripcion": [],
+        "stock": "",
+        "marca": "",
+        "imagenes": ["nylon_redfish.jpg"],
+        "imagenesVertical": [],
+        "precio": 1600,
+        "cantidad": 1
+      },
+      {
+        "codigo": "8529-70",
+        "tipo": "nylon",
+        "nombre": "  Nylon 0,70mm x unidad x 100m",
+        "descripcion": [],
+        "stock": "nuevo ingreso",
+        "marca": "redfish",
+        "imagenes": ["nylon_redfish.jpg"],
+        "imagenesVertical": [],
+        "precio": 2400,
+        "cantidad": 1
+      },
+      {
+        "codigo": "F17084",
+        "tipo": "boyas",
+        "nombre": "Boyas ESFERICA PLASTICO x12",
+        "descripcion": [],
+        "stock": "nuevo ingreso",
+        "marca": "redfish",
+        "imagenes": ["boyas_esfericas.jpg"],
+        "imagenesVertical": [],
+        "precio": 2800,
+        "cantidad": 1
+      },
+      {
+        "codigo": "DTD105",
+        "tipo": "señuelos",
+        "nombre": "Gomas Soft x 3 Unidades",
+        "descripcion": [],
+        "stock": "nuevo ingreso",
+        "marca": "redfish",
+        "imagenes": ["gomas_soft_redfish.jpg"],
+        "imagenesVertical": [],
+        "precio": 2800,
+        "cantidad": 1
+      },
+      {
+        "codigo": "BW38",
+        "tipo": "señuelos",
+        "nombre": "Lombriz saborizada de Goma x 100 unidades",
+        "descripcion": [],
+        "stock": "nuevo ingreso",
+        "marca": "redfish",
+        "imagenes": ["lombriz_saborizada.jpeg"],
+        "imagenesVertical": [],
+        "precio": 4800,
+        "cantidad": 1
+      },
+      {
+        "codigo": "F17095-1",
+        "tipo": "posa cañas",
+        "nombre": "Posa Caña Metalico",
+        "descripcion": [],
+        "stock": "nuevo ingreso",
+        "marca": "redfish",
+        "imagenes": ["posacania.jpg"],
+        "imagenesVertical": [],
+        "precio": 2900,
+        "cantidad": 1
+      },
+      {
+        "codigo": "BJ003",
+        "tipo": "señuelos",
+        "nombre": "Señuelo RedFish Bait",
+        "descripcion": [],
+        "stock": "nuevo ingreso",
+        "marca": "redfish",
+        "imagenes": ["hundimiendo_redfish_BJ003.jpg"],
+        "imagenesVertical": [],
+        "precio": 3500,
+        "cantidad": 1
+      },
+      {
+        "codigo": "2680",
+        "tipo": "atrapa mojarras",
+        "nombre": "Atrapa Mojarra Rectangular Grande",
+        "descripcion": [],
+        "stock": "nuevo ingreso",
+        "marca": "redfish",
+        "imagenes": ["atrapamojarra.jpg"],
+        "imagenesVertical": [],
+        "precio": 4800,
+        "cantidad": 1
+      },
+      {
+        "codigo": "W51-10",
+        "tipo": "cables de acero",
+        "nombre": "Cable de Acero x 10M 60lb",
+        "descripcion": [],
+        "stock": "nuevo ingreso",
+        "marca": "redfish",
+        "imagenes": ["cable_acero_60lb.jpg"],
+        "imagenesVertical": [],
+        "precio": 3180,
+        "cantidad": 1
+      },
+      {
+        "codigo": "BK-8801",
+        "tipo": "cintas extensibles",
+        "nombre": "Cinta Extensible Para Pinzas",
+        "descripcion": [],
+        "stock": "nuevo ingreso",
+        "marca": "redfish",
+        "imagenes": ["cinta_extensible.jpg"],
+        "imagenesVertical": [],
+        "precio": 2900,
+        "cantidad": 1
+      },
+      {
+        "codigo": "BF-1",
+        "tipo": "cascabeles",
+        "nombre": "Cascabel con Luz",
+        "descripcion": [],
+        "stock": "nuevo ingreso",
+        "marca": "redfish",
+        "imagenes": ["cascabel_luz.jpg"],
+        "imagenesVertical": [],
+        "precio": 930,
+        "cantidad": 1
+      },
+      {
+        "codigo": "C13",
+        "tipo": "señuelos",
+        "nombre": "Cuchara Ondulante AntiEnganche RedFish",
+        "descripcion": [],
+        "stock": "nuevo ingreso",
+        "marca": "redfish",
+        "imagenes": ["cuchara_ondulante.jpg"],
+        "imagenesVertical": [],
+        "precio": 4100,
+        "cantidad": 1
+      },
+      {
+        "codigo": "004-03",
+        "tipo": "señuelos",
+        "nombre": "Señuelo Popper RedFish",
+        "descripcion": [],
+        "stock": "nuevo ingreso",
+        "marca": "redfish",
+        "imagenes": ["popper_redfish.jpg"],
+        "imagenesVertical": [],
+        "precio": 3800,
         "cantidad": 1
       },
       {
@@ -568,7 +806,7 @@
           "casterflexV-7.webp",
           "casterflexV-8.webp"
         ],
-        "precio": 21.700,
+        "precio": 21700,
         "cantidad": 1
       },
       {
@@ -592,7 +830,7 @@
           "frogantiV-3.webp",
           "frogantiV-4.webp"
         ],
-        "precio": 2.800,
+        "precio": 2800,
         "cantidad": 1
       },
       {
@@ -609,7 +847,7 @@
           "sombreronegro-1.webp",
           "sombreronegro-2.webp"
         ],
-        "precio": 5.300,
+        "precio": 5300,
         "cantidad": 1
       },
       {
@@ -636,7 +874,7 @@
           "senueloBigFrogV-2.webp",
           "senueloBigFrogV-3.webp"
         ],
-        "precio": 2.300,
+        "precio": 2300,
         "cantidad": 1
       },
       {
@@ -658,7 +896,7 @@
           "reelfrontalcasterblackwidowV-8.webp",
           "caniaspeedforceV-2.webp"
         ],
-        "precio": 55.400,
+        "precio": 55400,
         "cantidad": 1
       },
       {
@@ -682,7 +920,7 @@
         "imagenesVertical": [
           "anzueloPlomadoV-1.webp"
         ],
-        "precio": 2.300,
+        "precio": 2300,
         "cantidad": 1
       },
       {
@@ -714,7 +952,7 @@
           "bogagripV-2.webp",
           "bogagripV-3.webp"
         ],
-        "precio": 8.300,
+        "precio": 8300,
         "cantidad": 1
       },
       {
@@ -746,7 +984,7 @@
           "caniaspeedforceV-1.webp",
           "caniaspeedforceV-3.webp"
         ],
-        "precio": 20.100,
+        "precio": 20100,
         "cantidad": 1
       },
       {
@@ -779,7 +1017,7 @@
           "caniablackfighterV-1.webp",
           "caniablackfighterV-2.webp"
         ],
-        "precio": 19.900,
+        "precio": 19900,
         "cantidad": 1
       },
       {
@@ -803,7 +1041,7 @@
           "leader15cmV-1.webp",
           "leader15cmV-2.webp"
         ],
-        "precio": 2.900,
+        "precio": 2900,
         "cantidad": 1
       },
       {
@@ -840,7 +1078,7 @@
           "reelhuevomonsterV-4.webp",
           "reelhuevomonsterV-5.webp"
         ],
-        "precio": 25.000,
+        "precio": 25000,
         "cantidad": 1
       },
       {
@@ -859,7 +1097,7 @@
         "imagenes": [
           "mosquetones13kg-1.webp"
         ],
-        "precio": 5.300,
+        "precio": 5300,
         "cantidad": 1
       },
       {
@@ -882,7 +1120,7 @@
           "multifilamentoverde0.18V-2.webp",
           "multifilamentoverde0.18V-1.webp"
         ],
-        "precio": 3.900,
+        "precio": 3900,
         "cantidad": 1
       },
       {
@@ -905,7 +1143,7 @@
           "multifilamentoamarillo0.18V-2.webp",
           "multifilamentoamarillo0.18V-1.webp"
         ],
-        "precio": 3.900,
+        "precio": 3900,
         "cantidad": 1
       },
       {
@@ -946,7 +1184,7 @@
           "reelfrontalcasterblackwidowV-7.webp",
           "reelfrontalcasterblackwidowV-8.webp"
         ],
-        "precio": 35.900,
+        "precio": 35900,
         "cantidad": 1
       },
       {
@@ -971,7 +1209,7 @@
           "combatfrogV-2.webp",
           "combatfrogV-3.webp"
         ],
-        "precio": 2.100,
+        "precio": 2100,
         "cantidad": 1
       },
       {
@@ -995,7 +1233,7 @@
           "lunkerfrogV-1.webp",
           "lunkerfrogV-2.webp"
         ],
-        "precio": 2.900,
+        "precio": 2900,
         "cantidad": 1
       },
       {
@@ -1024,7 +1262,7 @@
           "rivershadV-2.webp",
           "rivershadV-3.webp"
         ],
-        "precio": 5.900,
+        "precio": 5900,
         "cantidad": 1
       },
       {
@@ -1047,7 +1285,7 @@
           "casterflexV-1.webp",
           "casterflexV-2.webp"
         ],
-        "precio": 41.500,
+        "precio": 41500,
         "cantidad": 1
       },
       {
@@ -1071,7 +1309,7 @@
           "froggyV-1.webp",
           "froggyV-2.webp"
         ],
-        "precio": 2.200,
+        "precio": 2200,
         "cantidad": 1
       },
       {
@@ -1093,7 +1331,7 @@
           "cucharacaster03V-1.webp",
           "cucharacaster03V-2.webp"
         ],
-        "precio": 2.700,
+        "precio": 2700,
         "cantidad": 1
       },
       {
@@ -1113,7 +1351,7 @@
           "cucharazwickeV-1.webp",
           "cucharazwickeV-2.webp"
         ],
-        "precio": 1.600,
+        "precio": 1600,
         "cantidad": 1
       },
       {
@@ -1132,7 +1370,7 @@
         "imagenesVertical": [
           "senuelolr001V-1.webp"
         ],
-        "precio": 1.600,
+        "precio": 1600,
         "cantidad": 1
       },
       {
@@ -1151,7 +1389,7 @@
         "imagenesVertical": [
           "senuelolr0002V-1.webp"
         ],
-        "precio": 1.600,
+        "precio": 1600,
         "cantidad": 1
       },
       {
@@ -1170,7 +1408,7 @@
         "imagenesVertical": [
           "senuelolr003V-1.webp"
         ],
-        "precio": 1.800,
+        "precio": 1800,
         "cantidad": 1
       },
       {
@@ -1190,7 +1428,7 @@
           "senuelolr004V-1.webp",
           "senuelolr004V-2.webp"
         ],
-        "precio": 1.500,
+        "precio": 1500,
         "cantidad": 1
       },
       {
@@ -1210,7 +1448,7 @@
           "senuelolr005V-2.webp",
           "senuelolr005V-1.webp"
         ],
-        "precio": 2.100,
+        "precio": 2100,
         "cantidad": 1
       },
       {
@@ -1230,7 +1468,7 @@
           "senuelolr006V-1.webp",
           "senuelolr006V-2.webp"
         ],
-        "precio": 1.700,
+        "precio": 1700,
         "cantidad": 1
       },
       {
@@ -1251,7 +1489,7 @@
           "senuelolr007V-2.webp",
           "senuelolr007V-3.webp"
         ],
-        "precio": 1.600,
+        "precio": 1600,
         "cantidad": 1
       },
       {
@@ -1268,7 +1506,7 @@
           "sombrerogris-1.webp",
           "sombrerogris-2.webp"
         ],
-        "precio": 5.300,
+        "precio": 5300,
         "cantidad": 1
       },
       {
@@ -1293,7 +1531,7 @@
           "unlimited110V-6.webp",
           "caniablackfighterV-1.webp"
         ],
-        "precio": 79.200,
+        "precio": 79200,
         "cantidad": 1
       },
       {
@@ -1316,7 +1554,7 @@
           "caniablackfighterV-1.webp",
           "reelhuevomonsterV-4.webp"
         ],
-        "precio": 39.900,
+        "precio": 39900,
         "cantidad": 1
       },
       {
@@ -1353,7 +1591,7 @@
           "abugarciaV-7.webp",
           "abugarciaV-8.webp"
         ],
-        "precio": 0.0,
+        "precio": 0,
         "cantidad": 1
       },
       {
@@ -1376,9 +1614,10 @@
           "reelHuevitoAbuGarciaBM3-2.webp",
           "caniaBlackFighter-BC1802M-1.webp"
         ],
-        "precio": 0.0,
+        "precio": 0,
         "cantidad": 1
       }
+      
     ],
     "electronica": []
   }

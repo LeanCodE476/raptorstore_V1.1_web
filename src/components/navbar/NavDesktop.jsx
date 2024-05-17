@@ -23,6 +23,7 @@ const NavDesktop = ({ handleTypeSelection }) => {
             justifyContent: "space-around",
             alignItems: "center",
             position: "sticky",
+            flexWrap:'wrap',
             top:'0rem',
             zIndex:'1',
           }}

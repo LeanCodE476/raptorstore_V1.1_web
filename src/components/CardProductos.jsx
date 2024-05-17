@@ -2,6 +2,7 @@ import { Box, Button, IconButton, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import logoAbuGarcia from "../../public/images/logoAbuGarcia.webp";
+import logoRedfish from '../../public/images/Logo-Redfish.png'
 import { CartContext } from "../Contexts/CartContext";
 import { useContext, useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
@@ -24,7 +25,7 @@ const CardProductos = ({ product }) => {
   const handleVerDetallesClick = () => {
     navigate(`/detalle/${codigo}`);
   };
-  const formattedPrice = precio.toFixed(3);
+  const formattedPrice = new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' }).format(precio);
 
   const [cantidad, setCantidad] = useState(product.cantidad || 0);
 
@@ -45,6 +46,8 @@ const CardProductos = ({ product }) => {
   };
   const logos = {
     abugarcia: logoAbuGarcia,
+    redfish: logoRedfish,
+
   };
 
   return (
@@ -108,7 +111,7 @@ const CardProductos = ({ product }) => {
                 alt={`logo-${marca}`}
                 style={{
                   height: "auto",
-                  maxWidth: "2.5rem",
+                  maxWidth: "2.6rem",
                   zIndex: 2,
                 }}
               />
@@ -227,7 +230,7 @@ const CardProductos = ({ product }) => {
             fontWeight={"500"}
             textAlign={"start"}
           >
-            ${formattedPrice}
+            {formattedPrice}
           </Typography>
         </Box>
 

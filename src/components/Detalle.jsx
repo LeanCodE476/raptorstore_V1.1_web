@@ -19,6 +19,8 @@ import logoCaster from "../../public/images/logo-caster.webp";
 import logoAbuGarcia from "../../public/images/logoAbuGarcia.webp";
 import logoBeast from "../../public/images/logo-beast.webp";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+import logoRedfish from '../../public/images/Logo-Redfish.png'
+
 import "../App.css";
 const Detalle = ({ products }) => {
   // const logos = {
@@ -169,6 +171,7 @@ const Detalle = ({ products }) => {
           width={"90%"}
           fontSize={"1.4rem"}
           mt={"2rem"}
+          textTransform={'capitalize'}
         >
           {product.nombre}
         </Typography>
@@ -211,6 +214,19 @@ const Detalle = ({ products }) => {
                   marginLeft: "1rem",
                   height: "auto",
                   maxWidth: "2.5rem",
+                  zIndex: 2,
+                }}
+              />
+            ) : null}
+            {product && product.marca === "redfish" ? (
+              <img
+                className="img-marca"
+                src={logoRedfish}
+                alt={`logo-redfish`}
+                style={{
+                  marginLeft: "1rem",
+                  height: "auto",
+                  maxWidth: "5rem",
                   zIndex: 2,
                 }}
               />
@@ -342,7 +358,7 @@ const Detalle = ({ products }) => {
               maxWidth: "20rem",
               padding: ".5rem",
               borderRadius: ".5rem",
-              boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
+              // boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
             }}
           >
             <Box

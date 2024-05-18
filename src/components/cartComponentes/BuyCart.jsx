@@ -5,8 +5,15 @@ import { CartContext } from "../../Contexts/CartContext";
 
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
+
+// Función para formatear el precio
+const formattedPrice = (price) => {
+  return new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' }).format(price);
+};
+
 const BuyCart = () => {
-  const { cart, total,cleanCart } = useContext(CartContext);
+  const { cart, total, cleanCart } = useContext(CartContext);
+
   function enviarMensajeWhatsapp() {
     const numeroTelefono = "3755 503038";
 
@@ -17,11 +24,11 @@ const BuyCart = () => {
         producto.nombre
       } \n- Cantidad: ${
         producto.cantidad
-      } \n- PrecioUnitario: $${formattedPrice(producto.precio)}\n`;
+      } \n- PrecioUnitario: ${formattedPrice(producto.precio)}\n`;
     });
 
     // Agregar el total al mensaje con un salto de línea
-    mensaje += `\n*Total: $${formattedPrice(total)}*`;
+    mensaje += `\n*Total: ${formattedPrice(total)}*`;
 
     // Generar el enlace de WhatsApp con el número de teléfono y el mensaje
     const enlaceWhatsapp = `https://api.whatsapp.com/send?phone=${numeroTelefono}&text=${encodeURIComponent(
@@ -32,14 +39,11 @@ const BuyCart = () => {
     window.open(enlaceWhatsapp);
   }
 
-  const formattedPrice = (precio) => {
-    return precio.toFixed(3);
-  };
   return (
     <Box
       sx={{
         width: "23rem",
-        borderTop: "1px solid #CACFD2  ",
+        borderTop: "1px solid #CACFD2",
         height: "10rem",
         position: "absolute",
         bottom: "0rem",
@@ -49,7 +53,7 @@ const BuyCart = () => {
         justifyContent: "space-around",
         "@media (max-width: 410px)": {
           width: "90%",
-          borderTop: "1px solid #CACFD2  ",
+          borderTop: "1px solid #CACFD2",
           height: "10rem",
           position: "absolute",
           bottom: "0rem",
@@ -66,9 +70,9 @@ const BuyCart = () => {
           bgcolor: "black",
           color: "white",
           bottom: "11rem",
-          fontSize:'.7rem'
+          fontSize: '.7rem'
         }}
-        onClick={()=>cleanCart()}
+        onClick={() => cleanCart()}
         className="button-clean-cart"
       >
         {" "}
@@ -85,8 +89,8 @@ const BuyCart = () => {
         <Typography fontWeight={"bold"} fontSize={"1.2rem"} color={"gray "}>
           Total
         </Typography>
-        <Typography  fontSize={"1.2rem"} fontWeight={'500'} >
-          ${total.toFixed(3)}
+        <Typography fontSize={"1.2rem"} fontWeight={'500'}>
+          {formattedPrice(total)}
         </Typography>
       </Box>
       <Button

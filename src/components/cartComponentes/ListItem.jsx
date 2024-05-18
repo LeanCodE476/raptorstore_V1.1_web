@@ -6,9 +6,10 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 const ListItem = ({ productos }) => {
   const { increaseItems, decreaseItems } = useContext(CartContext);
-  const formattedPrice = (precio) => {
-    return precio.toFixed(3);
-  };
+
+
+  const formattedPrice = new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' }).format(productos.precio);
+
   return (
     <List
       sx={{
@@ -60,7 +61,7 @@ const ListItem = ({ productos }) => {
           {productos.nombre}
         </Typography>{" "}
         <Typography fontWeight={"bold"} fontSize={"1.2rem"}>
-          $ {formattedPrice(productos.precio)}
+          {formattedPrice}
         </Typography>
       </Box>
 

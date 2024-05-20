@@ -19,7 +19,7 @@ import logoCaster from "../../public/images/logo-caster.webp";
 import logoAbuGarcia from "../../public/images/logoAbuGarcia.webp";
 import logoBeast from "../../public/images/logo-beast.webp";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-import logoRedfish from '../../public/images/Logo-Redfish.png'
+import logoRedfish from '../../public/images/Logo-Redfish.webp'
 
 import "../App.css";
 const Detalle = ({ products }) => {

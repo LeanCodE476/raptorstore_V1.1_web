@@ -3,6 +3,39 @@
     "pesca": [
       {
         "tipo": "reel",
+        "nombre": "Reel Huevito KastKing Brutus",
+        "descripcion": [
+          "Posición: Apto para uso en lago, río, estanque, arroyo y campo de gestión",
+          "Categoría: Carrete de pesca de señuelo",
+          "Potencia de arrastre: 8KG",
+          "Relación de engranajes: 7:2:1",
+          "Capacidad de línea métrica: 0.27mm/140m, 0.33mm/90m, 0.35mm/80m",
+          "Capacidad de línea trenzada: 0.28mm/130m, 0.31mm/105m, 0.33mm/90m",
+          "Peso: 210g",
+          "Manija: Izquierda",
+          "Sistema de freno dual: Freno magnético"
+        ],
+        "stock": "nuevo ingreso",
+        "marca": "kastking",
+        "envioGratis": "true",
+        "codigo": "PESCA0598",
+        "imagenes": [
+         "kastking_2.webp",
+         "kastking_1.webp",
+         "kastking_4.webp"
+        ],
+        "imagenesVertical": [
+          "kastking_5.webp",
+          "kastking_1.webp",
+          "kastking_2.webp",
+          "kastking_3.webp"
+
+        ],
+        "precio": 77900,
+        "cantidad": 1
+      },
+      {
+        "tipo": "reel",
         "nombre": "Reel Huevito CASTER Unlimited Pro 110 Bait Casting 10 Rulemanes 7.2:1",
         "descripcion": [
           "Mano: Derecha",
@@ -70,7 +103,7 @@
         "imagenes": [
           "BLUEMAX-BC1802M-400_11zon.webp"
         ],
-        "imagenesVertical": [],
+        "imagenesVertical": ["blue_max_cania.webp"],
         "precio": 19900,
         "cantidad": 1
       },
@@ -102,7 +135,7 @@
         "imagenes": [
           "COBRA-BC1802M-400_11zon.webp"
         ],
-        "imagenesVertical": [],
+        "imagenesVertical": ["cobra_cania.webp"],
         "precio": 19900,
         "cantidad": 1
       },
@@ -133,7 +166,7 @@
         "imagenes": [
           "SOLID-SE2102S-400_11zon.webp"
         ],
-        "imagenesVertical": [],
+        "imagenesVertical": ["beast_solid_vertical.webp"],
         "precio": 14500,
         "cantidad": 1
       },
@@ -161,9 +194,9 @@
         "stock": "nuevo ingreso",
         "marca": "caster",
         "imagenes": [
-          "VALIANTGSP.jpg"
+          "VALIANTGSP.webp"
         ],
-        "imagenesVertical": [],
+        "imagenesVertical": ["cania_valiant_vertical.webp"],
         "precio": 32500,
         "cantidad": 1
       },
@@ -193,9 +226,9 @@
         "stock": "nuevo ingreso",
         "marca": "caster",
         "imagenes": [
-          "XTREMECHAOS-GSP2102MH.jpg"
+          "XTREMECHAOS-GSP2102MH.webp"
         ],
-        "imagenesVertical": [],
+        "imagenesVertical": ["cania_xtreme_vertical.webp"],
         "precio": 31500,
         "cantidad": 1
       },
@@ -222,7 +255,7 @@
         "stock": "nuevo ingreso",
         "marca": "beast",
         "imagenes": [
-          "REDMAX104L.jpg"
+          "REDMAX104L.webp"
         ],
         "imagenesVertical": [],
         "precio": 31900,
@@ -252,6 +285,22 @@
         ],
         "imagenesVertical": [],
         "precio": 8700,
+        "cantidad": 1
+      },
+      {
+        "codigo": "PESCA943",
+        "tipo": "señuelos",
+        "nombre": "Señuelo Whopper Plopper",
+        "descripcion": [
+  
+        ],
+        "stock": "nuevo ingreso",
+       
+        "imagenes": [
+          "whoppler_plopper.webp"
+        ],
+        "imagenesVertical": [ "whopper_plopper_vertical.webp"],
+        "precio": 3800,
         "cantidad": 1
       },
       {
@@ -331,7 +380,7 @@
         "imagenes": [
           "LF-PROPRAT-C4_11zon.webp"
         ],
-        "imagenesVertical": [],
+        "imagenesVertical": ["proprat_caster_vertical.webp"],
         "precio": 5300,
         "cantidad": 1
       },
@@ -354,7 +403,11 @@
         "imagenes": [
           "LHPRO-DMADNESS-C2034_11zon.webp"
         ],
-        "imagenesVertical": [],
+        "imagenesVertical": [
+          "deep_senuelo_1.webp",
+          "deep_senuelo_2.webp"
+
+        ],
         "precio": 5700,
         "cantidad": 1
       },
@@ -399,7 +452,11 @@
         "imagenes": [
           "TBOX-001_11zon.webp"
         ],
-        "imagenesVertical": [],
+        "imagenesVertical": [
+          "caja_caster_12_vertical_1.webp",
+          "caja_caster_12_vertical_2.webp"
+
+        ],
         "precio": 8100,
         "cantidad": 1
       },
@@ -523,7 +580,7 @@
         ],
         "stock": "nuevo ingreso",
         "imagenes": [
-          "HOOKS-W10-20.jpg"
+          "HOOKS-W10.webp"
         ],
         "imagenesVertical": [],
         "precio": 1600,
@@ -538,8 +595,8 @@
         "stock": "nuevo ingreso",
         "marca": "redfish",
         "envioGratis": "",
-        "imagenes": ["caja_chica_H0605.jpg"],
-        "imagenesVertical": [],
+        "imagenes": ["caja_chica_H0605.webp"],
+        "imagenesVertical": ["caja_organizadora_H0605_vertical.webp"],
         "precio": 1900,
         "cantidad": 1
       },
@@ -550,8 +607,8 @@
         "descripcion": [],
         "stock": "nuevo ingreso",
         "marca": "redfish",
-        "imagenes": ["caja_chica_H434.jpg"],
-        "imagenesVertical": [],
+        "imagenes": ["caja_chica_H434.webp"],
+        "imagenesVertical": ["caja_organizadora_H434_vertical.webp"],
         "precio": 2500,
         "cantidad": 1
       },
@@ -562,7 +619,7 @@
         "descripcion": [],
         "stock": "nuevo ingreso",
         "marca": "redfish",
-        "imagenes": ["caja_chica_H0510A.jpg"],
+        "imagenes": ["caja_chica_H0510A.webp"],
         "imagenesVertical": [],
         "precio": 2900,
         "cantidad": 1
@@ -574,7 +631,7 @@
         "descripcion": [],
         "stock": "nuevo ingreso",
         "marca": "redfish",
-        "imagenes": ["caja_chica_ H0310C.jpg"],
+        "imagenes": ["caja_chica_ H0310C.webp"],
         "imagenesVertical": [],
         "precio": 3400,
         "cantidad": 1
@@ -586,8 +643,8 @@
         "descripcion": [],
         "stock": "nuevo ingreso",
         "marca": "redfish",
-        "imagenes": ["funda_reel_RBC001.jpg"],
-        "imagenesVertical": [],
+        "imagenes": ["funda_reel_RBC001.webp"],
+        "imagenesVertical": ["funda_redfish_vertical.webp"],
         "precio": 5500,
         "cantidad": 1
       },
@@ -598,8 +655,8 @@
         "descripcion": [],
         "stock": "nuevo ingreso",
         "marca": "redfish",
-        "imagenes": ["navaja_engomada_9752.jpg"],
-        "imagenesVertical": [],
+        "imagenes": ["navaja_engomada.webp"],
+        "imagenesVertical": ["navaja_redfish_vertical.webp"],
         "precio": 9300,
         "cantidad": 1
       },
@@ -610,7 +667,7 @@
         "descripcion": [],
         "stock": "nuevo ingreso",
         "marca": "redfish",
-        "imagenes": ["nylon_redfish.jpg"],
+        "imagenes": ["nylon_redfish.webp"],
         "imagenesVertical": [],
         "precio": 1900,
         "cantidad": 1
@@ -622,7 +679,7 @@
         "descripcion": [],
         "stock": "",
         "marca": "",
-        "imagenes": ["nylon_redfish.jpg"],
+        "imagenes": ["nylon_redfish.webp"],
         "imagenesVertical": [],
         "precio": 1600,
         "cantidad": 1
@@ -634,7 +691,7 @@
         "descripcion": [],
         "stock": "nuevo ingreso",
         "marca": "redfish",
-        "imagenes": ["nylon_redfish.jpg"],
+        "imagenes": ["nylon_redfish.webp"],
         "imagenesVertical": [],
         "precio": 2400,
         "cantidad": 1
@@ -646,7 +703,7 @@
         "descripcion": [],
         "stock": "nuevo ingreso",
         "marca": "redfish",
-        "imagenes": ["boyas_esfericas.jpg"],
+        "imagenes": ["boyas_esfericas.webp"],
         "imagenesVertical": [],
         "precio": 2800,
         "cantidad": 1
@@ -658,8 +715,8 @@
         "descripcion": [],
         "stock": "nuevo ingreso",
         "marca": "redfish",
-        "imagenes": ["gomas_soft_redfish.jpg"],
-        "imagenesVertical": [],
+        "imagenes": ["gomas_soft_redfish.webp"],
+        "imagenesVertical": ["gomas_soft_redfish_vertical.webp"],
         "precio": 2800,
         "cantidad": 1
       },
@@ -670,8 +727,8 @@
         "descripcion": [],
         "stock": "nuevo ingreso",
         "marca": "redfish",
-        "imagenes": ["lombriz_saborizada.jpeg"],
-        "imagenesVertical": [],
+        "imagenes": ["lombriz_saborizada.webp"],
+        "imagenesVertical": ["lombriz_saborizada_vertical.webp"],
         "precio": 4800,
         "cantidad": 1
       },
@@ -682,8 +739,8 @@
         "descripcion": [],
         "stock": "nuevo ingreso",
         "marca": "redfish",
-        "imagenes": ["posacania.jpg"],
-        "imagenesVertical": [],
+        "imagenes": ["posacania.webp"],
+        "imagenesVertical": ["posacania_vertical.webp"],
         "precio": 2900,
         "cantidad": 1
       },
@@ -694,8 +751,8 @@
         "descripcion": [],
         "stock": "nuevo ingreso",
         "marca": "redfish",
-        "imagenes": ["hundimiendo_redfish_BJ003.jpg"],
-        "imagenesVertical": [],
+        "imagenes": ["hundimiendo_redfish_BJ003.webp"],
+        "imagenesVertical": ["senuelo_paletudo_redfish_1.webp"],
         "precio": 3500,
         "cantidad": 1
       },
@@ -706,7 +763,7 @@
         "descripcion": [],
         "stock": "nuevo ingreso",
         "marca": "redfish",
-        "imagenes": ["atrapamojarra.jpg"],
+        "imagenes": ["atrapamojarra.webp"],
         "imagenesVertical": [],
         "precio": 4800,
         "cantidad": 1
@@ -718,7 +775,7 @@
         "descripcion": [],
         "stock": "nuevo ingreso",
         "marca": "redfish",
-        "imagenes": ["cable_acero_60lb.jpg"],
+        "imagenes": ["cable_acero_60lb.webp"],
         "imagenesVertical": [],
         "precio": 3180,
         "cantidad": 1
@@ -730,7 +787,7 @@
         "descripcion": [],
         "stock": "nuevo ingreso",
         "marca": "redfish",
-        "imagenes": ["cinta_extensible.jpg"],
+        "imagenes": ["cinta_extensible.webp"],
         "imagenesVertical": [],
         "precio": 2900,
         "cantidad": 1
@@ -742,7 +799,7 @@
         "descripcion": [],
         "stock": "nuevo ingreso",
         "marca": "redfish",
-        "imagenes": ["cascabel_luz.jpg"],
+        "imagenes": ["cascabel_luz.webp"],
         "imagenesVertical": [],
         "precio": 930,
         "cantidad": 1
@@ -754,7 +811,7 @@
         "descripcion": [],
         "stock": "nuevo ingreso",
         "marca": "redfish",
-        "imagenes": ["cuchara_ondulante.jpg"],
+        "imagenes": ["cuchara_ondulante.webp"],
         "imagenesVertical": [],
         "precio": 4100,
         "cantidad": 1
@@ -766,8 +823,8 @@
         "descripcion": [],
         "stock": "nuevo ingreso",
         "marca": "redfish",
-        "imagenes": ["popper_redfish.jpg"],
-        "imagenesVertical": [],
+        "imagenes": ["popper_redfish.webp"],
+        "imagenesVertical": ["popper_redfish_vertical.webp"],
         "precio": 3800,
         "cantidad": 1
       },

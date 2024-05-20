@@ -30,7 +30,6 @@ const Home = () => {
       <div
         style={{
           minHeight: "100vh",
-          overflow: "auto",
           borderBottom: "2px solid transparent",
         }}
       >
@@ -99,7 +98,7 @@ const Home = () => {
             ) : null}
           </Box>
 
-          <Grid container rowSpacing={3} columnSpacing={0}>
+          <Grid container rowSpacing={3} columnSpacing={0} marginTop={'auto'}>
             {filteredProducts.map((product, index) => (
               <Grid
                 item

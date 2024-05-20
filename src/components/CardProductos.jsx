@@ -2,7 +2,7 @@ import { Box, Button, IconButton, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import logoAbuGarcia from "../../public/images/logoAbuGarcia.webp";
-import logoRedfish from '../../public/images/Logo-Redfish.png'
+import logoRedfish from '../../public/images/Logo-Redfish.webp'
 import { CartContext } from "../Contexts/CartContext";
 import { useContext, useState } from "react";
 import AddIcon from "@mui/icons-material/Add";

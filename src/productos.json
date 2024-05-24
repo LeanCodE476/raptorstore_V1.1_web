@@ -262,32 +262,6 @@
         "cantidad": 1
       },
       {
-        "codigo": "PESCA0037",
-        "tipo": "reel",
-        "nombre": "Reel Frontal BEAST SE200 Pejerrey Spinning Variada Rio 3 Rulemanes",
-        "descripcion": [
-          "3 RULEMANES",
-          "Radio de giro: 5.2:1",
-          "Capacidad de monofilamento mm/m: 0.18/245 - 0.20/200 - 0.25/125",
-          "Incluye carga de nylon",
-          "Max drag: 3 kg",
-          "Peso: 155 gramos",
-          "Sistema de freno delantero",
-          "Cuerpo y carretel construidos en grafito",
-          "Manija de grafito intercambiable izquierda/derecha",
-          "Tipo de caña utilizable: Spinning",
-          "Modalidades de pesca: Variada liviana en río y laguna"
-        ],
-        "stock": "nuevo ingreso",
-        "marca": "beast",
-        "imagenes": [
-          "SE200-YELLOW_11zon.webp"
-        ],
-        "imagenesVertical": [],
-        "precio": 8700,
-        "cantidad": 1
-      },
-      {
         "codigo": "PESCA943",
         "tipo": "señuelos",
         "nombre": "Señuelo Whopper Plopper",
@@ -660,18 +634,7 @@
         "precio": 9300,
         "cantidad": 1
       },
-      {
-        "codigo": "8529-50",
-        "tipo": "nylon",
-        "nombre": "  Nylon 0,50mm x unidad x 100m",
-        "descripcion": [],
-        "stock": "nuevo ingreso",
-        "marca": "redfish",
-        "imagenes": ["nylon_redfish.webp"],
-        "imagenesVertical": [],
-        "precio": 1900,
-        "cantidad": 1
-      },
+   
       {
         "codigo": "8529-40",
         "tipo": "nylon",
@@ -1674,7 +1637,45 @@
         "precio": 0,
         "cantidad": 1
       }
-      
+      ,   {
+        "codigo": "8529-50",
+        "tipo": "nylon",
+        "nombre": "  Nylon 0,50mm x unidad x 100m",
+        "descripcion": [],
+        "stock": "Agotado",
+        "marca": "redfish",
+        "imagenes": ["nylon_redfish.webp"],
+        "imagenesVertical": [],
+        "precio": 1900,
+        "cantidad": 1
+      }
+      ,
+      {
+        "codigo": "PESCA0037",
+        "tipo": "reel",
+        "nombre": "Reel Frontal BEAST SE200 Pejerrey Spinning Variada Rio 3 Rulemanes",
+        "descripcion": [
+          "3 RULEMANES",
+          "Radio de giro: 5.2:1",
+          "Capacidad de monofilamento mm/m: 0.18/245 - 0.20/200 - 0.25/125",
+          "Incluye carga de nylon",
+          "Max drag: 3 kg",
+          "Peso: 155 gramos",
+          "Sistema de freno delantero",
+          "Cuerpo y carretel construidos en grafito",
+          "Manija de grafito intercambiable izquierda/derecha",
+          "Tipo de caña utilizable: Spinning",
+          "Modalidades de pesca: Variada liviana en río y laguna"
+        ],
+        "stock": "Agotado",
+        "marca": "beast",
+        "imagenes": [
+          "SE200-YELLOW_11zon.webp"
+        ],
+        "imagenesVertical": [],
+        "precio": 8700,
+        "cantidad": 1
+      }
     ],
     "electronica": []
   }

@@ -11,7 +11,7 @@ import CartProvider from "./Contexts/CartContext";
 import Preloader from "./components/Preloader";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Envios from "./components/Envios";
-
+import Add from "./pages/Add"
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -43,6 +43,8 @@ function App() {
                 element={<Detalle products={products} />}
                 />
                 <Route path="/Envios" element={<Envios />} />
+                <Route path="/add" element={<Add />} />
+
               </Routes>
               <Footer />
             </>

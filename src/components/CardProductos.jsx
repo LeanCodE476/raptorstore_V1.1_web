@@ -2,7 +2,11 @@ import { Box, Button, IconButton, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import logoAbuGarcia from "../../public/images/logoAbuGarcia.webp";
-import logoRedfish from '../../public/images/Logo-Redfish.webp'
+import logoRedfish from "../../public/images/Logo-Redfish.webp";
+import logoMarine from "../../public/images/logo-marine.webp";
+import logoRapala from "../../public/images/logo-rapala.webp";
+import logoTopFishing from "../../public/images/logo-topFishing.webp";
+import logoKastKing from "../../public/images/logo-kastking.webp";
 import { CartContext } from "../Contexts/CartContext";
 import { useContext, useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
@@ -16,7 +20,9 @@ const CardProductos = ({ product }) => {
     nombre = "",
     precio = 0,
     codigo = "",
-    imagenes = [],
+    imagen1_url = "",
+    imagen2_url = "",
+    imagen3_url = "",
     marca,
     stock,
   } = product || {};
@@ -25,7 +31,11 @@ const CardProductos = ({ product }) => {
   const handleVerDetallesClick = () => {
     navigate(`/detalle/${codigo}`);
   };
-  const formattedPrice = new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' }).format(precio);
+
+  const formattedPrice = new Intl.NumberFormat("es-AR", {
+    style: "currency",
+    currency: "ARS",
+  }).format(precio);
 
   const [cantidad, setCantidad] = useState(product.cantidad || 0);
 
@@ -44,11 +54,25 @@ const CardProductos = ({ product }) => {
     onAddProduct(productToAdd);
     setCantidad(1);
   };
+
   const logos = {
     abugarcia: logoAbuGarcia,
     redfish: logoRedfish,
-
+    marine: logoMarine,
+    rapala: logoRapala,
+    topfishing: logoTopFishing,
+    kastking: logoKastKing,
   };
+
+  const stockText = stock || "Sin información";
+  const stockColor =
+    stock === "agotado"
+      ? "red"
+      : stock === "stock disponible" || stock === "nuevo ingreso"
+      ? "green"
+      : stock === "proximamente"
+      ? "blue"
+      : "black";
 
   return (
     <>
@@ -89,33 +113,34 @@ const CardProductos = ({ product }) => {
               alignItems: "center",
             }}
           >
-            <Typography color={"#CACFD2"} fontSize={"80%"}>
+            <Typography color={"#CACFD2"} fontSize={"60%"}>
               {codigo}
             </Typography>
-            {marca === "caster" ? (
+            {marca === "caster" && (
               <Typography
                 className="brand-caster brand-caster-color"
                 fontFamily={"Days One"}
                 fontSize={".8rem"}
+                zIndex={"3"}
               >
                 CASTER
               </Typography>
-            ) : null}
-            {marca === "beast" ? (
+            )}
+            {marca === "beast" && (
               <Typography className="brand-beast-color">Beast</Typography>
-            ) : null}
-            {marca && logos[marca] ? (
+            )}
+            {marca && logos[marca] && (
               <img
                 className="img-marca"
                 src={logos[marca]}
                 alt={`logo-${marca}`}
                 style={{
                   height: "auto",
-                  maxWidth: "2.6rem",
+                  maxWidth: marca === "topfishing" ? "2rem" : "5rem",
                   zIndex: 2,
                 }}
               />
-            ) : null}
+            )}
           </Box>
         </Box>
         <Box
@@ -133,45 +158,25 @@ const CardProductos = ({ product }) => {
           }}
           onClick={handleVerDetallesClick}
         >
-          <SearchIcon
-            sx={{
-              position: "absolute",
-              bgcolor: "black",
-              color: "white",
-              p: ".3rem",
-              fontSize: "1.5rem",
-              borderRadius: ".5rem",
-              top: ".5rem",
-              right: ".5rem",
-            }}
-            onClick={handleVerDetallesClick}
-          />
           <Typography
             sx={{
               fontSize: ".7rem",
               position: "absolute",
               bottom: "0rem",
-              bgcolor: "white",
-              color:
-                product.stock === "Agotado"
-                  ? "red"
-                  : product.stock === "stock disponible" || "nuevo ingreso"
-                  ? "green"
-                  : product.stock === "proximamente"
-                  ? "blue"
-                  : null,
+              bgcolor: stock === "nuevo ingreso" ? "green" : "white",
+              color: stock === "nuevo ingreso" ? "white" : stockColor,
               right: "0rem",
               fontWeight: "500",
               p: ".2rem",
               paddingRight: "1rem",
               borderRadius: " .5rem 0 0 0",
               textTransform: "capitalize",
-              borderTop:'1px solid green'
+              borderTop: "1px solid green",
             }}
           >
-            {product.stock}
+            {stockText}
           </Typography>
-          {product.stock === "Agotado" ? (
+          {product.stock === "agotado" && (
             <Box
               sx={{
                 width: "100%",
@@ -188,15 +193,28 @@ const CardProductos = ({ product }) => {
                 AGOTADO
               </Typography>
             </Box>
-          ) : null}
+          )}
+          <SearchIcon
+            sx={{
+              position: "absolute",
+              bgcolor: "black",
+              color: "white",
+              p: ".3rem",
+              fontSize: "1.5rem",
+              borderRadius: ".5rem",
+              top: ".5rem",
+              right: ".5rem",
+            }}
+            onClick={handleVerDetallesClick}
+          />
           <img
-            src={`/images/${imagenes[0]}`}
+            src={imagen1_url}
             loading="lazy"
             style={{
               width: "100%",
               boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
             }}
-            alt={product.nombre}
+            alt={nombre}
             className="imagen-detalle"
           />
         </Box>
@@ -209,9 +227,7 @@ const CardProductos = ({ product }) => {
             flexDirection: "column",
           }}
         >
-          {" "}
           <Typography
-            variant="p"
             sx={{
               mt: "1rem",
               fontSize: ".9rem",
@@ -223,12 +239,14 @@ const CardProductos = ({ product }) => {
           >
             {nombre}
           </Typography>
+
           <Typography
-            variant="p"
-            fontSize={"1.2rem"}
-            mt={".5rem"}
-            fontWeight={"500"}
-            textAlign={"start"}
+            sx={{
+              fontSize: "1.2rem",
+              mt: ".5rem",
+              fontWeight: "500",
+              textAlign: "start",
+            }}
           >
             {formattedPrice}
           </Typography>
@@ -285,11 +303,8 @@ const CardProductos = ({ product }) => {
               <AddIcon sx={{ color: "#424949  ", fontSize: "1.6rem" }} />
             </IconButton>
           </Box>
-
           <Button
-            disabled={
-              product.stock === "Agotado" || product.stock === "proximamente" 
-            }
+            disabled={stock === "agotado" || stock === "proximamente"}
             sx={{
               bgcolor: "#1F1F1F",
               color: "white",

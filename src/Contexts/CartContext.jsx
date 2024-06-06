@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSnackbar } from "notistack";
+import { supabase } from "../supabaseClient";
 
 export const CartContext = React.createContext();
 
@@ -40,11 +41,11 @@ const CartProvider = ({ children }) => {
   };
 
   const onAddProduct = (items) => {
-    const { codigo, nombre, precio, imagenes } = items;
-
+    const { codigo, nombre, precio, imagen1_url } = items;
+  
     const nombreArray = nombre.split(" ");
     const nombreProducto = nombreArray.slice(0, 1).join(" ");
-
+  
     if (cart.find((item) => item.codigo === codigo)) {
       const products = cart.map((item) =>
         item.codigo === codigo
@@ -69,7 +70,7 @@ const CartProvider = ({ children }) => {
         cantidad: items.cantidad,
         nombre,
         precio,
-        imagen: imagenes[0],
+        imagen: imagen1_url,
       },
     ]);
     saveToLocalStorage(
@@ -80,7 +81,7 @@ const CartProvider = ({ children }) => {
           cantidad: items.cantidad,
           nombre,
           precio,
-          imagen: imagenes[0],
+          imagen: imagen1_url,
         },
       ],
       total + items.precio * items.cantidad,
@@ -93,8 +94,15 @@ const CartProvider = ({ children }) => {
         horizontal: "right",
       },
     });
+    checkForOutOfStockProducts([...cart, {
+      codigo,
+      cantidad: items.cantidad,
+      nombre,
+      precio,
+      imagen: imagen1_url,
+    }]);
   };
-
+  
   const decreaseItems = (product) => {
     if (product.cantidad === 1) {
       onDeleteProduct(product);
@@ -123,6 +131,41 @@ const CartProvider = ({ children }) => {
     saveToLocalStorage(updatedCart, total + product.precio, contador + 1);
   };
 
+  const checkForOutOfStockProducts = async (updatedCart = cart) => {
+    try {
+      const { data, error } = await supabase.from("products").select("codigo, stock");
+      if (error) throw error;
+
+      const outOfStockProducts = data.filter(product => product.stock === "agotado");
+
+      if (outOfStockProducts.length > 0) {
+        const newCart = updatedCart.filter(cartItem =>
+          !outOfStockProducts.some(product => product.codigo === cartItem.codigo)
+        );
+        const newTotal = newCart.reduce((total, item) => total + item.precio * item.cantidad, 0);
+        const newContador = newCart.reduce((count, item) => count + item.cantidad, 0);
+
+        setCart(newCart);
+        setTotal(newTotal);
+        setContador(newContador);
+
+        saveToLocalStorage(newCart, newTotal, newContador);
+
+        if (newCart.length !== updatedCart.length) {
+          enqueueSnackbar("Algunos productos se agotaron y fueron eliminados del carrito", {
+            variant: "warning",
+            anchorOrigin: {
+              vertical: "bottom",
+              horizontal: "right",
+            },
+          });
+        }
+      }
+    } catch (error) {
+      console.error("Error checking for out-of-stock products:", error);
+    }
+  };
+
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart"));
     const storedTotal = JSON.parse(localStorage.getItem("total"));
@@ -130,6 +173,8 @@ const CartProvider = ({ children }) => {
     if (storedCart) setCart(storedCart);
     if (storedTotal) setTotal(storedTotal);
     if (storedContador) setContador(storedContador);
+
+    checkForOutOfStockProducts(storedCart || []);
   }, []);
 
   const saveToLocalStorage = (cart, total, contador) => {
@@ -159,4 +204,4 @@ const CartProvider = ({ children }) => {
   );
 };
 
-export default CartProvider;
+export { CartProvider };

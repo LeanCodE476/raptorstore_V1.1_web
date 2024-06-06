@@ -17,7 +17,7 @@ const Envios = () => {
         width: "100%",
         height: "100vh",
         mt: "5rem",
-        mb:'2rem'
+        mb:'2rem',
       }}
     >
     <Button

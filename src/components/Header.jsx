@@ -36,8 +36,9 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
-    <header>
+    <header style={{width:'100%'}}>
       <img
         src={logoRaptor}
         alt="logo raptor store"
@@ -140,9 +141,7 @@ const Header = () => {
             {" "}
             {cart.length > 0 ? (
               cart.map((productos) => (
-                <>
-                  <ListItem key={uuidv4()} productos={productos} />
-                </>
+                <ListItem key={productos.codigo} productos={productos} />
               ))
             ) : (
               <>

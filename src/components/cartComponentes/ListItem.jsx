@@ -1,14 +1,14 @@
 import { useContext } from "react";
 import { Box, IconButton, List, Typography } from "@mui/material";
-
 import { CartContext } from "../../Contexts/CartContext";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+
 const ListItem = ({ productos }) => {
   const { increaseItems, decreaseItems } = useContext(CartContext);
 
-
   const formattedPrice = new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' }).format(productos.precio);
+  const productImage = productos.imagen || productos.imagen1_url || productos.imagen2_url || productos.imagen3_url;
 
   return (
     <List
@@ -25,7 +25,7 @@ const ListItem = ({ productos }) => {
       }}
     >
       <img
-        src={`/images/${productos.imagen}`}
+        src={productImage}
         alt={productos.nombre}
         style={{
           width: "5rem",

@@ -9,7 +9,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Footer = () => {
   const openWhatsApp = () => {
-    const telefono = "3755503038";
+    const telefono = "37555561156";
     const mensaje = "Hola, quiero consultar acerca de...";
     window.open(
       `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`,
@@ -39,7 +39,7 @@ const Footer = () => {
         fontWeight={"bold"}
         mt={"1rem"}
       >
-        V 1.0
+        V 1.1
       </Typography>
       <Typography
         fontSize={"1.5rem"}
@@ -88,7 +88,7 @@ const Footer = () => {
                 fontSize: "2.5rem",
               }}
             />
-            +54 3755 503038
+            +54 3755 561156
           </Button>
 
           <Button

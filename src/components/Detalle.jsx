@@ -1,11 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import {
-  Button,
-  Container,
-  Typography,
-  Box,
-  IconButton,
-  Divider,
+  Button, Typography, Box, IconButton,
 } from "@mui/material";
 import { useParams, useNavigate } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
@@ -13,67 +8,52 @@ import { CartContext } from "../Contexts/CartContext";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import { useEffect } from "react";
 import { animateScroll as scroll } from "react-scroll";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import logoCaster from "../../public/images/logo-caster.webp";
 import logoAbuGarcia from "../../public/images/logoAbuGarcia.webp";
 import logoBeast from "../../public/images/logo-beast.webp";
-import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-import logoRedfish from '../../public/images/Logo-Redfish.webp'
+import logoRedfish from '../../public/images/Logo-Redfish.webp';
+import logoMarine from "../../public/images/logo-marine.webp";
+import logoRapala from "../../public/images/logo-rapala.webp";
+import logoTopFishing from '../../public/images/logo-topFishing.webp'
+import logoKastKing from '../../public/images/logo-kastking.webp'
+
 
 import "../App.css";
+
 const Detalle = ({ products }) => {
-  // const logos = {
-  //   caster: logoCaster,
-  //   abugarcia: logoAbuGarcia,
-  //   beast: logoBeast,
-  // };
+  const { codigo } = useParams();
+  const navigate = useNavigate();
+  const { onAddProduct } = useContext(CartContext);
+  const [product, setProduct] = useState(null);
+  const [index, setIndex] = useState(0);
+  const [markedIndex, setMarkedIndex] = useState(0);
+  const [showScrollButton, setShowScrollButton] = useState(false);
+  const [cantidad, setCantidad] = useState(1);
 
   useEffect(() => {
     scroll.scrollToTop();
   }, []);
-  const { codigo } = useParams();
-  const navigate = useNavigate();
-  const [index, setIndex] = React.useState(0);
-  const [markedIndex, setMarkedIndex] = React.useState(0);
-  const { onAddProduct, cart, total, contador, increaseItems, decreaseItems } =
-    useContext(CartContext);
-  let product = null;
-  const [showScrollButton, setShowScrollButton] = useState(false);
-  const enviarMensajeWhatsApp = (codigo, nombre) => {
-    const telefono = "3755503038"; // Número de teléfono al que se enviará el mensaje
-    const mensaje = `Hola, quiero cotizar el envio de este producto. Código: ${codigo}, Nombre: ${nombre}`;
 
-    const enlaceWhatsApp = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(
-      mensaje
-    )}`;
-
-    window.open(enlaceWhatsApp, "_blank");
-  };
-
-  for (const categoryKey in products.productos) {
-    if (Object.prototype.hasOwnProperty.call(products.productos, categoryKey)) {
-      const category = products.productos[categoryKey];
-      const currentProduct = category.find((item) => item.codigo === codigo);
-      if (currentProduct) {
-        product = currentProduct;
-        break;
-      }
+  useEffect(() => {
+    const foundProduct = products.find(item => item.codigo === codigo);
+    if (foundProduct) {
+      const productData = {
+        ...foundProduct,
+        imagenes: [foundProduct.imagen1_url, foundProduct.imagen2_url, foundProduct.imagen3_url].filter(Boolean),
+        descripcion: Array.isArray(foundProduct.descripcion) ? foundProduct.descripcion : JSON.parse(foundProduct.descripcion)
+      };
+      setProduct(productData);
     }
-  }
+  }, [codigo, products]);
 
-  const changeIndex = (newIndex) => {
-    setIndex(newIndex);
+  const handleScrollToTop = () => {
+    scroll.scrollToTop({
+      smooth: true,
+      duration: 500,
+    });
   };
-
-  const markImage = (newIndex) => {
-    setMarkedIndex(newIndex);
-    setIndex(newIndex);
-  };
-
-  const formattedPrice = new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' }).format(product.precio);
-
-  const [cantidad, setCantidad] = useState(product.cantidad || 0);
 
   const handleIncrease = () => {
     setCantidad(cantidad + 1);
@@ -91,31 +71,49 @@ const Detalle = ({ products }) => {
     setCantidad(1);
   };
 
-  const handleScrollToTop = () => {
-    scroll.scrollToTop({
-      smooth: true,
-      duration: 500, // Duración del desplazamiento en milisegundos
-    });
+  const changeIndex = (newIndex) => {
+    setIndex(newIndex);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 1500) {
-        setShowScrollButton(true);
-      } else {
-        setShowScrollButton(false);
-      }
-    };
+  const markImage = (newIndex) => {
+    setMarkedIndex(newIndex);
+    setIndex(newIndex);
+  };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const enviarMensajeWhatsApp = (codigo, nombre) => {
+    const telefono = "3755561156";
+    const mensaje = `Hola, quiero cotizar el envio de este producto. Código: ${codigo}, Nombre: ${nombre}`;
+    const enlaceWhatsApp = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
+    window.open(enlaceWhatsApp, "_blank");
+  };
 
   if (!product) {
     return <p>Producto no encontrado</p>;
   }
+
+  const {
+    nombre,
+    precio,
+    marca,
+    stock,
+    descripcion,
+    codigo: productCodigo,
+    imagenes
+  } = product;
+
+  const formattedPrice = new Intl.NumberFormat('es-AR', { style: 'currency', currency: 'ARS' }).format(precio);
+
+  const logos = {
+    caster: logoCaster,
+    abugarcia: logoAbuGarcia,
+    beast: logoBeast,
+    redfish: logoRedfish,
+    marine: logoMarine,
+    rapala: logoRapala,
+    topfishing: logoTopFishing,
+    kastking:logoKastKing 
+  };
+
   return (
     <Box sx={{ borderBottom: "1px solid transparent" }}>
       <Button
@@ -163,6 +161,7 @@ const Detalle = ({ products }) => {
           bgcolor: "white",
           borderRadius: ".5rem",
           overflow: "hidden",
+          pb:'3rem'
         }}
       >
         <Typography
@@ -173,10 +172,10 @@ const Detalle = ({ products }) => {
           mt={"2rem"}
           textTransform={'capitalize'}
         >
-          {product.nombre}
+          {nombre}
         </Typography>
 
-        {product.marca ? (
+        {marca && (
           <Typography
             variant="h6"
             textAlign={"start"}
@@ -187,52 +186,23 @@ const Detalle = ({ products }) => {
             sx={{ display: "flex", alignItems: "center" }}
           >
             Producto de :
-            {product && product.marca === "caster" ? (
-              <Typography
-                className="brand-caster brand-caster-color"
-                fontFamily={"Days One"}
-                fontSize={".8rem"}
-                sx={{ marginLeft: "1rem" }}
-              >
-                CASTER
-              </Typography>
-            ) : null}
-            {product && product.marca === "beast" ? (
-              <Typography
-                className="brand-beast-color"
-                sx={{ marginLeft: "1rem" }}
-              >
-                Beast
-              </Typography>
-            ) : null}
-            {product && product.marca === "abugarcia" ? (
+            {logos[marca] ? (
               <img
                 className="img-marca"
-                src={logoAbuGarcia}
-                alt={`logo-abugarcia`}
-                style={{
-                  marginLeft: "1rem",
-                  height: "auto",
-                  maxWidth: "2.5rem",
-                  zIndex: 2,
-                }}
-              />
-            ) : null}
-            {product && product.marca === "redfish" ? (
-              <img
-                className="img-marca"
-                src={logoRedfish}
-                alt={`logo-redfish`}
+                src={logos[marca]}
+                alt={`logo-${marca}`}
                 style={{
                   marginLeft: "1rem",
                   height: "auto",
                   maxWidth: "5rem",
-                  zIndex: 2,
+                  zIndex: 0,
                 }}
               />
-            ) : null}
+            ) : (
+              <Typography sx={{ marginLeft: "1rem" }}>{marca}</Typography>
+            )}
           </Typography>
-        ) : null}
+        )}
 
         <Box sx={{ display: "flex", width: "90%", alignItems: "center" }}>
           <Typography
@@ -240,11 +210,11 @@ const Detalle = ({ products }) => {
             fontWeight={"bold"}
             sx={{
               color:
-                product.stock === "Agotado"
+                stock === "agotado"
                   ? "red"
-                  : product.stock === "stock disponible" || product.stock === "nuevo ingreso"
+                  : stock === "stock disponible" || stock === "nuevo ingreso"
                   ? "green"
-                  : product.stock === "proximamente"
+                  : stock === "proximamente"
                   ? "blue"
                   : null,
             }}
@@ -252,10 +222,10 @@ const Detalle = ({ products }) => {
             mt={"1rem"}
             textTransform={"capitalize"}
           >
-            {product.stock}!
+            {stock}!
           </Typography>
           <Typography variant="p" color={"gray"} marginTop={" 1rem"}>
-            Cod:{product.codigo}
+            Cod:{productCodigo}
           </Typography>
         </Box>
 
@@ -279,8 +249,7 @@ const Detalle = ({ products }) => {
               alignItems: "center",
             }}
           >
-            {" "}
-            {product.stock === "Agotado" ? (
+            {stock === "agotado" && (
               <Box
                 sx={{
                   width: "100%",
@@ -297,15 +266,15 @@ const Detalle = ({ products }) => {
                   AGOTADO
                 </Typography>
               </Box>
-            ) : null}
+            )}
             <img
-              src={`/images/${product.imagenes[index]}`}
+              src={imagenes[index]}
               loading="lazy"
               style={{
                 width: "100%",
                 boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
               }}
-              alt={product.nombre}
+              alt={nombre}
               className="imagen-detalle"
             />
           </Box>
@@ -318,11 +287,11 @@ const Detalle = ({ products }) => {
               marginTop: "2rem",
             }}
           >
-            {product.imagenes.map((img, i) => (
+            {imagenes.map((img, i) => (
               <img
                 className="imagen-miniatura"
                 loading="lazy"
-                src={`/images/${img}`}
+                src={img}
                 key={i}
                 style={{
                   width: "5rem",
@@ -338,7 +307,7 @@ const Detalle = ({ products }) => {
                   markImage(i);
                 }}
                 onMouseOver={() => markImage(i)}
-                alt={product.nombre}
+                alt={nombre}
               />
             ))}
           </Box>
@@ -347,7 +316,7 @@ const Detalle = ({ products }) => {
         <Typography variant="h4" width={"90%"} mt={"2rem"} textAlign={"start"}>
           {formattedPrice}
         </Typography>
-        {product.stock === "stock disponible" || product.stock === "nuevo ingreso" ? (
+        {stock === "stock disponible" || stock === "nuevo ingreso" ? (
           <Box
             sx={{
               width: "95%",
@@ -358,7 +327,6 @@ const Detalle = ({ products }) => {
               maxWidth: "20rem",
               padding: ".5rem",
               borderRadius: ".5rem",
-              // boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
             }}
           >
             <Box
@@ -376,7 +344,6 @@ const Detalle = ({ products }) => {
               <IconButton
                 sx={{
                   borderRadius: "0rem",
-
                   opacity: cantidad === 1 ? 0 : 1,
                   bgcolor: "#F1C40F",
                 }}
@@ -444,7 +411,7 @@ const Detalle = ({ products }) => {
               fontWeight: "400",
             }}
           >
-            {product.descripcion.map((desc, i) => (
+            {descripcion.map((desc, i) => (
               <li key={i} style={{ marginTop: ".5rem", color: "gray" }}>
                 -{desc}
               </li>
@@ -461,30 +428,13 @@ const Detalle = ({ products }) => {
               fontWeight: "bold",
             }}
             onClick={() =>
-              enviarMensajeWhatsApp(product.codigo, product.nombre)
+              enviarMensajeWhatsApp(productCodigo, nombre)
             }
           >
             Click Aca
           </Button>
         </Typography>
-        <Box
-          sx={{
-            width: "100%",
-            mt: "3rem",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          {product.imagenesVertical?.map((img, i) => (
-            <img
-              src={`/images/${img}`}
-              key={i}
-              alt={product.imagenesVertical[i]}
-              style={{ width: "100%" }}
-              loading="lazy"
-            />
-          ))}
-        </Box>
+ 
       </Box>
     </Box>
   );

@@ -62,9 +62,20 @@ const Home = () => {
     setPriceOrder(event.target.value);
   };
 
-  const filteredProducts = products.filter((product) =>
-    product.nombre.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const handleTypeSelection = (type) => {
+    setSelectedType(type === selectedType ? null : type);
+    setCurrentPage(1); // Reset page number when filter changes
+  };
+
+  const filteredProducts = selectedType
+    ? products.filter(
+        (product) =>
+          product.tipo === selectedType &&
+          product.nombre.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    : products.filter((product) =>
+        product.nombre.toLowerCase().includes(searchTerm.toLowerCase())
+      );
 
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     if (priceOrder === "asc") {
@@ -92,11 +103,6 @@ const Home = () => {
 
   const handlePageChange = (event, value) => {
     setCurrentPage(value);
-  };
-
-  const handleTypeSelection = (type) => {
-    setSelectedType(type === selectedType ? null : type);
-    setCurrentPage(1); // Reset page number when filter changes
   };
 
   const justifyContentValue = selectedType ? "space-between" : "center";
@@ -127,13 +133,7 @@ const Home = () => {
           </Button>
         </Typography>
 
-        <Box
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          m="1rem auto"
-         
-        >
+        <Box display="flex" justifyContent="center" alignItems="center" m="1rem auto">
           <TextField
             variant="outlined"
             placeholder="Buscar..."
@@ -148,7 +148,7 @@ const Home = () => {
             }}
             sx={{
               width: "95%",
-              maxWidth:'40rem',
+              maxWidth: "40rem",
               backgroundColor: "white",
               borderRadius: "50px",
               "& .MuiOutlinedInput-root": {
@@ -206,35 +206,18 @@ const Home = () => {
               </Button>
             ) : null}
           </Box>
-          <Box
-            sx={{
-              p: "1rem 0 0 0",
-              bgcolor: "white",
-              display: "inline-block",
-              borderRadius: ".5rem",
-            }}
-          >
-            {" "}
-            {
-            //   <FormControl
-            //   variant="outlined"
-            //   sx={{ ml: 2, minWidth: 120, width: "10rem" }}
-            // >
-            //   <InputLabel>Ordenar por</InputLabel>
-            //   <Select
-            //     value={priceOrder}
-            //     onChange={handlePriceOrderChange}
-            //     label="Ordenar por"
-            //   >
-            //     <MenuItem value="">
-            //       <em>Ninguno</em>
-            //     </MenuItem>
-            //     <MenuItem value="asc">Precio: Menor a Mayor</MenuItem>
-            //     <MenuItem value="desc">Precio: Mayor a Menor</MenuItem>
-            //   </Select>
-            // </FormControl>
-          }
-            
+          <Box sx={{pt:'1rem',bgcolor:'white',display:'inline-block',borderRadius:'.5rem'}}>
+            <FormControl sx={{ minWidth: 120, backgroundColor: "white", borderRadius: 1 }}>
+              <InputLabel>Ordenar por</InputLabel>
+              <Select
+                value={priceOrder}
+                onChange={handlePriceOrderChange}
+                label="Ordenar por"
+              >
+                <MenuItem value="asc">Precio: Menor a Mayor</MenuItem>
+                <MenuItem value="desc">Precio: Mayor a Menor</MenuItem>
+              </Select>
+            </FormControl>
           </Box>
 
           {loading ? (
@@ -265,7 +248,7 @@ const Home = () => {
               </Grid>
               <Box display="flex" justifyContent="center" mt={3}>
                 <Pagination
-                  count={Math.ceil(sortedProducts.length / productsPerPage)}
+                  count={Math.ceil(filteredProducts.length / productsPerPage)}
                   page={currentPage}
                   onChange={handlePageChange}
                   variant="outlined"

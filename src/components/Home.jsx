@@ -215,23 +215,26 @@ const Home = () => {
             }}
           >
             {" "}
-            <FormControl
-              variant="outlined"
-              sx={{ ml: 2, minWidth: 120, width: "10rem" }}
-            >
-              <InputLabel>Ordenar por</InputLabel>
-              <Select
-                value={priceOrder}
-                onChange={handlePriceOrderChange}
-                label="Ordenar por"
-              >
-                <MenuItem value="">
-                  <em>Ninguno</em>
-                </MenuItem>
-                <MenuItem value="asc">Precio: Menor a Mayor</MenuItem>
-                <MenuItem value="desc">Precio: Mayor a Menor</MenuItem>
-              </Select>
-            </FormControl>
+            {
+            //   <FormControl
+            //   variant="outlined"
+            //   sx={{ ml: 2, minWidth: 120, width: "10rem" }}
+            // >
+            //   <InputLabel>Ordenar por</InputLabel>
+            //   <Select
+            //     value={priceOrder}
+            //     onChange={handlePriceOrderChange}
+            //     label="Ordenar por"
+            //   >
+            //     <MenuItem value="">
+            //       <em>Ninguno</em>
+            //     </MenuItem>
+            //     <MenuItem value="asc">Precio: Menor a Mayor</MenuItem>
+            //     <MenuItem value="desc">Precio: Mayor a Menor</MenuItem>
+            //   </Select>
+            // </FormControl>
+          }
+            
           </Box>
 
           {loading ? (

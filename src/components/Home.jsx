@@ -222,7 +222,7 @@ const Home = () => {
               </Button>
             ) : null}
           </Box>
-          sdf
+          
           <Box sx={{ display: "inline-block", pt: '1rem', bgcolor: 'white', borderRadius: '.5rem', width: '15rem' }}>
             <FormControl sx={{  backgroundColor: "white", borderRadius: 1, width: '100%' }}>
               <InputLabel>Ordenar por</InputLabel>

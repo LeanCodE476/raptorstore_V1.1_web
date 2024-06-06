@@ -12,6 +12,7 @@ import {
   Select,
   FormControl,
   InputLabel,
+  CircularProgress,
 } from "@mui/material";
 import CardProductos from "./CardProductos";
 import Navbar from "./navbar/Navbar";
@@ -29,6 +30,7 @@ const Home = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [paginationLoading, setPaginationLoading] = useState(false);
   const [selectedType, setSelectedType] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
@@ -113,7 +115,10 @@ const Home = () => {
   );
 
   const handlePageChange = (event, value) => {
+    setPaginationLoading(true);
     setCurrentPage(value);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setTimeout(() => setPaginationLoading(false), 500); // Adjust the timeout duration as needed
   };
 
   const justifyContentValue = selectedType ? "space-between" : "center";
@@ -123,7 +128,7 @@ const Home = () => {
 
   return (
     <Box display="flex" minHeight="100vh" borderBottom="2px solid transparent">
-      {isLargeScreen && <Aside handleTypeSelection={handleTypeSelection} />}
+      {isLargeScreen && <Aside handleTypeSelection={handleTypeSelection} selectedType={selectedType} />}
       <Box flex={1} width={"100%"}>
         <Navbar handleTypeSelection={handleTypeSelection} />
         <FormaPago />
@@ -135,7 +140,7 @@ const Home = () => {
           <Button
             sx={{
               textTransform: "capitalize",
-              color: "red",
+              color: "white",
               borderBottom: "1px solid yellow",
             }}
             onClick={() => navigate("/Envios")}
@@ -217,13 +222,24 @@ const Home = () => {
               </Button>
             ) : null}
           </Box>
-          <Box sx={{ display: "inline-block",pt:'1rem',bgcolor:'white',borderRadius:'.5rem' }}>
-            <FormControl sx={{ minWidth: 120, backgroundColor: "white", borderRadius: 1 }}>
+          <Box sx={{ display: "inline-block", pt: '1rem', bgcolor: 'white', borderRadius: '.5rem', width: '10rem' }}>
+            <FormControl sx={{ minWidth: 120, backgroundColor: "white", borderRadius: 1, width: '100%' }}>
               <InputLabel>Ordenar por</InputLabel>
               <Select
                 value={priceOrder}
                 onChange={handlePriceOrderChange}
                 label="Ordenar por"
+                sx={{
+                  "& .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "transparent",
+                  },
+                  "&:hover .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "transparent",
+                  },
+                  "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                    borderColor: "transparent",
+                  },
+                }}
               >
                 <MenuItem value="asc">Precio: Menor a Mayor</MenuItem>
                 <MenuItem value="desc">Precio: Mayor a Menor</MenuItem>
@@ -231,11 +247,11 @@ const Home = () => {
               </Select>
             </FormControl>
           </Box>
-
-          {loading ? (
-            <Typography color="white" textAlign="center">
-              Cargando productos...
-            </Typography>
+          
+          {loading || paginationLoading ? (
+            <Box display="flex" justifyContent="center" alignItems="center" minHeight="50vh">
+              <CircularProgress />
+            </Box>
           ) : (
             <>
               <Grid
@@ -281,3 +297,4 @@ const Home = () => {
 };
 
 export default Home;
+

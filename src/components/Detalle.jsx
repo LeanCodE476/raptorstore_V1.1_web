@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import {
   Button, Typography, Box, IconButton,
 } from "@mui/material";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { CartContext } from "../Contexts/CartContext";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
@@ -25,6 +25,7 @@ import "../App.css";
 const Detalle = ({ products }) => {
   const { codigo } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
   const { onAddProduct } = useContext(CartContext);
   const [product, setProduct] = useState(null);
   const [index, setIndex] = useState(0);
@@ -127,7 +128,7 @@ const Detalle = ({ products }) => {
             backgroundColor: "black",
           },
         }}
-        onClick={() => navigate("/")}
+        onClick={() => navigate("/", { state: { currentPage: location.state?.currentPage || 1 } })}
       >
         <ArrowBackIcon />
         Volver

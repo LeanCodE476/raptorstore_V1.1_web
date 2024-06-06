@@ -67,6 +67,15 @@ const Home = () => {
     setCurrentPage(1); // Reset page number when filter changes
   };
 
+  const shuffleArray = (array) => {
+    let shuffledArray = [...array];
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+    }
+    return shuffledArray;
+  };
+
   const filteredProducts = selectedType
     ? products.filter(
         (product) =>
@@ -77,22 +86,24 @@ const Home = () => {
         product.nombre.toLowerCase().includes(searchTerm.toLowerCase())
       );
 
-  const sortedProducts = [...filteredProducts].sort((a, b) => {
-    if (priceOrder === "asc") {
-      return a.precio - b.precio;
-    } else if (priceOrder === "desc") {
-      return b.precio - a.precio;
-    } else {
-      const stockOrder = {
-        "nuevo ingreso": 1,
-        "stock disponible": 2,
-        agotado: 3,
-      };
-      if (stockOrder[a.stock] < stockOrder[b.stock]) return -1;
-      if (stockOrder[a.stock] > stockOrder[b.stock]) return 1;
-      return new Date(b.created_at) - new Date(a.created_at);
-    }
-  });
+  const sortedProducts = priceOrder === "random"
+    ? shuffleArray(filteredProducts)
+    : [...filteredProducts].sort((a, b) => {
+        if (priceOrder === "asc") {
+          return a.precio - b.precio;
+        } else if (priceOrder === "desc") {
+          return b.precio - a.precio;
+        } else {
+          const stockOrder = {
+            "nuevo ingreso": 1,
+            "stock disponible": 2,
+            agotado: 3,
+          };
+          if (stockOrder[a.stock] < stockOrder[b.stock]) return -1;
+          if (stockOrder[a.stock] > stockOrder[b.stock]) return 1;
+          return new Date(b.created_at) - new Date(a.created_at);
+        }
+      });
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
@@ -206,7 +217,7 @@ const Home = () => {
               </Button>
             ) : null}
           </Box>
-          <Box sx={{pt:'1rem',bgcolor:'white',display:'inline-block',borderRadius:'.5rem'}}>
+          <Box sx={{ display: "inline-block",pt:'1rem',bgcolor:'white',borderRadius:'.5rem' }}>
             <FormControl sx={{ minWidth: 120, backgroundColor: "white", borderRadius: 1 }}>
               <InputLabel>Ordenar por</InputLabel>
               <Select
@@ -216,6 +227,7 @@ const Home = () => {
               >
                 <MenuItem value="asc">Precio: Menor a Mayor</MenuItem>
                 <MenuItem value="desc">Precio: Mayor a Menor</MenuItem>
+                <MenuItem value="random">Aleatorio</MenuItem>
               </Select>
             </FormControl>
           </Box>

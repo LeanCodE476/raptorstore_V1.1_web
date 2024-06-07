@@ -79,7 +79,7 @@ const Detalle = ({ products }) => {
   };
 
   const enviarMensajeWhatsApp = (codigo, nombre) => {
-    const telefono = "3755561156";
+    const telefono = "3755503038";
     const mensaje = `Hola, quiero cotizar el envio de este producto. Código: ${codigo}, Nombre: ${nombre}`;
     const enlaceWhatsApp = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
     window.open(enlaceWhatsApp, "_blank");

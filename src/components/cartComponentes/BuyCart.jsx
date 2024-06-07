@@ -15,7 +15,7 @@ const BuyCart = () => {
   const { cart, total, cleanCart } = useContext(CartContext);
 
   function enviarMensajeWhatsapp() {
-    const numeroTelefono = "3755 561156";
+    const numeroTelefono = "3755 503038";
 
     let mensaje = `Hola, me gustaría comprar los siguientes productos:\n \n`;
 

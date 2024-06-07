@@ -1,7 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import {
-  Button, Typography, Box, IconButton,
-} from "@mui/material";
+import { Button, Typography, Box, IconButton } from "@mui/material";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { CartContext } from "../Contexts/CartContext";
@@ -16,9 +14,8 @@ import logoBeast from "../../public/images/logo-beast.webp";
 import logoRedfish from '../../public/images/Logo-Redfish.webp';
 import logoMarine from "../../public/images/logo-marine.webp";
 import logoRapala from "../../public/images/logo-rapala.webp";
-import logoTopFishing from '../../public/images/logo-topFishing.webp'
-import logoKastKing from '../../public/images/logo-kastking.webp'
-
+import logoTopFishing from '../../public/images/logo-topFishing.webp';
+import logoKastKing from '../../public/images/logo-kastking.webp';
 
 import "../App.css";
 
@@ -112,7 +109,7 @@ const Detalle = ({ products }) => {
     marine: logoMarine,
     rapala: logoRapala,
     topfishing: logoTopFishing,
-    kastking:logoKastKing 
+    kastking: logoKastKing
   };
 
   return (
@@ -128,7 +125,12 @@ const Detalle = ({ products }) => {
             backgroundColor: "black",
           },
         }}
-        onClick={() => navigate("/", { state: { currentPage: location.state?.currentPage || 1 } })}
+        onClick={() => navigate("/", {
+          state: {
+            selectedType: location.state?.selectedType,
+            currentPage: location.state?.currentPage,
+          },
+        })}
       >
         <ArrowBackIcon />
         Volver
@@ -162,7 +164,7 @@ const Detalle = ({ products }) => {
           bgcolor: "white",
           borderRadius: ".5rem",
           overflow: "hidden",
-          pb:'3rem'
+          pb: '3rem'
         }}
       >
         <Typography
@@ -214,10 +216,10 @@ const Detalle = ({ products }) => {
                 stock === "agotado"
                   ? "red"
                   : stock === "stock disponible" || stock === "nuevo ingreso"
-                  ? "green"
-                  : stock === "proximamente"
-                  ? "blue"
-                  : null,
+                    ? "green"
+                    : stock === "proximamente"
+                      ? "blue"
+                      : null,
             }}
             width={"90%"}
             mt={"1rem"}
@@ -435,7 +437,7 @@ const Detalle = ({ products }) => {
             Click Aca
           </Button>
         </Typography>
- 
+
       </Box>
     </Box>
   );

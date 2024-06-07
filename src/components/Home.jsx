@@ -12,12 +12,12 @@ import {
   Select,
   FormControl,
   InputLabel,
-  CircularProgress,
+  CircularProgress
 } from "@mui/material";
 import CardProductos from "./CardProductos";
 import Navbar from "./navbar/Navbar";
 import FormaPago from "./FormaPago";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
 import SearchIcon from "@mui/icons-material/Search";
 import Aside from "./Aside"; // Importa el nuevo componente Aside
@@ -28,13 +28,14 @@ const theme = createTheme();
 
 const Home = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [paginationLoading, setPaginationLoading] = useState(false);
-  const [selectedType, setSelectedType] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [selectedType, setSelectedType] = useState(location.state?.selectedType || null);
+  const [currentPage, setCurrentPage] = useState(location.state?.currentPage || 1);
   const [searchTerm, setSearchTerm] = useState("");
   const [priceOrder, setPriceOrder] = useState("");
+  const [pageLoading, setPageLoading] = useState(false);
   const productsPerPage = 15;
 
   useEffect(() => {
@@ -115,10 +116,12 @@ const Home = () => {
   );
 
   const handlePageChange = (event, value) => {
-    setPaginationLoading(true);
+    setPageLoading(true);
     setCurrentPage(value);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    setTimeout(() => setPaginationLoading(false), 500); // Adjust the timeout duration as needed
+    window.scrollTo(0, 0);
+    setTimeout(() => {
+      setPageLoading(false);
+    }, 500); // Adjust delay as needed for a smooth transition
   };
 
   const justifyContentValue = selectedType ? "space-between" : "center";
@@ -140,7 +143,7 @@ const Home = () => {
           <Button
             sx={{
               textTransform: "capitalize",
-              color: "white",
+              color: "red",
               borderBottom: "1px solid yellow",
             }}
             onClick={() => navigate("/Envios")}
@@ -182,7 +185,7 @@ const Home = () => {
           />
         </Box>
 
-        <Box m="1.5rem auto" maxWidth="80rem" overflow="hidden">
+        <Box m="1.5rem auto" maxWidth="80rem" overflow="hidden" pb={'2rem'} >
           <Box
             display="flex"
             justifyContent={justifyContentValue}
@@ -196,6 +199,8 @@ const Home = () => {
               fontSize={"1.2rem"}
               width={"100%"}
               fontWeight={"bold"}
+      
+              
             >
               Sección{" "}
               <span style={{ textTransform: "capitalize" }}>
@@ -222,9 +227,8 @@ const Home = () => {
               </Button>
             ) : null}
           </Box>
-          
-          <Box sx={{ display: "inline-block", pt: '1rem', bgcolor: 'white', borderRadius: '.5rem', width: '15rem' }}>
-            <FormControl sx={{  backgroundColor: "white", borderRadius: 1, width: '100%' }}>
+          <Box sx={{mt:'2rem', display: "inline-block", pt: '1rem', bgcolor: 'white', borderRadius: '.5rem', width: '10rem' }}>
+            <FormControl sx={{ minWidth: 120, backgroundColor: "white", borderRadius: 1, width: '100%' }}>
               <InputLabel>Ordenar por</InputLabel>
               <Select
                 value={priceOrder}
@@ -248,8 +252,12 @@ const Home = () => {
               </Select>
             </FormControl>
           </Box>
-          
-          {loading || paginationLoading ? (
+
+          {loading ? (
+            <Typography color="white" textAlign="center">
+              Cargando productos...
+            </Typography>
+          ) : pageLoading ? (
             <Box display="flex" justifyContent="center" alignItems="center" minHeight="50vh">
               <CircularProgress />
             </Box>
@@ -270,6 +278,11 @@ const Home = () => {
                     lg={3}
                     sx={{ display: "flex", justifyContent: "center" }}
                     key={index}
+                    onClick={() => {
+                      navigate(`/detalle/${product.codigo}`, {
+                        state: { selectedType, currentPage },
+                      });
+                    }}
                   >
                     <CardProductos product={product} />
                   </Grid>
@@ -298,4 +311,3 @@ const Home = () => {
 };
 
 export default Home;
-

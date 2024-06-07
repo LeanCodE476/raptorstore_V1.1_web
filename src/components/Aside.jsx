@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {
   Box,
+  Button,
   List,
   ListItem,
   ListItemButton,
@@ -49,19 +50,13 @@ const Aside = ({ handleTypeSelection, selectedType }) => {
         }}
       >
         <ListItem>
-          <ListItemButton
-            onClick={() => handleTypeSelection(null)}
-            sx={{
-              bgcolor: selectedType === null ? "green" : "inherit",
-              color: selectedType === null ? "black" : "inherit",
-            }}
-          >
+          <ListItemButton onClick={() => handleTypeSelection(null)}>
             <Typography
               sx={{
                 fontWeight: "bold",
                 textAlign: "center",
                 width: "100%",
-                color: selectedType === null ? "black" : "red",
+                color: "red",
               }}
             >
               Inicio
@@ -75,23 +70,15 @@ const Aside = ({ handleTypeSelection, selectedType }) => {
           <ListItem
             key={index}
             onClick={() => handleTypeSelection(tipo)}
-            sx={{
-              borderBottom: "1px solid gray",
-              bgcolor: selectedType === tipo ? "green" : "inherit",
-            }}
+            sx={{ borderBottom: "1px solid gray" }}
           >
-            <ListItemButton
-              sx={{
-                bgcolor: selectedType === tipo ? "green" : "#ECF0F1 ",
-                borderRadius: ".5rem",
-              }}
-            >
+            <ListItemButton sx={{ bgcolor: selectedType === tipo ? "green" : "#ECF0F1", borderRadius: ".5rem" }}>
               <Typography
                 sx={{
                   textAlign: "center",
                   width: "100%",
                   textTransform: "capitalize",
-                  fontWeight: "bold",
+                  fontWeight: 'bold',
                   color: selectedType === tipo ? "black" : "inherit",
                 }}
               >

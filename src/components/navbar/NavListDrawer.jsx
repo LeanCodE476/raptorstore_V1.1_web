@@ -3,7 +3,7 @@ import { Box, Button, Typography, CircularProgress } from "@mui/material";
 import { supabase } from "../../supabaseClient";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
-const NavListDrawer = ({ setOpen, handleTypeSelection }) => {
+const NavListDrawer = ({ setOpen, handleTypeSelection, selectedType }) => {
   const [tiposUnicos, setTiposUnicos] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -13,7 +13,7 @@ const NavListDrawer = ({ setOpen, handleTypeSelection }) => {
         const { data, error } = await supabase.from("products").select("tipo");
         if (error) throw error;
 
-        const tipos = Array.from(new Set(data.map((product) => product.tipo)));
+        const tipos = Array.from(new Set(data.map((product) => product.tipo))).sort();
         setTiposUnicos(tipos);
       } catch (error) {
         console.error("Error fetching product types:", error);
@@ -58,10 +58,11 @@ const NavListDrawer = ({ setOpen, handleTypeSelection }) => {
               sx={{
                 width: "100%",
                 textTransform: "capitalize",
-                bgcolor: "#F2F3F4",
-                color: "#626567 ",
+                bgcolor: selectedType === tipo ? "green" : "#F2F3F4",
+                color: selectedType === tipo ? "black" : "#626567",
                 borderBottom: "1px solid #D7DBDD",
                 fontSize: "1rem",
+                borderRadius: selectedType === tipo ? "0px" : "0px",
               }}
               onClick={() => {
                 setOpen(false);

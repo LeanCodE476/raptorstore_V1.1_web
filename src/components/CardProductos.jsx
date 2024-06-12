@@ -149,14 +149,11 @@ const CardProductos = ({ product }) => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            cursor: "pointer",
-            transition: "transform 0.2s",
             position: "relative",
             "&:hover": {
               transform: "scale(1.1)",
             },
           }}
-          onClick={handleVerDetallesClick}
         >
           <Typography
             sx={{
@@ -204,6 +201,7 @@ const CardProductos = ({ product }) => {
               borderRadius: ".5rem",
               top: ".5rem",
               right: ".5rem",
+              cursor: "pointer",
             }}
             onClick={handleVerDetallesClick}
           />
@@ -213,9 +211,11 @@ const CardProductos = ({ product }) => {
             style={{
               width: "100%",
               boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
+              cursor: "pointer",
             }}
             alt={nombre}
             className="imagen-detalle"
+            onClick={handleVerDetallesClick}
           />
         </Box>
 

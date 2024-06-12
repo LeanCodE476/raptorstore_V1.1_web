@@ -199,8 +199,6 @@ const Home = () => {
               fontSize={"1.2rem"}
               width={"100%"}
               fontWeight={"bold"}
-      
-              
             >
               Sección{" "}
               <span style={{ textTransform: "capitalize" }}>
@@ -217,7 +215,7 @@ const Home = () => {
                   fontSize: ".7rem",
                   "&:hover": {
                     transition: "0s all",
-                    backgroundColor: "black",
+                    backgroundColor: "black", 
                   },
                 }}
                 onClick={() => handleTypeSelection(null)}
@@ -278,11 +276,6 @@ const Home = () => {
                     lg={3}
                     sx={{ display: "flex", justifyContent: "center" }}
                     key={index}
-                    onClick={() => {
-                      navigate(`/detalle/${product.codigo}`, {
-                        state: { selectedType, currentPage },
-                      });
-                    }}
                   >
                     <CardProductos product={product} />
                   </Grid>

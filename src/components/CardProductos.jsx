@@ -136,7 +136,7 @@ const CardProductos = ({ product }) => {
                 alt={`logo-${marca}`}
                 style={{
                   height: "auto",
-                  maxWidth: marca === "topfishing" ? "2rem" : "5rem",
+                  maxWidth: marca === "topfishing" ? "2rem" : "5rem" || marca ==='abugarcia' ? '2rem' : '3rem',
                   zIndex: 2,
                 }}
               />

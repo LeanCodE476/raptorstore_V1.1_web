@@ -5,15 +5,18 @@ import {
   Grid,
   Typography,
   useMediaQuery,
-  Pagination,
   TextField,
   InputAdornment,
   MenuItem,
   Select,
   FormControl,
   InputLabel,
-  CircularProgress
+  CircularProgress,
+  IconButton
 } from "@mui/material";
+
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
+
 import CardProductos from "./CardProductos";
 import Navbar from "./navbar/Navbar";
 import FormaPago from "./FormaPago";
@@ -21,7 +24,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
 import SearchIcon from "@mui/icons-material/Search";
 import Aside from "./Aside"; // Importa el nuevo componente Aside
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 import { supabase } from "../supabaseClient"; // Importa supabaseClient si no está ya importado
 
 const theme = createTheme();
@@ -29,15 +32,15 @@ const theme = createTheme();
 const Home = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedType, setSelectedType] = useState(location.state?.selectedType || null);
-  const [currentPage, setCurrentPage] = useState(location.state?.currentPage || 1);
   const [searchTerm, setSearchTerm] = useState("");
   const [priceOrder, setPriceOrder] = useState("");
-  const [pageLoading, setPageLoading] = useState(false);
-  const productsPerPage = 15;
-
+  
+  const [showScrollButton, setShowScrollButton] = useState(false);
+  
   useEffect(() => {
     const fetchProducts = async () => {
       setLoading(true);
@@ -54,11 +57,24 @@ const Home = () => {
     };
 
     fetchProducts();
+
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowScrollButton(true);
+      } else {
+        setShowScrollButton(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
-    setCurrentPage(1); // Reset page number when search changes
   };
 
   const handlePriceOrderChange = (event) => {
@@ -67,7 +83,6 @@ const Home = () => {
 
   const handleTypeSelection = (type) => {
     setSelectedType(type === selectedType ? null : type);
-    setCurrentPage(1); // Reset page number when filter changes
   };
 
   const shuffleArray = (array) => {
@@ -108,26 +123,14 @@ const Home = () => {
         }
       });
 
-  const indexOfLastProduct = currentPage * productsPerPage;
-  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = sortedProducts.slice(
-    indexOfFirstProduct,
-    indexOfLastProduct
-  );
-
-  const handlePageChange = (event, value) => {
-    setPageLoading(true);
-    setCurrentPage(value);
-    window.scrollTo(0, 0);
-    setTimeout(() => {
-      setPageLoading(false);
-    }, 500); // Adjust delay as needed for a smooth transition
-  };
-
   const justifyContentValue = selectedType ? "space-between" : "center";
 
   const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <Box display="flex" minHeight="100vh" borderBottom="2px solid transparent">
@@ -255,47 +258,46 @@ const Home = () => {
             <Typography color="white" textAlign="center">
               Cargando productos...
             </Typography>
-          ) : pageLoading ? (
-            <Box display="flex" justifyContent="center" alignItems="center" minHeight="50vh">
-              <CircularProgress />
-            </Box>
           ) : (
-            <>
-              <Grid
-                container
-                rowSpacing={3}
-                columnSpacing={0}
-                marginTop={"auto"}
-              >
-                {currentProducts.map((product, index) => (
-                  <Grid
-                    item
-                    xs={6}
-                    sm={4}
-                    md={3}
-                    lg={3}
-                    sx={{ display: "flex", justifyContent: "center" }}
-                    key={index}
-                  >
-                    <CardProductos product={product} />
-                  </Grid>
-                ))}
-              </Grid>
-              <Box display="flex" justifyContent="center" mt={3}>
-                <Pagination
-                  count={Math.ceil(filteredProducts.length / productsPerPage)}
-                  page={currentPage}
-                  onChange={handlePageChange}
-                  variant="outlined"
-                  color="primary"
-                  sx={{
-                    bgcolor: "white",
-                    padding: "1rem .5rem 1rem .5rem",
-                    borderRadius: ".5rem",
-                  }}
-                />
-              </Box>
-            </>
+            <Grid
+              container
+              rowSpacing={3}
+              columnSpacing={0}
+              marginTop={"auto"}
+            >
+              {sortedProducts.map((product, index) => (
+                <Grid
+                  item
+                  xs={6}
+                  sm={4}
+                  md={3}
+                  lg={3}
+                  sx={{ display: "flex", justifyContent: "center" }}
+                  key={index}
+                >
+                  <CardProductos product={product} />
+                </Grid>
+              ))}
+            </Grid>
+          )}
+
+          {showScrollButton && (
+            <IconButton
+              sx={{
+                position: "fixed",
+                bottom: "2rem",
+                right: "2rem",
+                bgcolor: "white",
+                color: "red",
+                zIndex: "9",
+                "&:hover": {
+                  bgcolor: "black",
+                },
+              }}
+              onClick={handleScrollToTop}
+            >
+              <ArrowUpwardIcon />
+            </IconButton>
           )}
         </Box>
       </Box>

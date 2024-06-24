@@ -251,7 +251,7 @@ const CardProductos = ({ product }) => {
             {formattedPrice}
           </Typography>
         </Box>
-
+   
         <Box
           sx={{
             width: "90%",

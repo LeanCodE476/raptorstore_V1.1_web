@@ -251,89 +251,88 @@ const CardProductos = ({ product }) => {
             {formattedPrice}
           </Typography>
       </Box>
-   {
-        // <Box
-        //   sx={{
-        //     width: "90%",
-        //     display: "flex",
-        //     justifyContent: "space-around",
-        //     alignItems: "center",
-        //     flexWrap: "wrap",
-        //     gap: ".5rem",
-        //     mt: "0rem",
-        //   }}
-        // >
-        //   <Box
-        //     sx={{
-        //       height: "2rem",
-        //       maxWidth: "7rem",
-        //       display: "flex",
-        //       alignItems: "center",
-        //       justifyContent: "center",
-        //       borderRadius: ".3rem",
-        //       overflow: "hidden",
-        //       boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
-        //     }}
-        //   >
-        //     <IconButton
-        //       sx={{
-        //         borderRadius: "0rem",
-        //         opacity: cantidad === 1 ? 0 : 1,
-        //         bgcolor: "#F1C40F",
-        //       }}
-        //       disabled={cantidad === 1}
-        //       onClick={handleDecrease}
-        //     >
-        //       <RemoveIcon sx={{ color: "#424949 ", fontSize: "1.6rem" }} />
-        //     </IconButton>
+   
+        <Box
+          sx={{
+            width: "90%",
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+            flexWrap: "wrap",
+            gap: ".5rem",
+            mt: "0rem",
+          }}
+        >
+          <Box
+            sx={{
+              height: "2rem",
+              maxWidth: "7rem",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              borderRadius: ".3rem",
+              overflow: "hidden",
+              boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
+            }}
+          >
+            <IconButton
+              sx={{
+                borderRadius: "0rem",
+                opacity: cantidad === 1 ? 0 : 1,
+                bgcolor: "#F1C40F",
+              }}
+              disabled={cantidad === 1}
+              onClick={handleDecrease}
+            >
+              <RemoveIcon sx={{ color: "#424949 ", fontSize: "1.6rem" }} />
+            </IconButton>
 
-        //     <Typography
-        //       sx={{ fontWeight: "bold", margin: "1rem", fontSize: "1rem" }}
-        //     >
-        //       {cantidad}
-        //     </Typography>
+            <Typography
+              sx={{ fontWeight: "bold", margin: "1rem", fontSize: "1rem" }}
+            >
+              {cantidad}
+            </Typography>
 
-        //     <IconButton
-        //       sx={{
-        //         borderRadius: "0rem",
-        //         bgcolor: "#F1C40F",
-        //       }}
-        //       onClick={handleIncrease}
-        //     >
-        //       <AddIcon sx={{ color: "#424949  ", fontSize: "1.6rem" }} />
-        //     </IconButton>
-        //   </Box>
+            <IconButton
+              sx={{
+                borderRadius: "0rem",
+                bgcolor: "#F1C40F",
+              }}
+              onClick={handleIncrease}
+            >
+              <AddIcon sx={{ color: "#424949  ", fontSize: "1.6rem" }} />
+            </IconButton>
+          </Box>
           
-        //           <Button
-        //     disabled={stock === "agotado" || stock === "proximamente"}
-        //     sx={{
-        //       bgcolor: "#1F1F1F",
-        //       color: "white",
-        //       height: "2rem",
-        //       width: "100%",
-        //       borderRadius: ".3rem",
-        //       fontWeight: "bold",
-        //       fontSize: "70%",
-        //       textTransform: "capitalize",
-        //       boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
-        //       mt: ".3rem",
-        //       "&:hover": {
-        //         backgroundColor: "black",
-        //         color: "white",
-        //       },
-        //     }}
-        //     onClick={handleAddToCart}
-        //   >
-        //     Agregar al Carrito
-        //     <AddShoppingCartIcon
-        //       sx={{ fontSize: "1.2rem", marginLeft: ".5rem" }}
-        //     />
-        //   </Button>
+                  <Button
+            disabled={stock === "agotado" || stock === "proximamente"}
+            sx={{
+              bgcolor: "#1F1F1F",
+              color: "white",
+              height: "2rem",
+              width: "100%",
+              borderRadius: ".3rem",
+              fontWeight: "bold",
+              fontSize: "70%",
+              textTransform: "capitalize",
+              boxShadow: "0px 1px 5px 0px rgba(0,0,0,0.5)",
+              mt: ".3rem",
+              "&:hover": {
+                backgroundColor: "black",
+                color: "white",
+              },
+            }}
+            onClick={handleAddToCart}
+          >
+            Agregar al Carrito
+            <AddShoppingCartIcon
+              sx={{ fontSize: "1.2rem", marginLeft: ".5rem" }}
+            />
+          </Button>
           
     
-        // </Box>
-<Typography>Actualizando precios...</Typography>
-}
+        </Box>
+
       </Box>
     </>
   );

@@ -61,7 +61,7 @@ function App() {
         >
           Visita nuestra nueva web!
         </Typography>
-        <Button sx={{ bgcolor: "green",color:'white',mt:'2rem'}} href="https://raptorstore4.mitiendanube.com/" target="blank">Click aca</Button>
+        <Button sx={{ bgcolor: "green",color:'white',mt:'2rem'}} href="https://www.raptorstore.com.ar/" target="blank">Click aca</Button>
       </Box>
 
       {
